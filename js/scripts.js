@@ -3,16 +3,6 @@ if (1 != '1') {
 document.getElementById('box-1').style.display = 'none';
 }
 
-window.onload = function() {
-    if (window.jQuery) {  
-        // jQuery is loaded  
-        alert("Yeah!");
-    } else {
-        // jQuery is not loaded
-        alert("Doesn't Work");
-    }
-}
-
 // Make the DIV element draggable:
 dragElement(document.getElementById("mydiv"));
 
