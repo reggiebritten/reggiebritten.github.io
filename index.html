@@ -59,10 +59,40 @@
 	<script src="js/ability-list.js"></script>
 	<script src="js/scripts.js"></script>
 	
+	
+	
+	
+	
+	    <script>
+        $(document).ready(function(){
+          $("button").click(function(){
+            // $.getJSON("spellbook.json", function(data){
+            $.get("myFile.txt", function(data){
+                // for (var i = 0, len = data.length; i < len; i++) {
+                //     $("div").append(JSON.stringify(data[i]));
+                // }
+                console.log(data)
+            });
+          });
+        });
+    </script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 </head>
 <body>
+<button>View JSON</button>
 <div id="container">
   <div id="menu">
     <ul>
