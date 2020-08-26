@@ -8,12 +8,15 @@ console.log(abilityList["Cleave"]["Momentum"]);
 
 
 
-$.get('myFile.txt', function(data) {    
-    var lines = data.split("\n");
-	console.log(lines);
-
-    });
-});
+            // $.getJSON("spellbook.json", function(data){
+            $.get("myFile.txt", function myFunction(data){
+                // for (var i = 0, len = data.length; i < len; i++) {
+                //     $("div").append(JSON.stringify(data[i]));
+                // }
+                console.log(data)
+            });
+		
+		myFunction();
 
 /*
 var str = `link,model,role,access
