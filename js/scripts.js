@@ -1,3 +1,65 @@
+function clearText(field) {
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+
+
+console.log(abilityList["Cleave"]["Momentum"]);
+
+
+
+$.get('file_to_read.txt', function(data) {
+   console.log(data);
+}, 'text');
+
+/*
+var str = `link,model,role,access
+link1,model1,role1,true`;
+
+var lines = str.split('\n');
+console.log(lines);
+var obj = {};
+
+var lineHeaders = lines[0].split(',');
+console.log(lineHeaders[0]);
+// Ignore the first line as it contains only the header info.
+
+
+for(var i = 1; i < lines.length; i++) {
+  var lineItems = lines[i].split(',');
+  console.log(lineItems);
+  var h1 = lineItems[0];
+  var model = lineItems[1];
+  var role = lineItems[2];
+  var roleValue = lineItems[3];
+  
+  
+  
+  //Object.assign(obj, {dink: lineItems[1]});
+  
+
+  
+  obj[lineHeaders[0]] = h1;
+  obj[lineHeaders[1]] = model;
+  obj[lineHeaders[2]] = role;
+  obj[lineHeaders[3]] = roleValue;
+}
+
+console.log(obj);
+
+*/
+
+
+
+
+
+
+
+/*
+
+
+
+
 if (1 != '1') {
 
 document.getElementById('box-1').style.display = 'none';
@@ -65,4 +127,4 @@ function MouseWheelHandler(e) {
 	myimage.style.width = Math.max(50, Math.min(800, myimage.width + (30 * delta))) + "px";
 
 	return false;
-}
+}*/
