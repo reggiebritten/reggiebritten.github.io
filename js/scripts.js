@@ -8,9 +8,12 @@ console.log(abilityList["Cleave"]["Momentum"]);
 
 
 
-$.get('file_to_read.txt', function(data) {
-   console.log(data);
-}, 'text');
+$.get('myFile.txt', function(data) {    
+    var lines = data.split("\n");
+	console.log(lines);
+
+    });
+});
 
 /*
 var str = `link,model,role,access
