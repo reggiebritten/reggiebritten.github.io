@@ -3,17 +3,19 @@ function clearText(field) {
     else if (field.value == '') field.value = field.defaultValue;
 }
 
-
-console.log(abilityList["Cleave"]["Momentum"]);
-
 $(document).ready(function(){
   $("button").click(function(){
     $.get("items.db", function(data){
       data = "["+data.replace(/}\n/g, "},");
       data = data.substring(0, data.length - 1)  + "]";
       var jsonData = JSON.parse(data);
+      console.log(jsonData)
       for (var i = 0; i < jsonData.length; i++) {
-          console.log(jsonData[i]);
+
+        if (jsonData[i].type == "ability"){
+          console.log(jsonData[i].type);
+        }
+          
       }
     });
   });
