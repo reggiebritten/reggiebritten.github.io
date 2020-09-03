@@ -49,7 +49,9 @@ $(document).ready(function(){
     const keywords = ["Bleeding", "Blessed", "Blinded", "Burning", "Chilled", "Choking", "Compelled", "Corroding", "Cursed", "Deafened", "Defenseless", "Distracted", "Drunk", "Empowered", "Encumbered", "Frightened", "Fumbling", "Grabbed", "Guarded", "Hastened", "Hidden", "Honed", "Invisible", "Kneeling", "Oiled", "Petrified", "Provoked", "Relaxed", "Restrained", "Shocked", "Slowed", "Staggered", "Stunned", "Surprised", "Unbalanced", "Unconscious", "Vortexed", "Weakened", "Wet", "Wracked", "Disarmed", "Knocked-Down", "Confused", "bleeding", "blessed", "blinded", "burning", "chilled", "choking", "compelled", "corroding", "cursed", "deafened", "defenseless", "distracted", "drunk", "empowered", "encumbered", "frightened", "fumbling", "grabbed", "guarded", "hastened", "hidden", "honed", "invisible", "kneeling", "oiled", "petrified", "provoked", "relaxed", "restrained", "shocked", "slowed", "staggered", "stunned", "surprised", "unbalanced", "unconscious", "vortexed", "weakened", "wet", "wracked", "disarmed", "knocked-down", "confused", "base focus", "base momentum", "base poise","Base focus", "Base momentum", "Base poise"];
     keywords.forEach(function(keyword){
       var re = new RegExp(keyword, 'g');
-      Array.from(document.getElementsByClassName("FoLedit")).forEach(element => element.innerHTML = element.innerHTML.replace(re, `<a href="#${keyword}" class="keyword ${keyword.replace(' ', '-')}" title='tooltipPlaceHolder'><b>${keyword}</b></a>`));
+      Array.from(document.getElementsByClassName("FoLedit")).forEach(
+        element => element.innerHTML = element.innerHTML.replace(re, `<a href="#${keyword.toLowerCase()}" class="keyword ${keyword.replace(' ', '-').toLowerCase()}" title='tooltipPlaceHolder'><b>${keyword}</b></a>`)
+        );
     });
 
 
@@ -57,7 +59,9 @@ $(document).ready(function(){
     const icons = ["Bleeding", "Blessed", "Blinded", "Burning", "Chilled", "Choking", "Compelled", "Corroding", "Cursed", "Deafened", "Defenseless", "Distracted", "Drunk", "Empowered", "Encumbered", "Frightened", "Fumbling", "Grabbed", "Guarded", "Hastened", "Hidden", "Honed", "Invisible", "Kneeling", "Oiled", "Petrified", "Provoked", "Relaxed", "Restrained", "Shocked", "Slowed", "Staggered", "Stunned", "Surprised", "Unbalanced", "Unconscious", "Vortexed", "Weakened", "Wet", "Wracked", "Focus", "Momentum", "Poise", "Disarmed", "Knocked-Down", "Confused", "bleeding", "blessed", "blinded", "burning", "chilled", "choking", "compelled", "corroding", "cursed", "deafened", "defenseless", "distracted", "drunk", "empowered", "encumbered", "frightened", "fumbling", "grabbed", "guarded", "hastened", "hidden", "honed", "invisible", "kneeling", "oiled", "petrified", "provoked", "relaxed", "restrained", "shocked", "slowed", "staggered", "stunned", "surprised", "unbalanced", "unconscious", "vortexed", "weakened", "wet", "wracked", "focus", "momentum", "poise", "disarmed", "knocked-down", "confused"];
     icons.forEach(function(icon){
       var re = new RegExp('(?<!base )(?<!Base )(?<!-)(?<!#)(?<!class="keyword\\s)'+icon, 'g');
-      Array.from(document.getElementsByClassName("FoLedit")).forEach(element => element.innerHTML = element.innerHTML.replace(re, `<b><img src='/images/icons/${icon}.png' class='inlineicon'> ${icon}</b>`));
+      Array.from(document.getElementsByClassName("FoLedit")).forEach(
+        element => element.innerHTML = element.innerHTML.replace(re, `<b><img src='/images/icons/${icon.toLowerCase()}.png' class='inlineicon'> ${icon}</b>`)
+        );
     });
 
 
