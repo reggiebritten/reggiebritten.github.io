@@ -1,0 +1,8 @@
+Forum
+Comment on Pages
+Custom Abilities
+Patreon Link
+Database / JSON
+Data stored in url so can bookmark favorite items and sorted views
+cookies
+iframe to forum, google sheets, etc
