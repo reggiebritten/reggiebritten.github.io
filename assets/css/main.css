@@ -2535,7 +2535,16 @@ button,
         text-indent: 3em;
       }
 
-      #main > .inner > section {
-        padding-right: 20%;
-        padding-left: 10%;
+      #main > .inner > section p {
+        padding-right: 30%;
+
     }
+
+    #main > .inner > section h1 {
+      padding-right: 30%;
+
+  }
+
+  #main > .inner > section h2 {
+    padding-right: 30%;
+}
