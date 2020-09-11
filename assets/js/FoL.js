@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 //Get item and skill data
-  $.get("items.db", function(data){
+  $.get("/assets/data/items.db", function(data){
     var dbData = [];
     var skillData = [];
     var itemData = [];
@@ -59,7 +59,7 @@ $(document).ready(function(){
 //Convert keywords into links
    const keywords = ["Bleeding", "Blessed", "Blinded", "Burning", "Chilled", "Choking", "Compelled", "Corroding", "Cursed", "Deafened", "Defenseless", "Distracted", "Drunk", "Empowered", "Encumbered", "Frightened", "Fumbling", "Grabbed", "Guarded", "Hastened", "Hidden", "Honed", "Invisible", "Kneeling", "Oiled", "Petrified", "Provoked", "Relaxed", "Restrained", "Shocked", "Slowed", "Staggered", "Stunned", "Surprised", "Unbalanced", "Unconscious", "Vortexed", "Weakened", "Wet", "Wracked", "Disarmed", "Knocked-Down", "Confused", "Base focus", "Base momentum", "Base poise", "Attack", "Boon", "Boons"];
     keywords.forEach(function(keyword){
-      var re = new RegExp("("+keyword+")", 'gi');
+      var re = new RegExp("(?<!&nbsp;)("+keyword+")", 'gi');
       Array.from(document.getElementsByTagName("P")).forEach(
         element => element.innerHTML = element.innerHTML.replace(re, `<a href="#${keyword.toLowerCase()}" title="tooltipPlaceHolder" class="keyword-${keyword.replace(' ', '-').toLowerCase()}"><strong>$1</strong></a>`)
         );
@@ -69,7 +69,7 @@ $(document).ready(function(){
 //Add icons before relevant text
    const icons = ["Bleeding", "Blessed", "Blinded", "Burning", "Chilled", "Choking", "Compelled", "Corroding", "Cursed", "Deafened", "Defenseless", "Distracted", "Drunk", "Empowered", "Encumbered", "Frightened", "Fumbling", "Grabbed", "Guarded", "Hastened", "Hidden", "Honed", "Invisible", "Kneeling", "Oiled", "Petrified", "Provoked", "Relaxed", "Restrained", "Shocked", "Slowed", "Staggered", "Stunned", "Surprised", "Unbalanced", "Unconscious", "Vortexed", "Weakened", "Wet", "Wracked", "Focus", "Momentum", "Poise", "Disarmed", "Knocked-Down", "Confused"];
    icons.forEach(function(icon){
-      var re = new RegExp(`(?<!base\\s)(?<!Base\\s)(?<!#)(${icon.toLowerCase()})(?!"><strong>)`, 'gi');
+      var re = new RegExp(`(?<!base\\s)(?<!Base\\s)(?<!#)(?<!&nbsp;)(${icon.toLowerCase()})(?!"><strong>)`, 'gi');
       Array.from(document.getElementsByTagName("P")).forEach(
         element => element.innerHTML = element.innerHTML.replace(re, `<img src='/images/icons/${icon.toLowerCase()}.png' class='inlineicon'> <strong>$1</strong>`)
         );
@@ -82,7 +82,7 @@ $(document).ready(function(){
 
 
 //Get journal data
-  $.get("journal.db", function(data){
+  $.get("/assets/data/journal.db", function(data){
     let journalData = [];
     data = "["+data.replace(/}\n/g, "},");
     data = data.substring(0, data.length - 1)  + "]";

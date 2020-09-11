@@ -1989,7 +1989,7 @@ button,
       font-family: 'Font Awesome 5 Free';
       font-weight: 900; }
     #sidebar .toggle:before {
-      //content: '\f0c9';
+      content: '\f0c9';
       font-size: 2rem;
       height: inherit;
       left: 0;
@@ -2202,7 +2202,7 @@ button,
   user-select: none;
   color: #3d4449;
   font-family: "Knights Quest", serif;
-  //font-weight: 400;
+  font-weight: 400;
   letter-spacing: 0.125em;
   list-style: none;
   margin-bottom: 0;
@@ -2212,7 +2212,7 @@ button,
     color: inherit;
     cursor: pointer;
     display: contents;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: bold;
     padding: 0.2em 0; }
     #menu ul a:hover, #menu ul span:hover {
@@ -2232,7 +2232,7 @@ button,
         font-style: normal;
         font-variant: normal;
         text-rendering: auto;
-        line-height: 1;
+        line-height: 1.15;
         text-transform: none !important;
         font-family: 'Font Awesome 5 Free';
         font-weight: 600; }
@@ -2266,7 +2266,7 @@ button,
     margin: 0.5em 0 1.5em 0;
     padding-left: 1em; }
     #menu > ul > li > ul a, #menu > ul > li > ul span {
-      font-size: 2em;
+      font-size: 1.5em;
       color: #3d4449;
       line-height: normal; 
       font-weight: normal;}
@@ -2453,10 +2453,11 @@ button,
 
 }
 
-
 #gs_id50 {
   margin-bottom: 0px !important;
 }
+
+
 
 #wrapper{
   background-image: url("/images/Parchment.jpg");
@@ -2480,8 +2481,6 @@ button,
   margin:0px;
   border: 0px;
 }
-
-
 
 .box {
   background: url("/images/scroll/top-border.png") left top no-repeat, url("/images/scroll/bottom-border.png") left bottom no-repeat, url("/images/Parchment.jpg") top left round;
@@ -2525,7 +2524,18 @@ button,
 
 
 
+      section p:first-child:first-letter {
+        float: left;
+        font-family:"Knights Quest";
+        font-size: 4em;
+        line-height: 0.8em;
+        padding-right: 0.1em;
+      }
+      p:not(:first-child) {
+        text-indent: 3em;
+      }
 
-
-
-
+      #main > .inner > section {
+        padding-right: 20%;
+        padding-left: 10%;
+    }
