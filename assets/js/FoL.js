@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 //Get item and skill data
-  $.get("items.db", function(data){
+  $.get("/assets/data/items.db", function(data){
     var dbData = [];
     var skillData = [];
     var itemData = [];
@@ -82,7 +82,7 @@ $(document).ready(function(){
 
 
 //Get journal data
-  $.get("journal.db", function(data){
+  $.get("/assets/data/journal.db", function(data){
     let journalData = [];
     data = "["+data.replace(/}\n/g, "},");
     data = data.substring(0, data.length - 1)  + "]";
