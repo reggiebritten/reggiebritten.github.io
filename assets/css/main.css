@@ -2504,19 +2504,7 @@ button,
 
 
 
-/*
-	Drop Caps and Paragraphs
-*/
-      section p:first-child:first-letter {
-        float: left;
-        font-family:"Knights Quest";
-        font-size: 4em;
-        line-height: 0.8em;
-        padding-right: 0.1em;
-      }
-      p:not(:first-child) {
-        text-indent: 3em;
-      }
+
 
 /*
 	Narrower Margins for Better Reading
