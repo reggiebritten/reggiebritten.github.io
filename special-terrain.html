@@ -6,69 +6,33 @@
 -->
 <html>
 	<head>
-	<title>Forge of Legends - Home</title>
+	<title>Forge of Legends - Special Terrain</title>
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <meta name="description" content="The official website of the Forge of Legends roleplaying game.">
+    <meta name="description" content="The official website of the Forge of Legends fantasy roleplaying game.">
 	<meta name="keywords" content="tabletop, RPG, fantasy">
     <meta name="author" content="Reggie Britten">
 	<link rel="icon" type="image/png" href="/images/logo.png"/>
-    <link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/tooltipster.bundle.css" />
+	<link rel="stylesheet" href="/assets/js/leaflet/leaflet.css" />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/assets/js/FoL.js"></script>
+	<script src="/assets/js/handlebars-v4.7.7.js"></script>
+	<script src="/assets/js/tooltipster.bundle.js"></script>
+	<script src="/assets/js/leaflet/leaflet.js"></script>
+	<script src="https://kit.fontawesome.com/c754307781.js" crossorigin="anonymous"></script>
 	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
+	<body>
 		<div id="wrapper">
-			<!-- Main -->
-			<div id="main">
-				<div class="inner">
-					<div><img src="images/pic11.jpg" alt="" class="image main" /> </div>
+			<div id="sidebar">
 
-<h1 id="special-terrain">Special Terrain</h1>
-<p>Sometimes, the battlefield itself plays as big a role as the combatants. Special terrain is used to describe aspects of the area that have unique effects, especially during combat.
-Special terrain is often removed or replaced by other special terrain when certain conditions are met, but it is also possible for a space to have multiple special terrain effects.</p>
-<h3 id="shattered-terrain">Shattered Terrain</h3>
-<p>Shattered terrain is covered in large rocks or rubble. A space of shattered terrain requires two movement points to enter. A character knocked-down or kneeling in shattered terrain becomes unbalanced.
-If a floor becomes shattered terrain, it may collapse into an area below at the GM’s discretion. Wooden floors will usually collapse, but stone ones will usually not. Shattered terrain lasts indefinitely.</p>
-<h3 id="overgrown-terrain">Overgrown Terrain</h3>
-<p>Overgrown terrain is covered in thick bushes, webs, or other fibers. A space of overgrown terrain requires two movement points to enter. A character in overgrown terrain adds a bane to all their attacks and all attacks against them. A character kneeling or knocked-down becomes restrained by the thick fibers.
-Overgrown terrain shrivels after 1 minute if it is not on fertile soil, otherwise it lasts indefinitely. A space of overgrown terrain becomes burning terrain if it is in a fire area or line ability, or if it contains a burning character.</p>
-<h3 id="burning-terrain">Burning Terrain</h3>
-<p>Burning terrain is on fire. When a character enters burning terrain for the first time in a round or ends their turn there, they must lose -4 poise or they become burning. A character kneeling or knocked-down in burning terrain automatically becomes burning.
-If a space of burning terrain overlaps with a space of wet terrain, both are replaced by an obscuring cloud. If a space of burning terrain overlaps with a space of frozen terrain, both are replaced by wet terrain. Burning terrain in the area of an ice or water line or area effect is removed. Burning terrain returns to normal after 1 round unless it contains flammable material. If there is flammable material, then it lasts indefinitely and may spread to other flammable objects.</p>
-<h3 id="wet-terrain">Wet Terrain</h3>
-<p>Wet terrain is covered in at least a foot of water (deep water is also wet terrain). A lightning area or line ability that includes a space of wet terrain also includes all adjacent spaces of wet terrain. A character knocked-down or keeling in wet terrain gains the wet condition.
-If a space of wet terrain overlaps with a space of burning terrain, then both are replaced by an obscuring cloud. Wet terrain is replaced by frozen terrain and becomes frozen terrain if it is in the area of an ice area or line ability. Wet terrain returns to normal at the end of the round if the water can flow away, otherwise it lasts indefinitely.</p>
-<h3 id="frozen-terrain">Frozen Terrain</h3>
-<p>Frozen terrain is covered in a thick sheet of ice or snow. When a character enters frozen terrain for the first time on a round or ends their turn there, they must succeed on a moderate agility roll or they become unbalanced. A character in frozen terrain is vulnerable to push abilities. A character kneeling or knocked-down in overgrown terrain becomes chilled.
-If a space of frozen terrain overlaps with a space of burning terrain, then both are replaced by wet terrain. Frozen terrain is removed if it is included in a fire area or line ability. Frozen terrain thaws after at least a minute, depending on the weather.</p>
-<h3 id="goopy-terrain">Goopy Terrain</h3>
-<p>Goopy terrain is covered in mud, sludge, or some other goo that makes moving and getting up difficult. A space of goopy terrain requires two movement points to enter. The kneeling condition can’t be removed from a creature in goopy terrain.</p>
-<h3 id="oiled-terrain">Oiled Terrain</h3>
-<p>Oiled terrain is covered in a layer of slippery, flammable oil. When a character enters oiled terrain for the first time on a round or ends their turn there, they must succeed on a moderate agility roll or they become unbalanced. A character in oiled terrain is vulnerable to push abilities. A character kneeling or knocked-down in oiled terrain becomes oiled.
-Oiled terrain is replaced by burning terrain and becomes burning terrain if it is in the area of a fire area or line ability or if it contains a burning character. If one space of oiled terrain becomes burning, all contiguous spaces also become burning. Otherwise, oiled terrain lasts indefinitely.</p>
-<h3 id="caustic-terrain">Caustic Terrain</h3>
-<p>Caustic terrain is covered in extremely corrosive liquid that eats away at anything immersed in it. When a character enters caustic terrain for the first time on a round or ends their turn there, they suffer one stress. A character kneeling or knocked-down in caustic terrain becomes corroding and suffers three stress instead of one, while a character completely submerged in caustic terrain suffers five stress instead. Caustic terrain normally loses its potency after one minute.</p>
-<h3 id="blessed-terrain">Blessed Terrain</h3>
-<p>Blessed terrain has been hallowed by a force of justice. When a character enters blessed terrain for the first time in a round or ends their turn there, they must lose -3   focus or they become blessed. Undead and fiends add a bane to attack actions against targets in blessed terrain. Blessed terrain removes but does not replace cursed terrain. Blessed terrain returns to normal after 1 minute.</p>
-<h3 id="cursed-terrain">Cursed Terrain</h3>
-<p>Cursed terrain has been desecrated by a force of evil. When a character enters cursed terrain for the first time in a round or ends their turn there, they must lose -3   focus or they become cursed. A bane is added to all attack actions against undead or fiends in cursed terrain. Cursed terrain removes but does not replace blessed terrain. Cursed terrain returns to normal after 1 minute.</p>
-<h3 id="obscuring-cloud">Obscuring Cloud</h3>
-<p>An obscuring cloud fills the are above the terrain with dense mist or smoke. Characters are unable to see more than one space through an obscuring cloud. Abilities that pass through more than one space of obscuring terrain can’t be aimed properly and are ineffective, unless they are area abilities (but not line abilities). All visual actions suffer a bane against targets in an obscuring cloud, and characters in an obscuring cloud have their perception decreased by two.
-The obscuring cloud dissipates at the end of the round if it can flow downhill or if a strong wind is present, otherwise it lasts 1 minute. Depending on the source, an obscuring cloud may also exist underwater, at the GM’s discretion.</p>
-<h3 id="toxic-cloud">Toxic Cloud</h3>
-<p>A toxic cloud fills the air above the terrain with flammable, poisonous vapors. Characters who find themselves in the toxic cloud without first holding their breath on their turn gain the choking condition, which cannot be removed as long as they remain in the cloud. The toxic cloud is flammable and is replaced by burning terrain if it is in the area of a fire area or line ability or if is includes a burning character. The toxic cloud dissipates at the end of the round if it can flow downhill or if a strong wind is present, otherwise it lasts 1 minute.</p>
-<h3 id="lava">Lava</h3>
-<p>Lava is extremely dangerous molten rock. When a character enters lava for the first time in a round or ends their turn there, they immediately become burning and suffer five stress. A character knocked-down, kneeling or immersed in lava suffers 5d6 stress instead. Many lesser foes will be defeated as soon as they are knocked into lava.
-If a space of lava overlaps with a space of frozen terrain or wet terrain, or if it is in the area of a ice or water area or line ability, then the lava solidifies into relatively safe stone. However, if the space is part of a larger body of lava, it will probably melt and return to lava at the end of the round.</p>
-
-				</div>
-			</div>
-			<!-- Sidebar -->
-        	<div id="sidebar">
-    <img src="/images/scroll/topleft-border.png" id="sidebar-top-scroll">
     <div class="inner">
+        <img src="assets/css/ranger/PartyFrameBG.png" height="110px" width="auto" id="sidebar-handle">
+
         <!-- Search -->
             <section id="search" class="alt">
                 <script async src="https://cse.google.com/cse.js?cx=a3cc61b05e5e110db"></script>
@@ -78,258 +42,207 @@ If a space of lava overlaps with a space of frozen terrain or wet terrain, or if
         <!-- Menu -->
         <nav id="menu">
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/introduction.html">Introduction</a></li>
-                <h2>Quck Reference</h2>
+                <li><h2><a href="/introduction.html">Introduction</a></h2></li>
 
-                <li>
-                    <span class="opener">Classes</span>
-                    <ul>
-                        
-                        <li></li><a href="/classes/Weaponmaster.html"></li>
-                          Weaponmaster
-                        </a>
-                      
-                        <li></li><a href="/classes/Berserker.html"></li>
-                          Berserker
-                        </a>
-                      
-                        <li></li><a href="/classes/Tactician.html"></li>
-                          Tactician
-                        </a>
-                      
-                        <li></li><a href="/classes/Monk.html"></li>
-                          Monk
-                        </a>
-                      
-                        <li></li><a href="/classes/Assassin.html"></li>
-                          Assassin
-                        </a>
-                      
-                        <li></li><a href="/classes/Bard.html"></li>
-                          Bard
-                        </a>
-                      
-                        <li></li><a href="/classes/Trickster.html"></li>
-                          Trickster
-                        </a>
-                      
-                        <li></li><a href="/classes/Acrobat.html"></li>
-                          Acrobat
-                        </a>
-                      
-                        <li></li><a href="/classes/Elementalist.html"></li>
-                          Elementalist
-                        </a>
-                      
-                        <li></li><a href="/classes/Wizard.html"></li>
-                          Wizard
-                        </a>
-                      
-                        <li></li><a href="/classes/Enchanter.html"></li>
-                          Enchanter
-                        </a>
-                      
-                        <li></li><a href="/classes/Psion.html"></li>
-                          Psion
-                        </a>
-                      
-                        <li></li><a href="/classes/Paladin.html"></li>
-                          Paladin
-                        </a>
-                      
-                        <li></li><a href="/classes/Excorcist.html"></li>
-                          Excorcist
-                        </a>
-                      
-                        <li></li><a href="/classes/Necromancer.html"></li>
-                          Necromancer
-                        </a>
-                      
-                        <li></li><a href="/classes/Warlock.html"></li>
-                          Warlock
-                        </a>
-                      
-                        <li></li><a href="/classes/Ranger.html"></li>
-                          Ranger
-                        </a>
-                      
-                        <li></li><a href="/classes/Druid.html"></li>
-                          Druid
-                        </a>
-                      
-                        <li></li><a href="/classes/Shapeshifter.html"></li>
-                          Shapeshifter
-                        </a>
-                      
-                        <li></li><a href="/classes/Beastmaster.html"></li>
-                          Beastmaster
-                        </a>
-                      
-                        <li></li><a href="/classes/Alchemist.html"></li>
-                          Alchemist
-                        </a>
-                      
-                        <li></li><a href="/classes/Inventor.html"></li>
-                          Inventor
-                        </a>
-                      
-                        <li></li><a href="/classes/Demolitionist.html"></li>
-                          Demolitionist
-                        </a>
-                      
-                        <li></li><a href="/classes/Mechanist.html"></li>
-                          Mechanist
-                        </a>
-                      
-                    </ul>
-                </li>
-                <li><a href="/weapons.html">Weapons</a></li>
-                <li><a href="/skill-browser.html">Skill Broswer</a></li>
-                <li>
-                    <span class="opener">Glossary</span>
-                    <ul>
-                        <li><a href="/skill-tags.html">Skill Tags</a></li>
-                        <li><a href="/conditions.html#condition-list">Conditions</a></li>
-                        <li><a href="/stress.html#affliction-list">Afflictions</a></li>
-                        <li><a href="/special-terrain.html">Special Terrain</a></li>
-                    </ul>
-                </li>
-                <h2>Core Rules</h2>
-                <li>
-                    <a href="/fate.html">Fate</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/fate.html#twist-of-fate">Twists of Fate</a></li>
-                        <li><a href="/fate.html#tempt-fate">Tempting Fate</a></li>
-                        <li><a href="/fate.html#tempt-fate">Fate Dice</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/abilities.html">Abilities</a><span class="opener"></span>
+                <h1>Characters</h1>
 
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/soon.html">Ancestry</a></h2>
+                    <ul>
+                        <li></li><a href="/soon.html">Coming Soon!</a></li>
+                        <!-- <li><a href="/ancestry.html#human">Human</a></li>
+                        <li><a href="/ancestry.html#elf">Elf</a></li>
+                        <li><a href="/ancestry.html#dwarf">Dwarf</a></li>
+                        <li><a href="/ancestry.html#gnome">Gnome</a></li>
+                        <li><a href="/ancestry.html#orc">Orc</a></li>
+                        <li><a href="/ancestry.html#beast-kin">Beast-Kin</a></li>
+                        <li><a href="/ancestry.html#mixed">Mixed</a></li> -->
+                    </ul>
+                </li>
+                                
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/abilities.html">Abilities</a></h2>
                     <ul>
                         <li><a href="/abilities.html#agility">Agility</a></li>
                         <li><a href="/abilities.html#brawn">Brawn</a></li>
-                        <li><a href="/abilities.html#insight">Insight</a></li>
-                        <li><a href="/abilities.html#ability-rolls">Ability Rolls</a></li>
+                        <li><a href="/abilities.html#cunning">Cunning</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/ancestry.html">Ancestry</a><span class="opener"></span>
 
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/personality.html">Personality</a></h2>
                     <ul>
-                        <li><a href="/ancestry.html#human">Humans</a></li>
-                        <li><a href="/ancestry.html#elf">Elves</a></li>
-                        <li><a href="/ancestry.html#dwarf">Dwarves</a></li>
-                        <li><a href="/ancestry.html#gnome">Gnomes</a></li>
-                        <li><a href="/ancestry.html#orc">Orcs</a></li>
-                        <li><a href="/ancestry.html#beastkin">Beastkin</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/personality.html">Personality</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/personality.html#traits">Personality Traits</a></li>
-                        <li><a href="/personality.html#fateful-deeds">Fateful Deeds</a></li>
-                        <li><a href="/personality.html#influince">Influince Rolls</a></li>
-                        <li><a href="/personality.html#backgrounds">Backgrounds</a></li>
-                        <li><a href="/personality.html#lore">Lore</a></li>
-                        <li><a href="/personality.html#indulgences">Indulgences</a></li>
+                        <li><a href="/personality.html#values">Values</a></li>
+                        <li><a href="/personality.html#bold-vs-subtle">Bold vs Subtle</a></li>
+                        <li><a href="/personality.html#idealistic-vs-pragmatic">Idealistic vs Pragmatic</a></li>
+                        <li><a href="/personality.html#serious-vs-whimsical">Serious vs Whimsical</a></li>
+                        <li><a href="/personality.html#training">Training</a></li>
+                        <li><a href="/personality.html#expertise">Expertise</a></li>
+                        <li><a href="/personality.html#flashbacks">Flashbacks</a></li>
+                        <li><a href="/personality.html#lore-check">Lore Checks</a></li>
+                        <li><a href="/personality.html#flaw">Character Flaws</a></li>
+                        <li><a href="/personality.html#indulgence">Indulgences</a></li>
                         <li><a href="/personality.html#personal-legend">Personal Legend</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/skills.html">Skills</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/class.html">Classes</a></h2>
                     <ul>
-                        <li><a href="/skills.html#class-feature">Class Feature</a></li>
-                        <li><a href="/skills.html#fighting-style">Fighting Style</a></li>
-                        <li><a href="/skills.html#repertoire">Repertoire</a></li>
-                        <li><a href="/skills.html#unlocking">Unlocking Skills</a></li>
+                        <li><a href="/class.html#core-feature">Core Feature</a></li>
+                        <li><a href="/class.html#fighting--style">Fighting Style</a></li>
+                        <li><a href="/class.html#expereince">Experience</a></li>
+                        <li><a href="/class.html#assassin">Assassin</a></li>
+                        <li><a href="/class.html#bard">Bard</a></li>
+                        <li><a href="/class.html#battlemaster">Battlemaster</a></li>
+                        <li><a href="/class.html#beastmaster">Beastmaster</a></li>
+                        <li><a href="/class.html#berserker">Berserker</a></li>
+                        <li><a href="/class.html#elementalist">Elementalist</a></li>
+                        <li><a href="/class.html#enchanter">Enchanter</a></li>
+                        <li><a href="/class.html#geomancer">Geomancer</a></li>
+                        <li><a href="/class.html#monk">Monk</a></li>
+                        <li><a href="/class.html#paladin">Paladin</a></li>
+                        <li><a href="/class.html#shaman">Shaman</a></li>
+                        <li><a href="/class.html#shapeshifter">Shapeshifter</a></li>
+                        <li><a href="/class.html#trickster">Trickster</a></li>
+                        <li><a href="/class.html#warlock">Warlock</a></li>
+                        <li><a href="/class.html#wizard">Wizard</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/equipment.html">Equipment</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/equipment.html">Equipment</a></h2>
                     <ul>
-                        <li><a href="/equipment.html#equipment-slots">Equipment Slots</a></li>
-                        <li><a href="/equipment.html#impression">Impression</a></li>
                         <li><a href="/equipment.html#inventory">Inventory</a></li>
-                        <li><a href="/equipment.html#equipment-list">Equipment List</a></li>
+                        <li><a href="/equipment.html#weapon-proficiency">Weapon Proficiency</a></li>
+                        <li><a href="/equipment.html#armor">Armor</a></li>
+                        <li><a href="/equipment.html#equipment-slots">Equipment Slots</a></li>
+                        <li><a href="/equipment.html#item-tags">Item Tags</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/exploration.html">Exploration</a><span class="opener"></span>
+
+                <hr>
+                
+                <li class="">
+                    <h2> <a href="/soon.html">Skill List</a></h2>
+                </li>
+                <li class="">
+                    <h2> <a href="/soon.html">Equipment List</a></h2>
+                </li>
+
+
+
+
+                <h1>Gameplay</h1>
+
+
+                <li class="opener">   
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/rolls.html">Rolls</a></h2>
                     <ul>
-                        <li><a href="/exploration.html#special-movement">Special Movement</a></li>
-                        <li><a href="/exploration.html#lifting-dragging">Lifting & Dragging</a></li>
-                        <li><a href="/exploration.html#breaking">Breaking Objects</a></li>
-                        <li><a href="/exploration.html#light-darkness">Light & Darkness</a></li>
-                        <li><a href="/exploration.html#stealth">Stealth</a></li>
-                        <li><a href="/exploration.html#chase">Chase Scenes</a></li>
-                        <li><a href="/exploration.html#doom">Time & Doom</a></li>
-                        <li><a href="/exploration.html#travel">Overland Travel</a></li>
-                        <li><a href="/exploration.html#travel-activities">Travel Activities</a></li>
+                        <li><a href="/rolls.html#roll-difficulty">Roll Difficulty</a></li>
+                        <li><a href="/rolls.html#target-number">Target Number</a></li>
+                        <li><a href="/rolls.html#roll-results">Roll Results</a></li>
+                        <li><a href="/rolls.html#boons--banes">Boons & Banes</a></li>
+                        <li><a href="/rolls.html#push-your-luck">Push Your Luck</a></li>
+                        <li><a href="/rolls.html#play-it-safe">Play it Safe</a></li>
+                        <li><a href="/rolls.html#group-rolls">Group Rolls</a></li>
+                        <li><a href="/rolls.html#opposed-rolls">Opposed Rolls</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">   
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/fate.html">Fate</a></h2>
+                    <ul>
+                        <li><a href="/fate.html#fateful-deeds">Fateful Deeds</a></li>
+                        <li><a href="/fate.html#twists-of-fate">Twists of Fate</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/exploration.html">Exploration</a></h2>
+                    <ul>
+                        <li><a href="/exploration.html#jumping">Jumping</a></li>
+                        <li><a href="/exploration.html#climbing">Climbing</a></li>
+                        <li><a href="/exploration.html#flying">Flying</a></li>
+                        <li><a href="/exploration.html#falling">Falling</a></li>
+                        <li><a href="/exploration.html#swimming">Swimming</a></li>
+                        <li><a href="/exploration.html#breath-holding">Breath Holding</a></li>
+                        <li><a href="/exploration.html#sight--darkness">Sight & Darkness</a></li>
+                        <li><a href="/exploration.html#hiding">Hiding</a></li>
+                        <li><a href="/exploration.html#damaging-objects">Damaging Objects</a></li>
+                        <li><a href="/exploration.html#doom">Doom</a></li>
                         <li><a href="/exploration.html#resting">Resting</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/combat.html">Combat</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/overland-travel.html">Travel</a></h2>
                     <ul>
-                        <li><a href="/combat.html#turns">Turns & Rounds</a></li>
-                        <li><a href="/combat.html#vigor">Vigor</a></li>
-                        <li><a href="/combat.html#skills">Skills</a></li>
-                        <li><a href="/combat.html#universal-skills">Universal Skills</a></li>
-                        <li><a href="/combat.html#concentration">Concentration</a></li>
-                        <li><a href="/combat.html#movement">Movement & Position</a></li>
-                        <li><a href="/combat.html#support">Support Skills</a></li>
-                        <li><a href="/combat.html#attack">Attack & Defense</a></li>
-                        <li><a href="/combat.html#fated-actions">Fated & Doomed Actions</a></li>
-                        <li><a href="/combat.html#depleted-vigor">Depleted Vigor</a></li>
-                        <li><a href="/combat.html#defeat">Defeat</a></li>
-                        <li><a href="/combat.html#mounted-combat">Mounted Combat</a></li>
-                        <li><a href="/combat.html#water-combat">Water Combat</a></li>
+                        <li><a href="/overland-travel.html#landscape">Landscape</a></li>
+                        <li><a href="/overland-travel.html#weather">Weather</a></li>
+                        <li><a href="/overland-travel.html#mounts--vehicles">Mounts & Vehicles</a></li>
+                        <li><a href="/overland-travel.html#travel-activities">Travel Activities</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/forging-legends.html">Forging Legends</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/stress.html">Stress</a></h2>
                     <ul>
-                        <li><a href="/forging-legends.html#legendary-deeds">Legendary Deeds</a></li>
-                        <li><a href="/forging-legends.html#commemoration">Commemoration</a></li>
-                        <li><a href="/forging-legends.html#legendary-quests">Legendary Quests</a></li>
-                        <li><a href="/forging-legends.html#legends-of-old">Legends of Old</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/downtime.html">Downtime</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/downtime.html#crafting">Crafting</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/stress.html">Stress & Affliction</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/stress.html#stress">Stress</a></li>
                         <li><a href="/stress.html#affliction">Afflictions</a></li>
+                        <li><a href="/stress.html#dying">Dying</a></li>
+                        <li><a href="/stress.html#stress-tolerance">Stress Tolerance</a></li>
                         <li><a href="/stress.html#affliction-list">Affliction List</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/conditions.html">Conditions</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/skills.html">Skills</a></h2>
                     <ul>
-                        <li><a href="/conditions.html#tags">Condition Tags</a></li>
+                        <li><a href="/skills.html#type">Type</a></li>
+                        <li><a href="/skills.html#targets">Targets</a></li>
+                        <li><a href="/skills.html#defense">Defense</a></li>
+                        <li><a href="/skills.html#effects">Effects</a></li>
+                        <li><a href="/skills.html#cunning-effects">Cunning Effects</a></li>
+                        <li><a href="/skills.html#skill-tags">Skill Tags</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/combat.html">Combat</a></h2>
+                    <ul>
+                        <li><a href="/combat.html#turns--rounds">Turns & Rounds</a></li>
+                        <li><a href="/combat.html#defenses">Defenses</a></li>
+                        <li><a href="/combat.html#defending--yielding">Defending vs Yielding</a></li>
+                        <li><a href="/combat.html#damage--defeat">Damage & Defeat</a></li>
+                        <li><a href="/combat.html#movement--position">Movement & Position</a></li>
+                        <li><a href="/combat.html#zone-of-control">Zone of Control</a></li>
+                        <li><a href="/combat.html#mounted-combat">Mounted Combat</a></li>
+                        <li><a href="/combat.html#combat-in-water">Combat in Water</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/conditions.html">Conditions</a></h2>
+                    <ul>
+                        <li><a href="/conditions.html#removing-conditions">Removing Conditions</a></li>
+                        <li><a href="/conditions.html#condition-tags">Condition Tags</a></li>
                         <li><a href="/conditions.html#condition-list">Condition List</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/special-terrain.html">Special Terrain</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/special-terrain.html">Terrain</a></h2>
                     <ul>
                         <li><a href="/special-terrain.html#shattered-terrain">Shattered Terrain</a></li>
-                        <li><a href="/special-terrain.html#overgrown-terrain">Overgrown Terrain</a></li>
+                        <li><a href="/special-terrain.html#tangled-terrain">Tangled Terrain</a></li>
+                        <li><a href="/special-terrain.html#spiked-terrain">Spiked Terrain</a></li>
                         <li><a href="/special-terrain.html#burning-terrain">Burning Terrain</a></li>
                         <li><a href="/special-terrain.html#wet-terrain">Wet Terrain</a></li>
-                        <li><a href="/special-terrain.html#frozen-terrain">Frozen Terrain</a></li>
+                        <li><a href="/special-terrain.html#icy-terrain">Icy Terrain</a></li>
+                        <li><a href="/special-terrain.html#snowy-terrain">Snowy Terrain</a></li>
                         <li><a href="/special-terrain.html#goopy-terrain">Goopy Terrain</a></li>
-                        <li><a href="/special-terrain.html#oiled-terrain">Oiled Terrain</a></li>
-                        <li><a href="/special-terrain.html#caustic-terrain">Caustic Terrain</a></li>
+                        <li><a href="/special-terrain.html#oily-terrain">Oily Terrain</a></li>
+                        <li><a href="/special-terrain.html#corrosive-terrain">Corrosive Terrain</a></li>
                         <li><a href="/special-terrain.html#blessed-terrain">Blessed Terrain</a></li>
                         <li><a href="/special-terrain.html#cursed-terrain">Cursed Terrain</a></li>
                         <li><a href="/special-terrain.html#obscuring-cloud">Obscuring Cloud</a></li>
@@ -337,11 +250,36 @@ If a space of lava overlaps with a space of frozen terrain or wet terrain, or if
                         <li><a href="/special-terrain.html#lava">Lava</a></li>
                     </ul>
                 </li>
+
+
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/legends.html">Legends</a></h2>
+                    <ul>
+                        <li><a href="/forging-legends.html#legendary-deeds">Legendary Deeds</a></li>
+                        <li><a href="/forging-legends.html#commemorating-legends">Comemorating Legends</a></li>
+                        <li><a href="/forging-legends.html#legendary-quests">Legendary Quests</a></li>
+                        <li><a href="/forging-legends.html#legends-of-old">Legends of Old</a></li>
+                    </ul>
+                </li>
+                <!-- <li>
+                    <a href="/downtime.html">Downtime</a><span class="opener"></span>
+                    <ul>
+                        <li><a href="/downtime.html#crafting">Crafting</a></li>
+                    </ul>
+                </li> -->
+
+
+                
+                <h1>Gamemastery</h1>
+                <h2> </i> <a href="/soon.html">Coming Soon!</a></h2>
+
+
             </ul>
         </nav>
 
         <!-- ??? -->
-            <section>
+            <!-- <section>
             <header class="major">
                 <h2>Latest Skills</h2>
             </header>
@@ -362,10 +300,10 @@ If a space of lava overlaps with a space of frozen terrain or wet terrain, or if
             <ul class="actions">
                 <li><a href="/#" class="button">More</a></li>
             </ul>
-        </section>
+        </section> -->
 
         <!-- ??? -->
-        <section>
+        <!-- <section>
             <header class="major">
                 <h2>Get in touch</h2>
             </header>
@@ -376,32 +314,118 @@ If a space of lava overlaps with a space of frozen terrain or wet terrain, or if
                 <li class="icon solid fa-home">1234 Somewhere Road #8254<br />
                 Nashville, TN 00000-0000</li>
             </ul>
-        </section>
+        </section> -->
 
         <!-- Footer -->
-        <footer id="footer">
+        <!-- <footer id="footer">
             <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="/https://unsplash.com">Unsplash</a>. Design: <a href="/https://html5up.net">HTML5 UP</a>.</p>
-        </footer>
+        </footer> -->
     </div>
 </div>
+			<div id="main">
+					<h1 id="special-terrain">Special Terrain</h1>
+
+<p>Sometimes, the battlefield itself plays as big a role as the combatants. Special terrain is used to describe aspects of the area that have unique effects. All spaces of special terrain, except clouds require an additional point of movement to enter unless you are <a href="combat.html#shoving">shoved</a>.</p>
+
+<p>Each space may only have one type of special terrain at a time, although toxic and obscuring clouds may float over other terrain. If a space already contains special terrain and a new special terrain would be added, the GM will decide weather the new terrain replaces the old, weather the old terrain remains, or weather they combine into a new special terrain or cancel each other out.</p>
+
+<p>Many special terrains apply additional effects to characters who become <a href="conditions.html#knocked-down">knocked-down</a> in them. Some special terrains also change when they are included in certain types of skills. These effects apply to any space that includes a character targeted by a skill with the specified <a href="skills.html#skill-tags">tag</a>, as well as any space in an <a href="skills.html#blast">blast</a> or <a href="skills.html#line">line</a> with that tag.</p>
+
+<h2 id="shattered-terrain">Shattered Terrain</h2>
+
+<p>Shattered terrain is covered in large rocks or rubble. A character <a href="conditions.html#knocked-down">knocked-down</a> into shattered terrain is <a href="combat.html#disarmed">disarmed</a>.</p>
+
+<p>If a floor becomes shattered terrain, it may collapse into an area below at the GM’s discretion. Wooden floors will usually collapse, but stone ones will usually not. Shattered terrain lasts indefinitely.</p>
+
+<h2 id="tangled-terrain">Tangled Terrain</h2>
+
+<p>Tangled terrain is covered in thick bushes, webs, or other fibers. While you’re in tangled terrain, all your <a href="skills.html#attack">attacks</a> suffer a <a href="skills.html#bane">bane</a>, and all attacks suffer a bane against you. A character <a href="conditions.html#knocked-down">knocked-down</a> into tangled terrain becomes <a href="conditions.html#restrained">restrained</a> by the thick fibers.</p>
+
+<p>A space of tangled terrain is transformed into <a href="special-terrain.html#burning-terrain">burning terrain</a> if it is included in a <a href="skills.html#fire">fire</a> skill or if it contains a <a href="conditions.html#burning">burning</a> character. Tangled terrain lasts indefinitely.</p>
+
+<h2 id="spiked-terrain">Spiked Terrain</h2>
+
+<p>Spiked terrain is covered in sharp spikes, thorns, caltrops, or other jagged material. You lose your choice of -1 <a href="combat.html#poise">poise</a>, <a href="combat.html#momentum">momentum</a>, or <a href="combat.html#focus">focus</a> for each space you move or are <a href="combat.html#shoving">shoved</a> into spiked terrain. A character <a href="conditions.html#knocked-down">knocked-down</a> into tangled terrain becomes <a href="conditions.html#bleeding">bleeding</a>.</p>
+
+<p>Spiked terrain lasts indefinitely.</p>
+
+<h2 id="burning-terrain">Burning Terrain</h2>
+
+<p>Burning terrain is on fire. When you enter burning terrain for the first time in a round or end your turn there, you must spend -4 poise or you become <a href="conditions.html#burning">burning</a>. A character <a href="conditions.html#knocked-down">knocked-down</a> into burning terrain automatically becomes burning.</p>
+
+<p>A space of burning terrain included in a <a href="skills.html#water">water</a> or <a href="skills.html#ice">ice</a> skill is transformed into an <a href="special-terrain.html#obscuring-cloud">obscuring cloud</a>. Burning terrain returns to normal after 1 round unless it contains flammable material. If there is flammable material, then it lasts indefinitely and may spread to other flammable objects.</p>
+
+<h2 id="wet-terrain">Wet Terrain</h2>
+
+<p>Wet terrain is covered in at least a foot of water, and deep water is also wet terrain. A <a href="skills.html#lightning">lightning</a> <a href="skills.html#blast">blast</a> or <a href="skills.html#line">line</a> skill that includes a space of wet terrain also includes all adjacent spaces of wet terrain. A character <a href="conditions.html#knocked-down">knocked-down</a> into wet terrain gains the <a href="conditions.html#wet">wet</a> condition. While you are in wet terrain, you may choose to become wet as a reaction on your turn.</p>
+
+<p>A space of wet terrain included in a fire or lightning skill is transformed into an <a href="special-terrain.html#obscuring-cloud">obscuring cloud</a>. A space of wet terrain included in an <a href="skills.html#ice">ice</a> skill is transformed into icy terrain. Wet terrain returns to normal at the end of the round if the water can flow away, otherwise it lasts indefinitely.</p>
+
+<h2 id="icy-terrain">Icy Terrain</h2>
+
+<p>Icy terrain is covered in a sheet of slippery ice. When you enter icy terrain for the first time in a round or end your turn there, you must spend -4 poise or you become <a href="conditions.html#unbalanced">unbalanced</a>. For each space you are <a href="combat.html#shoving">shoved</a> into icy terrain, you are moved two spaced instead of one. A character <a href="conditions.html#knocked-down">knocked-down</a> in icy terrain becomes <a href="conditions.html#chilled">chilled</a>.</p>
+
+<p>A space of icy terrain included in a fire skill is transformed into <a href="special-terrain.html#wet-terrain">wet terrain</a>. Icy terrain thaws after at least a minute, but could last indefinitely depending on the weather.</p>
+
+<h2 id="snowy-terrain">Snowy Terrain</h2>
+
+<p>Snowy terrain is covered in a thick sheet of fluffy snow. A character knocked-down in snowy terrain becomes <a href="conditions.html#chilled">chilled</a>.</p>
+
+<p>A space of snowy terrain included in a fire skill is replaced by an obscuring cloud. Snowy terrain thaws after at least a minute, but could last indefinitely depending on the weather.</p>
+
+<h2 id="goopy-terrain">Goopy Terrain</h2>
+
+<p>Goopy terrain is covered in mud, sludge, or some other goo that makes moving and getting up difficult. The kneeling condition is <a href="conditions.html#persistent">persistent</a> while you’re in goopy terrain. When you get up from being <a href="conditions.html#knocked-down">knocked-down</a> while you’re in goopy terrain, you automatically become <a href="conditions.html#kneeling">kneeling</a>.</p>
+
+<p>Goopy terrain lasts indefinitely.</p>
+
+<h2 id="oily-terrain">Oily Terrain</h2>
+
+<p>Oily terrain is covered in a layer of slippery, flammable oil. When you enter oily terrain for the first time in a round or end your turn there, you must spend -4 poise or you become <a href="conditions.html#unbalanced">unbalanced</a>. For each space you are <a href="combat.html#shoving">shoved</a> into oily terrain, you are moved two spaced instead of one. A character <a href="conditions.html#knocked-down">knocked-down</a> in oily terrain becomes <a href="conditions.html#oiled">oiled</a>.</p>
+
+<p>Oily terrain is replaced by burning terrain and becomes burning terrain if it is in the area of a fire area or line ability or if it contains a burning character. If one space of oiled terrain becomes burning, all contiguous spaces also become burning. Otherwise, oiled terrain lasts indefinitely.</p>
+
+<h2 id="corrosive-terrain">Corrosive Terrain</h2>
+
+<p>Corrosive terrain is covered in extremely caustic liquid that eats away at anything immersed in it. When you enter corrosive terrain for the first time on a round or end your their turn there, you suffer 1 <a href="stress.md">stress</a>. A character kneeling or <a href="conditions.html#knocked-down">knocked-down</a> in corrosive terrain becomes <a href="conditions.html#corroding">corroding</a> and suffers three stress instead of one.</p>
+
+<p>Corrosive terrain normally loses its potency after one minute.</p>
+
+<h2 id="blessed-terrain">Blessed Terrain</h2>
+
+<p>Blessed terrain has been hallowed by a force of justice. When you enter blessed terrain for the first time in a round or end your turn there, you must spend -4 <a href="combat.html#focus">focus</a> or you become <a href="conditions.html#blessed">blessed</a>. Undead and demons suffer a <a href="skills.html#bane">bane</a> on <a href="skills.html#attack">attacks</a> against targets in blessed terrain.</p>
+
+<p>Blessed terrain returns to normal after 1 minute.</p>
+
+<h2 id="cursed-terrain">Cursed Terrain</h2>
+
+<p>Cursed terrain has been desecrated by a force of evil. When you enter cursed terrain for the first time in a round or end your turn there, you must spend -4 <a href="combat.html#focus">focus</a> or you become <a href="conditions.html#cursed">cursed</a>. Undead and demons gain a <a href="skills.html#boon">boon</a> on <a href="skills.html#attack">attacks</a> against targets in cursed terrain.</p>
+
+<p>Cursed terrain returns to normal after 1 minute.</p>
+
+<h2 id="obscuring-cloud">Obscuring Cloud</h2>
+
+<p>An obscuring cloud fills the are above the terrain with dense mist or smoke. While you’re in an obscuring cloud, you can only things in spaces adjacent to you, and can only be seen by adjacent characters.</p>
+
+<p>The obscuring cloud dissipates at the end of the round  if a strong wind is present, otherwise it lasts 1 minute.</p>
+
+<h2 id="toxic-cloud">Toxic Cloud</h2>
+
+<p>A toxic cloud fills the air above the terrain with flammable, poisonous vapors. When you enter burning terrain for the first time in a round or end your turn there, you must spend -4 <a href="combat.html#focus">focus</a> or you become <a href="conditions.html#choking">choking</a>.</p>
+
+<p>The toxic cloud is flammable and is transformed into <a href="special-terrain.html#burning-terrain">burning terrain</a> if it is included in a <a href="skills.html#fire">fire</a> skill or if it contains a <a href="conditions.html#burning">burning</a> character. The toxic cloud dissipates at the end of the round  if a strong wind is present, otherwise it lasts 1 minute.</p>
+
+<h2 id="lava">Lava</h2>
+
+<p>Lava is extremely dangerous molten rock. When you enter lava for the first time in a round or end your turn there, you immediately become <a href="conditions.html#burning">burning</a> and suffer five <a href="stress.md">stress</a>. A character <a href="conditions.html#knocked-down">knocked-down</a> into lava suffers 5d6 stress instead. <a href="combat.html#minions-defense">Minions</a> without <a href="skills.html#fire">fire</a> <a href="skills.html#resistant">resistance</a> or <a href="skills.html#immune">immunity</a> are immediately <a href="combat.html#defeated">defeated</a> when knocked into lava.</p>
+
+<p>Lava takes at least 10 minutes to cool to safety, and may last indefinitely.</p>
+ <!--  | replace_regex -->
+			</div>
+			<div id="info">
+			</div>
+			<!-- <div id="map">
+			</div> -->
 		</div>
-		<svg xmlns="http://www.w3.org/2000/svg">
-			<filter id="Bevel1">
-				<feGaussianBlur in="SourceAlpha" stdDeviation="0.5" result="blur"/>
-				<feSpecularLighting in="blur" surfaceScale="5" specularConstant="0.5" specularExponent="10" result="specOut" lighting-color="white">
-					<fePointLight x="-5000" y="-5000" z="4000"/>
-				</feSpecularLighting>
-				<feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut2"/>
-				<feComposite in="SourceGraphic" in2="specOut2" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint" />
-			</filter>
-		</svg>
-		<!-- Scripts -->
-		<script src="/assets/js/jquery.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<script src="/assets/js/browser.min.js"></script>
-		<script src="/assets/js/breakpoints.min.js"></script>
-		<script src="/assets/js/util.js"></script>
-      	<script src="/assets/js/main.js"></script>
-		<script src="/assets/js/FoL.js"></script>
 	</body>
 </html>

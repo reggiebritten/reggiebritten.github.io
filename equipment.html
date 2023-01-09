@@ -6,202 +6,33 @@
 -->
 <html>
 	<head>
-	<title>Forge of Legends - Home</title>
+	<title>Forge of Legends - Equipment</title>
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <meta name="description" content="The official website of the Forge of Legends roleplaying game.">
+    <meta name="description" content="The official website of the Forge of Legends fantasy roleplaying game.">
 	<meta name="keywords" content="tabletop, RPG, fantasy">
     <meta name="author" content="Reggie Britten">
 	<link rel="icon" type="image/png" href="/images/logo.png"/>
-    <link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/tooltipster.bundle.css" />
+	<link rel="stylesheet" href="/assets/js/leaflet/leaflet.css" />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/assets/js/FoL.js"></script>
+	<script src="/assets/js/handlebars-v4.7.7.js"></script>
+	<script src="/assets/js/tooltipster.bundle.js"></script>
+	<script src="/assets/js/leaflet/leaflet.js"></script>
+	<script src="https://kit.fontawesome.com/c754307781.js" crossorigin="anonymous"></script>
 	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
+	<body>
 		<div id="wrapper">
-			<!-- Main -->
-			<div id="main">
-				<div class="inner">
-					<div><img src="images/pic11.jpg" alt="" class="image main" /> </div>
+			<div id="sidebar">
 
-<h1 id="equipment">Equipment</h1>
-
-<p>Whether it is a character’s armor, specialized equipment that grants unique abilities, useful tools like a 10-foot pole, or simply the supplies needed to survive, having the right items can make the difference between success and failure.</p>
-
-<h2 id="equipment-slots">Equipment Slots</h2>
-
-<p>The number and type of items a character can equip is limited by their equipment slots. A character benefits from all their equipped items and, can change their equipment by adjusting their fighting style, as described above. A character wearing too many pieces of equipment in the same slot can’t benefit from any of them properly. A character wearing more armor than their brawn allows suffers the encumbered condition.</p>
-
-<h3 id="weapons">Weapons</h3>
-
-<p>A character can equip four “hands” of weapons, meaning four one-handed weapons, two one-handed weapons and one two-handed weapon, or two two-handed weapons. Weapons can range from sword to bows to shield to magic wands. For a complete list of weapons and their associated abilities, see the Weapon List chapter below.</p>
-
-<h3 id="chest">Chest</h3>
-
-<p>The most common chest equipment is a suit of armor, which increases the character’s armor number and protects against attacks. Many suits of armor cover other parts of the body, but they are still considered chest slot equipment.</p>
-
-<h3 id="head">Head</h3>
-
-<p>Helmets, hats, headbands, and goggles are all considered head equipment. Head equipment often make the biggest impression, as described below. Head equipment is also useful for granting and protecting a character’s sight and hearing.</p>
-
-<h3 id="feet">Feet</h3>
-
-<p>Boots, shoes, and sandals will often affect how a character moves or interacts with special terrain. A good pair of boots might also help with a long overland journey.</p>
-
-<h3 id="shoulder">Shoulder</h3>
-
-<p>Cloaks, capes, scarves, and pauldrons can all be equipped to a character’s shoulder slot. Such items can have a wide variety of effects, from protecting against the elements, to resisting conditions, to making a dramatic impression.</p>
-
-<h3 id="accessories">Accessories</h3>
-
-<p>A character can equip two accessories, such, such as rings, gloves, belts, bracers, or pendants. Such items are rarely useful in combat unless they are legendary, but they may have effects relating exploration, talent rolls, or influence rolls.</p>
-
-<h3 id="pockets">Pockets</h3>
-
-<p>Pockets are unique in that a character doesn’t default have any pocket slots. Instead, pocket slots are often granted by other equipment and characters may have multiple. Items small enough to fit in a pocket slot could be anything from a small knife to a consumable potion.</p>
-
-<h2 id="impression">Impression</h2>
-
-<p>What a person wears can say a lot about them, whether they want it to or not. In addition to an equipment’s slot, many pieces of equipment also have an impression, describing how others perceive that equipment. Equipment impression is described in the same terms as the six personality traits (bold, subtle, idealistic, pragmatic, serious, &amp; carefree), including a rating. However, there are some important differences.</p>
-
-<p>​      For one, equipment’s impression doesn’t change the person wearing it, only how they are perceived. Impressions only affect influence rolls, not legendary deeds or any other effects based on personality. The equipment an NPC is wearing also doesn’t affect how they will respond to influence rolls made by the player character or other NPCs.</p>
-
-<p>​      Secondly, while a character’s equipment may have many different impression ratings, only the highest impression rating matters, and influence rolls are only altered by one point at the most. Characters should add together all impression ratings from their equipment. Impression ratings associated with opposite traits cancel out and are subtracted from each other when determining the overall highest.</p>
-
-<p>​      Whichever impression rating is highest across the character’s equipment is the overall impression their appearance makes. Whenever the character makes an influence roll, their personality is treated as if it that trait rating was one point higher (possibly higher than three), or the opposing trait was one point lower. If multiple impression ratings are tied for the highest, then the character’s equipment doesn’t make a strong impression and their influence rolls are not modified.</p>
-
-<h2 id="inventory">Inventory</h2>
-
-<p>A character’s inventory describes everything else they might be carrying, including food, water, torches, weapon ammunition, a bedroll, and a backpack to carry it all.</p>
-
-<p>An inventory item has two important attributes, its bulk, describing how heavy and ungainly it is to carry, and its price describing how expensive it is.</p>
-
-<h3 id="bulk">Bulk</h3>
-
-<p>Bulk is an abstract description of how heavy an item is and how hard it is to carry, some items like a lead ball might be bulky simply because of how heavy they are, while others like a 10-foot pole might be bulky because there are awkward to store.</p>
-
-<p>In general, one bulk equates to about five pounds or two and a half kilograms. A character’s carrying capacity is terms of bulk is equal to four plus double their brawn, so a character with two brawn could carry eight bulk, about 40 pounds or 20 kg. A character may attempt to carry up to double that amount, but doing so imposes the encumbered condition on the character. A character can’t reliably carry more than double their carrying capacity over long distances. Over short distances, see the rules for lifting and dragging below.</p>
-
-<p>Items that weight less that one bulk don’t typically need to be counted against the limit a character can carry. If a character tries to carry many small items, the GM may say that several of those small items make up one bulk.</p>
-
-<h3 id="currency">Currency</h3>
-
-<p>In the fantasy world of Forge of Legends, most people buy and sell things using coins of copper, silver or gold. More expensive transactions may instead require entire bars of precious metal. Gemstones, land, or other property may be traded, but aren’t considered money.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Currency  Exchance Rates</th>
-      <th> </th>
-      <th> </th>
-      <th> </th>
-      <th> </th>
-      <th> </th>
-      <th> </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Currency</td>
-      <td>Copper Coins</td>
-      <td>Silver Coins</td>
-      <td>Gold Coins</td>
-      <td>Copper Bars</td>
-      <td>Silver Bars</td>
-      <td>Gold Bars</td>
-    </tr>
-    <tr>
-      <td>Copper Coins</td>
-      <td>1</td>
-      <td>1/10</td>
-      <td>1/100</td>
-      <td>1/1,000</td>
-      <td>10,000</td>
-      <td>1/100,000</td>
-    </tr>
-    <tr>
-      <td>Silver Coins</td>
-      <td>10</td>
-      <td>1</td>
-      <td>1/10</td>
-      <td>1/100</td>
-      <td>1/1,000</td>
-      <td>10,000</td>
-    </tr>
-    <tr>
-      <td>Gold Coins</td>
-      <td>100</td>
-      <td>10</td>
-      <td>1</td>
-      <td>1/10</td>
-      <td>1/100</td>
-      <td>1/1,000</td>
-    </tr>
-    <tr>
-      <td>Copper Bars</td>
-      <td>1,000</td>
-      <td>100</td>
-      <td>10</td>
-      <td>1</td>
-      <td>1/10</td>
-      <td>1/100</td>
-    </tr>
-    <tr>
-      <td>Silver Bars</td>
-      <td>10,000</td>
-      <td>1,000</td>
-      <td>100</td>
-      <td>10</td>
-      <td>1</td>
-      <td>1/10</td>
-    </tr>
-    <tr>
-      <td>Gold Bars</td>
-      <td>100,000</td>
-      <td>10,000</td>
-      <td>1,000</td>
-      <td>100</td>
-      <td>10</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>​      Each denomination of coin is worth 10 times as much as the previous denomination. A copper bar is worth 10 times as much as gold coin, and silver and gold are each 10 times more valuable again than the previous denomination. These exchange rates are shown in the table below. Copper coins, silver coins, and gold coins are often called copper, silver, or gold for short. Something only refers to a “bar” if the word is used, otherwise coins are the default.</p>
-
-<p>All coins weigh 1/50th of a pound (1/100th kg), while each bar weighs 20 pounds (10 kg). Players don’t typically need to track the weight of coins they are carrying, but each bar takes up four bulk.</p>
-
-<p>Of course, merchants will usually accept any combination of coins and bars that meet the price required to pay for an item. Most people would rather receive 50 gold coins than 5 copper bars.</p>
-
-<h3 id="price">Price</h3>
-
-<p>The price of an item describes how much that item is typically worth. Prices are listed in vague ranges of “a few” or “several” of each of the different kinds of currency. For example, a meal at an inn might cost “a few copper (coins),” a good set of clothes might cost “several silver (coins)”, and a sailing ship might cost “a few gold bars.”</p>
-
-<p>​      These vague terms reflect the fact that the price of an item may vary. Several factors, such as local availability, demand, or regulations, can influence the price an item will actually cost. An item that costs “a few” coins or bars might cost between one and five, while an item that costs “several” coins or bars would cost between six to ten. Extreme surplus or shortage might even shift an item’s price category.</p>
-
-<p>When a player asks the price of an item, The GM may take the opportunity to set the price in the low or high range of the price category in a way the represents the local availability and values. Alternatively, the GM may simply say that any item that costs “a few” costs three, while any item that costs “several” costs seven.</p>
-
-<p>When a character wants to sell an item from their inventory, it will almost always sell at the bottom of the item’s price range; only one or two for “a few,” and six or seven for “several”. Legendary items have no standard price, they can be sold for whatever people are willing to pay.</p>
-
-<h3 id="supplies">Supplies</h3>
-
-<p>Supplies represent everything an adventurer might use up on a regular basis. This includes food, torches, ammunition, flint and tinder for starting fires, as well as tools for cleaning and maintaining weapons and equipment.</p>
-
-<p>​      In Forge of Legends, all of those mundane consumables are described by a single item simply called supplies. As long as a character has at least one supply, they have everything they need to keep adventuring for the day.</p>
-
-<p>Supplies cost a few silver and take up one bulk. Characters should stock up on as many supplies as they want to carry while they are in town. Each evening before they rest, characters must remove one supply from their inventory, representing the resources used throughout the day. If a character spends a relaxing day in civilization, they may not need to consume supplies if they purchase food and accommodations.</p>
-
-<p>Supplies notably don’t include water. In most parts of the world, water is easy to come by. But in places where water is scarce, adventurers should consider bringing their own. One day’s quantity of water for a person, including a typical container, takes up one bulk.</p>
-
-<p>When character’s run out of supplies, they may begin to suffer from hunger (see the Stress &amp; Affliction chapter below), they may be unable to use weapons requiring ammunition, including bows and guns, they may struggle to find their way through darkness, and they may be unable to repair damaged equipment.</p>
-
-				</div>
-			</div>
-			<!-- Sidebar -->
-        	<div id="sidebar">
-    <img src="/images/scroll/topleft-border.png" id="sidebar-top-scroll">
     <div class="inner">
+        <img src="assets/css/ranger/PartyFrameBG.png" height="110px" width="auto" id="sidebar-handle">
+
         <!-- Search -->
             <section id="search" class="alt">
                 <script async src="https://cse.google.com/cse.js?cx=a3cc61b05e5e110db"></script>
@@ -211,258 +42,207 @@
         <!-- Menu -->
         <nav id="menu">
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/introduction.html">Introduction</a></li>
-                <h2>Quck Reference</h2>
+                <li><h2><a href="/introduction.html">Introduction</a></h2></li>
 
-                <li>
-                    <span class="opener">Classes</span>
-                    <ul>
-                        
-                        <li></li><a href="/classes/Weaponmaster.html"></li>
-                          Weaponmaster
-                        </a>
-                      
-                        <li></li><a href="/classes/Berserker.html"></li>
-                          Berserker
-                        </a>
-                      
-                        <li></li><a href="/classes/Tactician.html"></li>
-                          Tactician
-                        </a>
-                      
-                        <li></li><a href="/classes/Monk.html"></li>
-                          Monk
-                        </a>
-                      
-                        <li></li><a href="/classes/Assassin.html"></li>
-                          Assassin
-                        </a>
-                      
-                        <li></li><a href="/classes/Bard.html"></li>
-                          Bard
-                        </a>
-                      
-                        <li></li><a href="/classes/Trickster.html"></li>
-                          Trickster
-                        </a>
-                      
-                        <li></li><a href="/classes/Acrobat.html"></li>
-                          Acrobat
-                        </a>
-                      
-                        <li></li><a href="/classes/Elementalist.html"></li>
-                          Elementalist
-                        </a>
-                      
-                        <li></li><a href="/classes/Wizard.html"></li>
-                          Wizard
-                        </a>
-                      
-                        <li></li><a href="/classes/Enchanter.html"></li>
-                          Enchanter
-                        </a>
-                      
-                        <li></li><a href="/classes/Psion.html"></li>
-                          Psion
-                        </a>
-                      
-                        <li></li><a href="/classes/Paladin.html"></li>
-                          Paladin
-                        </a>
-                      
-                        <li></li><a href="/classes/Excorcist.html"></li>
-                          Excorcist
-                        </a>
-                      
-                        <li></li><a href="/classes/Necromancer.html"></li>
-                          Necromancer
-                        </a>
-                      
-                        <li></li><a href="/classes/Warlock.html"></li>
-                          Warlock
-                        </a>
-                      
-                        <li></li><a href="/classes/Ranger.html"></li>
-                          Ranger
-                        </a>
-                      
-                        <li></li><a href="/classes/Druid.html"></li>
-                          Druid
-                        </a>
-                      
-                        <li></li><a href="/classes/Shapeshifter.html"></li>
-                          Shapeshifter
-                        </a>
-                      
-                        <li></li><a href="/classes/Beastmaster.html"></li>
-                          Beastmaster
-                        </a>
-                      
-                        <li></li><a href="/classes/Alchemist.html"></li>
-                          Alchemist
-                        </a>
-                      
-                        <li></li><a href="/classes/Inventor.html"></li>
-                          Inventor
-                        </a>
-                      
-                        <li></li><a href="/classes/Demolitionist.html"></li>
-                          Demolitionist
-                        </a>
-                      
-                        <li></li><a href="/classes/Mechanist.html"></li>
-                          Mechanist
-                        </a>
-                      
-                    </ul>
-                </li>
-                <li><a href="/weapons.html">Weapons</a></li>
-                <li><a href="/skill-browser.html">Skill Broswer</a></li>
-                <li>
-                    <span class="opener">Glossary</span>
-                    <ul>
-                        <li><a href="/skill-tags.html">Skill Tags</a></li>
-                        <li><a href="/conditions.html#condition-list">Conditions</a></li>
-                        <li><a href="/stress.html#affliction-list">Afflictions</a></li>
-                        <li><a href="/special-terrain.html">Special Terrain</a></li>
-                    </ul>
-                </li>
-                <h2>Core Rules</h2>
-                <li>
-                    <a href="/fate.html">Fate</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/fate.html#twist-of-fate">Twists of Fate</a></li>
-                        <li><a href="/fate.html#tempt-fate">Tempting Fate</a></li>
-                        <li><a href="/fate.html#tempt-fate">Fate Dice</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/abilities.html">Abilities</a><span class="opener"></span>
+                <h1>Characters</h1>
 
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/soon.html">Ancestry</a></h2>
+                    <ul>
+                        <li></li><a href="/soon.html">Coming Soon!</a></li>
+                        <!-- <li><a href="/ancestry.html#human">Human</a></li>
+                        <li><a href="/ancestry.html#elf">Elf</a></li>
+                        <li><a href="/ancestry.html#dwarf">Dwarf</a></li>
+                        <li><a href="/ancestry.html#gnome">Gnome</a></li>
+                        <li><a href="/ancestry.html#orc">Orc</a></li>
+                        <li><a href="/ancestry.html#beast-kin">Beast-Kin</a></li>
+                        <li><a href="/ancestry.html#mixed">Mixed</a></li> -->
+                    </ul>
+                </li>
+                                
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/abilities.html">Abilities</a></h2>
                     <ul>
                         <li><a href="/abilities.html#agility">Agility</a></li>
                         <li><a href="/abilities.html#brawn">Brawn</a></li>
-                        <li><a href="/abilities.html#insight">Insight</a></li>
-                        <li><a href="/abilities.html#ability-rolls">Ability Rolls</a></li>
+                        <li><a href="/abilities.html#cunning">Cunning</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/ancestry.html">Ancestry</a><span class="opener"></span>
 
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/personality.html">Personality</a></h2>
                     <ul>
-                        <li><a href="/ancestry.html#human">Humans</a></li>
-                        <li><a href="/ancestry.html#elf">Elves</a></li>
-                        <li><a href="/ancestry.html#dwarf">Dwarves</a></li>
-                        <li><a href="/ancestry.html#gnome">Gnomes</a></li>
-                        <li><a href="/ancestry.html#orc">Orcs</a></li>
-                        <li><a href="/ancestry.html#beastkin">Beastkin</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/personality.html">Personality</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/personality.html#traits">Personality Traits</a></li>
-                        <li><a href="/personality.html#fateful-deeds">Fateful Deeds</a></li>
-                        <li><a href="/personality.html#influince">Influince Rolls</a></li>
-                        <li><a href="/personality.html#backgrounds">Backgrounds</a></li>
-                        <li><a href="/personality.html#lore">Lore</a></li>
-                        <li><a href="/personality.html#indulgences">Indulgences</a></li>
+                        <li><a href="/personality.html#values">Values</a></li>
+                        <li><a href="/personality.html#bold-vs-subtle">Bold vs Subtle</a></li>
+                        <li><a href="/personality.html#idealistic-vs-pragmatic">Idealistic vs Pragmatic</a></li>
+                        <li><a href="/personality.html#serious-vs-whimsical">Serious vs Whimsical</a></li>
+                        <li><a href="/personality.html#training">Training</a></li>
+                        <li><a href="/personality.html#expertise">Expertise</a></li>
+                        <li><a href="/personality.html#flashbacks">Flashbacks</a></li>
+                        <li><a href="/personality.html#lore-check">Lore Checks</a></li>
+                        <li><a href="/personality.html#flaw">Character Flaws</a></li>
+                        <li><a href="/personality.html#indulgence">Indulgences</a></li>
                         <li><a href="/personality.html#personal-legend">Personal Legend</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/skills.html">Skills</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/class.html">Classes</a></h2>
                     <ul>
-                        <li><a href="/skills.html#class-feature">Class Feature</a></li>
-                        <li><a href="/skills.html#fighting-style">Fighting Style</a></li>
-                        <li><a href="/skills.html#repertoire">Repertoire</a></li>
-                        <li><a href="/skills.html#unlocking">Unlocking Skills</a></li>
+                        <li><a href="/class.html#core-feature">Core Feature</a></li>
+                        <li><a href="/class.html#fighting--style">Fighting Style</a></li>
+                        <li><a href="/class.html#expereince">Experience</a></li>
+                        <li><a href="/class.html#assassin">Assassin</a></li>
+                        <li><a href="/class.html#bard">Bard</a></li>
+                        <li><a href="/class.html#battlemaster">Battlemaster</a></li>
+                        <li><a href="/class.html#beastmaster">Beastmaster</a></li>
+                        <li><a href="/class.html#berserker">Berserker</a></li>
+                        <li><a href="/class.html#elementalist">Elementalist</a></li>
+                        <li><a href="/class.html#enchanter">Enchanter</a></li>
+                        <li><a href="/class.html#geomancer">Geomancer</a></li>
+                        <li><a href="/class.html#monk">Monk</a></li>
+                        <li><a href="/class.html#paladin">Paladin</a></li>
+                        <li><a href="/class.html#shaman">Shaman</a></li>
+                        <li><a href="/class.html#shapeshifter">Shapeshifter</a></li>
+                        <li><a href="/class.html#trickster">Trickster</a></li>
+                        <li><a href="/class.html#warlock">Warlock</a></li>
+                        <li><a href="/class.html#wizard">Wizard</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/equipment.html">Equipment</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/equipment.html">Equipment</a></h2>
                     <ul>
-                        <li><a href="/equipment.html#equipment-slots">Equipment Slots</a></li>
-                        <li><a href="/equipment.html#impression">Impression</a></li>
                         <li><a href="/equipment.html#inventory">Inventory</a></li>
-                        <li><a href="/equipment.html#equipment-list">Equipment List</a></li>
+                        <li><a href="/equipment.html#weapon-proficiency">Weapon Proficiency</a></li>
+                        <li><a href="/equipment.html#armor">Armor</a></li>
+                        <li><a href="/equipment.html#equipment-slots">Equipment Slots</a></li>
+                        <li><a href="/equipment.html#item-tags">Item Tags</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/exploration.html">Exploration</a><span class="opener"></span>
+
+                <hr>
+                
+                <li class="">
+                    <h2> <a href="/soon.html">Skill List</a></h2>
+                </li>
+                <li class="">
+                    <h2> <a href="/soon.html">Equipment List</a></h2>
+                </li>
+
+
+
+
+                <h1>Gameplay</h1>
+
+
+                <li class="opener">   
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/rolls.html">Rolls</a></h2>
                     <ul>
-                        <li><a href="/exploration.html#special-movement">Special Movement</a></li>
-                        <li><a href="/exploration.html#lifting-dragging">Lifting & Dragging</a></li>
-                        <li><a href="/exploration.html#breaking">Breaking Objects</a></li>
-                        <li><a href="/exploration.html#light-darkness">Light & Darkness</a></li>
-                        <li><a href="/exploration.html#stealth">Stealth</a></li>
-                        <li><a href="/exploration.html#chase">Chase Scenes</a></li>
-                        <li><a href="/exploration.html#doom">Time & Doom</a></li>
-                        <li><a href="/exploration.html#travel">Overland Travel</a></li>
-                        <li><a href="/exploration.html#travel-activities">Travel Activities</a></li>
+                        <li><a href="/rolls.html#roll-difficulty">Roll Difficulty</a></li>
+                        <li><a href="/rolls.html#target-number">Target Number</a></li>
+                        <li><a href="/rolls.html#roll-results">Roll Results</a></li>
+                        <li><a href="/rolls.html#boons--banes">Boons & Banes</a></li>
+                        <li><a href="/rolls.html#push-your-luck">Push Your Luck</a></li>
+                        <li><a href="/rolls.html#play-it-safe">Play it Safe</a></li>
+                        <li><a href="/rolls.html#group-rolls">Group Rolls</a></li>
+                        <li><a href="/rolls.html#opposed-rolls">Opposed Rolls</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">   
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/fate.html">Fate</a></h2>
+                    <ul>
+                        <li><a href="/fate.html#fateful-deeds">Fateful Deeds</a></li>
+                        <li><a href="/fate.html#twists-of-fate">Twists of Fate</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/exploration.html">Exploration</a></h2>
+                    <ul>
+                        <li><a href="/exploration.html#jumping">Jumping</a></li>
+                        <li><a href="/exploration.html#climbing">Climbing</a></li>
+                        <li><a href="/exploration.html#flying">Flying</a></li>
+                        <li><a href="/exploration.html#falling">Falling</a></li>
+                        <li><a href="/exploration.html#swimming">Swimming</a></li>
+                        <li><a href="/exploration.html#breath-holding">Breath Holding</a></li>
+                        <li><a href="/exploration.html#sight--darkness">Sight & Darkness</a></li>
+                        <li><a href="/exploration.html#hiding">Hiding</a></li>
+                        <li><a href="/exploration.html#damaging-objects">Damaging Objects</a></li>
+                        <li><a href="/exploration.html#doom">Doom</a></li>
                         <li><a href="/exploration.html#resting">Resting</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/combat.html">Combat</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/overland-travel.html">Travel</a></h2>
                     <ul>
-                        <li><a href="/combat.html#turns">Turns & Rounds</a></li>
-                        <li><a href="/combat.html#vigor">Vigor</a></li>
-                        <li><a href="/combat.html#skills">Skills</a></li>
-                        <li><a href="/combat.html#universal-skills">Universal Skills</a></li>
-                        <li><a href="/combat.html#concentration">Concentration</a></li>
-                        <li><a href="/combat.html#movement">Movement & Position</a></li>
-                        <li><a href="/combat.html#support">Support Skills</a></li>
-                        <li><a href="/combat.html#attack">Attack & Defense</a></li>
-                        <li><a href="/combat.html#fated-actions">Fated & Doomed Actions</a></li>
-                        <li><a href="/combat.html#depleted-vigor">Depleted Vigor</a></li>
-                        <li><a href="/combat.html#defeat">Defeat</a></li>
-                        <li><a href="/combat.html#mounted-combat">Mounted Combat</a></li>
-                        <li><a href="/combat.html#water-combat">Water Combat</a></li>
+                        <li><a href="/overland-travel.html#landscape">Landscape</a></li>
+                        <li><a href="/overland-travel.html#weather">Weather</a></li>
+                        <li><a href="/overland-travel.html#mounts--vehicles">Mounts & Vehicles</a></li>
+                        <li><a href="/overland-travel.html#travel-activities">Travel Activities</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/forging-legends.html">Forging Legends</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/stress.html">Stress</a></h2>
                     <ul>
-                        <li><a href="/forging-legends.html#legendary-deeds">Legendary Deeds</a></li>
-                        <li><a href="/forging-legends.html#commemoration">Commemoration</a></li>
-                        <li><a href="/forging-legends.html#legendary-quests">Legendary Quests</a></li>
-                        <li><a href="/forging-legends.html#legends-of-old">Legends of Old</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/downtime.html">Downtime</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/downtime.html#crafting">Crafting</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/stress.html">Stress & Affliction</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/stress.html#stress">Stress</a></li>
                         <li><a href="/stress.html#affliction">Afflictions</a></li>
+                        <li><a href="/stress.html#dying">Dying</a></li>
+                        <li><a href="/stress.html#stress-tolerance">Stress Tolerance</a></li>
                         <li><a href="/stress.html#affliction-list">Affliction List</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/conditions.html">Conditions</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/skills.html">Skills</a></h2>
                     <ul>
-                        <li><a href="/conditions.html#tags">Condition Tags</a></li>
+                        <li><a href="/skills.html#type">Type</a></li>
+                        <li><a href="/skills.html#targets">Targets</a></li>
+                        <li><a href="/skills.html#defense">Defense</a></li>
+                        <li><a href="/skills.html#effects">Effects</a></li>
+                        <li><a href="/skills.html#cunning-effects">Cunning Effects</a></li>
+                        <li><a href="/skills.html#skill-tags">Skill Tags</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/combat.html">Combat</a></h2>
+                    <ul>
+                        <li><a href="/combat.html#turns--rounds">Turns & Rounds</a></li>
+                        <li><a href="/combat.html#defenses">Defenses</a></li>
+                        <li><a href="/combat.html#defending--yielding">Defending vs Yielding</a></li>
+                        <li><a href="/combat.html#damage--defeat">Damage & Defeat</a></li>
+                        <li><a href="/combat.html#movement--position">Movement & Position</a></li>
+                        <li><a href="/combat.html#zone-of-control">Zone of Control</a></li>
+                        <li><a href="/combat.html#mounted-combat">Mounted Combat</a></li>
+                        <li><a href="/combat.html#combat-in-water">Combat in Water</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/conditions.html">Conditions</a></h2>
+                    <ul>
+                        <li><a href="/conditions.html#removing-conditions">Removing Conditions</a></li>
+                        <li><a href="/conditions.html#condition-tags">Condition Tags</a></li>
                         <li><a href="/conditions.html#condition-list">Condition List</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/special-terrain.html">Special Terrain</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/special-terrain.html">Terrain</a></h2>
                     <ul>
                         <li><a href="/special-terrain.html#shattered-terrain">Shattered Terrain</a></li>
-                        <li><a href="/special-terrain.html#overgrown-terrain">Overgrown Terrain</a></li>
+                        <li><a href="/special-terrain.html#tangled-terrain">Tangled Terrain</a></li>
+                        <li><a href="/special-terrain.html#spiked-terrain">Spiked Terrain</a></li>
                         <li><a href="/special-terrain.html#burning-terrain">Burning Terrain</a></li>
                         <li><a href="/special-terrain.html#wet-terrain">Wet Terrain</a></li>
-                        <li><a href="/special-terrain.html#frozen-terrain">Frozen Terrain</a></li>
+                        <li><a href="/special-terrain.html#icy-terrain">Icy Terrain</a></li>
+                        <li><a href="/special-terrain.html#snowy-terrain">Snowy Terrain</a></li>
                         <li><a href="/special-terrain.html#goopy-terrain">Goopy Terrain</a></li>
-                        <li><a href="/special-terrain.html#oiled-terrain">Oiled Terrain</a></li>
-                        <li><a href="/special-terrain.html#caustic-terrain">Caustic Terrain</a></li>
+                        <li><a href="/special-terrain.html#oily-terrain">Oily Terrain</a></li>
+                        <li><a href="/special-terrain.html#corrosive-terrain">Corrosive Terrain</a></li>
                         <li><a href="/special-terrain.html#blessed-terrain">Blessed Terrain</a></li>
                         <li><a href="/special-terrain.html#cursed-terrain">Cursed Terrain</a></li>
                         <li><a href="/special-terrain.html#obscuring-cloud">Obscuring Cloud</a></li>
@@ -470,11 +250,36 @@
                         <li><a href="/special-terrain.html#lava">Lava</a></li>
                     </ul>
                 </li>
+
+
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/legends.html">Legends</a></h2>
+                    <ul>
+                        <li><a href="/forging-legends.html#legendary-deeds">Legendary Deeds</a></li>
+                        <li><a href="/forging-legends.html#commemorating-legends">Comemorating Legends</a></li>
+                        <li><a href="/forging-legends.html#legendary-quests">Legendary Quests</a></li>
+                        <li><a href="/forging-legends.html#legends-of-old">Legends of Old</a></li>
+                    </ul>
+                </li>
+                <!-- <li>
+                    <a href="/downtime.html">Downtime</a><span class="opener"></span>
+                    <ul>
+                        <li><a href="/downtime.html#crafting">Crafting</a></li>
+                    </ul>
+                </li> -->
+
+
+                
+                <h1>Gamemastery</h1>
+                <h2> </i> <a href="/soon.html">Coming Soon!</a></h2>
+
+
             </ul>
         </nav>
 
         <!-- ??? -->
-            <section>
+            <!-- <section>
             <header class="major">
                 <h2>Latest Skills</h2>
             </header>
@@ -495,10 +300,10 @@
             <ul class="actions">
                 <li><a href="/#" class="button">More</a></li>
             </ul>
-        </section>
+        </section> -->
 
         <!-- ??? -->
-        <section>
+        <!-- <section>
             <header class="major">
                 <h2>Get in touch</h2>
             </header>
@@ -509,32 +314,245 @@
                 <li class="icon solid fa-home">1234 Somewhere Road #8254<br />
                 Nashville, TN 00000-0000</li>
             </ul>
-        </section>
+        </section> -->
 
         <!-- Footer -->
-        <footer id="footer">
+        <!-- <footer id="footer">
             <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="/https://unsplash.com">Unsplash</a>. Design: <a href="/https://html5up.net">HTML5 UP</a>.</p>
-        </footer>
+        </footer> -->
     </div>
 </div>
+			<div id="main">
+					<h1 id="equipment">Equipment</h1>
+
+<p>Your weapons, armor, tools, and supplies can al make the difference between the success and failure of your adventures. Equipment like tools can give you bonuses to certain <a href="rolls.md">rolls</a>, while weapons and armor can grant you <a href="skills.md">skills</a> used to overcome challenges. You can only equip as many items as you have <a href="equipment.html#slots">slots</a> , so choose carefully. But your other items can be kept in your inventory, as long as you have sufficient <a href="equipment.html#carrying-capacity">carrying capacity</a>. That capacity is shared with your <a href="equipment.html#supplies">supplies</a>, which include food, ammo, and the basics you will need on you adventures.</p>
+
+<h2 id="inventory">Inventory</h2>
+
+<p>Your inventory describes everything you might be carrying, including weapons, armor, tools, food, water, torches, ammunition, a bedroll, and a backpack to carry it all. Every item has two important attributes, its <strong>bulk</strong>, describing how heavy and awkward it is to carry, and its <strong>price</strong> describing how valuable it is.</p>
+
+<h3 id="bulk">Bulk</h3>
+
+<p>Bulk is an abstract description of how heavy an item is and how hard it is to carry, some items like a lead ball might be bulky simply because of how heavy they are, while others like a 10-foot pole might be bulky because there are awkward to store.</p>
+
+<p>In general, one bulk equates to about five pounds or two and a half kilograms. Your <a href="equipment.html#carrying-capacity">carrying-capacity</a> is terms of bulk is equal to five plus three times your brawn, so a character with two brawn could carry 11 bulk, about 55 pounds or just under 25 kg. You can carry up to double this amount, but while you do, you become <a href="conditions.html#encumbered">encumbered</a>. You can’t reliably carry more than double your carrying capacity over long distances. Over short distances, the GM will call for a brawn <a href="rolls.md">rolls</a> to see if you can move heavy objects.</p>
+
+<p>Items that weight less that one bulk don’t typically need to be counted against the limit you can carry. If you try to carry many small items, the GM may say that several of those small items make up one bulk.</p>
+
+<h3 id="price">Price</h3>
+
+<p>An item’s price is described as either <strong>copper</strong>, <strong>silver</strong>, <strong>gold</strong>, <strong>platinum</strong>, or <strong>gemstones</strong>. You might buy or sell an item for 1-10 of its type of currency. This range reflects the fact that the price of an item may vary. Several factors-  local availability, demand, or regulations - can influence the price an item will actually cost. Extreme surplus or shortage might even shift an item’s price category. Merchants will usually buy items from you at the lower end of the price range. Legendary items have no standard price, they can be sold for whatever people are willing to pay.</p>
+
+<h3 id="currency">Currency</h3>
+
+<p>In the fantasy world of Forge of Legends, most people buy and sell things using coins of copper, silver or gold. More expensive transactions might be conducted with platinum or even precious gemstones. Land, art, and other property may be traded, but aren’t considered money. Each denomination of coin is worth 10 times as much as the previous denomination, as shown in the table below. Each coin or gem weighs 1/50th of a pound (1/100th kg), so 250 make up one bulk.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Currency</td>
+      <td>Copper</td>
+      <td>Silver</td>
+      <td>Gold</td>
+      <td>Platinum</td>
+      <td>Gemstones</td>
+    </tr>
+    <tr>
+      <td>Copper</td>
+      <td>1</td>
+      <td>1/10</td>
+      <td>1/100</td>
+      <td>1/1,000</td>
+      <td>10,000</td>
+    </tr>
+    <tr>
+      <td>Silver</td>
+      <td>10</td>
+      <td>1</td>
+      <td>1/10</td>
+      <td>1/100</td>
+      <td>1/1,000</td>
+    </tr>
+    <tr>
+      <td>Gold</td>
+      <td>100</td>
+      <td>10</td>
+      <td>1</td>
+      <td>1/10</td>
+      <td>1/100</td>
+    </tr>
+    <tr>
+      <td>Platinum</td>
+      <td>1,000</td>
+      <td>100</td>
+      <td>10</td>
+      <td>1</td>
+      <td>1/10</td>
+    </tr>
+    <tr>
+      <td>Gemstones</td>
+      <td>10,000</td>
+      <td>1,000</td>
+      <td>100</td>
+      <td>10</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="supplies">Supplies</h3>
+
+<p>Supplies represent everything an adventurer might use up on a regular basis. This includes food, torches, ammunition, flint and tinder for starting fires, as well as tools for cleaning and maintaining weapons and equipment.</p>
+
+<p>In Forge of Legends, all of those mundane consumables are described by a single item simply called supplies. As long as you have at least one supply, you have everything they need to keep adventuring for the day.</p>
+
+<p>Supplies are priced in silver and take up one bulk. Almost every civilization will have basic supplies, so you should stock up while you are in town. Each evening before you rest, remove one supply from your inventory, representing the resources used throughout the day. If you stay at a inn, your house or, somewhere else were accommodations are provided, you don’t need to use up your supplies. Supplies go expire of the course of weeks, so you shouldn’t need to keep track of their spoilage.</p>
+
+<p>Supplies notably don’t include water. In most parts of the world, water is easy to come by. But in places where water is scarce, you should consider bringing you own. One day’s quantity of water for a person, including a typical container, takes up one bulk.</p>
+
+<p>When you run out of supplies, you may begin to suffer from hunger and accumulate <a href="stress.md">stress</a>, you may be unable to use weapons requiring ammunition, including bows and guns, and you may struggle to find their way through darkness.</p>
+
+<h2 id="weapon-proficiency">Weapon Proficiency</h2>
+
+<p>You must be proficient with a weapon to properly wield it. Most weapon proficiency comes from your class, but you might acquire more weapon training during your adventures. Weapon training is described in terms of an items <a href="equipment.html#item-tags">tags</a>. You only need to be proficiency with one of an item’s tags, not all of them. You are <a href="conditions.html#encumbered">encumbered</a> while you wield a weapon with which you aren’t trained.</p>
+
+<h2 id="armor">Armor</h2>
+
+<p>Your armor reduces the <a href="combat.html#threat">threat</a> and the <a href="combat.html#yield">yield</a> damage of enemy <a href="skills.html#attack">attacks</a>. You can comfortably equip an amount of armor equal to your <a href="abilities.html#brawn">brawn</a>. You can equip more armor if you want, but you become <a href="conditions.html#encumbered">encumbered</a> until you take off the excess. If one skill would deal damage to more than one of your <a href="combat.html#defenses">defenses</a>, you may choose which one of your defenses your armor protects.</p>
+
+<h2 id="equipment-slots">Equipment Slots</h2>
+
+<p>Your character has a certain number of equipment slots, and you can equip one item in each. The item must have a tag that matches the slot; a helmet will have the head tag and must be equipped to the head slot. You gain the benefits of all your equipped items, though you might have to choose which to use at the right moment. You can rearrange which items you have equipped over 10 minutes, during which time you can also change your <a href="classes.html#fighting-style">fighting style</a>.</p>
+
+<h3 id="weapons">Weapons</h3>
+
+<p>You can equip four “hands” of weapons, meaning four <a href="equipment.html#one-handed">one-handed</a> weapons, two one-handed weapons and one <a href="equipment.html#two-handed">two-handed</a> weapon, or two two-handed weapons. However, you may only wield two hands of weapons at once. The others are stored within easy reach, and you can swap between your different weapons with the <a class="item" data-name="Interact">Interact</a> skill. Weapons include anything you might carry into battle, such as swords, shields, magic wands, and even musical instruments. Weapons almost always grant you <a href="skills.md">skills</a>, especially <a href="skills.html#attack">attack</a> skills.</p>
+
+<h3 id="head">Head</h3>
+
+<p>You have one head slot. Helmets, hats, headbands, and goggles are all considered head equipment. Head equipment is often useful for granting you special sight or hearing, or protecting what you have.</p>
+
+<h3 id="shoulder">Shoulder</h3>
+
+<p>You have one shoulder slot. Cloaks, backpacks, scarves, and pauldrons can all be equipped on your shoulders. Such items can have a wide variety of effects, from protecting against the elements, to resisting <a href="conditions.md">conditions</a>, to letting you carry more.</p>
+
+<h3 id="chest">Chest</h3>
+
+<p>You have one chest slot. A breastplate, cuirass, coat or simple shirt might all be chest equipment. Chest equipment often grants you <a href="equipment.html#armor">armor</a>.</p>
+
+<h3 id="feet">Feet</h3>
+
+<p>You have one feet slot. Greaves, boots, shoes, and sandals are equipped on your feet, and will often affect how a character moves or interacts with special terrain. A good pair of boots might also help with overland <a href="overland-travel.md">travel/travel</a>.</p>
+
+<h3 id="accessories">Accessories</h3>
+
+<p>You have two accessory slots. Accessories include rings, gloves, belts, bracers, or pendants. Such items are rarely useful in combat, but might help with various <a href="rolls.md">rolls</a>.</p>
+
+<h3 id="pockets">Pockets</h3>
+
+<p>You don’t start with any pocket slots. Instead, pockets come from your other equipment, and you might have multiple pockets. A small knife, a potion or a bag of caltrops, would all be small enough to fit in a pocket.</p>
+
+<h2 id="item-tags-wip">Item Tags #WIP</h2>
+
+<h3 id="one-handed">One-Handed</h3>
+
+<p>A one-hand weapon only requires one hand to use properly. You can wield two one-handed weapons at once, and equip up to four in your fighting style. Most one-handed weapons have 2-3 <a href="skills.md">skills</a>.</p>
+
+<h3 id="two-handed">Two-Handed</h3>
+
+<p>A two-hand weapon requires both hands to use properly. You can only wield one two-handed weapon at a time, and you can equip two two-handed weapons in your fighting style. Most two-handed weapons have 4-6 <a href="skills.md">skills</a>. You can carry a two-handed weapon in just one hand, but you can’t use any of its <a href="skills.md">skills</a> while you do.</p>
+
+<h3 id="zoc">ZoC</h3>
+
+<p>A ZoC weapon is typically used for close-quarters combat, and grants you a <a href="combat.html#zone-of-control">zone of control</a>while you wield it. Your zone of control lets you <a href="combat.html#hindering-maneuvers">hinder</a> enemies, <a href="combat.html#surrounded">surround</a> them, and impose <a href="skills.html#bane">banes</a> on their ranged skills. Note that some effects might remove your zone of control even while you wield a ZoC weapon.</p>
+
+<h3 id="loading">Loading</h3>
+
+<p>A loading weapon needs to be reloaded after using any of it’s <a href="skills.html#ranged">ranged</a> <a href="skills.md">skills</a>; you can’t use such skills while it is unloaded. You can still used the weapons, non-ranged skills even while it’s not loaded. Reloading a weapon is often accomplished with the <a class="item" data-name="Interact">Interact</a> skill, but other skills can let you reload your weapon too.</p>
+
+<h3 id="simple">Simple</h3>
+
+<p>Simple weapons are straightforward and easy to use. All classes are proficient with simple weapons, and so are a good many common folk.</p>
+
+<h3 id="light">Light</h3>
+
+<p>Light weapons are swift and precise, and usually benefit most from your <a href="abilities.html#agility">agility</a>.</p>
+
+<h3 id="heavy">Heavy</h3>
+
+<p>Heavy weapons are big and slow, and usually benefit most from your <a href="abilities.html#brawn">brawn</a>.</p>
+
+<h3 id="sword">Sword</h3>
+
+<p>A sword is a long, deadly blade with a short handle. Swords come in many lengths and designs, and are used for both cutting and stabbing.</p>
+
+<h3 id="axe">Axe</h3>
+
+<p>An axe is a brutal blade with the weight concentrated toward the tip. Axes can chop down trees and foes alike.</p>
+
+<h3 id="mace">Mace</h3>
+
+<p>A mace is a heavy destructive weight at the end of a long haft. Maces let you batter your foes around the battlefield.</p>
+
+<h3 id="polearm">Polearm</h3>
+
+<p>A polearm is one of many deadly tips affixed to the end of a very long haft. Polearms let you keep your enemies at a distance.</p>
+
+<h3 id="shield">Shield</h3>
+
+<p>A shield is a large metal or wooden disk that you can interpose between yourself and your enemy. Shields will protect you and let you control the flow of battle.</p>
+
+<h3 id="bow">Bow</h3>
+
+<p>A bow is a flexible piece of wood and string that can fire arrows as fast as you can draw them. Bows excel at fast paced ranged combat.</p>
+
+<h3 id="crossbow">Crossbow</h3>
+
+<p>A crossbow is a mechanical marvel that can fire bolts with tremendous power. Crossbows must be reloaded between, but feature more range and power than bows.</p>
+
+<h3 id="firearm">Firearm</h3>
+
+<p>Early firearms lack range and speed, but more than make up for it with penetrating power. Firearms must be reloaded between shots, but have the most power of any ranged weapons. The GM may decide that firearms are not a part of the world you play in.</p>
+
+<h3 id="warbanner">Warbanner</h3>
+
+<p>Warbanners are battle standards that you carry to rally your allies and demoralize your enemies. Many of a warbanner’s <a href="skills.md">skills</a> will be <a href="skills.html#passive">passive</a>.</p>
+
+<h3 id="instrument">Instrument</h3>
+
+<p>Musical instruments of all types can weave music to inspire allies and unnerve enemies. Each instrument is further categorized as a <strong>drum</strong>, <strong>horn</strong>, <strong>stringed</strong>, or <strong>woodwind</strong> instrument.</p>
+
+<h3 id="arcane">Arcane</h3>
+
+<p>Arcane weapons, such as wands and staves, draw their magical power from the gemstone from which they are set. Arcane weapons are often used for ranged combat.</p>
+
+<h3 id="holy">Holy</h3>
+
+<p>Holy weapons draw their powers from divine spirits. Holy weapons will often bolster allies, and can be very effective against demons and undead.</p>
+
+<h3 id="unholy">Unholy</h3>
+
+<p>Unholy weapons are tainted by malevolent forces. They often excel at inflicting lingering debilities on enemies.</p>
+
+<h3 id="primal">Primal</h3>
+
+<p>Primal weapons call upon the primordial forces of nature. Primordial weapons often manipulate plants, animals, or natural elements.</p>
+ <!--  | replace_regex -->
+			</div>
+			<div id="info">
+			</div>
+			<!-- <div id="map">
+			</div> -->
 		</div>
-		<svg xmlns="http://www.w3.org/2000/svg">
-			<filter id="Bevel1">
-				<feGaussianBlur in="SourceAlpha" stdDeviation="0.5" result="blur"/>
-				<feSpecularLighting in="blur" surfaceScale="5" specularConstant="0.5" specularExponent="10" result="specOut" lighting-color="white">
-					<fePointLight x="-5000" y="-5000" z="4000"/>
-				</feSpecularLighting>
-				<feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut2"/>
-				<feComposite in="SourceGraphic" in2="specOut2" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint" />
-			</filter>
-		</svg>
-		<!-- Scripts -->
-		<script src="/assets/js/jquery.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<script src="/assets/js/browser.min.js"></script>
-		<script src="/assets/js/breakpoints.min.js"></script>
-		<script src="/assets/js/util.js"></script>
-      	<script src="/assets/js/main.js"></script>
-		<script src="/assets/js/FoL.js"></script>
 	</body>
 </html>

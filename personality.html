@@ -6,179 +6,545 @@
 -->
 <html>
 	<head>
-	<title>Forge of Legends - Home</title>
+	<title>Forge of Legends - Personality</title>
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <meta name="description" content="The official website of the Forge of Legends roleplaying game.">
+    <meta name="description" content="The official website of the Forge of Legends fantasy roleplaying game.">
 	<meta name="keywords" content="tabletop, RPG, fantasy">
     <meta name="author" content="Reggie Britten">
 	<link rel="icon" type="image/png" href="/images/logo.png"/>
-    <link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/tooltipster.bundle.css" />
+	<link rel="stylesheet" href="/assets/js/leaflet/leaflet.css" />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/assets/js/FoL.js"></script>
+	<script src="/assets/js/handlebars-v4.7.7.js"></script>
+	<script src="/assets/js/tooltipster.bundle.js"></script>
+	<script src="/assets/js/leaflet/leaflet.js"></script>
+	<script src="https://kit.fontawesome.com/c754307781.js" crossorigin="anonymous"></script>
 	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
+	<body>
 		<div id="wrapper">
-			<!-- Main -->
+			<div id="sidebar">
+
+    <div class="inner">
+        <img src="assets/css/ranger/PartyFrameBG.png" height="110px" width="auto" id="sidebar-handle">
+
+        <!-- Search -->
+            <section id="search" class="alt">
+                <script async src="https://cse.google.com/cse.js?cx=a3cc61b05e5e110db"></script>
+                <div class="gcse-search" style="width: 1%; margin: 0 auto"></div>
+            </section>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul>
+                <li><h2><a href="/introduction.html">Introduction</a></h2></li>
+
+                <h1>Characters</h1>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/soon.html">Ancestry</a></h2>
+                    <ul>
+                        <li></li><a href="/soon.html">Coming Soon!</a></li>
+                        <!-- <li><a href="/ancestry.html#human">Human</a></li>
+                        <li><a href="/ancestry.html#elf">Elf</a></li>
+                        <li><a href="/ancestry.html#dwarf">Dwarf</a></li>
+                        <li><a href="/ancestry.html#gnome">Gnome</a></li>
+                        <li><a href="/ancestry.html#orc">Orc</a></li>
+                        <li><a href="/ancestry.html#beast-kin">Beast-Kin</a></li>
+                        <li><a href="/ancestry.html#mixed">Mixed</a></li> -->
+                    </ul>
+                </li>
+                                
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/abilities.html">Abilities</a></h2>
+                    <ul>
+                        <li><a href="/abilities.html#agility">Agility</a></li>
+                        <li><a href="/abilities.html#brawn">Brawn</a></li>
+                        <li><a href="/abilities.html#cunning">Cunning</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/personality.html">Personality</a></h2>
+                    <ul>
+                        <li><a href="/personality.html#values">Values</a></li>
+                        <li><a href="/personality.html#bold-vs-subtle">Bold vs Subtle</a></li>
+                        <li><a href="/personality.html#idealistic-vs-pragmatic">Idealistic vs Pragmatic</a></li>
+                        <li><a href="/personality.html#serious-vs-whimsical">Serious vs Whimsical</a></li>
+                        <li><a href="/personality.html#training">Training</a></li>
+                        <li><a href="/personality.html#expertise">Expertise</a></li>
+                        <li><a href="/personality.html#flashbacks">Flashbacks</a></li>
+                        <li><a href="/personality.html#lore-check">Lore Checks</a></li>
+                        <li><a href="/personality.html#flaw">Character Flaws</a></li>
+                        <li><a href="/personality.html#indulgence">Indulgences</a></li>
+                        <li><a href="/personality.html#personal-legend">Personal Legend</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/class.html">Classes</a></h2>
+                    <ul>
+                        <li><a href="/class.html#core-feature">Core Feature</a></li>
+                        <li><a href="/class.html#fighting--style">Fighting Style</a></li>
+                        <li><a href="/class.html#expereince">Experience</a></li>
+                        <li><a href="/class.html#assassin">Assassin</a></li>
+                        <li><a href="/class.html#bard">Bard</a></li>
+                        <li><a href="/class.html#battlemaster">Battlemaster</a></li>
+                        <li><a href="/class.html#beastmaster">Beastmaster</a></li>
+                        <li><a href="/class.html#berserker">Berserker</a></li>
+                        <li><a href="/class.html#elementalist">Elementalist</a></li>
+                        <li><a href="/class.html#enchanter">Enchanter</a></li>
+                        <li><a href="/class.html#geomancer">Geomancer</a></li>
+                        <li><a href="/class.html#monk">Monk</a></li>
+                        <li><a href="/class.html#paladin">Paladin</a></li>
+                        <li><a href="/class.html#shaman">Shaman</a></li>
+                        <li><a href="/class.html#shapeshifter">Shapeshifter</a></li>
+                        <li><a href="/class.html#trickster">Trickster</a></li>
+                        <li><a href="/class.html#warlock">Warlock</a></li>
+                        <li><a href="/class.html#wizard">Wizard</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/equipment.html">Equipment</a></h2>
+                    <ul>
+                        <li><a href="/equipment.html#inventory">Inventory</a></li>
+                        <li><a href="/equipment.html#weapon-proficiency">Weapon Proficiency</a></li>
+                        <li><a href="/equipment.html#armor">Armor</a></li>
+                        <li><a href="/equipment.html#equipment-slots">Equipment Slots</a></li>
+                        <li><a href="/equipment.html#item-tags">Item Tags</a></li>
+                    </ul>
+                </li>
+
+                <hr>
+                
+                <li class="">
+                    <h2> <a href="/soon.html">Skill List</a></h2>
+                </li>
+                <li class="">
+                    <h2> <a href="/soon.html">Equipment List</a></h2>
+                </li>
+
+
+
+
+                <h1>Gameplay</h1>
+
+
+                <li class="opener">   
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/rolls.html">Rolls</a></h2>
+                    <ul>
+                        <li><a href="/rolls.html#roll-difficulty">Roll Difficulty</a></li>
+                        <li><a href="/rolls.html#target-number">Target Number</a></li>
+                        <li><a href="/rolls.html#roll-results">Roll Results</a></li>
+                        <li><a href="/rolls.html#boons--banes">Boons & Banes</a></li>
+                        <li><a href="/rolls.html#push-your-luck">Push Your Luck</a></li>
+                        <li><a href="/rolls.html#play-it-safe">Play it Safe</a></li>
+                        <li><a href="/rolls.html#group-rolls">Group Rolls</a></li>
+                        <li><a href="/rolls.html#opposed-rolls">Opposed Rolls</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">   
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/fate.html">Fate</a></h2>
+                    <ul>
+                        <li><a href="/fate.html#fateful-deeds">Fateful Deeds</a></li>
+                        <li><a href="/fate.html#twists-of-fate">Twists of Fate</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/exploration.html">Exploration</a></h2>
+                    <ul>
+                        <li><a href="/exploration.html#jumping">Jumping</a></li>
+                        <li><a href="/exploration.html#climbing">Climbing</a></li>
+                        <li><a href="/exploration.html#flying">Flying</a></li>
+                        <li><a href="/exploration.html#falling">Falling</a></li>
+                        <li><a href="/exploration.html#swimming">Swimming</a></li>
+                        <li><a href="/exploration.html#breath-holding">Breath Holding</a></li>
+                        <li><a href="/exploration.html#sight--darkness">Sight & Darkness</a></li>
+                        <li><a href="/exploration.html#hiding">Hiding</a></li>
+                        <li><a href="/exploration.html#damaging-objects">Damaging Objects</a></li>
+                        <li><a href="/exploration.html#doom">Doom</a></li>
+                        <li><a href="/exploration.html#resting">Resting</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/overland-travel.html">Travel</a></h2>
+                    <ul>
+                        <li><a href="/overland-travel.html#landscape">Landscape</a></li>
+                        <li><a href="/overland-travel.html#weather">Weather</a></li>
+                        <li><a href="/overland-travel.html#mounts--vehicles">Mounts & Vehicles</a></li>
+                        <li><a href="/overland-travel.html#travel-activities">Travel Activities</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/stress.html">Stress</a></h2>
+                    <ul>
+                        <li><a href="/stress.html#affliction">Afflictions</a></li>
+                        <li><a href="/stress.html#dying">Dying</a></li>
+                        <li><a href="/stress.html#stress-tolerance">Stress Tolerance</a></li>
+                        <li><a href="/stress.html#affliction-list">Affliction List</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/skills.html">Skills</a></h2>
+                    <ul>
+                        <li><a href="/skills.html#type">Type</a></li>
+                        <li><a href="/skills.html#targets">Targets</a></li>
+                        <li><a href="/skills.html#defense">Defense</a></li>
+                        <li><a href="/skills.html#effects">Effects</a></li>
+                        <li><a href="/skills.html#cunning-effects">Cunning Effects</a></li>
+                        <li><a href="/skills.html#skill-tags">Skill Tags</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/combat.html">Combat</a></h2>
+                    <ul>
+                        <li><a href="/combat.html#turns--rounds">Turns & Rounds</a></li>
+                        <li><a href="/combat.html#defenses">Defenses</a></li>
+                        <li><a href="/combat.html#defending--yielding">Defending vs Yielding</a></li>
+                        <li><a href="/combat.html#damage--defeat">Damage & Defeat</a></li>
+                        <li><a href="/combat.html#movement--position">Movement & Position</a></li>
+                        <li><a href="/combat.html#zone-of-control">Zone of Control</a></li>
+                        <li><a href="/combat.html#mounted-combat">Mounted Combat</a></li>
+                        <li><a href="/combat.html#combat-in-water">Combat in Water</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/conditions.html">Conditions</a></h2>
+                    <ul>
+                        <li><a href="/conditions.html#removing-conditions">Removing Conditions</a></li>
+                        <li><a href="/conditions.html#condition-tags">Condition Tags</a></li>
+                        <li><a href="/conditions.html#condition-list">Condition List</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/special-terrain.html">Terrain</a></h2>
+                    <ul>
+                        <li><a href="/special-terrain.html#shattered-terrain">Shattered Terrain</a></li>
+                        <li><a href="/special-terrain.html#tangled-terrain">Tangled Terrain</a></li>
+                        <li><a href="/special-terrain.html#spiked-terrain">Spiked Terrain</a></li>
+                        <li><a href="/special-terrain.html#burning-terrain">Burning Terrain</a></li>
+                        <li><a href="/special-terrain.html#wet-terrain">Wet Terrain</a></li>
+                        <li><a href="/special-terrain.html#icy-terrain">Icy Terrain</a></li>
+                        <li><a href="/special-terrain.html#snowy-terrain">Snowy Terrain</a></li>
+                        <li><a href="/special-terrain.html#goopy-terrain">Goopy Terrain</a></li>
+                        <li><a href="/special-terrain.html#oily-terrain">Oily Terrain</a></li>
+                        <li><a href="/special-terrain.html#corrosive-terrain">Corrosive Terrain</a></li>
+                        <li><a href="/special-terrain.html#blessed-terrain">Blessed Terrain</a></li>
+                        <li><a href="/special-terrain.html#cursed-terrain">Cursed Terrain</a></li>
+                        <li><a href="/special-terrain.html#obscuring-cloud">Obscuring Cloud</a></li>
+                        <li><a href="/special-terrain.html#toxic-cloud">Toxic Could</a></li>
+                        <li><a href="/special-terrain.html#lava">Lava</a></li>
+                    </ul>
+                </li>
+
+
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/legends.html">Legends</a></h2>
+                    <ul>
+                        <li><a href="/forging-legends.html#legendary-deeds">Legendary Deeds</a></li>
+                        <li><a href="/forging-legends.html#commemorating-legends">Comemorating Legends</a></li>
+                        <li><a href="/forging-legends.html#legendary-quests">Legendary Quests</a></li>
+                        <li><a href="/forging-legends.html#legends-of-old">Legends of Old</a></li>
+                    </ul>
+                </li>
+                <!-- <li>
+                    <a href="/downtime.html">Downtime</a><span class="opener"></span>
+                    <ul>
+                        <li><a href="/downtime.html#crafting">Crafting</a></li>
+                    </ul>
+                </li> -->
+
+
+                
+                <h1>Gamemastery</h1>
+                <h2> </i> <a href="/soon.html">Coming Soon!</a></h2>
+
+
+            </ul>
+        </nav>
+
+        <!-- ??? -->
+            <!-- <section>
+            <header class="major">
+                <h2>Latest Skills</h2>
+            </header>
+            <div class="mini-posts">
+                <article>
+                    <a href="/#" class="image"><img src="/images/pic07.jpg" alt="" /></a>
+                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                </article>
+                <article>
+                    <a href="/#" class="image"><img src="/images/pic08.jpg" alt="" /></a>
+                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                </article>
+                <article>
+                    <a href="/#" class="image"><img src="/images/pic09.jpg" alt="" /></a>
+                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                </article>
+            </div>
+            <ul class="actions">
+                <li><a href="/#" class="button">More</a></li>
+            </ul>
+        </section> -->
+
+        <!-- ??? -->
+        <!-- <section>
+            <header class="major">
+                <h2>Get in touch</h2>
+            </header>
+            <p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+            <ul class="contact">
+                <li class="icon solid fa-envelope"><a href="/#">information@untitled.tld</a></li>
+                <li class="icon solid fa-phone">(000) 000-0000</li>
+                <li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+                Nashville, TN 00000-0000</li>
+            </ul>
+        </section> -->
+
+        <!-- Footer -->
+        <!-- <footer id="footer">
+            <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="/https://unsplash.com">Unsplash</a>. Design: <a href="/https://html5up.net">HTML5 UP</a>.</p>
+        </footer> -->
+    </div>
+</div>
 			<div id="main">
-				<div class="inner">
-					<div><img src="images/pic11.jpg" alt="" class="image main" /> </div>
+					<h1 id="personality">Personality</h1>
 
-<h1 id="personality">Personality</h1>
+<p><em>We are what we repeatedly do.</em></p>
 
-<p>A character’s personality describes many things including the way they see the world, the way they interact with other people, their life experience, their favorite pastimes, and what makes them special.</p>
+<p>Your character’s personality is who they are as a person, including the way they see the world, the way they interact with other people, their life experience, their favorite pastimes, and what makes them special.</p>
 
-<p>A character’s personality traits represent their outlook on life, determine how the respond to fateful deeds, and contribute to influence rolls made to persuade NPCs. A character’s background details describe their past experiences, which they draw upon to help overcome talent and influence rolls.</p>
+<ul>
+  <li>
+    <p>Your <a href="personality.html#values">values</a> are your outlook on life. They determine the success of <a href="rolls.md">rolls</a> made to influence NPCs, and how you respond to <a href="fate.html#fateful-deed">fateful deeds</a>.</p>
+  </li>
+  <li>
+    <p>Your <a href="personality.html#training">training</a> and <a href="personality.html#expertise">expertise</a> describe your past experiences, which you draw upon to help overcome a variety of challenges.</p>
+  </li>
+  <li>
+    <p>Your <a href="personality.html#character-flaws">flaws</a> might create problems for you, but <a href="fate.md">fate</a> smiles upon troubled souls.</p>
+  </li>
+  <li>
+    <p>Your <a href="personality.html#indulgence">indulgences</a> are activities you enjoy and that can reduce your <a href="stress.md">stress</a>.</p>
+  </li>
+  <li>
+    <p>Finally, your <a href="personality.html#personal-legend">personal legend</a> is entirely unique to you and gives you some special power.</p>
+  </li>
+</ul>
 
-<p>A character’s indulgences are activities they enjoy and that can reduce their stress. Finally, each character has a personal legend unique to them that gives them some special power.</p>
+<h2 id="personal-values">Personal Values</h2>
 
-<h2 id="personality-traits">Personality Traits</h2>
+<p>While all people have a unique set of traits, principles, and motives, Forge of Legends focuses on six personal values in particular. These values come in three opposing pairs: bold vs. subtle, idealistic vs. pragmatic and serious vs. whimsical.</p>
 
-<p>While all people have a unique set of values, principles, and motives, Forge of Legends focuses on six personality traits in particular. These personality traits come in three opposing pairs: bold vs. subtle, idealistic vs. pragmatic and serious vs. carefree.</p>
+<p>Your character has a rating from one to five in each value. A rating of one or two means that you are <strong>opposed</strong> to the value, while a rating of four or five means that you are <strong>aligned</strong> with the value. A rating of exactly three means you are <strong>neutral</strong> on that scale.</p>
 
-<p>Each character has a trait rating from zero to three in one trait from each pair. A rating of zero means the character has neither trait, while a rating of three is very strongly aligned with one trait and opposed to the other. Players may set their characters’ personality trait ratings to anything they wish when creating their character. But one set, personality traits typically only change as the results of fateful deeds, described below.</p>
+<p>Opposite pairs of values always add up to exactly 6; whenever one value is increased, the opposite value is decreased. If you have a bold rating of 3, you must also be subtle 3; if you are serious 5, you must be whimsical 1. Other than that restriction, you may set their characters’ personal values to anything you wish when creating your character. Once set, personal values can only change as the results of fateful deeds.</p>
 
-<h3 id="bold--subtle">Bold / Subtle</h3>
+<h3 id="bold-vs-subtle">Bold vs Subtle</h3>
 
-<p>A bold character would confront an challenge directly, but a subtle character would bypass a direction confrontation. A bold character might see themself as brave, daring, and straightforward, while they see might subtle characters as cowardly, manipulative, or meek. A subtle character sees themself as patient, wise and careful, and bold characters as impatient, shortsighted, or reckless.</p>
+<p>Bold and subtle describe a character’s approach to <strong>overcoming obstacles</strong>. A bold character would <strong>confront</strong> an challenge directly, but a subtle character would <strong>bypass</strong> a direction confrontation. A bold character might see themselves as brave, daring, and straightforward, while they see might subtle characters as cowardly, manipulative, or meek. A subtle character sees themselves as patient, wise, and careful, but bold characters as impatient, shortsighted, or reckless.</p>
 
-<h3 id="idealistic--pragmatic">Idealistic / Pragmatic</h3>
+<h3 id="idealistic-vs-pragmatic">Idealistic vs Pragmatic</h3>
 
-<p>An idealistic character would renounce a beneficial but distasteful opportunity, but a pragmatic character would exploit such an opportunity. An idealistic character sees themself as honorable, fair, and someone who does the right thing, while they might see a pragmatic character as unscrupulous, selfish, or downright evil. A pragmatic character sees themselves as realistic, practical and someone who does what needs to be done, while they might describe an idealistic character as a zealot, a wishful thinker, or gullible.</p>
+<p>Idealistic and Pragmatic describe how a character responds to an <strong>unpleasant opportunity</strong>. An idealistic character would <strong>renounce</strong> a beneficial but distasteful opportunity, but a pragmatic character would <strong>exploit</strong> such an opportunity. An idealistic character sees themselves as honorable, fair, and someone who does the right thing, while they might see a pragmatic character as unscrupulous, selfish, or downright evil. A pragmatic character sees themselves as realistic, practical and someone who does what needs to be done, while they might describe an idealistic character as a zealot, a wishful thinker, or gullible.</p>
 
-<h3 id="serious--carefree">Serious / Carefree</h3>
+<h3 id="serious-vs-whimsical">Serious vs Whimsical</h3>
 
-<p>A serious character would remain determined in the face of adversity, while a carefree character would adapt to their new situation. A serious character sees themself as tenacious, decisive, and calm, but might see a carefree character as unreliable, lazy, or overly excitable. A carefree character sees themself as friendly, flexible, and passionate, while they might see a serious character as dour, stubborn, and cold.</p>
+<p>Serious and Whimsical describe how a character responds to <strong>intriguing diversions</strong>. A serious character would <strong>persist</strong> toward their main objective, while a whimsical character would <strong>explore</strong> the new circumstance. A serious character sees themselves as tenacious, decisive, and calm, but might see a whimsical character as unreliable, lazy, or overly excitable. A whimsical character sees themselves as friendly, flexible, and passionate, while they might see a serious character as dour, stubborn, and cold.</p>
 
-<h2 id="fateful-deeds">Fateful Deeds</h2>
+<h2 id="training-wip">Training #WIP</h2>
 
-<blockquote>
-  <h3 id="optional-rule-focus-for-fateful-deeds">Optional Rule: Focus for Fateful Deeds</h3>
-
-  <p>Performing a fateful deed aligned to one’s personality    can be inspiring and motivating. That resolve may just what is needed to    turn the tide of battle.    If your group wishes to use this rule, then whenever a    character performs a fateful deed matching their personality, that    character gains +8 focus.</p>
-</blockquote>
-
-<p>A fateful deed is an important decision made in the spirit of one of the six personality traits. A fateful deed could be something a character says, does, or even doesn’t do, but it must always be a significant, informed, and voluntary choice by a character. The GM should attempt to let players know in advance when one of their actions will be considered a fateful deed, but fateful deeds may also be declared in hindsight if applicable. Players should also nominate each other’s actions for fateful deeds, but the GM makes the final decision.</p>
-
-<p>When a choice is declared to be a fateful deed, the GM will specify which of the six personality traits most closely matches the situation. Any character involved in the deed should compare their personality traits to that specified by the GM. But characters who are unaware of or unable to influence the deed are not included.</p>
-
-<p>If a character’s personality matches the trait of the fateful deed, then that character gains one point of fate (regardless of their trait rating). The character may also choose to increase the rating of that personality trait by one (up to three) or leave their trait rating unchanged.</p>
-
-<p>If a character has a personality trait that is the opposite of the fateful deed, the character must choose one: either they suffer stress equal to their rating of the opposing trait; or the opposing trait rating is decreased by one. Sticking to one’s values can be difficult when the going gets tough.</p>
-
-<h3 id="discussions">Discussions</h3>
-
-<p>Discussions arise when a group of characters disagrees on a choice between two fateful deeds with opposite traits. A discussion is a chance for each character to state their viewpoints and what they believe to be the best choice for the situation. Each player should roleplay their character’s viewpoint and advocate for what their character would do.</p>
-
-<p>Characters who participate in a discussion and share their perspectives are more willing to accept another character’s way of doing things. Whatever conclusion the group comes to regarding the fateful deed, characters who participated in the discussion suffer one less stress than normal as a result. A character with a trait rating a zero would not suffer any stress.</p>
-
-<h2 id="influence-rolls">Influence Rolls</h2>
+<p>Your training describes your familiarity with certain tasks, and benefits your <a href="rolls.md">rolls</a> related to those tasks. When you create your character, select 7 tasks from the list below in which your character is trained. When the GM calls for a roll, you should ask if your training would help with the task. If the GM agrees that it would help, add a +2 bonus to your TN for the roll. Some tasks may only be attempted by a character who has the necessary training.</p>
 
 <table>
   <thead>
     <tr>
-      <th>Influence  Roll Difficulty</th>
-      <th> </th>
-      <th> </th>
+      <th>Training</th>
+      <th>Use</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Difficulty</td>
-      <td>TN</td>
-      <td>Example</td>
+      <td>Run</td>
+      <td>Run quickly or over long distances.</td>
     </tr>
     <tr>
-      <td>Trivial</td>
-      <td>NA</td>
-      <td>Asking for the time  of day</td>
+      <td>Jump</td>
+      <td>Jump high and far.</td>
     </tr>
     <tr>
-      <td>Easy</td>
-      <td>3</td>
-      <td>Making a first impression over some  drinks</td>
+      <td>Climb</td>
+      <td>Climb up trees, rocks, buildings or other surfaces.</td>
     </tr>
     <tr>
-      <td>Simple</td>
-      <td>6</td>
-      <td>Requesting a favor  that takes hours to complete</td>
+      <td>Swim</td>
+      <td>Swim while laden and through turbulent water.</td>
     </tr>
     <tr>
-      <td>Moderate</td>
-      <td>9</td>
-      <td>Convincing someone to reveal their dark  past</td>
+      <td>Heave</td>
+      <td>Push, pull, lift, or haul heavy objects.</td>
     </tr>
     <tr>
-      <td>Difficult</td>
-      <td>12</td>
-      <td>Rallying  a group to risk their lives for a good cause</td>
+      <td>Smash</td>
+      <td>Break through barriers and destroy tough objects.</td>
     </tr>
     <tr>
-      <td>Incredible</td>
-      <td>15</td>
-      <td>Changing a long held or deeply  rooted belief</td>
+      <td>Lurk</td>
+      <td>Find a place to hide and stay there unnoticed.</td>
     </tr>
     <tr>
-      <td>Legendary</td>
-      <td>18+</td>
-      <td>Demanding that  someone betray their family and friends</td>
+      <td>Skulk</td>
+      <td>Move while remaining out of sight, keeping to shadows and behind cover.</td>
     </tr>
     <tr>
-      <td>Impossible</td>
-      <td>NA</td>
-      <td>Asking a stranger to fall on  their sword</td>
+      <td>Tiptoe</td>
+      <td>Move or interact with objects while remaining silent.</td>
+    </tr>
+    <tr>
+      <td>Tinker</td>
+      <td>Fiddle with locks or other delicate mechanisms.</td>
+    </tr>
+    <tr>
+      <td>Balance</td>
+      <td>Keep your footing, or land safely when you fall.</td>
+    </tr>
+    <tr>
+      <td>Contort</td>
+      <td>Squeeze into or out of a tight spot, or flex into unusual positions.</td>
+    </tr>
+    <tr>
+      <td>Spot</td>
+      <td>Notice subtle visual details.</td>
+    </tr>
+    <tr>
+      <td>Listen</td>
+      <td>Pick up faint sounds or filter out noise.</td>
+    </tr>
+    <tr>
+      <td>Rummage</td>
+      <td>Search through physical objects to find those of interest.</td>
+    </tr>
+    <tr>
+      <td>Inspect</td>
+      <td>Search through information to find what stands out.</td>
+    </tr>
+    <tr>
+      <td>Medicine</td>
+      <td>Heal or diagnose an ailment or injury.</td>
+    </tr>
+    <tr>
+      <td>Ride</td>
+      <td>Control your mount or your position while mounted.</td>
+    </tr>
+    <tr>
+      <td>Slight of Hand</td>
+      <td>Conceal your subtle hand movements.</td>
+    </tr>
+    <tr>
+      <td>Boast</td>
+      <td>Convince others that you are important and deserve respect.</td>
+    </tr>
+    <tr>
+      <td>Intimidate</td>
+      <td>Pressure others into giving you what you want.</td>
+    </tr>
+    <tr>
+      <td>Calm</td>
+      <td>Defuse a tense situation and turn it into a conversation.</td>
+    </tr>
+    <tr>
+      <td>Disguise</td>
+      <td>Look and act as if you were someone else.</td>
+    </tr>
+    <tr>
+      <td>Negotiate</td>
+      <td>Help two sides come to a mutually agreeable arrangement.</td>
+    </tr>
+    <tr>
+      <td>Inspire</td>
+      <td>Show others that you know what is best for all.</td>
+    </tr>
+    <tr>
+      <td>Entertain</td>
+      <td>Crack jokes, lighten the mood, and pass the time.</td>
+    </tr>
+    <tr>
+      <td>Schmooze</td>
+      <td>Make a good first impression.</td>
+    </tr>
+    <tr>
+      <td>Divert</td>
+      <td>change the topic away from one you’d rather avoid.</td>
+    </tr>
+    <tr>
+      <td>Manipulate</td>
+      <td>Trick others into acting against their best interests.</td>
+    </tr>
+    <tr>
+      <td>Explain</td>
+      <td>sincerely change a person’s belief.</td>
+    </tr>
+    <tr>
+      <td>Vow</td>
+      <td>Convince others that you and your cause are sincere.</td>
     </tr>
   </tbody>
 </table>
 
-<p>Player character will often need to persuade NPCs to assist them with their adventures. Sometimes, an NPC is eager and willing to do what they can. But when an NPC or group of NPCs is reluctant to help, influence rolls may change their perspective. The GM will call for an influence roll when a character attempts to change the mind of an NPC or group who is uncooperative.</p>
+<h2 id="expertise">Expertise</h2>
 
-<p>First, the DM should consider the NPC or group’s objections, which describe why they are not willing to cooperate with the request. An objection could be that the NPC wants something in return, they fear the consequences of cooperating, or they just plain don’t like the character. If the NPC has no objections, then they would cooperate and no influence roll in needed.</p>
+<p>Your expertise describes tasks that you are uniquely excellent. This mastery comes from the details of your history, such as where you are from, who you have known, and how you came to do what you’re doing now. You don’t decide your expertise when creating your character; your expertise is revealed through <a href="personality.html#flashbacks">flashbacks</a> as you play the game.</p>
 
-<p>Next the GM should decide the NPC’s patience, representing how long they will listen to the characters before refusing to listen more. An NPC’s patience will normally be about two but may change depending on the circumstances. Finally, the GM should decide the NPC’s personality traits or use traits that have already been established. The GM won’t reveal this information to the players right away, but the NPC’s words and actions will provide hints during the conversation.</p>
+<p>Expertise is not chosen from a specific list. Instead, expertise is a short phrase that describes your talent. Expertise much be specific enough that it doesn’t apply to just any situation, but general enough that it will be useful throughout your adventure. For example, you might have expertise that you serve aboard a specific sailing ship. Your expertise would help you with anything related to the ship, including the crew, construction, and exploits of the ship. But such expertise wouldn’t help you with other different kinds of ships. The GM will help you adjust your expertise to be appropriately specific. Some example phrases of expertise are given here:</p>
 
-<p>The player’s goal with influence rolls are to overcome all the NPC’s objections before they run out of patience. The players should describe what their character says and does to persuade the NPC. Then the GM will decide which personality trait most closely matches the character’s words and actions, and assign the roll a target number for success, just like a talent roll.</p>
+<ul>
+  <li>
+    <p>I’ve trekked every corner of the august valley.</p>
+  </li>
+  <li>
+    <p>I was swindled by a traveling salesman, I’ll never let it happen again.</p>
+  </li>
+  <li>
+    <p>The court of Lataris recognizes me as a minor noble.</p>
+  </li>
+  <li>
+    <p>In the red wastes, you don’t survive if you can’t lay low.</p>
+  </li>
+  <li>
+    <p>The red hand tribe of orcs killed my family; I’ll get my revenge.</p>
+  </li>
+</ul>
 
-<p>If the character has the personality trait associated with the influence roll, they add their trait rating to the influence roll. But if they have the opposite trait, they subtract that rating from the roll instead. The same applies to the NPC or group being persuaded; if they share that trait, they add their rating to the character’s roll, but if they have the opposite trait, they subtract their rating from the roll instead.</p>
+<p>If your expertise is relevant to a <a href="rolls.md">roll</a>, then it gives you a <a href="rolls.html#boons--banes">boon</a> to that roll. If multiple sources of expertise are helpful, then you gain a boon for each!</p>
 
-<p>As with talent rolls, players may add boons from relevant background details to their influence rolls, and the GM may add boons or banes based on the circumstances. Certain conditions, afflictions, and equipment can also increase or decrease influence rolls.</p>
+<h3 id="flashbacks-wip2">Flashbacks #WIP2</h3>
 
-<p>Group influence rolls also work like group talent rolls. Each character can contribute boons from their background details and nominate just one member of the group to roll the dice. Likewise, cooperating might force characters to take the lowest roll if their messages interfere with each other.</p>
+<p>When your character achieves certain goals, the GM will reward you with the opportunity for a flashback. A flashback is a chance to explore a detail of your character’s past. When you resolve a flashback, discuss with the GM what detail you would like to explore.</p>
 
-<p>Finally, the chance die is rolled, and all bonuses and penalties are added. If the total is greater than the TN, then the character’s words and actions have successfully overcome that objection. If the roll fails, then the NPC is not convinced and loses one patience with the conversation.</p>
+<p>If the GM agrees that the proposed embellishment is reasonable in the context of the character’s existing background, then the player may spend a point of fate to add the embellishment to their character’s background.</p>
 
-<p>Once all the NPC’s objections have been overcome, then their mind has been changed and they are willing to cooperate with the character’s request. Once the NPC’s patience runs out, they refuse to listen to anything further on the subject and insist on their current point of view.</p>
+<p>In general, embellishing a character’s background is easier if fewer details have already been established, and if the detail being added is consistent with the background details that the character already has. The GM should be more permissive of characters who have few background details already established or few that have aided them on their quest so far. Everyone comes from somewhere, and all characters are entitles to backgrounds that help them achieve their goals.</p>
 
-<p>The fate die is also rolled alongside an influence roll, and if it rolls a 1, doom may befall the players, while if it rolls a 10, the roll becomes fated.</p>
+<h2 id="lore-checks">Lore Checks</h2>
 
-<p>For simple interactions with simple NPCs, the NPC might only have one objection and one patience, giving the players just one chance at success or failure. Only NPCs can be affected by influence rolls; players may always decide for themselves how their character thinks and reacts.</p>
+<p>The GM will ask you for a lore check to determine what you know about a specific subject. If you have any training that would give you insight in the subject, each adds +2 to your lore check. If you have relevant expertise, each adds +4. If your allies have training or expertise that would offer a different perspective, you all can pool your knowledge together to determine how much you know. However, if you and your ally have the same training, it is only counted once for a lore check.</p>
 
-<h3 id="changing-patience">Changing Patience</h3>
-
-<p>Often when an NPC runs out of patience, that is the end of the conversation. However, character can attempt to increase an NPC’s patience by offering them new information relevant to the conversation.</p>
-
-<p>For example, a guard may have run out of patience with the players simply asking to be let past. But if one of the players offers a generous bribe, the guard may be willing to reconsider their proposition. Other new information that may increase an NPC’s patience could include sharing a scandalous rumor, a previously unnoticed benefit for the NPC, or a threat against something important to them. Most importantly, whatever is brought up must be relevant to the conversation and new. If it is irrelevant or if the NPC has already been informed, then their patience does not increase.</p>
-
-<p>Along the same lines, an NPC’s patience may decrease if they feel that they have been treated rudely or unfairly, or if they would rather avoid the subject of the conversation. Saying the wrong thing can end a conversation just as surely as a failed influence roll.</p>
-
-<h2 id="background-details">Background Details</h2>
-
-<p>A character’s background details describe the whole collection of experiences they have had over their life. This could include old and mundane information such as where a character was born and who their family is. But it can also include new and fantastic details such as recent adventures.</p>
-
-<p>All these background details may become relevant for talent rolls and influence rolls, and lore checks. If a player believes that one or more of a character’s background details would provide them with valuable insight or experience toward a talent or influence roll, they should point the connection out to the GM. Even players who are not involved in the roll may point out how another character’s background is helpful in a given situation. The GM may ask the player how that experience is relevant, and if the GM agrees, then player may add a boon to their character’s roll.</p>
-
-<p>Players should write down as much information about their character as they think is relevant, with the GM’s permission. However, it is okay if a player doesn’t have their character’s entire background detailed when the character is first created, because a character’s background can always be embellished.</p>
-
-<h3 id="flaws--fate">Flaws &amp; Fate</h3>
-
-<p>The characters of Forge of Legends are still just people, and often come with their own weakness, foibles, and flaws. But fate smiles upon those who admit their shortcomings.</p>
-
-<p>​      A character’s flaws are background details just like any others. However, whenever a character flaws or other background details create a significant problem for the character or group, as determined by the GM, that character gains a point of fate. Characters with interesting flaws or double-edged background details will find more opportunities to be favored by fate.</p>
-
-<h3 id="embellishing-a-background">Embellishing a Background</h3>
-
-<p>At any time except during a roll, a character may ask to embellish their background by adding more details. This is a kind of twist of fate and follows all the same rules, such as only adding detail and not changing established facts.</p>
+<p>Once you’ve added up your relevant training and expertise, the GM will determine how much you know about the subject and tell you your insights. No dice are rolled to determine what you know; either you have enough experience from your background, or you don’t. If it turns out you don’t know enough lore, you’re encouraged to seek out people, books, or research to learn more.</p>
 
 <table>
   <thead>
@@ -200,29 +566,29 @@
       <td>Fire  is hot, water is wet</td>
     </tr>
     <tr>
-      <td>1</td>
+      <td>2</td>
       <td>Public Information</td>
       <td>The personality of the local  governor</td>
     </tr>
     <tr>
-      <td>2</td>
+      <td>4</td>
       <td>Expert  Knowledge</td>
       <td>The  type of herb to treat an illness</td>
     </tr>
     <tr>
-      <td>3</td>
+      <td>6</td>
       <td>Whispered Rumors</td>
-      <td>Which of the townsfolk may be a  vampire</td>
+      <td>Which of the townsfolk has been sneaking out at night</td>
     </tr>
     <tr>
-      <td>4</td>
+      <td>8</td>
       <td>Well-kept  Secrets</td>
-      <td>The  whereabouts of the king’s secret heir</td>
+      <td>The  whereabouts of the king’s secret scion</td>
     </tr>
     <tr>
-      <td>5</td>
+      <td>10</td>
       <td>Legendary Lore</td>
-      <td>How to call upon an elder god</td>
+      <td>The name of one of the old gods</td>
     </tr>
     <tr>
       <td>NA</td>
@@ -232,381 +598,37 @@
   </tbody>
 </table>
 
-<p>Every character comes from somewhere and has done something. For characters with very few background details, adding modest details would be a likely or plausible twist of fate, costing few fate points. However, if a character already has some background details, or if they ask to add a detail that seems dubious or unrelated to their other details, then it may be an unlikely or doubtful twist of fate, requiring more fate points. Eventually the GM may declare that it is ridiculous or impossible, for a character to add dozens of unrelated details to their background.</p>
+<h2 id="character-flaws">Character Flaws</h2>
 
-<p>In general, embellishing a character’s background is easier if fewer details have already been established, and if the detail being added is consistent with the background details that the character already has.</p>
-
-<h2 id="lore">Lore</h2>
-
-<p>Lore describes all the knowledge about various subjects a character has collected. When the GM or players ask if the characters have some specific knowledge about a subject, the GM will call for a lore check, and assign a lore rating necessary to reveal the information, based on the table below.</p>
-
-<p>The players should review their characters’ backgrounds and point out any background detail that might be relevant to the subject. Each relevant background detail adds one to the group’s lore check on the subject.</p>
-
-<p>If one or more characters have multiple similar background details, then only one should be counted to determine the group’s lore check. However, if different characters or different background details can offer different perspectives, then each one should be added to the group’s lore check.</p>
-
-<p>Finally, the GM compare’s the group’s lore check to the necessary lore rating to reveal the information. If the group passes the check, then the GM reveals the information to them. No dice are rolled to determine what a character knows; either they have enough experience from their backgrounds, or they don’t.</p>
-
-<p>If a character or group is revealed to have an insufficient lore rating, there are a few things they could do to increase their knowledge. They may try to seek out a person, book, or other source of information that can help them reach the required rating. Or they may ask to embellish their background to add a detail that would expand their knowledge.</p>
+<p>The characters of Forge of Legends are still just people, and often come with their own weakness, foibles, and flaws. But fate smiles upon those who admit their shortcomings. Whenever your character’s values, flaws or other background details create a significant problem for the your or your allies, you gain a point of fate. Characters with interesting flaws or double-edged quirks will find more opportunities to be favored by fate.</p>
 
 <h2 id="indulgences">Indulgences</h2>
 
-<p>Indulgences are a character’s favorite activities, experiences, and pastimes. Each character should have three to five indulgences that describe what they like to do in their spare time. Whenever a character participates in one of their indulgences, they are relieved of one point of stress. An especially poignant indulgent experience may remove more than one stress or reward a character with a point of fate, at the GM’s discretion.</p>
-
-<p>An indulgence should be a pleasant activity that is difficult, risky, costly, or otherwise rare but enjoyable for the character to do. For example, a sentiment such as “I like drinking a few ales” is not an indulgence, because it is not a rare experience. On the other hand, an indulgence such as “I like to get so drunk I have a hangover the next day” is fine because it comes with a downside.</p>
-
-<p>Indulgences are only special if they are uncommon, and an old indulgence that becomes commonplace may no longer feel as special as it once did. Likewise, characters may discover new indulgences on their journey.</p>
+<p>Indulgences are your character’s favorite activities, experiences, and pastimes. As you play the game you will discover your character’s indulgences, which will relive stress when you parted of them. An indulgence is a pleasant activity that is difficult, risky, costly, or otherwise rare but enjoyable for your character to do. Indulgences are only special if they are uncommon, and an old indulgence that becomes commonplace may no longer feel as special as it once did.</p>
 
 <h2 id="personal-legend">Personal Legend</h2>
 
-<p>A character’s personal legend is a story and power completely unique to them. A personal legend must include 3 things: An origin, a manifestation, and a mystery.</p>
+<p>Your character’s personal legend is a story and power completely unique to them! A personal legend must include 3 things: An origin, a manifestation, and a mystery. Not all the details of your personal legend need to be established right away. Personal legends can and do change over time. It may even be that a you haven’t yet discovered your personal legend when the game begins, only for it to be revealed later in a moment of crisis.</p>
 
-<p>The origin is a brief description of how the character came to acquire or understand their personal legend. It may come from the character’s bloodline, one of their past deeds, or years of dedicated training. However, a personal legend is always tied to a character themselves, not an item that the character possesses.</p>
+<h3 id="origin">Origin</h3>
 
-<p>The manifestation of a personal legend is a supernatural ability or power that the character has. As with Forging a Legend, describes below, the player should suggest the nature of the manifestation, while the GM should offer the specific effects and limitations. Both the player and the GM should agree on an appropriate manifestation. The GM Guidelines chapter includes additional information about manifestations.</p>
+<p>The origin of your legend is a brief description of how you came to acquire or understand your personal legend. It may come from your bloodline, one of your past deeds, or years of dedicated training. However, a personal legend is always tied to your character themselves, not an item that your character possesses.</p>
 
-<p>Finally, ever personal legend needs a mystery. There may still be unanswered questions or unresolved conflicts about the origin, the character may not fully understand their manifestation, or there may be questions about the future of the personal legend.</p>
+<h3 id="manifestation">Manifestation</h3>
 
-<p>Not all the details of a character’s personal legend need to be established right away. Personal legends can and do change over time. It may even be that a character hasn’t yet discovered their personal legend when the game begins. A character may only discover their personal legend in a moment of crisis.</p>
+<p>The manifestation of a personal legend is a supernatural ability or power that your has, usually in the form of a unique skill. You should suggest the nature of the manifestation to the GM, who will then offer the specific effects and limitations. The GM Guidelines chapter includes additional information for designing legendary manifestations.</p>
 
-				</div>
+<h3 id="mystery">Mystery</h3>
+
+<p>Finally, every personal legend needs a mystery. There may still be unanswered questions or unresolved conflicts about the origin, you may not fully understand your manifestation, or you may be uncertain of how the legend will affect your future. A mystery is a loose thread that the GM can weave into an adventure. If the GM feels like it is difficult to incorporate a character’s mystery into any adventure, then they will ask you to elaborate that mystery.</p>
+
+<p>By their nature, legendary mysteries entice characters to seek their answers. Discovering the resolution to a mystery rewards you with a new manifestation of your personal legend, which may enhance or even replace their old manifestation. Resolving a mystery doesn’t just spell the end of one chapter of your personal legend. It also marks the begging of another. Wherever you discover the answer to a mystery, the GM will work with you to decide what new mystery has arisen. A personal legend must always have some unanswered questions.</p>
+ <!--  | replace_regex -->
 			</div>
-			<!-- Sidebar -->
-        	<div id="sidebar">
-    <img src="/images/scroll/topleft-border.png" id="sidebar-top-scroll">
-    <div class="inner">
-        <!-- Search -->
-            <section id="search" class="alt">
-                <script async src="https://cse.google.com/cse.js?cx=a3cc61b05e5e110db"></script>
-                <div class="gcse-search" style="width: 1%; margin: 0 auto"></div>
-            </section>
-
-        <!-- Menu -->
-        <nav id="menu">
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/introduction.html">Introduction</a></li>
-                <h2>Quck Reference</h2>
-
-                <li>
-                    <span class="opener">Classes</span>
-                    <ul>
-                        
-                        <li></li><a href="/classes/Weaponmaster.html"></li>
-                          Weaponmaster
-                        </a>
-                      
-                        <li></li><a href="/classes/Berserker.html"></li>
-                          Berserker
-                        </a>
-                      
-                        <li></li><a href="/classes/Tactician.html"></li>
-                          Tactician
-                        </a>
-                      
-                        <li></li><a href="/classes/Monk.html"></li>
-                          Monk
-                        </a>
-                      
-                        <li></li><a href="/classes/Assassin.html"></li>
-                          Assassin
-                        </a>
-                      
-                        <li></li><a href="/classes/Bard.html"></li>
-                          Bard
-                        </a>
-                      
-                        <li></li><a href="/classes/Trickster.html"></li>
-                          Trickster
-                        </a>
-                      
-                        <li></li><a href="/classes/Acrobat.html"></li>
-                          Acrobat
-                        </a>
-                      
-                        <li></li><a href="/classes/Elementalist.html"></li>
-                          Elementalist
-                        </a>
-                      
-                        <li></li><a href="/classes/Wizard.html"></li>
-                          Wizard
-                        </a>
-                      
-                        <li></li><a href="/classes/Enchanter.html"></li>
-                          Enchanter
-                        </a>
-                      
-                        <li></li><a href="/classes/Psion.html"></li>
-                          Psion
-                        </a>
-                      
-                        <li></li><a href="/classes/Paladin.html"></li>
-                          Paladin
-                        </a>
-                      
-                        <li></li><a href="/classes/Excorcist.html"></li>
-                          Excorcist
-                        </a>
-                      
-                        <li></li><a href="/classes/Necromancer.html"></li>
-                          Necromancer
-                        </a>
-                      
-                        <li></li><a href="/classes/Warlock.html"></li>
-                          Warlock
-                        </a>
-                      
-                        <li></li><a href="/classes/Ranger.html"></li>
-                          Ranger
-                        </a>
-                      
-                        <li></li><a href="/classes/Druid.html"></li>
-                          Druid
-                        </a>
-                      
-                        <li></li><a href="/classes/Shapeshifter.html"></li>
-                          Shapeshifter
-                        </a>
-                      
-                        <li></li><a href="/classes/Beastmaster.html"></li>
-                          Beastmaster
-                        </a>
-                      
-                        <li></li><a href="/classes/Alchemist.html"></li>
-                          Alchemist
-                        </a>
-                      
-                        <li></li><a href="/classes/Inventor.html"></li>
-                          Inventor
-                        </a>
-                      
-                        <li></li><a href="/classes/Demolitionist.html"></li>
-                          Demolitionist
-                        </a>
-                      
-                        <li></li><a href="/classes/Mechanist.html"></li>
-                          Mechanist
-                        </a>
-                      
-                    </ul>
-                </li>
-                <li><a href="/weapons.html">Weapons</a></li>
-                <li><a href="/skill-browser.html">Skill Broswer</a></li>
-                <li>
-                    <span class="opener">Glossary</span>
-                    <ul>
-                        <li><a href="/skill-tags.html">Skill Tags</a></li>
-                        <li><a href="/conditions.html#condition-list">Conditions</a></li>
-                        <li><a href="/stress.html#affliction-list">Afflictions</a></li>
-                        <li><a href="/special-terrain.html">Special Terrain</a></li>
-                    </ul>
-                </li>
-                <h2>Core Rules</h2>
-                <li>
-                    <a href="/fate.html">Fate</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/fate.html#twist-of-fate">Twists of Fate</a></li>
-                        <li><a href="/fate.html#tempt-fate">Tempting Fate</a></li>
-                        <li><a href="/fate.html#tempt-fate">Fate Dice</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/abilities.html">Abilities</a><span class="opener"></span>
-
-                    <ul>
-                        <li><a href="/abilities.html#agility">Agility</a></li>
-                        <li><a href="/abilities.html#brawn">Brawn</a></li>
-                        <li><a href="/abilities.html#insight">Insight</a></li>
-                        <li><a href="/abilities.html#ability-rolls">Ability Rolls</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/ancestry.html">Ancestry</a><span class="opener"></span>
-
-                    <ul>
-                        <li><a href="/ancestry.html#human">Humans</a></li>
-                        <li><a href="/ancestry.html#elf">Elves</a></li>
-                        <li><a href="/ancestry.html#dwarf">Dwarves</a></li>
-                        <li><a href="/ancestry.html#gnome">Gnomes</a></li>
-                        <li><a href="/ancestry.html#orc">Orcs</a></li>
-                        <li><a href="/ancestry.html#beastkin">Beastkin</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/personality.html">Personality</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/personality.html#traits">Personality Traits</a></li>
-                        <li><a href="/personality.html#fateful-deeds">Fateful Deeds</a></li>
-                        <li><a href="/personality.html#influince">Influince Rolls</a></li>
-                        <li><a href="/personality.html#backgrounds">Backgrounds</a></li>
-                        <li><a href="/personality.html#lore">Lore</a></li>
-                        <li><a href="/personality.html#indulgences">Indulgences</a></li>
-                        <li><a href="/personality.html#personal-legend">Personal Legend</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/skills.html">Skills</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/skills.html#class-feature">Class Feature</a></li>
-                        <li><a href="/skills.html#fighting-style">Fighting Style</a></li>
-                        <li><a href="/skills.html#repertoire">Repertoire</a></li>
-                        <li><a href="/skills.html#unlocking">Unlocking Skills</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/equipment.html">Equipment</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/equipment.html#equipment-slots">Equipment Slots</a></li>
-                        <li><a href="/equipment.html#impression">Impression</a></li>
-                        <li><a href="/equipment.html#inventory">Inventory</a></li>
-                        <li><a href="/equipment.html#equipment-list">Equipment List</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/exploration.html">Exploration</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/exploration.html#special-movement">Special Movement</a></li>
-                        <li><a href="/exploration.html#lifting-dragging">Lifting & Dragging</a></li>
-                        <li><a href="/exploration.html#breaking">Breaking Objects</a></li>
-                        <li><a href="/exploration.html#light-darkness">Light & Darkness</a></li>
-                        <li><a href="/exploration.html#stealth">Stealth</a></li>
-                        <li><a href="/exploration.html#chase">Chase Scenes</a></li>
-                        <li><a href="/exploration.html#doom">Time & Doom</a></li>
-                        <li><a href="/exploration.html#travel">Overland Travel</a></li>
-                        <li><a href="/exploration.html#travel-activities">Travel Activities</a></li>
-                        <li><a href="/exploration.html#resting">Resting</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/combat.html">Combat</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/combat.html#turns">Turns & Rounds</a></li>
-                        <li><a href="/combat.html#vigor">Vigor</a></li>
-                        <li><a href="/combat.html#skills">Skills</a></li>
-                        <li><a href="/combat.html#universal-skills">Universal Skills</a></li>
-                        <li><a href="/combat.html#concentration">Concentration</a></li>
-                        <li><a href="/combat.html#movement">Movement & Position</a></li>
-                        <li><a href="/combat.html#support">Support Skills</a></li>
-                        <li><a href="/combat.html#attack">Attack & Defense</a></li>
-                        <li><a href="/combat.html#fated-actions">Fated & Doomed Actions</a></li>
-                        <li><a href="/combat.html#depleted-vigor">Depleted Vigor</a></li>
-                        <li><a href="/combat.html#defeat">Defeat</a></li>
-                        <li><a href="/combat.html#mounted-combat">Mounted Combat</a></li>
-                        <li><a href="/combat.html#water-combat">Water Combat</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/forging-legends.html">Forging Legends</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/forging-legends.html#legendary-deeds">Legendary Deeds</a></li>
-                        <li><a href="/forging-legends.html#commemoration">Commemoration</a></li>
-                        <li><a href="/forging-legends.html#legendary-quests">Legendary Quests</a></li>
-                        <li><a href="/forging-legends.html#legends-of-old">Legends of Old</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/downtime.html">Downtime</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/downtime.html#crafting">Crafting</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/stress.html">Stress & Affliction</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/stress.html#stress">Stress</a></li>
-                        <li><a href="/stress.html#affliction">Afflictions</a></li>
-                        <li><a href="/stress.html#affliction-list">Affliction List</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/conditions.html">Conditions</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/conditions.html#tags">Condition Tags</a></li>
-                        <li><a href="/conditions.html#condition-list">Condition List</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/special-terrain.html">Special Terrain</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/special-terrain.html#shattered-terrain">Shattered Terrain</a></li>
-                        <li><a href="/special-terrain.html#overgrown-terrain">Overgrown Terrain</a></li>
-                        <li><a href="/special-terrain.html#burning-terrain">Burning Terrain</a></li>
-                        <li><a href="/special-terrain.html#wet-terrain">Wet Terrain</a></li>
-                        <li><a href="/special-terrain.html#frozen-terrain">Frozen Terrain</a></li>
-                        <li><a href="/special-terrain.html#goopy-terrain">Goopy Terrain</a></li>
-                        <li><a href="/special-terrain.html#oiled-terrain">Oiled Terrain</a></li>
-                        <li><a href="/special-terrain.html#caustic-terrain">Caustic Terrain</a></li>
-                        <li><a href="/special-terrain.html#blessed-terrain">Blessed Terrain</a></li>
-                        <li><a href="/special-terrain.html#cursed-terrain">Cursed Terrain</a></li>
-                        <li><a href="/special-terrain.html#obscuring-cloud">Obscuring Cloud</a></li>
-                        <li><a href="/special-terrain.html#toxic-cloud">Toxic Could</a></li>
-                        <li><a href="/special-terrain.html#lava">Lava</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-
-        <!-- ??? -->
-            <section>
-            <header class="major">
-                <h2>Latest Skills</h2>
-            </header>
-            <div class="mini-posts">
-                <article>
-                    <a href="/#" class="image"><img src="/images/pic07.jpg" alt="" /></a>
-                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-                </article>
-                <article>
-                    <a href="/#" class="image"><img src="/images/pic08.jpg" alt="" /></a>
-                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-                </article>
-                <article>
-                    <a href="/#" class="image"><img src="/images/pic09.jpg" alt="" /></a>
-                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-                </article>
-            </div>
-            <ul class="actions">
-                <li><a href="/#" class="button">More</a></li>
-            </ul>
-        </section>
-
-        <!-- ??? -->
-        <section>
-            <header class="major">
-                <h2>Get in touch</h2>
-            </header>
-            <p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-            <ul class="contact">
-                <li class="icon solid fa-envelope"><a href="/#">information@untitled.tld</a></li>
-                <li class="icon solid fa-phone">(000) 000-0000</li>
-                <li class="icon solid fa-home">1234 Somewhere Road #8254<br />
-                Nashville, TN 00000-0000</li>
-            </ul>
-        </section>
-
-        <!-- Footer -->
-        <footer id="footer">
-            <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="/https://unsplash.com">Unsplash</a>. Design: <a href="/https://html5up.net">HTML5 UP</a>.</p>
-        </footer>
-    </div>
-</div>
+			<div id="info">
+			</div>
+			<!-- <div id="map">
+			</div> -->
 		</div>
-		<svg xmlns="http://www.w3.org/2000/svg">
-			<filter id="Bevel1">
-				<feGaussianBlur in="SourceAlpha" stdDeviation="0.5" result="blur"/>
-				<feSpecularLighting in="blur" surfaceScale="5" specularConstant="0.5" specularExponent="10" result="specOut" lighting-color="white">
-					<fePointLight x="-5000" y="-5000" z="4000"/>
-				</feSpecularLighting>
-				<feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut2"/>
-				<feComposite in="SourceGraphic" in2="specOut2" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint" />
-			</filter>
-		</svg>
-		<!-- Scripts -->
-		<script src="/assets/js/jquery.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<script src="/assets/js/browser.min.js"></script>
-		<script src="/assets/js/breakpoints.min.js"></script>
-		<script src="/assets/js/util.js"></script>
-      	<script src="/assets/js/main.js"></script>
-		<script src="/assets/js/FoL.js"></script>
 	</body>
 </html>

@@ -1,0 +1,20 @@
+<div class="forgeoflegends item-card" uuid="{{item.uuid}}">
+    <h1 class='item-header flex-group'><img src="{{item.img}}" class='inline-icon'> {{item.name}}</h1>
+    <hr>
+    <span class='item-tags'>
+        {{#if item.system.tags.length}}📜{{#each item.system.tags}} {{this}}{{/each}}{{/if}}
+    </span>
+    <strong>Bulk: </strong>{{item.system.bulk}}
+    <strong>Value: </strong>{{item.system.value}}
+        {{{item.system.description}}}
+
+    <ol class="items-grid">
+        {{#each item.system.skillDocuments as |item index|}}
+            {{> "systems/forgeoflegends/templates/partials/grid-item.hbs" item=item index=index actor=../actor}}
+        {{/each}}
+        {{#each item.effects as |effect index|}}
+            {{> "systems/forgeoflegends/templates/partials/grid-effect.hbs" effect=effect index=index actor=../actor}}
+        {{/each}}
+    </ol>
+
+</div>

@@ -1,0 +1,431 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+	<title>Forge of Legends - Legends</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="description" content="The official website of the Forge of Legends fantasy roleplaying game.">
+	<meta name="keywords" content="tabletop, RPG, fantasy">
+    <meta name="author" content="Reggie Britten">
+	<link rel="icon" type="image/png" href="/images/logo.png"/>
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/tooltipster.bundle.css" />
+	<link rel="stylesheet" href="/assets/js/leaflet/leaflet.css" />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/assets/js/FoL.js"></script>
+	<script src="/assets/js/handlebars-v4.7.7.js"></script>
+	<script src="/assets/js/tooltipster.bundle.js"></script>
+	<script src="/assets/js/leaflet/leaflet.js"></script>
+	<script src="https://kit.fontawesome.com/c754307781.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="sidebar">
+
+    <div class="inner">
+        <img src="assets/css/ranger/PartyFrameBG.png" height="110px" width="auto" id="sidebar-handle">
+
+        <!-- Search -->
+            <section id="search" class="alt">
+                <script async src="https://cse.google.com/cse.js?cx=a3cc61b05e5e110db"></script>
+                <div class="gcse-search" style="width: 1%; margin: 0 auto"></div>
+            </section>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul>
+                <li><h2><a href="/introduction.html">Introduction</a></h2></li>
+
+                <h1>Characters</h1>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/soon.html">Ancestry</a></h2>
+                    <ul>
+                        <li></li><a href="/soon.html">Coming Soon!</a></li>
+                        <!-- <li><a href="/ancestry.html#human">Human</a></li>
+                        <li><a href="/ancestry.html#elf">Elf</a></li>
+                        <li><a href="/ancestry.html#dwarf">Dwarf</a></li>
+                        <li><a href="/ancestry.html#gnome">Gnome</a></li>
+                        <li><a href="/ancestry.html#orc">Orc</a></li>
+                        <li><a href="/ancestry.html#beast-kin">Beast-Kin</a></li>
+                        <li><a href="/ancestry.html#mixed">Mixed</a></li> -->
+                    </ul>
+                </li>
+                                
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/abilities.html">Abilities</a></h2>
+                    <ul>
+                        <li><a href="/abilities.html#agility">Agility</a></li>
+                        <li><a href="/abilities.html#brawn">Brawn</a></li>
+                        <li><a href="/abilities.html#cunning">Cunning</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/personality.html">Personality</a></h2>
+                    <ul>
+                        <li><a href="/personality.html#values">Values</a></li>
+                        <li><a href="/personality.html#bold-vs-subtle">Bold vs Subtle</a></li>
+                        <li><a href="/personality.html#idealistic-vs-pragmatic">Idealistic vs Pragmatic</a></li>
+                        <li><a href="/personality.html#serious-vs-whimsical">Serious vs Whimsical</a></li>
+                        <li><a href="/personality.html#training">Training</a></li>
+                        <li><a href="/personality.html#expertise">Expertise</a></li>
+                        <li><a href="/personality.html#flashbacks">Flashbacks</a></li>
+                        <li><a href="/personality.html#lore-check">Lore Checks</a></li>
+                        <li><a href="/personality.html#flaw">Character Flaws</a></li>
+                        <li><a href="/personality.html#indulgence">Indulgences</a></li>
+                        <li><a href="/personality.html#personal-legend">Personal Legend</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/class.html">Classes</a></h2>
+                    <ul>
+                        <li><a href="/class.html#core-feature">Core Feature</a></li>
+                        <li><a href="/class.html#fighting--style">Fighting Style</a></li>
+                        <li><a href="/class.html#expereince">Experience</a></li>
+                        <li><a href="/class.html#assassin">Assassin</a></li>
+                        <li><a href="/class.html#bard">Bard</a></li>
+                        <li><a href="/class.html#battlemaster">Battlemaster</a></li>
+                        <li><a href="/class.html#beastmaster">Beastmaster</a></li>
+                        <li><a href="/class.html#berserker">Berserker</a></li>
+                        <li><a href="/class.html#elementalist">Elementalist</a></li>
+                        <li><a href="/class.html#enchanter">Enchanter</a></li>
+                        <li><a href="/class.html#geomancer">Geomancer</a></li>
+                        <li><a href="/class.html#monk">Monk</a></li>
+                        <li><a href="/class.html#paladin">Paladin</a></li>
+                        <li><a href="/class.html#shaman">Shaman</a></li>
+                        <li><a href="/class.html#shapeshifter">Shapeshifter</a></li>
+                        <li><a href="/class.html#trickster">Trickster</a></li>
+                        <li><a href="/class.html#warlock">Warlock</a></li>
+                        <li><a href="/class.html#wizard">Wizard</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/equipment.html">Equipment</a></h2>
+                    <ul>
+                        <li><a href="/equipment.html#inventory">Inventory</a></li>
+                        <li><a href="/equipment.html#weapon-proficiency">Weapon Proficiency</a></li>
+                        <li><a href="/equipment.html#armor">Armor</a></li>
+                        <li><a href="/equipment.html#equipment-slots">Equipment Slots</a></li>
+                        <li><a href="/equipment.html#item-tags">Item Tags</a></li>
+                    </ul>
+                </li>
+
+                <hr>
+                
+                <li class="">
+                    <h2> <a href="/soon.html">Skill List</a></h2>
+                </li>
+                <li class="">
+                    <h2> <a href="/soon.html">Equipment List</a></h2>
+                </li>
+
+
+
+
+                <h1>Gameplay</h1>
+
+
+                <li class="opener">   
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/rolls.html">Rolls</a></h2>
+                    <ul>
+                        <li><a href="/rolls.html#roll-difficulty">Roll Difficulty</a></li>
+                        <li><a href="/rolls.html#target-number">Target Number</a></li>
+                        <li><a href="/rolls.html#roll-results">Roll Results</a></li>
+                        <li><a href="/rolls.html#boons--banes">Boons & Banes</a></li>
+                        <li><a href="/rolls.html#push-your-luck">Push Your Luck</a></li>
+                        <li><a href="/rolls.html#play-it-safe">Play it Safe</a></li>
+                        <li><a href="/rolls.html#group-rolls">Group Rolls</a></li>
+                        <li><a href="/rolls.html#opposed-rolls">Opposed Rolls</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">   
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/fate.html">Fate</a></h2>
+                    <ul>
+                        <li><a href="/fate.html#fateful-deeds">Fateful Deeds</a></li>
+                        <li><a href="/fate.html#twists-of-fate">Twists of Fate</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/exploration.html">Exploration</a></h2>
+                    <ul>
+                        <li><a href="/exploration.html#jumping">Jumping</a></li>
+                        <li><a href="/exploration.html#climbing">Climbing</a></li>
+                        <li><a href="/exploration.html#flying">Flying</a></li>
+                        <li><a href="/exploration.html#falling">Falling</a></li>
+                        <li><a href="/exploration.html#swimming">Swimming</a></li>
+                        <li><a href="/exploration.html#breath-holding">Breath Holding</a></li>
+                        <li><a href="/exploration.html#sight--darkness">Sight & Darkness</a></li>
+                        <li><a href="/exploration.html#hiding">Hiding</a></li>
+                        <li><a href="/exploration.html#damaging-objects">Damaging Objects</a></li>
+                        <li><a href="/exploration.html#doom">Doom</a></li>
+                        <li><a href="/exploration.html#resting">Resting</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/overland-travel.html">Travel</a></h2>
+                    <ul>
+                        <li><a href="/overland-travel.html#landscape">Landscape</a></li>
+                        <li><a href="/overland-travel.html#weather">Weather</a></li>
+                        <li><a href="/overland-travel.html#mounts--vehicles">Mounts & Vehicles</a></li>
+                        <li><a href="/overland-travel.html#travel-activities">Travel Activities</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/stress.html">Stress</a></h2>
+                    <ul>
+                        <li><a href="/stress.html#affliction">Afflictions</a></li>
+                        <li><a href="/stress.html#dying">Dying</a></li>
+                        <li><a href="/stress.html#stress-tolerance">Stress Tolerance</a></li>
+                        <li><a href="/stress.html#affliction-list">Affliction List</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/skills.html">Skills</a></h2>
+                    <ul>
+                        <li><a href="/skills.html#type">Type</a></li>
+                        <li><a href="/skills.html#targets">Targets</a></li>
+                        <li><a href="/skills.html#defense">Defense</a></li>
+                        <li><a href="/skills.html#effects">Effects</a></li>
+                        <li><a href="/skills.html#cunning-effects">Cunning Effects</a></li>
+                        <li><a href="/skills.html#skill-tags">Skill Tags</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/combat.html">Combat</a></h2>
+                    <ul>
+                        <li><a href="/combat.html#turns--rounds">Turns & Rounds</a></li>
+                        <li><a href="/combat.html#defenses">Defenses</a></li>
+                        <li><a href="/combat.html#defending--yielding">Defending vs Yielding</a></li>
+                        <li><a href="/combat.html#damage--defeat">Damage & Defeat</a></li>
+                        <li><a href="/combat.html#movement--position">Movement & Position</a></li>
+                        <li><a href="/combat.html#zone-of-control">Zone of Control</a></li>
+                        <li><a href="/combat.html#mounted-combat">Mounted Combat</a></li>
+                        <li><a href="/combat.html#combat-in-water">Combat in Water</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/conditions.html">Conditions</a></h2>
+                    <ul>
+                        <li><a href="/conditions.html#removing-conditions">Removing Conditions</a></li>
+                        <li><a href="/conditions.html#condition-tags">Condition Tags</a></li>
+                        <li><a href="/conditions.html#condition-list">Condition List</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/special-terrain.html">Terrain</a></h2>
+                    <ul>
+                        <li><a href="/special-terrain.html#shattered-terrain">Shattered Terrain</a></li>
+                        <li><a href="/special-terrain.html#tangled-terrain">Tangled Terrain</a></li>
+                        <li><a href="/special-terrain.html#spiked-terrain">Spiked Terrain</a></li>
+                        <li><a href="/special-terrain.html#burning-terrain">Burning Terrain</a></li>
+                        <li><a href="/special-terrain.html#wet-terrain">Wet Terrain</a></li>
+                        <li><a href="/special-terrain.html#icy-terrain">Icy Terrain</a></li>
+                        <li><a href="/special-terrain.html#snowy-terrain">Snowy Terrain</a></li>
+                        <li><a href="/special-terrain.html#goopy-terrain">Goopy Terrain</a></li>
+                        <li><a href="/special-terrain.html#oily-terrain">Oily Terrain</a></li>
+                        <li><a href="/special-terrain.html#corrosive-terrain">Corrosive Terrain</a></li>
+                        <li><a href="/special-terrain.html#blessed-terrain">Blessed Terrain</a></li>
+                        <li><a href="/special-terrain.html#cursed-terrain">Cursed Terrain</a></li>
+                        <li><a href="/special-terrain.html#obscuring-cloud">Obscuring Cloud</a></li>
+                        <li><a href="/special-terrain.html#toxic-cloud">Toxic Could</a></li>
+                        <li><a href="/special-terrain.html#lava">Lava</a></li>
+                    </ul>
+                </li>
+
+
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/legends.html">Legends</a></h2>
+                    <ul>
+                        <li><a href="/forging-legends.html#legendary-deeds">Legendary Deeds</a></li>
+                        <li><a href="/forging-legends.html#commemorating-legends">Comemorating Legends</a></li>
+                        <li><a href="/forging-legends.html#legendary-quests">Legendary Quests</a></li>
+                        <li><a href="/forging-legends.html#legends-of-old">Legends of Old</a></li>
+                    </ul>
+                </li>
+                <!-- <li>
+                    <a href="/downtime.html">Downtime</a><span class="opener"></span>
+                    <ul>
+                        <li><a href="/downtime.html#crafting">Crafting</a></li>
+                    </ul>
+                </li> -->
+
+
+                
+                <h1>Gamemastery</h1>
+                <h2> </i> <a href="/soon.html">Coming Soon!</a></h2>
+
+
+            </ul>
+        </nav>
+
+        <!-- ??? -->
+            <!-- <section>
+            <header class="major">
+                <h2>Latest Skills</h2>
+            </header>
+            <div class="mini-posts">
+                <article>
+                    <a href="/#" class="image"><img src="/images/pic07.jpg" alt="" /></a>
+                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                </article>
+                <article>
+                    <a href="/#" class="image"><img src="/images/pic08.jpg" alt="" /></a>
+                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                </article>
+                <article>
+                    <a href="/#" class="image"><img src="/images/pic09.jpg" alt="" /></a>
+                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                </article>
+            </div>
+            <ul class="actions">
+                <li><a href="/#" class="button">More</a></li>
+            </ul>
+        </section> -->
+
+        <!-- ??? -->
+        <!-- <section>
+            <header class="major">
+                <h2>Get in touch</h2>
+            </header>
+            <p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+            <ul class="contact">
+                <li class="icon solid fa-envelope"><a href="/#">information@untitled.tld</a></li>
+                <li class="icon solid fa-phone">(000) 000-0000</li>
+                <li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+                Nashville, TN 00000-0000</li>
+            </ul>
+        </section> -->
+
+        <!-- Footer -->
+        <!-- <footer id="footer">
+            <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="/https://unsplash.com">Unsplash</a>. Design: <a href="/https://html5up.net">HTML5 UP</a>.</p>
+        </footer> -->
+    </div>
+</div>
+			<div id="main">
+					<h1 id="legends">Legends</h1>
+
+<p><em>Heroes are remembered, but legends never die.</em></p>
+
+<p>Legendary items are powerful relics with extraordinary effects and abilities. Yet these artifacts are not simply crafted by smiths or enchanted by wizards. Heroic and momentous deeds will be remembered as legends, and those legends themselves hold power. A legendary item is imbued with the spirit of the legendary deed it symbolizes.</p>
+
+<h2 id="legendary-deeds">Legendary Deeds</h2>
+
+<p>The first step toward forging a legend is achieving a legendary deed. A legendary deed is a feat that will be recounted and admired for countless generations to come. Whenever your group does something extraordinary, the GM may award you with a legendary deed!</p>
+
+<p>There are many ways to accomplish a legendary deed, such as defeating a powerful foe, ingeniously overcoming an obstacle, or performing an amazing feat of skill. There are no limits on what could be considered a legendary deed, but the deed must be truly legendary - a tale worth retelling through the ages!</p>
+
+<p>You are encouraged to nominate the actions of your allies if you feel that their deeds are legendary, but the GM always has the final say. A legendary deed may not always be recognized right away. If your group comes to realize how incredible a past action truly was, the GM may declare the past action to be a legendary deed.</p>
+
+<h2 id="commemorating-legends">Commemorating Legends</h2>
+
+<p>Once you have achieved a legendary deed, it must then be commemorated. This is a process of discussion between the players and the GM detailing how the legend should be remembered and expressed in the game. There are five details each legend must have to be commemorated: a <strong>major effect</strong>, a <strong>minor effect</strong>, a <strong>symbol</strong>, a <strong>name</strong>, and an <strong>inscription</strong>.</p>
+
+<p>You must decide the nature or essence of the legendary item’s effects, and the GM will decide the specific powers and limitations based on the your decisions. The effects of the item must be closely tied to legendary deed that creates them, such that the connection between the events of the legendary deed and the effects of the item is clear and obvious to anyone who is told. If one character stands out in the events of legendary deed, their opinion should be held in higher regard. But ultimately, a legend tells the story of your whole group.</p>
+
+<h3 id="major-effects">Major Effects</h3>
+
+<p>Major effects are the most important part of legendary items, and the things for which such items will be renowned. Many major effects will take the form of powerful <a href="skills.md">skills</a>. They may be combat abilities or be valuable for exploration and interaction. They may be passive skills that are always in effect, skills that must be recovered between uses, or powerful skills that can only ever be used once.</p>
+
+<p>The GM should decide on a suitable major effect based on your suggestions. If you aren’t satisfied with the GM’s decision, you may continue the discussion until you come up with something that is agreeable to everyone. Some examples of major effect include:</p>
+
+<ul>
+  <li>
+    <p>Attacks with the item may gain the <a href="skills.html#fire">fire</a> tag.</p>
+  </li>
+  <li>
+    <p>The item may be used to cause plants in the area to grow rapidly and <a href="conditions.html#restrained">restrain</a> foes.</p>
+  </li>
+  <li>
+    <p>The item may be used to reveal things that otherwise could not be seen.</p>
+  </li>
+  <li>
+    <p>The item grants <a href="skills.html#immune">immunity</a> to a specific <a href="conditions.md">condition</a>.</p>
+  </li>
+  <li>
+    <p>The item instantly returns to its owner’s hand when commanded.</p>
+  </li>
+</ul>
+
+<h3 id="minor-effects">Minor Effects</h3>
+
+<p>Minor effects have little to no direct benefit, but instead symbolize the spirit and meaning of the legend. Minor effect may include aesthetic effects, slight convinces, or demonstrations of the item’s power. Minor effects should never grant skills. Some examples of minor effects include:</p>
+
+<ul>
+  <li>
+    <p>The item glows with harmless fire at the bearer’s command.</p>
+  </li>
+  <li>
+    <p>Flowers blossom in the footsteps of the bearer</p>
+  </li>
+  <li>
+    <p>The bearer’s eyes glow with power.</p>
+  </li>
+  <li>
+    <p>The item can never be damaged, tarnished, cracked, or ripped.</p>
+  </li>
+  <li>
+    <p>The owner can always sense their distance from the item.</p>
+  </li>
+</ul>
+
+<h3 id="symbol">Symbol</h3>
+
+<p>The symbol of the legend is a physical object that will bear the power of the legendary deed such, as a weapon, a piece of equipment, or some other item. Choosing an object closely tied to the events of the legendary deed may make the connection between deed and effects more obvious, allowing a broader range of effects. However, the symbol may also be unrelated to the events of the legendary deed.</p>
+
+<p>Each object may only be the symbol for one legend at a time. One legend may be replaced by another on a specific symbol, but only if the two legends are related in a way that feels like one continuous story. For example, a wicked and evil blade may be redeemed by defeating the villain who tainted it.</p>
+
+<h3 id="name">Name</h3>
+
+<p>The name of the legend may be anything that the players choose, but it should inspire memories of the people and events that created it. A unique and evocative name is a mandatory part of any legendary item.</p>
+
+<h3 id="inscription">Inscription</h3>
+
+<p>Finally, once the effects, symbol and name have been established, one character of the group’s choice may inscribe the legend. You must inscribe runes representing the name of the legend onto the chosen symbol over the course of a day’s work. Once you have finished inscribing the runes, the legend has been forged, and your new legendary item is ready to use!</p>
+
+<h2 id="legendary-quests">Legendary Quests</h2>
+
+<p>Many legendary deeds arise spontaneously out of heroic bravery, the demands of desperate situations, or just plain good luck. But some legends are forged from grand aspirations and hard work. Legendary quests allow you to forge a specific legendary item of your choosing, but only after overcoming an appropriate adventure.</p>
+
+<p>Tell the GM when you would like to undertake a legendary quest. You may describe any kind of legendary item you want, not merely one related to recent deeds. As with commemorating a legend, you and the GM should come to an agreement on the item’s powers, effects, and limitations.</p>
+
+<p>As part of this discussion, the GM will determine a legendary quest needed to earn this item. The legendary quest could be anything from a single encounter to an epic odyssey, as befitting the legendary item. But whatever the quest, it must be symbolically related to the effects of the legendary item it will create.</p>
+
+<p>If you don’t accept the quest offered by the GM, or if the GM can’t offer a suitable legendary quest at the time, then nothing happens. If you do accept the legendary quest, then you should keep track of it and work toward it as best you can. Once you overcome the legendary quest, that completes your legendary deed!</p>
+
+<p>You can only undertake one legendary quest at a time. You may abandon a legendary quest at any time, but doing so causes you three <a href="stress.md">stress</a>. Giving up on one’s dreams is always disheartening.</p>
+
+<h2 id="legends-of-old">Legends of Old</h2>
+
+<p>Not all legends you encounter will be forged by you or your allies. Many legends have left their mark on the world already. All legendary items are the symbols for legendary deeds of the past and have effects that reflect those epic histories.</p>
+
+<p>Legendary items are memorable by their very nature, and it is obvious to anyone if a particular item has a legendary past. However the name and effects of an item are not always obvious. Holding and meditating upon an unknown legendary item for one minute imparts a vague knowledge of the legendary deed that created it. But you must often deduce the effects of a legendary item by trial and error. Once you have discovered the legendary effects, the name and full history of the legendary item reveals itself to you.</p>
+ <!--  | replace_regex -->
+			</div>
+			<div id="info">
+			</div>
+			<!-- <div id="map">
+			</div> -->
+		</div>
+	</body>
+</html>

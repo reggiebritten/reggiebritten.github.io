@@ -6,524 +6,33 @@
 -->
 <html>
 	<head>
-	<title>Forge of Legends - Abilities</title>
+	<title>Forge of Legends - Conditions</title>
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <meta name="description" content="The official website of the Forge of Legends roleplaying game.">
+    <meta name="description" content="The official website of the Forge of Legends fantasy roleplaying game.">
 	<meta name="keywords" content="tabletop, RPG, fantasy">
     <meta name="author" content="Reggie Britten">
 	<link rel="icon" type="image/png" href="/images/logo.png"/>
-    <link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/tooltipster.bundle.css" />
+	<link rel="stylesheet" href="/assets/js/leaflet/leaflet.css" />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/assets/js/FoL.js"></script>
+	<script src="/assets/js/handlebars-v4.7.7.js"></script>
+	<script src="/assets/js/tooltipster.bundle.js"></script>
+	<script src="/assets/js/leaflet/leaflet.js"></script>
+	<script src="https://kit.fontawesome.com/c754307781.js" crossorigin="anonymous"></script>
 	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
+	<body>
 		<div id="wrapper">
-			<!-- Main -->
-			<div id="main">
-				<div class="inner">
-					<div><img src="images/pic11.jpg" alt="" class="image main" /> </div>
+			<div id="sidebar">
 
-<h1 id="conditions">Conditions</h1>
-
-<p>Conditions are descriptions of a temporary situation a character finds themselves in. Most are bad, some are good, and others may be a mix of both depending on the circumstances. Many conditions are inflicted during combat, but some arise outside combat as well. Each condition lasts until something happens to end it and applies a specific set of bonuses or penalties to the affected character.</p>
-
-<p>Just like abilities, conditions have tags that describe how they interact with other things. The most important tag a condition might have is the <strong>recoverable</strong> tag, which means that the <strong>recovery</strong> ability may be used to attempt to end the condition.</p>
-
-<p>However, all recoverable conditions come with <strong>recovery</strong> requirements that must be met for the recovery ability to be successful. Some conditions require vigor loss, which may be paid either by the character using the recovery ability, the character affected by the condition, or a combination of both. Other conditions have other requirements that must be met as well.</p>
-
-<p>Some effects may also allow characters to directly <strong>remove</strong> or <strong>replace</strong> conditions while ignoring any recovery requirements.</p>
-
-<h2 id="condition-tags">Condition Tags</h2>
-
-<p>Just like abilities, conditions also have tags that describe how they work and interact with other parts of the game.</p>
-
-<h3 id="recoverable">Recoverable</h3>
-
-<h3 id="temporary">Temporary</h3>
-
-<p>A temporary condition is automatically removed from a character at the end of that character’s turn.</p>
-
-<h3 id="slowing">Slowing</h3>
-
-<p>A sluggish condition makes the character move half the normal distance whenever they use a movement ability.</p>
-
-<h3 id="immobilizing">Immobilizing</h3>
-
-<p>A character with an immobilizing condition can’t move or use movement abilities. Unless specified otherwise, the character can still be pushed.</p>
-
-<h3 id="conferred-reistance-vulnerability--immunity">Conferred Reistance, Vulnerability &amp; Immunity</h3>
-
-<p>Some conditions change the way the character is affected by certain abilities</p>
-
-<h3 id="disabled-zoc">Disabled-ZoC</h3>
-
-<p>A condition with the Disabled-ZoC tag means the character suffering from it does not have a <strong>zone of control</strong>, no matter what weapons they wield.</p>
-
-<h3 id="disabled-reactions">Disabled-Reactions</h3>
-
-<p>A condition with the Disabled -Reactions tag prevents the character suffering from it from using any <strong>reaction</strong> abilities.</p>
-
-<h3 id="disabled-swapping">Disabled-Swapping</h3>
-
-<p>A condition with the Disabled-Swapping tag prevents the character suffering from it from using swapping weapons under any circumstances.</p>
-
-<h3 id="replaced-by">Replaced By:</h3>
-
-<p>Many conditions have a removed by clause that specifies something that will end the condition when it happens, or a replaced by clause</p>
-
-<h3 id="no-speed">No-Speed</h3>
-
-<p>Can’t add speed to abilities, only get base speed</p>
-
-<h2 id="condition-list">Condition List</h2>
-
-<h3 id="staggered">Staggered</h3>
-
-<p>🏷️ Recoverable Physical Temporary Slowing</p>
-
-<p>A staggered character is unsteady on their feet.</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-1</strong>                                 poise.</p>
-
-<h3 id="restrained">Restrained</h3>
-
-<p>🏷️ Recoverable Physical Immobilizing No-ZoC</p>
-
-<p>A restrained character is held in place by some object such as a net or chain.</p>
-
-<p><strong>Push</strong> abilities are <strong>ineffective</strong> on the character. Attack actions against the character gain a boon, and the character’s attacks suffer a bane.</p>
-
-<p><strong>Recovery:</strong> Either the restrained character or the character using the recovery ability must succeed on a brawn roll to break the restraints, with a TN determined by the material of their restraints. If the roll fails, the character is still restrained.</p>
-
-<h3 id="grabbed">Grabbed</h3>
-
-<p>🏷️ Physical No-ZoC</p>
-
-<p>A grabbed character is being held in place by one or more other characters.</p>
-
-<p>Characters involved in the grab lose their <strong>zones of control</strong> and suffer a <strong>bane</strong> on attack actions against characters who are not part of the grab.</p>
-
-<p>If the grabbing character and the gabbed character are within one size category of each other, then the grabbed character cannot move or use movement abilities. The grabbing character can drag the grabbed character along whenever they move, but they move half the usual distance. If two similar sized characters grab each other, then neither can move.</p>
-
-<p>If the characters are two or more size category apart, then the larger character may move freely and the smaller character is pulled along, regardless of who is grabbing whom.</p>
-
-<p>If three or more characters are involved in the grab, then none of them can move unless they are two or more sizes bigger than every other character.</p>
-
-<p>Whenever any character in the grab would be <strong>pushed</strong>, the grabbing character must choose: either they must lose <strong>-3</strong>   momentum, and all characters are pushed, or the grab ends and only the original target of the effect is pushed.</p>
-
-<p>The grabbing character almost always needs to <strong>concentrate</strong> to maintain the grabbed condition. <strong>Interrupting</strong> the grabbing character is often the best way to free a grabbed character.</p>
-
-<h3 id="kneeling">Kneeling</h3>
-
-<p>🏷️ Recoverable Physical Slowing</p>
-
-<p>A kneeling character has been forced down to their knees.</p>
-
-<p><strong>Melee</strong> attack actions against the character gain a boon, and the character’s <strong>melee</strong> actions gain a bane.</p>
-
-<p>If a character becomes kneeling in <strong>special</strong> <strong>terrain</strong>, additional effects may apply.</p>
-
-<p>Replaced by: Knocked-Down</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-3</strong>   momentum.</p>
-
-<h3 id="unbalanced">Unbalanced</h3>
-
-<p>🏷️ Recoverable Physical No-Speed</p>
-
-<p>An unbalanced character is having difficulty recovering their fighting stance.</p>
-
-<p>The character adds a bane to all <strong>weapon</strong> actions, and their speed falls to zero.</p>
-
-<p>Replaced by: Disarmed</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-3</strong>   poise.</p>
-
-<h3 id="distracted">Distracted</h3>
-
-<p>🏷️ Recoverable Mental No-ZoC No-Reactions</p>
-
-<p>A distracted character has had their attention drawn away from the action.</p>
-
-<p>The character’s <strong>ranged</strong> actions suffer a <strong>bane</strong> and their <strong>perception</strong> decreases by 2.</p>
-
-<p>Replaced by: Confused</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-3</strong>   focus.</p>
-
-<p>**
-**</p>
-
-<h3 id="frightened">Frightened</h3>
-
-<p>🏷️ Recoverable Mental</p>
-
-<p>A frightened character has been terrified by another creature.</p>
-
-<p>The frightened character can’t willing move toward the source of its fear, and a bane is added to their actions while the frightening creature can see them. A frightened character treats their <strong>idealistic</strong> / <strong>pragmatic</strong> trait rating as if it were one point more pragmatic, possibly pragmatic 4.</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-4</strong>   focus if the frightening creature sees the frightened character, or <strong>-1</strong>   focus if they don’t.</p>
-
-<h3 id="provoked">Provoked</h3>
-
-<p>🏷️ Recoverable Mental</p>
-
-<p>A provoked character has had their attention commanded by a specific enemy. The provoked character adds two <strong>banes</strong> to their attacks against characters other than the provoking character. A provoked character treats their <strong>serious</strong> / <strong>carefree</strong> trait rating as if it was one point more serious, possibly serious 4. The provoked condition ends when the provoked character attacks the provoking character, or when another character attacks or <strong>hinders</strong> the provoked character.</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-2</strong>   focus.</p>
-
-<h3 id="compelled">Compelled</h3>
-
-<p>🏷️ Recoverable Mental</p>
-
-<p>A compelled character is being mentally manipulated by another character. The compelled character treats its <strong>serious</strong> / <strong>carefree</strong> rating as if it were one point more carefree and its <strong>bold</strong> / <strong>subtle</strong> trait rating as if it were one point more subtle, possibly carefree 4 or subtle 4. A compelled character is vulnerable to <strong>psychic</strong> attacks. As a reaction, the compelling character may issue the compelled character a verbal command. On its next turn the compelled character must either obey the command or lose <strong>-4</strong>   focus. The compelled condition ends at the end of the compelled character’s turn.</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-3</strong>   focus.</p>
-
-<h3 id="blinded">Blinded</h3>
-
-<p>🏷️ Recoverable Sensory</p>
-
-<p>A <strong>blinded</strong> character has had their vision temporarily impaired and can only see things very close to them.</p>
-
-<p>Ranged attack actions against a blinded character gain a <strong>boon</strong>. The blinded character can only target adjacent characters with abilities unless they are <strong>area</strong> abilities. <strong>Line</strong> abilities can’t be aimed properly and fail to target non-adjacent characters. <strong>Visual</strong> abilities are <strong>ineffective</strong> on a blinded character and the character’s <strong>perception</strong> is decreased by <strong>-4</strong>.</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-3</strong>   focus.</p>
-
-<h3 id="deafened">Deafened</h3>
-
-<p>🏷️ Recoverable Sensory No-ZoC</p>
-
-<p>A deafened character has had their hearing temporarily impaired.</p>
-
-<p>A deafened character is immediately <strong>interrupted</strong> and can’t concentrate on abilities. <strong>Audible</strong> abilities are ineffective on a deafened character, and the character’s <strong>perception</strong> is decreased by <strong>-2</strong>.</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-2</strong>   focus.</p>
-
-<p>**
-**</p>
-
-<h3 id="empowered">Empowered</h3>
-
-<p>🏷️ Circumstantial Temporary Beneficial</p>
-
-<p>An empowered character adds a boon to any <strong>attack</strong> action until the end of their turn.</p>
-
-<p>Replaced by: Weakened</p>
-
-<h3 id="weakened">Weakened</h3>
-
-<p>🏷️ Recoverable Circumstantial Temporary</p>
-
-<p>A weakened character adds a bane to any <strong>attack</strong> action until the end of their turn.</p>
-
-<p>Replaced by: Empowered</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-1</strong>   momentum.</p>
-
-<h3 id="guarded">Guarded</h3>
-
-<p>🏷️ Circumstantial Temporary Beneficial</p>
-
-<p>A guarded character adds a bane to any <strong>attack</strong> actions targeting them until the end of their turn.</p>
-
-<p>Replaced by: Defenseless</p>
-
-<h3 id="defenseless">Defenseless</h3>
-
-<p>🏷️ Recoverable Circumstantial Temporary</p>
-
-<p>Attacks against a defenseless character gain a boon until the end of their turn.</p>
-
-<p>Replaced by: Guarded</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-1</strong>   poise.</p>
-
-<h3 id="fleet">Fleet</h3>
-
-<p>🏷️ Circumstantial Temporary Beneficial</p>
-
-<p>All of a fleet character’s maneuvers gain the <strong>careful</strong> tag, meaning they can’t be hindered.</p>
-
-<p>**
-**</p>
-
-<h3 id="honed">Honed</h3>
-
-<p>🏷️ Circumstantial Temporary Beneficial</p>
-
-<p>A honed character’s <strong>fated action threshold</strong> is decreased by four (making fated effects more likely) until the end of their turn.</p>
-
-<p>Replaced by: Fumbling</p>
-
-<h3 id="fumbling">Fumbling</h3>
-
-<p>🏷️ Recoverable Circumstantial Temporary</p>
-
-<p>Whenever a fumbling character rolls a fate die, the roll is <strong>doomed</strong> if the die rolls 5 or below. A fumbling character’s <strong>fated action threshold</strong> can’t be reduced below 5 by other conditions or abilities.</p>
-
-<p>Replaced by: Honed</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-1</strong>   focus.</p>
-
-<h3 id="encumbered">Encumbered</h3>
-
-<p>🏷️ Circumstantial Slowing</p>
-
-<p>An encumbered character is carrying more armor, weapons, or inventory items than they can easily hold. A bane is added to all the character’s actions. An encumbered character also moves half as quickly while traveling and suffers one <strong>stress</strong> for every hour they spend traveling while encumbered. The encumbered condition is removed as soon as the character lightens their load.</p>
-
-<p>**
-**</p>
-
-<h3 id="surprised">Surprised</h3>
-
-<p>🏷️ Circumstantial No-ZoC</p>
-
-<p>A surprised character has been caught unaware and unprepared for combat.</p>
-
-<p>The character can’t use <strong>reactions</strong> other than to draw their weapons. On their turn, the surprised character can use an action or a maneuver, but not both, then the surprised condition ends.</p>
-
-<h3 id="hidden">Hidden</h3>
-
-<p>🏷️ Circumstantial</p>
-
-<p>A hidden character has eluded the <strong>perception</strong> of everyone looking for them. A character who wants to become hidden should consider the <strong>hide</strong> maneuver. If a character begins their turn hidden or becomes hidden on their turn, they retain the element of surprise and remain hidden until the end of their turn or until they use an action.</p>
-
-<p>A hidden character adds a boon to their attack actions, however almost all actions or attacks will cause the character to no longer be hidden at the end of the turn.</p>
-
-<p>While the character remains hidden, enemies cannot target the character with attacks except area attacks, and the character may ignore enemy <strong>zones of control</strong>. If a character is obviously noticed or makes a significant amount of noise, like an <strong>audible</strong> ability, the hidden condition is removed from them.</p>
-
-<p>See the above rules for <strong>Hiding &amp; Perception</strong> for sneaking around outside of combat.</p>
-
-<p>**
-**</p>
-
-<h3 id="stunned">Stunned</h3>
-
-<p>🏷️ Bodily No-ZoC No-Reaction Temporary</p>
-
-<p>A stunned character has been knocked senseless.</p>
-
-<p>The stunned character loses their <strong>zone of control</strong> and can’t use actions, maneuvers, or reactions until the end of their next turn. Then, the stunned condition ends and the character gains <strong>+6</strong>   focus as they come to their senses.</p>
-
-<h3 id="wracked">Wracked</h3>
-
-<p>🏷️ Recoverable Bodily</p>
-
-<p>A wracked character is crippled by pain when they try to move.</p>
-
-<p>The wracked character loses <strong>-1</strong>   poise, <strong>-1</strong>   momentum, or <strong>-1</strong>   focus (their choice) for each space they move using <strong>movement</strong> abilities.</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-3</strong>   poise.</p>
-
-<h3 id="unconscious">Unconscious</h3>
-
-<p>🏷️ Bodily</p>
-
-<p>An unconscious character is either asleep or knocked-out. The character can’t see or use abilities, and their <strong>perception</strong> is decreased by <strong>-6</strong>. A sleeping character might wake up from a touch or loud noise, but a knocked-out character wouldn’t.</p>
-
-<p>If an unconscious character is attacked, they are immediately defeated, and the damage of the attack directly inflicts stress on the target. The attacker, rather than the target, may choose to inflict damage equal to the threat of the attack or apply the attack’s yield.</p>
-
-<p>**
-**</p>
-
-<h3 id="drunk">Drunk</h3>
-
-<p>🏷️ Bodily</p>
-
-<p>A drunk character has had too much alcohol to drink. A drunk character adds a bane to all their attack actions, but all of their attacks are <strong>unpredictable</strong>. A drunk character treats their bold/subtle trait rating as if it was one step more bold, possibly up to 4. A drunk character’s <strong>perception</strong> is reduced by <strong>-</strong>2. The drunk condition ends after a night’s rest.</p>
-
-<h3 id="choking">Choking</h3>
-
-<p><strong>🏷️ Recoverable Bodily Stressful</strong></p>
-
-<p><strong>Ongoing Loss: 2</strong> momentum and <strong>2</strong> poise.</p>
-
-<p>A choking character is coughing, drowning, or otherwise unable to catch their breath.</p>
-
-<p>The character can’t use <strong>audible</strong> abilities that involve talking.</p>
-
-<h3 id="bleeding">Bleeding</h3>
-
-<p>🏷️ Recoverable Bodily Stressful</p>
-
-<p>A bleeding character is losing blood rapidly.</p>
-
-<p>After the character is targeted by a <strong>fire</strong> ability, the wound is cauterized, and the bleeding condition ends.</p>
-
-<p><strong>Ongoing Loss: 2</strong>   momentum and <strong>2</strong>   focus.</p>
-
-<p>Replaced by: Burning</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-2</strong>   poise. The bleeding character holds the wound closed, becoming <strong>unbalanced</strong>.</p>
-
-<p>**
-**</p>
-
-<h3 id="burning">Burning</h3>
-
-<p>🏷️ Recoverable Fire Elemental Stressful</p>
-
-<p>A burning character is on fire</p>
-
-<p><strong>Replaced by:</strong> Wet, Chilled</p>
-
-<p>Conferred Resistance: Ice</p>
-
-<p><strong>Ongoing Loss: 2</strong>   poise and <strong>2</strong>   focus.</p>
-
-<p>If a character is <strong>vulnerable</strong> or <strong>resistant</strong> to the fire tag, it loses 1 less or more poise and focus, respectively.</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-2</strong>   momentum. the affected character stops, drops, and rolls, becoming <strong>kneeling</strong>.</p>
-
-<h3 id="wet">Wet</h3>
-
-<p>🏷️ Water Elemental</p>
-
-<p>A wet character is soaked with water.</p>
-
-<p>Conferred Resistance: Fire, Caustic</p>
-
-<p>Conferred Vulnerability: Ice, Lightning</p>
-
-<p>The wet condition ends after the character is targeted by a fire, caustic, lightning, or ice ability, or when the character spends 10 minutes drying themselves off.</p>
-
-<h3 id="vortexed">Vortexed</h3>
-
-<p>🏷️ Recoverable Air Elemental No-ZoC</p>
-
-<p>A vortexed character is surrounded by magically swirling winds.</p>
-
-<p>All <strong>ranged</strong> attack actions my by or against the character suffer a bane. The character doesn’t have a zone of control but ignores enemy’s zones of control.</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-2</strong>   poise.</p>
-
-<h3 id="chilled">Chilled</h3>
-
-<p>🏷️ Recoverable Ice Elemental Slowing</p>
-
-<p>A chilled character has been struck by extreme cold and has difficulty moving quickly.</p>
-
-<p>Conferred Resistance: Fire</p>
-
-<p>The chilled condition ends after the character is targeted by a fire ability.</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-2</strong>   momentum.</p>
-
-<h3 id="shocked">Shocked</h3>
-
-<p>🏷️ Recoverable Bodily Lightning Elemental No-ZoC</p>
-
-<p>A shocked character has become uncoordinated after an electric shock.</p>
-
-<p>Immediately when the character becomes shocked, a random item they are holding is thrown 3 spaces in a random direction.</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-2</strong>   poise.</p>
-
-<h3 id="oiled">Oiled</h3>
-
-<p>🏷️ Oil Elemental</p>
-
-<p>An <strong>oiled</strong> character is covered in a thick layer of grease.</p>
-
-<p><strong>Conferred Resistance:</strong> Water, Caustic, Lightning</p>
-
-<p>Conferred Vulnerability: Fire, Push</p>
-
-<p><strong>Conferred Immunity:</strong> Grabbed, Wet, Corroding, Shocked</p>
-
-<p>Replaced by: Burning</p>
-
-<p>Whenever the character yields to a <strong>fire</strong> attack, the oiled condition is replaced by the <strong>burning</strong> condition. The oiled condition ends when the character spends 10 minutes cleaning themselves.</p>
-
-<h3 id="petrified">Petrified</h3>
-
-<p>🏷️ Recoverable Physical Earth Elemental</p>
-
-<p>A petrified character has had part of the body encased in stone. When the character first becomes petrified, they suffer a random <strong>injury</strong> <strong>affliction</strong>. The affliction is removed when the petrified condition is removed unless the character had the same injury before becoming petrified. However, the character’s <strong>armor</strong> is increased by two while petrified.</p>
-
-<p><strong>Recover:</strong> Lose <strong>-3</strong>   momentum.</p>
-
-<h3 id="corroding">Corroding</h3>
-
-<p>🏷️ Recoverable Caustic Elemental</p>
-
-<p>A corroding character is covered in a caustic liquid that weakens their equipment.</p>
-
-<p>While corroding, the character’s <strong>armor</strong> is reduced to zero and their <strong>weapon</strong> attacks suffer a bane.</p>
-
-<p>Replaced by: Wet, Oiled</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-3</strong>   poise.</p>
-
-<h3 id="slowed">Slowed</h3>
-
-<p>🏷️ Supernatural No-ZoC No-Reactions Temporary</p>
-
-<p>A slowed character is moving supernaturally slowly. A slowed character can only use one action or maneuver on their turn, but not both.</p>
-
-<p>Replaced by: Hastened</p>
-
-<p>**
-**</p>
-
-<h3 id="hastened">Hastened</h3>
-
-<p>🏷️ Supernatural Temporary Beneficial</p>
-
-<p>A hastened character is moving supernaturally quickly.</p>
-
-<p>On their next turn, a hastened character can use a second maneuver.</p>
-
-<p>Replaced by: Slowed</p>
-
-<p>Invisible</p>
-
-<p>🏷️ Supernatural Beneficial</p>
-
-<p>An invisible character and what the wearing and holding can’t be seen by anyone. The character is automatically <strong>hidden</strong> from other creatures and adds two boons to talent rolls to remain undetected. Invisibility is a very rare condition and often comes at a cost, depending on the source.</p>
-
-<h3 id="blessed">Blessed</h3>
-
-<p>🏷️ Recoverable Holy Supernatural</p>
-
-<p>A blessed character is overseen by a protective force of justice. As a reaction, the character may immediately remove once condition of their choice affecting them, then the blessed condition ends. A blessed character treats the <strong>idealistic</strong> / <strong>pragmatic</strong> trait rating as if it was one point more idealistic, possibly idealistic 4. The condition ends after a minute passes.</p>
-
-<p>Conferred Resistance: Holy, Unholy</p>
-
-<p>Replaced by: Cursed</p>
-
-<p>An <strong>undead</strong> or <strong>demon</strong> treats the blessed condition as if it were the <strong>cursed</strong> condition instead.</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-3</strong>   focus.</p>
-
-<p>**
-**</p>
-
-<h3 id="cursed">Cursed</h3>
-
-<p>🏷️ Recoverable Unholy Supernatural</p>
-
-<p>A cursed character is haunted by a wicked force of evil.</p>
-
-<p>The cursed character cannot <strong>recover</strong> from other conditions while they are cursed. A cursed character treats their <strong>idealistic</strong> / <strong>pragmatic</strong> trait rating as if it were one point more pragmatic, possibly pragmatic 4. The condition also ends after a minute passes.</p>
-
-<p>Conferred Vulnerability: Holy, Unholy</p>
-
-<p>Replaced by: Blessed</p>
-
-<p>An <strong>undead</strong> or <strong>demon</strong> treats the cursed condition as if it were the <strong>blessed</strong> condition instead.</p>
-
-<p><strong>Recovery:</strong> Lose <strong>-3</strong>   focus.</p>
-
-				</div>
-			</div>
-			<!-- Sidebar -->
-        	<div id="sidebar">
-    <img src="/images/scroll/topleft-border.png" id="sidebar-top-scroll">
     <div class="inner">
+        <img src="assets/css/ranger/PartyFrameBG.png" height="110px" width="auto" id="sidebar-handle">
+
         <!-- Search -->
             <section id="search" class="alt">
                 <script async src="https://cse.google.com/cse.js?cx=a3cc61b05e5e110db"></script>
@@ -533,258 +42,207 @@
         <!-- Menu -->
         <nav id="menu">
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/introduction.html">Introduction</a></li>
-                <h2>Quck Reference</h2>
+                <li><h2><a href="/introduction.html">Introduction</a></h2></li>
 
-                <li>
-                    <span class="opener">Classes</span>
-                    <ul>
-                        
-                        <li></li><a href="/classes/Weaponmaster.html"></li>
-                          Weaponmaster
-                        </a>
-                      
-                        <li></li><a href="/classes/Berserker.html"></li>
-                          Berserker
-                        </a>
-                      
-                        <li></li><a href="/classes/Tactician.html"></li>
-                          Tactician
-                        </a>
-                      
-                        <li></li><a href="/classes/Monk.html"></li>
-                          Monk
-                        </a>
-                      
-                        <li></li><a href="/classes/Assassin.html"></li>
-                          Assassin
-                        </a>
-                      
-                        <li></li><a href="/classes/Bard.html"></li>
-                          Bard
-                        </a>
-                      
-                        <li></li><a href="/classes/Trickster.html"></li>
-                          Trickster
-                        </a>
-                      
-                        <li></li><a href="/classes/Acrobat.html"></li>
-                          Acrobat
-                        </a>
-                      
-                        <li></li><a href="/classes/Elementalist.html"></li>
-                          Elementalist
-                        </a>
-                      
-                        <li></li><a href="/classes/Wizard.html"></li>
-                          Wizard
-                        </a>
-                      
-                        <li></li><a href="/classes/Enchanter.html"></li>
-                          Enchanter
-                        </a>
-                      
-                        <li></li><a href="/classes/Psion.html"></li>
-                          Psion
-                        </a>
-                      
-                        <li></li><a href="/classes/Paladin.html"></li>
-                          Paladin
-                        </a>
-                      
-                        <li></li><a href="/classes/Excorcist.html"></li>
-                          Excorcist
-                        </a>
-                      
-                        <li></li><a href="/classes/Necromancer.html"></li>
-                          Necromancer
-                        </a>
-                      
-                        <li></li><a href="/classes/Warlock.html"></li>
-                          Warlock
-                        </a>
-                      
-                        <li></li><a href="/classes/Ranger.html"></li>
-                          Ranger
-                        </a>
-                      
-                        <li></li><a href="/classes/Druid.html"></li>
-                          Druid
-                        </a>
-                      
-                        <li></li><a href="/classes/Shapeshifter.html"></li>
-                          Shapeshifter
-                        </a>
-                      
-                        <li></li><a href="/classes/Beastmaster.html"></li>
-                          Beastmaster
-                        </a>
-                      
-                        <li></li><a href="/classes/Alchemist.html"></li>
-                          Alchemist
-                        </a>
-                      
-                        <li></li><a href="/classes/Inventor.html"></li>
-                          Inventor
-                        </a>
-                      
-                        <li></li><a href="/classes/Demolitionist.html"></li>
-                          Demolitionist
-                        </a>
-                      
-                        <li></li><a href="/classes/Mechanist.html"></li>
-                          Mechanist
-                        </a>
-                      
-                    </ul>
-                </li>
-                <li><a href="/weapons.html">Weapons</a></li>
-                <li><a href="/skill-browser.html">Skill Broswer</a></li>
-                <li>
-                    <span class="opener">Glossary</span>
-                    <ul>
-                        <li><a href="/skill-tags.html">Skill Tags</a></li>
-                        <li><a href="/conditions.html#condition-list">Conditions</a></li>
-                        <li><a href="/stress.html#affliction-list">Afflictions</a></li>
-                        <li><a href="/special-terrain.html">Special Terrain</a></li>
-                    </ul>
-                </li>
-                <h2>Core Rules</h2>
-                <li>
-                    <a href="/fate.html">Fate</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/fate.html#twist-of-fate">Twists of Fate</a></li>
-                        <li><a href="/fate.html#tempt-fate">Tempting Fate</a></li>
-                        <li><a href="/fate.html#tempt-fate">Fate Dice</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/abilities.html">Abilities</a><span class="opener"></span>
+                <h1>Characters</h1>
 
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/soon.html">Ancestry</a></h2>
+                    <ul>
+                        <li></li><a href="/soon.html">Coming Soon!</a></li>
+                        <!-- <li><a href="/ancestry.html#human">Human</a></li>
+                        <li><a href="/ancestry.html#elf">Elf</a></li>
+                        <li><a href="/ancestry.html#dwarf">Dwarf</a></li>
+                        <li><a href="/ancestry.html#gnome">Gnome</a></li>
+                        <li><a href="/ancestry.html#orc">Orc</a></li>
+                        <li><a href="/ancestry.html#beast-kin">Beast-Kin</a></li>
+                        <li><a href="/ancestry.html#mixed">Mixed</a></li> -->
+                    </ul>
+                </li>
+                                
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/abilities.html">Abilities</a></h2>
                     <ul>
                         <li><a href="/abilities.html#agility">Agility</a></li>
                         <li><a href="/abilities.html#brawn">Brawn</a></li>
-                        <li><a href="/abilities.html#insight">Insight</a></li>
-                        <li><a href="/abilities.html#ability-rolls">Ability Rolls</a></li>
+                        <li><a href="/abilities.html#cunning">Cunning</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/ancestry.html">Ancestry</a><span class="opener"></span>
 
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/personality.html">Personality</a></h2>
                     <ul>
-                        <li><a href="/ancestry.html#human">Humans</a></li>
-                        <li><a href="/ancestry.html#elf">Elves</a></li>
-                        <li><a href="/ancestry.html#dwarf">Dwarves</a></li>
-                        <li><a href="/ancestry.html#gnome">Gnomes</a></li>
-                        <li><a href="/ancestry.html#orc">Orcs</a></li>
-                        <li><a href="/ancestry.html#beastkin">Beastkin</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/personality.html">Personality</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/personality.html#traits">Personality Traits</a></li>
-                        <li><a href="/personality.html#fateful-deeds">Fateful Deeds</a></li>
-                        <li><a href="/personality.html#influince">Influince Rolls</a></li>
-                        <li><a href="/personality.html#backgrounds">Backgrounds</a></li>
-                        <li><a href="/personality.html#lore">Lore</a></li>
-                        <li><a href="/personality.html#indulgences">Indulgences</a></li>
+                        <li><a href="/personality.html#values">Values</a></li>
+                        <li><a href="/personality.html#bold-vs-subtle">Bold vs Subtle</a></li>
+                        <li><a href="/personality.html#idealistic-vs-pragmatic">Idealistic vs Pragmatic</a></li>
+                        <li><a href="/personality.html#serious-vs-whimsical">Serious vs Whimsical</a></li>
+                        <li><a href="/personality.html#training">Training</a></li>
+                        <li><a href="/personality.html#expertise">Expertise</a></li>
+                        <li><a href="/personality.html#flashbacks">Flashbacks</a></li>
+                        <li><a href="/personality.html#lore-check">Lore Checks</a></li>
+                        <li><a href="/personality.html#flaw">Character Flaws</a></li>
+                        <li><a href="/personality.html#indulgence">Indulgences</a></li>
                         <li><a href="/personality.html#personal-legend">Personal Legend</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/skills.html">Skills</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/class.html">Classes</a></h2>
                     <ul>
-                        <li><a href="/skills.html#class-feature">Class Feature</a></li>
-                        <li><a href="/skills.html#fighting-style">Fighting Style</a></li>
-                        <li><a href="/skills.html#repertoire">Repertoire</a></li>
-                        <li><a href="/skills.html#unlocking">Unlocking Skills</a></li>
+                        <li><a href="/class.html#core-feature">Core Feature</a></li>
+                        <li><a href="/class.html#fighting--style">Fighting Style</a></li>
+                        <li><a href="/class.html#expereince">Experience</a></li>
+                        <li><a href="/class.html#assassin">Assassin</a></li>
+                        <li><a href="/class.html#bard">Bard</a></li>
+                        <li><a href="/class.html#battlemaster">Battlemaster</a></li>
+                        <li><a href="/class.html#beastmaster">Beastmaster</a></li>
+                        <li><a href="/class.html#berserker">Berserker</a></li>
+                        <li><a href="/class.html#elementalist">Elementalist</a></li>
+                        <li><a href="/class.html#enchanter">Enchanter</a></li>
+                        <li><a href="/class.html#geomancer">Geomancer</a></li>
+                        <li><a href="/class.html#monk">Monk</a></li>
+                        <li><a href="/class.html#paladin">Paladin</a></li>
+                        <li><a href="/class.html#shaman">Shaman</a></li>
+                        <li><a href="/class.html#shapeshifter">Shapeshifter</a></li>
+                        <li><a href="/class.html#trickster">Trickster</a></li>
+                        <li><a href="/class.html#warlock">Warlock</a></li>
+                        <li><a href="/class.html#wizard">Wizard</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/equipment.html">Equipment</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/equipment.html">Equipment</a></h2>
                     <ul>
-                        <li><a href="/equipment.html#equipment-slots">Equipment Slots</a></li>
-                        <li><a href="/equipment.html#impression">Impression</a></li>
                         <li><a href="/equipment.html#inventory">Inventory</a></li>
-                        <li><a href="/equipment.html#equipment-list">Equipment List</a></li>
+                        <li><a href="/equipment.html#weapon-proficiency">Weapon Proficiency</a></li>
+                        <li><a href="/equipment.html#armor">Armor</a></li>
+                        <li><a href="/equipment.html#equipment-slots">Equipment Slots</a></li>
+                        <li><a href="/equipment.html#item-tags">Item Tags</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/exploration.html">Exploration</a><span class="opener"></span>
+
+                <hr>
+                
+                <li class="">
+                    <h2> <a href="/soon.html">Skill List</a></h2>
+                </li>
+                <li class="">
+                    <h2> <a href="/soon.html">Equipment List</a></h2>
+                </li>
+
+
+
+
+                <h1>Gameplay</h1>
+
+
+                <li class="opener">   
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/rolls.html">Rolls</a></h2>
                     <ul>
-                        <li><a href="/exploration.html#special-movement">Special Movement</a></li>
-                        <li><a href="/exploration.html#lifting-dragging">Lifting & Dragging</a></li>
-                        <li><a href="/exploration.html#breaking">Breaking Objects</a></li>
-                        <li><a href="/exploration.html#light-darkness">Light & Darkness</a></li>
-                        <li><a href="/exploration.html#stealth">Stealth</a></li>
-                        <li><a href="/exploration.html#chase">Chase Scenes</a></li>
-                        <li><a href="/exploration.html#doom">Time & Doom</a></li>
-                        <li><a href="/exploration.html#travel">Overland Travel</a></li>
-                        <li><a href="/exploration.html#travel-activities">Travel Activities</a></li>
+                        <li><a href="/rolls.html#roll-difficulty">Roll Difficulty</a></li>
+                        <li><a href="/rolls.html#target-number">Target Number</a></li>
+                        <li><a href="/rolls.html#roll-results">Roll Results</a></li>
+                        <li><a href="/rolls.html#boons--banes">Boons & Banes</a></li>
+                        <li><a href="/rolls.html#push-your-luck">Push Your Luck</a></li>
+                        <li><a href="/rolls.html#play-it-safe">Play it Safe</a></li>
+                        <li><a href="/rolls.html#group-rolls">Group Rolls</a></li>
+                        <li><a href="/rolls.html#opposed-rolls">Opposed Rolls</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">   
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/fate.html">Fate</a></h2>
+                    <ul>
+                        <li><a href="/fate.html#fateful-deeds">Fateful Deeds</a></li>
+                        <li><a href="/fate.html#twists-of-fate">Twists of Fate</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/exploration.html">Exploration</a></h2>
+                    <ul>
+                        <li><a href="/exploration.html#jumping">Jumping</a></li>
+                        <li><a href="/exploration.html#climbing">Climbing</a></li>
+                        <li><a href="/exploration.html#flying">Flying</a></li>
+                        <li><a href="/exploration.html#falling">Falling</a></li>
+                        <li><a href="/exploration.html#swimming">Swimming</a></li>
+                        <li><a href="/exploration.html#breath-holding">Breath Holding</a></li>
+                        <li><a href="/exploration.html#sight--darkness">Sight & Darkness</a></li>
+                        <li><a href="/exploration.html#hiding">Hiding</a></li>
+                        <li><a href="/exploration.html#damaging-objects">Damaging Objects</a></li>
+                        <li><a href="/exploration.html#doom">Doom</a></li>
                         <li><a href="/exploration.html#resting">Resting</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/combat.html">Combat</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/overland-travel.html">Travel</a></h2>
                     <ul>
-                        <li><a href="/combat.html#turns">Turns & Rounds</a></li>
-                        <li><a href="/combat.html#vigor">Vigor</a></li>
-                        <li><a href="/combat.html#skills">Skills</a></li>
-                        <li><a href="/combat.html#universal-skills">Universal Skills</a></li>
-                        <li><a href="/combat.html#concentration">Concentration</a></li>
-                        <li><a href="/combat.html#movement">Movement & Position</a></li>
-                        <li><a href="/combat.html#support">Support Skills</a></li>
-                        <li><a href="/combat.html#attack">Attack & Defense</a></li>
-                        <li><a href="/combat.html#fated-actions">Fated & Doomed Actions</a></li>
-                        <li><a href="/combat.html#depleted-vigor">Depleted Vigor</a></li>
-                        <li><a href="/combat.html#defeat">Defeat</a></li>
-                        <li><a href="/combat.html#mounted-combat">Mounted Combat</a></li>
-                        <li><a href="/combat.html#water-combat">Water Combat</a></li>
+                        <li><a href="/overland-travel.html#landscape">Landscape</a></li>
+                        <li><a href="/overland-travel.html#weather">Weather</a></li>
+                        <li><a href="/overland-travel.html#mounts--vehicles">Mounts & Vehicles</a></li>
+                        <li><a href="/overland-travel.html#travel-activities">Travel Activities</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/forging-legends.html">Forging Legends</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/stress.html">Stress</a></h2>
                     <ul>
-                        <li><a href="/forging-legends.html#legendary-deeds">Legendary Deeds</a></li>
-                        <li><a href="/forging-legends.html#commemoration">Commemoration</a></li>
-                        <li><a href="/forging-legends.html#legendary-quests">Legendary Quests</a></li>
-                        <li><a href="/forging-legends.html#legends-of-old">Legends of Old</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/downtime.html">Downtime</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/downtime.html#crafting">Crafting</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/stress.html">Stress & Affliction</a><span class="opener"></span>
-                    <ul>
-                        <li><a href="/stress.html#stress">Stress</a></li>
                         <li><a href="/stress.html#affliction">Afflictions</a></li>
+                        <li><a href="/stress.html#dying">Dying</a></li>
+                        <li><a href="/stress.html#stress-tolerance">Stress Tolerance</a></li>
                         <li><a href="/stress.html#affliction-list">Affliction List</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/conditions.html">Conditions</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/skills.html">Skills</a></h2>
                     <ul>
-                        <li><a href="/conditions.html#tags">Condition Tags</a></li>
+                        <li><a href="/skills.html#type">Type</a></li>
+                        <li><a href="/skills.html#targets">Targets</a></li>
+                        <li><a href="/skills.html#defense">Defense</a></li>
+                        <li><a href="/skills.html#effects">Effects</a></li>
+                        <li><a href="/skills.html#cunning-effects">Cunning Effects</a></li>
+                        <li><a href="/skills.html#skill-tags">Skill Tags</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/combat.html">Combat</a></h2>
+                    <ul>
+                        <li><a href="/combat.html#turns--rounds">Turns & Rounds</a></li>
+                        <li><a href="/combat.html#defenses">Defenses</a></li>
+                        <li><a href="/combat.html#defending--yielding">Defending vs Yielding</a></li>
+                        <li><a href="/combat.html#damage--defeat">Damage & Defeat</a></li>
+                        <li><a href="/combat.html#movement--position">Movement & Position</a></li>
+                        <li><a href="/combat.html#zone-of-control">Zone of Control</a></li>
+                        <li><a href="/combat.html#mounted-combat">Mounted Combat</a></li>
+                        <li><a href="/combat.html#combat-in-water">Combat in Water</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/conditions.html">Conditions</a></h2>
+                    <ul>
+                        <li><a href="/conditions.html#removing-conditions">Removing Conditions</a></li>
+                        <li><a href="/conditions.html#condition-tags">Condition Tags</a></li>
                         <li><a href="/conditions.html#condition-list">Condition List</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="/special-terrain.html">Special Terrain</a><span class="opener"></span>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/special-terrain.html">Terrain</a></h2>
                     <ul>
                         <li><a href="/special-terrain.html#shattered-terrain">Shattered Terrain</a></li>
-                        <li><a href="/special-terrain.html#overgrown-terrain">Overgrown Terrain</a></li>
+                        <li><a href="/special-terrain.html#tangled-terrain">Tangled Terrain</a></li>
+                        <li><a href="/special-terrain.html#spiked-terrain">Spiked Terrain</a></li>
                         <li><a href="/special-terrain.html#burning-terrain">Burning Terrain</a></li>
                         <li><a href="/special-terrain.html#wet-terrain">Wet Terrain</a></li>
-                        <li><a href="/special-terrain.html#frozen-terrain">Frozen Terrain</a></li>
+                        <li><a href="/special-terrain.html#icy-terrain">Icy Terrain</a></li>
+                        <li><a href="/special-terrain.html#snowy-terrain">Snowy Terrain</a></li>
                         <li><a href="/special-terrain.html#goopy-terrain">Goopy Terrain</a></li>
-                        <li><a href="/special-terrain.html#oiled-terrain">Oiled Terrain</a></li>
-                        <li><a href="/special-terrain.html#caustic-terrain">Caustic Terrain</a></li>
+                        <li><a href="/special-terrain.html#oily-terrain">Oily Terrain</a></li>
+                        <li><a href="/special-terrain.html#corrosive-terrain">Corrosive Terrain</a></li>
                         <li><a href="/special-terrain.html#blessed-terrain">Blessed Terrain</a></li>
                         <li><a href="/special-terrain.html#cursed-terrain">Cursed Terrain</a></li>
                         <li><a href="/special-terrain.html#obscuring-cloud">Obscuring Cloud</a></li>
@@ -792,11 +250,36 @@
                         <li><a href="/special-terrain.html#lava">Lava</a></li>
                     </ul>
                 </li>
+
+
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/legends.html">Legends</a></h2>
+                    <ul>
+                        <li><a href="/forging-legends.html#legendary-deeds">Legendary Deeds</a></li>
+                        <li><a href="/forging-legends.html#commemorating-legends">Comemorating Legends</a></li>
+                        <li><a href="/forging-legends.html#legendary-quests">Legendary Quests</a></li>
+                        <li><a href="/forging-legends.html#legends-of-old">Legends of Old</a></li>
+                    </ul>
+                </li>
+                <!-- <li>
+                    <a href="/downtime.html">Downtime</a><span class="opener"></span>
+                    <ul>
+                        <li><a href="/downtime.html#crafting">Crafting</a></li>
+                    </ul>
+                </li> -->
+
+
+                
+                <h1>Gamemastery</h1>
+                <h2> </i> <a href="/soon.html">Coming Soon!</a></h2>
+
+
             </ul>
         </nav>
 
         <!-- ??? -->
-            <section>
+            <!-- <section>
             <header class="major">
                 <h2>Latest Skills</h2>
             </header>
@@ -817,10 +300,10 @@
             <ul class="actions">
                 <li><a href="/#" class="button">More</a></li>
             </ul>
-        </section>
+        </section> -->
 
         <!-- ??? -->
-        <section>
+        <!-- <section>
             <header class="major">
                 <h2>Get in touch</h2>
             </header>
@@ -831,32 +314,402 @@
                 <li class="icon solid fa-home">1234 Somewhere Road #8254<br />
                 Nashville, TN 00000-0000</li>
             </ul>
-        </section>
+        </section> -->
 
         <!-- Footer -->
-        <footer id="footer">
+        <!-- <footer id="footer">
             <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="/https://unsplash.com">Unsplash</a>. Design: <a href="/https://html5up.net">HTML5 UP</a>.</p>
-        </footer>
+        </footer> -->
     </div>
 </div>
+			<div id="main">
+					<h1 id="conditions">Conditions</h1>
+
+<p>Conditions are temporary situations you might find themselves in. Most are bad, some are good, and others may be a mix of both depending on your priorities. Many conditions are inflicted during combat, but some arise outside combat as well. Each condition lasts until something happens to end or remove it, and applies a specific set of bonuses or penalties to the affected character. Refer to the <a href="conditions.html#condition-list">Condition List</a> section for a description of each condition’s effects.</p>
+
+<h2 id="removing-conditions">Removing Conditions</h2>
+
+<p>All conditions, except for those with the <a href="conditions.html#persistent">persistent</a> tag, can be removed by using the <a class="item" data-name="Recovery">Recovery</a> skill. Furthermore, <a href="conditions.html#temporary">temporary</a> conditions are automatically removed from you after your action or your turn. The <a href="conditions.html#blessed">blessed</a> condition can also help remove non-persistent conditions.</p>
+
+<h3 id="replacing-conditions">Replacing Conditions</h3>
+
+<p>Many conditions will be overwritten by specific other conditions when they are applied, in addition to any other effects. For example, if you are <a href="conditions.html#burning">burning</a>, then you become <a href="conditions.html#wet">wet</a>, then the burning condition in immediately removed from you. Even <a href="conditions.html#persistent">persistent</a> conditions can be replaced.</p>
+
+<h2 id="condition-tags">Condition Tags</h2>
+
+<p>Many conditions have tags that describe how they work and interact with other parts of the game.</p>
+
+<h3 id="persistent">Persistent</h3>
+
+<p>A persistent condition cannot be removed by typical means, Including the <a class="item" data-name="Recovery">Recovery</a> skill or the <a href="conditions.html#blessed">blessed</a> condition. Persistent conditions can only be removed by effects that specifically name that condition. Some conditions are innately persistent, while others can be temporarily made persistent by other effects.</p>
+
+<h3 id="temporary">Temporary</h3>
+
+<p>A temporary condition is automatically removed from you after your next <a href="skills.html#action">action</a>, or after you use an extra <a href="skills.html#maneuvers">maneuver</a> instead of your action. A temporary condition that is granted during an action is not removed until the next action after that one. Temporary conditions applied to legendary characters on your turn are removed after your next ally’s action, instead of the next action of the legendary character.</p>
+
+<h3 id="granted-modifiers">Granted Modifiers</h3>
+
+<p>Some conditions may make you <a href="skills.html#vulnerable">vulnerable</a> or <a href="skills.html#resistant">resistant</a> to certain skill tags, or <a href="skills.html#immune">immune</a> to certain other conditions. Multiple sources of vulnerability, resistance, and immunity don’t stack.</p>
+
+<h3 id="item">Item</h3>
+
+<p>An equipment condition affects an item, such as a piece of <a href="equipment.md">equipment</a>, rather than a character directly.</p>
+
+<h3 id="mind">Mind</h3>
+
+<p>A mind condition affects a character’s mental state or emotions. Mindless characters, such as zombies, are <a href="skills.html#immune">immune</a> to mental conditions.</p>
+
+<h3 id="beneficial">Beneficial</h3>
+
+<p>A beneficial condition is one that is always helpful to the character affected by it.</p>
+
+<h3 id="elemental">Elemental</h3>
+
+<p>An elemental condition harnesses the power of one of the primal elements. Elemental conditions also have a skill tag that denotes which specific element they represent. If you are <a href="skills.html#immune">immune</a> to that elemental tag, you are also immune to that elemental condition. For example, if you are immune to the <a href="skills.html#fire">fire</a> tag, you are also immune to the <a href="conditions.html#burning">burning</a> condition.</p>
+
+<h3 id="magical">magical</h3>
+
+<p>A magical condition is supernatural in origin. Effects that have unique interactions with magic may affect magical conditions.</p>
+
+<h3 id="bodily">Bodily</h3>
+
+<p>A bodily condition affects a characters physiology or life force. Creatures that are not living typically cannot be affected by bodily conditions.</p>
+
+<h2 id="condition-list">Condition List</h2>
+
+<h3 id="bleeding">Bleeding</h3>
+
+<p><strong><a href="conditions.html#bodily">Bodily</a></strong></p>
+
+<p>A bleeding character is rapidly losing blood. At the start of your turn, you loose -2 <a href="combat.html#momentum">momentum</a> and -2 <a href="combat.html#poise">poise</a>. This defense loss is not affected by armor, and never carries over to another defense if one is depleted. If your momentum and poise are both 0, you suffer one stress at the start of your turn instead.</p>
+
+<h3 id="blessed">Blessed</h3>
+
+<p><strong><a href="skills.html#holy">Holy</a> <a href="conditions.html#magical">Magical</a> <a href="conditions.html#beneficial">Beneficial</a> <a href="conditions.html#temporary">Temporary</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#cursed">Cursed</a></strong></p>
+
+<p><strong>Granted Resistance: <a href="skills.html#holy">Holy</a>, <a href="skills.html#unholy">Unholy</a></strong></p>
+
+<p>A blessed character is guarded by a protective force of justice. If you are not an undead or a demon, then you may use a reaction to immediately remove one non-<a href="conditions.html#persistent">persistent</a> condition from yourself. A creature that is an undead or demon is, <a href="skills.html#vulnerable">vulnerable</a> to <a href="skills.html#unholy">unholy</a> skills instead of <a href="skills.html#resistant">resistant</a>, and all other conditions on such a creature are <a href="conditions.html#persistent">persistent</a>.</p>
+
+<h3 id="blinded">Blinded</h3>
+
+<p><strong><a href="conditions.html#bodily">Bodily</a></strong></p>
+
+<p>A blinded character has had their vision temporarily impaired and can only see things very close to them. <a href="skills.html#ranged">Ranged</a> <a href="skills.html#attack">attacks</a> gain <a href="skills.html#boon">boon</a> against you. You can only target adjacent characters and spaces with skills, except for <a href="skills.html#blast">blast</a> skills. <a href="skills.html#line">Line</a> skills can’t be aimed properly and fail to target non-adjacent characters. <a href="skills.html#sight">Sight</a> skills are ineffective on you and enemies gain a <a href="rolls.html#boons--banes">boon</a> on <a href="rolls.md">rolls</a> made to sneak around if you’re the only person who might notice them</p>
+
+<h3 id="burning">Burning</h3>
+
+<p><strong><a href="skills.html#fire">Fire</a> <a href="conditions.html#elemental">Elemental</a></strong></p>
+
+<p><strong>Replaces:</strong> <strong><a href="conditions.html#bleeding">Bleeding</a> <a href="conditions.html#chilled">Chilled</a> <a href="conditions.html#oiled">Oiled</a></strong></p>
+
+<p><strong>Granted Resistance: <a href="skills.html#ice">Ice</a></strong></p>
+
+<p><strong>Granted Immunity: <a href="conditions.html#oiled">Oiled</a></strong></p>
+
+<p>A burning character is on fire. At the start of your turn, you loose -2 <a href="combat.html#poise">poise</a> and -2 <a href="combat.html#focus">focus</a>. If you are <a href="skills.html#vulnerable">vulnerable</a> or <a href="skills.html#resistant">resistant</a> to <a href="skills.html#fire">fire</a>, you loose 1 less or more poise and focus, respectively. This defense loss is not affected by armor and never carries over to another defense if one is depleted. If your poise and focus are both 0, you suffer one stress at the start of your turn instead.</p>
+
+<h3 id="chilled">Chilled</h3>
+
+<p><strong><a href="skills.html#ice">Ice</a> <a href="conditions.html#elemental">Elemental</a> <a href="conditions.html#temporary">Temporary</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#burning">Burning</a> <a href="conditions.html#wet">Wet</a> <a href="conditions.html#hastened">Hastened</a></strong></p>
+
+<p><strong>Granted Resistance:</strong> <strong><a href="skills.html#fire">Fire</a></strong></p>
+
+<p>A chilled character has been struck by extreme cold and has difficulty moving quickly. You can only use one <a href="skills.html#action">action</a> or <a href="skills.html#maneuvers">maneuver</a> on your turn, but not both.</p>
+
+<h3 id="choking">Choking</h3>
+
+<p><strong><a href="conditions.html#bodily">Bodily</a></strong></p>
+
+<p>A choking character is coughing, drowning, or otherwise unable to catch their breath. At the start of your turn, you loose -2 <a href="combat.html#focus">focus</a> and -2 <a href="combat.html#momentum">momentum</a>. This defense loss is not affected by armor and never carries over to another defense if one is depleted. If your focus and momentum are both 0, you suffer one stress at the start of your turn instead. You can’t use <a href="skills.html#sound">sound</a> skills that involve speaking or shouting. A character who is unable to breath for several rounds will eventually suffer <a href="stress.md">stress</a>, as described in the <a href="exploration.html#breath-holding">breath holding</a> section.</p>
+
+<h3 id="compelled">Compelled</h3>
+
+<p><strong><a href="conditions.html#mind">Mind</a>, <a href="conditions.html#temporary">Temporary</a></strong></p>
+
+<p><strong>Granted Vulnerability:</strong> <strong><a href="skills.html#mental">Mental</a></strong></p>
+
+<p>A compelled character is being mentally manipulated by another character. As a <a href="skills.html#reaction">reaction</a> at the start of the compelled character’s turn, the compelling character may issue the compelled character a mental command. On its next turn the compelled character must either pay 4 <a href="combat.html#focus">focus</a> or obey the command.</p>
+
+<h3 id="confused">Confused</h3>
+
+<p><strong><a href="conditions.html#persistent">Persistent</a></strong></p>
+
+<p>A confused character’s <a href="combat.html#focus">focus</a> has been reduced to zero, and they have lost track of the battle around them. While confused, you can’t gain focus, you loose your <a href="combat.html#zone-of-control">zone of control</a>, and all your skills target a random character within the skill’s range.</p>
+
+<h3 id="corroding">Corroding</h3>
+
+<p><strong><a href="skills.html#caustic">Caustic</a> <a href="conditions.html#elemental">Elemental</a></strong></p>
+
+<p>A corroding character is covered in a caustic liquid that weakens their equipment. Whenever an <a href="skills.html#attack">attack</a> against you two scores two or more <a href="skills.html#cunning-effect">cunning effects</a>, the GM will choose to <a href="exploration.html#damaging-objects">damage</a> one of your weapons, armor pieces, or other equipment, in addition to any other effects.</p>
+
+<h3 id="cursed">Cursed</h3>
+
+<p><strong><a href="skills.html#holy">Unholy</a> <a href="conditions.html#magical">Magical</a> <a href="conditions.html#temporary">Temporary</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#cursed">Cursed</a></strong></p>
+
+<p><strong>Granted Vulnerability: <a href="skills.html#holy">Holy</a>, <a href="skills.html#unholy">Unholy</a></strong></p>
+
+<p>A cursed character is haunted by a wicked force of evil. While you are cursed, all other conditions on you are <a href="conditions.html#persistent">persistent</a>, unless you are an undead or a demon. An undead or demon who is cursed is <a href="skills.html#resistant">resistant</a> to <a href="skills.html#holy">holy</a> and <a href="skills.html#unholy">unholy</a> skills instead of <a href="skills.html#vulnerable">vulnerable</a>. Such a creature may use a <a href="skills.html#reaction">reaction</a> to immediately remove one non-<a href="conditions.html#persistent">persistent</a> condition from itself, then the cursed condition ends.</p>
+
+<h3 id="damaged">Damaged</h3>
+
+<p><strong><a href="conditions.html#item">Item</a></strong></p>
+
+<p>A damaged item is not functioning properly. You suffer a bane on any <a href="skills.md">skill</a> or <a href="rolls.md">roll</a> made with the item. Equipment that normally grants <a href="equipment.html#armor">armor</a> grants one fewer point of armor while damaged. Damaged items are best repaired in town, though you might have tools that let you manage a quicker repair.</p>
+
+<h3 id="deafened">Deafened</h3>
+
+<p><strong><a href="conditions.html#bodily">Bodily</a></strong></p>
+
+<p>A deafened character has had their hearing temporarily impaired and can’t react to enemies nearby. You loose your <a href="combat.html#zone-of-control">zone of control</a>, and attacks against you while you’re both deafened and <a href="combat.html#surrounded">surrounded</a> gain an additional <a href="skills.html#boon">boon</a>. <a href="skills.html#sound">Sound</a> skills are ineffective on a deafened character, and enemies gain a <a href="rolls.html#boons--banes">boon</a> on <a href="rolls.md">rolls</a> made to sneak around if you’re the only person who might notice them.</p>
+
+<h3 id="defenseless">Defenseless</h3>
+
+<p><strong><a href="conditions.html#temporary">Temporary</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#guarded">Guarded</a></strong></p>
+
+<p><a href="combat.html#defending-vs-yielding">Attacks</a> gain a <a href="skills.html#boon">boon</a> against you.</p>
+
+<h3 id="destroyed">Destroyed</h3>
+
+<p><strong><a href="conditions.html#item">Item</a></strong></p>
+
+<p>A destroyed item has been wrecked beyond all hope of repair. You can’t use any of the item’s <a href="skills.md">skills</a>, you can’t use it for <a href="rolls.md">rolls</a>, and it grants no <a href="equipment.html#armor">armor</a>.</p>
+
+<h3 id="distracted">Distracted</h3>
+
+<p><strong>Replaces: <a href="conditions.html#vigilant">Vigilant</a></strong></p>
+
+<p>A distracted character has had their attention drawn away from the action. You suffer a <a href="skills.html#bane">bane</a> on all <a href="combat.html#focus">focus</a> based <a href="skills.md">skills</a>, and you can’t <a href="combat.html#defending-vs-yielding">predict</a> attacks. You are immediately interrupted and can’t concentrate on skills. Enemies gain a <a href="rolls.html#boons--banes">boon</a> on <a href="rolls.md">rolls</a> made to sneak around if you’re the only person who might notice them.</p>
+
+<h3 id="drunk">Drunk</h3>
+
+<p><strong><a href="conditions.html#bodily">Bodily</a> <a href="conditions.html#persistent">Persistent</a></strong></p>
+
+<p><strong>Removed after:</strong> a night’s rest.</p>
+
+<p>A drunk character has had too much alcohol to drink. You suffer a <a href="skills.html#bane">bane</a> on all your <a href="combat.html#defending-vs-yielding">attack</a> actions, but all of your attacks are <a href="skills.html#unpredictable">unpredictable</a>. You gain a <a href="rolls.html#boons--banes">boon</a> on <a href="personality.html#bold-vs-subtle">bold</a> and <a href="personality.html#serious-vs-whimsical">whimsical</a> rolls, but suffer a bane on <a href="personality.html#bold-vs-subtle">subtle</a> and <a href="personality.html#serious-vs-whimsical">serious</a> rolls, Enemies gain a <a href="rolls.html#boons--banes">boon</a> on <a href="rolls.md">rolls</a> made to sneak around if you’re the only person who might notice them.</p>
+
+<h3 id="empowered">Empowered</h3>
+
+<p><strong><a href="conditions.html#temporary">Temporary</a> <a href="conditions.html#beneficial">Beneficial</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#weakened">Weakened</a></strong></p>
+
+<p>Your next <a href="combat.html#defending-vs-yielding">attack</a> <a href="skills.html#action">action</a> gains a <a href="skills.html#boon">boon</a> (but not your <a href="skills.html#maneuvers">maneuvers</a> or <a href="skills.html#reaction">reactions</a>).</p>
+
+<h3 id="encumbered">Encumbered</h3>
+
+<p><strong><a href="conditions.html#persistent">Persistent</a></strong></p>
+
+<p><strong>Removed after:</strong> The character is no longer carrying too much.</p>
+
+<p>An encumbered character is carrying more armor, weapons, or inventory items than they can easily hold. You suffer a <a href="skills.html#bane">bane</a> on all your rolls, attacks against you gain a <a href="skills.html#boon">boon</a>, and you must spend an extra point of movement to move each space. You move half as quickly while <a href="overland-travel.md">traveling</a> and suffers one <a href="stress.md">stress</a> for every hour you spend traveling while encumbered.</p>
+
+<h3 id="evasive">Evasive</h3>
+
+<p><strong><a href="conditions.html#temporary">Temporary</a> <a href="conditions.html#beneficial">Beneficial</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#grabbed">Grabbed</a>, <a href="conditions.html#restrained">Restrained</a></strong></p>
+
+<p>An evasive character is swift enough to move through enemy zones of control. Enemy zones of control can’t <a href="combat.html#surrounded">surround</a> you, <a href="combat.html#hindering-maneuvers">hinder</a> you, or impose <a href="skills.html#bane">banes</a> on your <a href="skills.html#ranged">ranged</a> skills.</p>
+
+<h3 id="frightened">Frightened</h3>
+
+<p><strong><a href="conditions.html#mind">Mind</a></strong></p>
+
+<p>A frightened character has been terrified by another character. You can’t willingly move toward the source of your fear, and a <a href="skills.html#bane">bane</a> is added to your <a href="skills.html#attack">attacks</a> against the character frightening you.</p>
+
+<h3 id="fumbling">Fumbling</h3>
+
+<p><strong>Replaces: <a href="conditions.html#honed">Honed</a></strong></p>
+
+<p>A fumbling character can’t coordinate their actions. Your skills can’t earn <a href="skills.html#cunning-effect">cunning effects</a>, no matter what the dice roll. You are also interrupted whenever you <a href="combat.html#yield">yield</a> to an <a href="skills.html#attack">attack</a>.</p>
+
+<h3 id="grabbed">Grabbed</h3>
+
+<p><strong><a href="conditions.html#persistent">Persistent</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#evasive">Evasive</a></strong></p>
+
+<p>A grabbed character is being held in place by one or more other characters. While you’re grabbed, you loose your <a href="combat.html#zone-of-control">zone of control</a> and suffer a <a href="skills.html#bane">bane</a> on <a href="skills.html#attack">attacks</a> against characters who are not part of the grab. If the character grabbing you is within one size of you, they also loose their zone of control and suffer a bane on characters outside the grab.</p>
+
+<p>If you and the character grabbing you are within one <a href="combat.html#size">size</a> of each other, then you cannot move. The character grabbing you can drag you along whenever they move, but each space they move costs an extra point of movement. If you and the character grabbing you are two or more size category apart, then the larger character may move freely and the smaller character is pulled along, regardless of who is grabbing whom.</p>
+
+<p>If two similar sized characters grab each other, then neither can move. Characters in a grab can still be <a href="combat.html#shoving">shoved</a>, and shoving a character out of reach removes the grabbed condition. You must usually <a href="skills.html#concentration">concentrate</a> on a grab, and <a href="skills.html#interrupt">interrupting</a> that concentration will free the grabbed character.</p>
+
+<h3 id="guarded">Guarded</h3>
+
+<p><strong><a href="conditions.html#temporary">Temporary</a> <a href="conditions.html#beneficial">Beneficial</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#defenseless">Defenseless</a></strong></p>
+
+<p><a href="combat.html#defending-vs-yielding">Attack</a> suffer a <a href="skills.html#bane">bane</a> against you.</p>
+
+<h3 id="hastened">Hastened</h3>
+
+<p><strong><a href="conditions.html#temporary">Temporary</a> <a href="conditions.html#magical">Magical</a> <a href="conditions.html#beneficial">Beneficial</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#chilled">Chilled</a></strong></p>
+
+<p>A hastened character is moving supernaturally quickly. On your next turn, you can use an additional <a href="skills.html#maneuvers">maneuver</a>.</p>
+
+<h3 id="heedless">Heedless</h3>
+
+<p><strong><a href="conditions.html#temporary">Temporary</a></strong></p>
+
+<p>Your <a href="combat.html#zone-of-control">zone of control</a> is temporarily suppressed. You automatically become heedless if you replace your action with a maneuver on your turn.</p>
+
+<h3 id="honed">Honed</h3>
+
+<p><strong><a href="conditions.html#temporary">Temporary</a> <a href="conditions.html#beneficial">Beneficial</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#fumbling">Fumbling</a></strong></p>
+
+<p>A honed character can envision a clear path to victory. Your next <a href="skills.html#action">action</a> automatically earns an extra <a href="skills.html#cunning-effect">cunning-effect</a>, even if your target doesn’t <a href="combat.html#yield">yield</a>. If you would be <a href="skills.html#interrupt">interrupted</a>, you may instead give up the honed condition to maintain your <a href="skills.html#concentration">concentration</a>.</p>
+
+<h3 id="invisible">Invisible</h3>
+
+<p><strong><a href="conditions.html#magical">Magical</a> <a href="conditions.html#beneficial">Beneficial</a> <a href="conditions.html#temporary">Temporary</a></strong></p>
+
+<p>An invisible character can’t be seen by anyone. Your <a href="skills.html#attack">attacks</a> gain a <a href="skills.html#boon">boon</a>, and enemies  can only target you with <a href="skills.html#blast">blast</a> skills. Enemy <a href="combat.html#zone-of-control">zones of control</a> can’t <a href="combat.html#surrounded">surround</a> you, <a href="combat.html#hindering-maneuvers">hinder</a> you, or impose <a href="skills.html#bane">banes</a> on your <a href="skills.html#ranged">ranged</a> skills.</p>
+
+<p>When you become invisible, anything you are wearing or carrying becomes invisible along with them. However, anything you drop or set down becomes visible, and anything you pick up while invisible remains visible.</p>
+
+<h3 id="kneeling">Kneeling</h3>
+
+<p>A kneeling character has been forced down to their knees. You suffer a <a href="skills.html#bane">bane</a> on <a href="combat.html#momentum">momentum</a> based skills, and you can’t <a href="combat.html#defending-vs-yielding">block</a> attacks. You must spend an extra point of movement for each space you move.</p>
+
+<h3 id="knocked-down">Knocked-Down</h3>
+
+<p><strong><a href="conditions.html#persistent">Persistent</a></strong></p>
+
+<p>A knocked-down character’s <a href="combat.html#momentum">momentum</a> has been reduce to zero, leaving them immobile on the ground. While knocked-down, you can’t gain momentum, you loose your <a href="combat.html#zone-of-control">zone of control</a>, and you can’t move except with the <a class="item" data-name="Shift">Shift</a> skill.</p>
+
+<h3 id="oiled">Oiled</h3>
+
+<p><strong><a href="conditions.html#persistent">Persistent</a> <a href="skills.html#oil">Oil</a> <a href="conditions.html#elemental">Elemental</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#invisible">Invisible</a> <a href="conditions.html#grabbed">Grabbed</a></strong></p>
+
+<p><strong>Granted Immunity:</strong> <strong><a href="conditions.html#grabbed">Grabbed</a> <a href="conditions.html#wet">Wet</a> <a href="conditions.html#corroding">Corroding</a> <a href="conditions.html#chilled">Chilled</a></strong></p>
+
+<p><strong>Granted Resistance:</strong> <strong><a href="skills.html#water">Water</a></strong> <strong><a href="skills.html#caustic">Caustic</a> <a href="skills.html#ice">Ice</a></strong></p>
+
+<p><strong>Granted Vulnerability:</strong> <strong><a href="skills.html#fire">Fire</a></strong></p>
+
+<p><strong>Removed after:</strong> the character spends 10 minutes removing most of the oil.</p>
+
+<p>An oiled character is covered in a layer of insulating, flammable grease.</p>
+
+<h3 id="petrified">Petrified</h3>
+
+<p><strong>Earth Elemental</strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#bleeding">Bleeding</a> <a href="conditions.html#evasive">Evasive</a></strong></p>
+
+<p>A petrified character is encased in heavy stone slabs. You can’t move and your <a href="equipment.html#armor">armor</a> is increased by 5.</p>
+
+<h3 id="provoked">Provoked</h3>
+
+<p><strong><a href="conditions.html#mind">Mind</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#provoked">Provoked</a></strong> by another character.</p>
+
+<p>A provoked character has had their attention commanded by a specific enemy. You suffer a <a href="skills.html#bane">bane</a> on skills targeting any other character than the one that provoked you, including skills that target yourself or that have no target.</p>
+
+<h3 id="reeling">Reeling</h3>
+
+<p><strong><a href="conditions.html#persistent">Persistent</a></strong></p>
+
+<p>A reeling character’s <a href="combat.html#poise">poise</a> has been reduce to zero, leaving them in a unable to coordinate an attack. While reeling, you can’t gain poise, you loose your <a href="combat.html#zone-of-control">zone of control</a>, and you suffer a <a href="skills.html#bane">bane</a> on all your <a href="skills.html#attack">attacks</a>.</p>
+
+<h3 id="restrained">Restrained</h3>
+
+<p><strong><a href="conditions.html#persistent">Persistent</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#evasive">Evasive</a></strong></p>
+
+<p>A restrained character is held in place by some object such as a net or chain. You can’t move or be <a href="combat.html#shoving">shoved</a>, and you lose you <a href="combat.html#zone-of-control">zone of control</a>. The restraints must be removed in order to free you. This will usually require a <a href="abilities.html#brawn">brawn</a> <a href="rolls.md">roll</a> to break the restraints, as determined by the GM. Usually such a roll may be made as part of any skill that would let you move, and if you succeed you may use that skill’s movement.</p>
+
+<h3 id="shocked">Shocked</h3>
+
+<p><strong><a href="conditions.html#bodily">Bodily</a> <a href="skills.html#lightning">Lightning</a> <a href="conditions.html#elemental">Elemental</a></strong></p>
+
+<p>A shocked character has become uncoordinated after an electric shock. The only <a href="skills.html#maneuvers">maneuvers</a> that you can use are Dash and Recovery.</p>
+
+<h3 id="surprised">Surprised</h3>
+
+<p><strong><a href="conditions.html#temporary">Temporary</a></strong></p>
+
+<p>A surprised character has been caught unaware and unprepared for combat. You have no <a href="combat.html#zone-of-control">zone of control</a> and you can’t use <a href="skills.html#reaction">reactions</a> other than to draw your weapon(s). On your next turn, you can use an <a href="skills.html#action">action</a> or a <a href="skills.html#maneuvers">maneuver</a>, but not both.</p>
+
+<h3 id="unbalanced">Unbalanced</h3>
+
+<p>An unbalanced character is having difficulty finding their footing. You suffer a <a href="skills.html#bane">bane</a> on all <a href="combat.html#poise">poise</a> based skills, and you can’t <a href="combat.html#defending-vs-yielding">dodge</a> attacks. You lose your zone of control.</p>
+
+<h3 id="unconscious">Unconscious</h3>
+
+<p><strong><a href="conditions.html#bodily">Bodily</a></strong></p>
+
+<p>An unconscious character is either asleep or knocked-out. You can’t talk, see, or use skills. A sleeping character might wake up from a touch or loud noise, but a knocked-out character wouldn’t. If you are <a href="skills.html#attack">attacked</a>, you are immediately <a href="combat.html#defeated">defeated</a>, and the damage of the attack’s yield directly inflicts <a href="stress.md">stress</a>.</p>
+
+<h3 id="vigilant">Vigilant</h3>
+
+<p><strong><a href="conditions.html#temporary">Temporary</a> <a href="conditions.html#beneficial">Beneficial</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#distracted">Distracted</a></strong></p>
+
+<p>A vigilant character is prepared to prevent an enemy’s escape. You can <a href="combat.html#hindering-maneuvers">hinder</a> <a href="skills.html#careful">careful</a> skills and skills that otherwise ignore your <a href="combat.html#zone-of-control">zone of control</a>, even if another condition would say otherwise. Whenever you hinder an enemy, that enemy loses a total of 4 <a href="combat.html#poise">poise</a>, 4 <a href="combat.html#momentum">momentum</a>, and 4 <a href="combat.html#focus">focus</a>, instead of the usual amount.</p>
+
+<h3 id="vortexed">Vortexed</h3>
+
+<p><strong><a href="skills.html#air">Air</a> <a href="conditions.html#elemental">Elemental</a> <a href="conditions.html#magical">Magical</a></strong></p>
+
+<p>A vortexed character is surrounded by magically swirling winds. All <a href="skills.html#ranged">ranged</a> skills used by you or used against you suffer a <a href="skills.html#bane">bane</a>. You loose your <a href="combat.html#zone-of-control">zone of control</a>, and enemy zones of control can’t <a href="combat.html#surrounded">surround</a> you, <a href="combat.html#hindering-maneuvers">hinder</a> you, or impose <a href="skills.html#bane">banes</a> on your <a href="skills.html#ranged">ranged</a> skills.</p>
+
+<h3 id="weakened">Weakened</h3>
+
+<p><strong><a href="conditions.html#temporary">Temporary</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#empowered">Empowered</a></strong></p>
+
+<p>You suffer a <a href="skills.html#bane">bane</a> on your <a href="combat.html#defending-vs-yielding">attacks</a>.</p>
+
+<h3 id="wet">Wet</h3>
+
+<p><strong><a href="conditions.html#persistent">Persistent</a> <a href="skills.html#water">Water</a> <a href="conditions.html#elemental">Elemental</a></strong></p>
+
+<p><strong>Replaces: <a href="conditions.html#burning">Burning</a> <a href="conditions.html#invisible">Invisible</a></strong></p>
+
+<p><strong>Granted Immunity:</strong> <strong><a href="conditions.html#burning">Burning</a></strong></p>
+
+<p><strong>Granted Resistance:</strong> <strong><a href="skills.html#fire">Fire</a></strong></p>
+
+<p><strong>Granted Vulnerability:</strong> <strong><a href="skills.html#ice">Ice</a></strong>, <strong><a href="skills.html#lightning">Lightning</a></strong></p>
+
+<p><strong>Removed after:</strong> You are targeted by a fire, ice or lightning skill, or you spend 10 minutes drying off.</p>
+
+<p>A wet character is soaked with water.</p>
+
+<h3 id="wracked">Wracked</h3>
+
+<p><strong><a href="conditions.html#bodily">Bodily</a></strong></p>
+
+<p>A wracked character is crippled by pain when they try to move. You lose your choice of -1 <a href="combat.html#poise">poise</a>, <a href="combat.html#momentum">momentum</a>, or <a href="combat.html#focus">focus</a> for each space you move, except when you are <a href="combat.html#shoving">shoved</a>.</p>
+ <!--  | replace_regex -->
+			</div>
+			<div id="info">
+			</div>
+			<!-- <div id="map">
+			</div> -->
 		</div>
-		<svg xmlns="http://www.w3.org/2000/svg">
-			<filter id="Bevel1">
-				<feGaussianBlur in="SourceAlpha" stdDeviation="0.5" result="blur"/>
-				<feSpecularLighting in="blur" surfaceScale="5" specularConstant="0.5" specularExponent="10" result="specOut" lighting-color="white">
-					<fePointLight x="-5000" y="-5000" z="4000"/>
-				</feSpecularLighting>
-				<feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut2"/>
-				<feComposite in="SourceGraphic" in2="specOut2" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint" />
-			</filter>
-		</svg>
-		<!-- Scripts -->
-		<script src="/assets/js/jquery.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<script src="/assets/js/browser.min.js"></script>
-		<script src="/assets/js/breakpoints.min.js"></script>
-		<script src="/assets/js/util.js"></script>
-      	<script src="/assets/js/main.js"></script>
-		<script src="/assets/js/FoL.js"></script>
 	</body>
 </html>

@@ -1,0 +1,588 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+	<title>Forge of Legends - Skills</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="description" content="The official website of the Forge of Legends fantasy roleplaying game.">
+	<meta name="keywords" content="tabletop, RPG, fantasy">
+    <meta name="author" content="Reggie Britten">
+	<link rel="icon" type="image/png" href="/images/logo.png"/>
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/tooltipster.bundle.css" />
+	<link rel="stylesheet" href="/assets/js/leaflet/leaflet.css" />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/assets/js/FoL.js"></script>
+	<script src="/assets/js/handlebars-v4.7.7.js"></script>
+	<script src="/assets/js/tooltipster.bundle.js"></script>
+	<script src="/assets/js/leaflet/leaflet.js"></script>
+	<script src="https://kit.fontawesome.com/c754307781.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="sidebar">
+
+    <div class="inner">
+        <img src="assets/css/ranger/PartyFrameBG.png" height="110px" width="auto" id="sidebar-handle">
+
+        <!-- Search -->
+            <section id="search" class="alt">
+                <script async src="https://cse.google.com/cse.js?cx=a3cc61b05e5e110db"></script>
+                <div class="gcse-search" style="width: 1%; margin: 0 auto"></div>
+            </section>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <ul>
+                <li><h2><a href="/introduction.html">Introduction</a></h2></li>
+
+                <h1>Characters</h1>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/soon.html">Ancestry</a></h2>
+                    <ul>
+                        <li></li><a href="/soon.html">Coming Soon!</a></li>
+                        <!-- <li><a href="/ancestry.html#human">Human</a></li>
+                        <li><a href="/ancestry.html#elf">Elf</a></li>
+                        <li><a href="/ancestry.html#dwarf">Dwarf</a></li>
+                        <li><a href="/ancestry.html#gnome">Gnome</a></li>
+                        <li><a href="/ancestry.html#orc">Orc</a></li>
+                        <li><a href="/ancestry.html#beast-kin">Beast-Kin</a></li>
+                        <li><a href="/ancestry.html#mixed">Mixed</a></li> -->
+                    </ul>
+                </li>
+                                
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/abilities.html">Abilities</a></h2>
+                    <ul>
+                        <li><a href="/abilities.html#agility">Agility</a></li>
+                        <li><a href="/abilities.html#brawn">Brawn</a></li>
+                        <li><a href="/abilities.html#cunning">Cunning</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/personality.html">Personality</a></h2>
+                    <ul>
+                        <li><a href="/personality.html#values">Values</a></li>
+                        <li><a href="/personality.html#bold-vs-subtle">Bold vs Subtle</a></li>
+                        <li><a href="/personality.html#idealistic-vs-pragmatic">Idealistic vs Pragmatic</a></li>
+                        <li><a href="/personality.html#serious-vs-whimsical">Serious vs Whimsical</a></li>
+                        <li><a href="/personality.html#training">Training</a></li>
+                        <li><a href="/personality.html#expertise">Expertise</a></li>
+                        <li><a href="/personality.html#flashbacks">Flashbacks</a></li>
+                        <li><a href="/personality.html#lore-check">Lore Checks</a></li>
+                        <li><a href="/personality.html#flaw">Character Flaws</a></li>
+                        <li><a href="/personality.html#indulgence">Indulgences</a></li>
+                        <li><a href="/personality.html#personal-legend">Personal Legend</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/class.html">Classes</a></h2>
+                    <ul>
+                        <li><a href="/class.html#core-feature">Core Feature</a></li>
+                        <li><a href="/class.html#fighting--style">Fighting Style</a></li>
+                        <li><a href="/class.html#expereince">Experience</a></li>
+                        <li><a href="/class.html#assassin">Assassin</a></li>
+                        <li><a href="/class.html#bard">Bard</a></li>
+                        <li><a href="/class.html#battlemaster">Battlemaster</a></li>
+                        <li><a href="/class.html#beastmaster">Beastmaster</a></li>
+                        <li><a href="/class.html#berserker">Berserker</a></li>
+                        <li><a href="/class.html#elementalist">Elementalist</a></li>
+                        <li><a href="/class.html#enchanter">Enchanter</a></li>
+                        <li><a href="/class.html#geomancer">Geomancer</a></li>
+                        <li><a href="/class.html#monk">Monk</a></li>
+                        <li><a href="/class.html#paladin">Paladin</a></li>
+                        <li><a href="/class.html#shaman">Shaman</a></li>
+                        <li><a href="/class.html#shapeshifter">Shapeshifter</a></li>
+                        <li><a href="/class.html#trickster">Trickster</a></li>
+                        <li><a href="/class.html#warlock">Warlock</a></li>
+                        <li><a href="/class.html#wizard">Wizard</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/equipment.html">Equipment</a></h2>
+                    <ul>
+                        <li><a href="/equipment.html#inventory">Inventory</a></li>
+                        <li><a href="/equipment.html#weapon-proficiency">Weapon Proficiency</a></li>
+                        <li><a href="/equipment.html#armor">Armor</a></li>
+                        <li><a href="/equipment.html#equipment-slots">Equipment Slots</a></li>
+                        <li><a href="/equipment.html#item-tags">Item Tags</a></li>
+                    </ul>
+                </li>
+
+                <hr>
+                
+                <li class="">
+                    <h2> <a href="/soon.html">Skill List</a></h2>
+                </li>
+                <li class="">
+                    <h2> <a href="/soon.html">Equipment List</a></h2>
+                </li>
+
+
+
+
+                <h1>Gameplay</h1>
+
+
+                <li class="opener">   
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/rolls.html">Rolls</a></h2>
+                    <ul>
+                        <li><a href="/rolls.html#roll-difficulty">Roll Difficulty</a></li>
+                        <li><a href="/rolls.html#target-number">Target Number</a></li>
+                        <li><a href="/rolls.html#roll-results">Roll Results</a></li>
+                        <li><a href="/rolls.html#boons--banes">Boons & Banes</a></li>
+                        <li><a href="/rolls.html#push-your-luck">Push Your Luck</a></li>
+                        <li><a href="/rolls.html#play-it-safe">Play it Safe</a></li>
+                        <li><a href="/rolls.html#group-rolls">Group Rolls</a></li>
+                        <li><a href="/rolls.html#opposed-rolls">Opposed Rolls</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">   
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/fate.html">Fate</a></h2>
+                    <ul>
+                        <li><a href="/fate.html#fateful-deeds">Fateful Deeds</a></li>
+                        <li><a href="/fate.html#twists-of-fate">Twists of Fate</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/exploration.html">Exploration</a></h2>
+                    <ul>
+                        <li><a href="/exploration.html#jumping">Jumping</a></li>
+                        <li><a href="/exploration.html#climbing">Climbing</a></li>
+                        <li><a href="/exploration.html#flying">Flying</a></li>
+                        <li><a href="/exploration.html#falling">Falling</a></li>
+                        <li><a href="/exploration.html#swimming">Swimming</a></li>
+                        <li><a href="/exploration.html#breath-holding">Breath Holding</a></li>
+                        <li><a href="/exploration.html#sight--darkness">Sight & Darkness</a></li>
+                        <li><a href="/exploration.html#hiding">Hiding</a></li>
+                        <li><a href="/exploration.html#damaging-objects">Damaging Objects</a></li>
+                        <li><a href="/exploration.html#doom">Doom</a></li>
+                        <li><a href="/exploration.html#resting">Resting</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/overland-travel.html">Travel</a></h2>
+                    <ul>
+                        <li><a href="/overland-travel.html#landscape">Landscape</a></li>
+                        <li><a href="/overland-travel.html#weather">Weather</a></li>
+                        <li><a href="/overland-travel.html#mounts--vehicles">Mounts & Vehicles</a></li>
+                        <li><a href="/overland-travel.html#travel-activities">Travel Activities</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/stress.html">Stress</a></h2>
+                    <ul>
+                        <li><a href="/stress.html#affliction">Afflictions</a></li>
+                        <li><a href="/stress.html#dying">Dying</a></li>
+                        <li><a href="/stress.html#stress-tolerance">Stress Tolerance</a></li>
+                        <li><a href="/stress.html#affliction-list">Affliction List</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/skills.html">Skills</a></h2>
+                    <ul>
+                        <li><a href="/skills.html#type">Type</a></li>
+                        <li><a href="/skills.html#targets">Targets</a></li>
+                        <li><a href="/skills.html#defense">Defense</a></li>
+                        <li><a href="/skills.html#effects">Effects</a></li>
+                        <li><a href="/skills.html#cunning-effects">Cunning Effects</a></li>
+                        <li><a href="/skills.html#skill-tags">Skill Tags</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/combat.html">Combat</a></h2>
+                    <ul>
+                        <li><a href="/combat.html#turns--rounds">Turns & Rounds</a></li>
+                        <li><a href="/combat.html#defenses">Defenses</a></li>
+                        <li><a href="/combat.html#defending--yielding">Defending vs Yielding</a></li>
+                        <li><a href="/combat.html#damage--defeat">Damage & Defeat</a></li>
+                        <li><a href="/combat.html#movement--position">Movement & Position</a></li>
+                        <li><a href="/combat.html#zone-of-control">Zone of Control</a></li>
+                        <li><a href="/combat.html#mounted-combat">Mounted Combat</a></li>
+                        <li><a href="/combat.html#combat-in-water">Combat in Water</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/conditions.html">Conditions</a></h2>
+                    <ul>
+                        <li><a href="/conditions.html#removing-conditions">Removing Conditions</a></li>
+                        <li><a href="/conditions.html#condition-tags">Condition Tags</a></li>
+                        <li><a href="/conditions.html#condition-list">Condition List</a></li>
+                    </ul>
+                </li>
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/special-terrain.html">Terrain</a></h2>
+                    <ul>
+                        <li><a href="/special-terrain.html#shattered-terrain">Shattered Terrain</a></li>
+                        <li><a href="/special-terrain.html#tangled-terrain">Tangled Terrain</a></li>
+                        <li><a href="/special-terrain.html#spiked-terrain">Spiked Terrain</a></li>
+                        <li><a href="/special-terrain.html#burning-terrain">Burning Terrain</a></li>
+                        <li><a href="/special-terrain.html#wet-terrain">Wet Terrain</a></li>
+                        <li><a href="/special-terrain.html#icy-terrain">Icy Terrain</a></li>
+                        <li><a href="/special-terrain.html#snowy-terrain">Snowy Terrain</a></li>
+                        <li><a href="/special-terrain.html#goopy-terrain">Goopy Terrain</a></li>
+                        <li><a href="/special-terrain.html#oily-terrain">Oily Terrain</a></li>
+                        <li><a href="/special-terrain.html#corrosive-terrain">Corrosive Terrain</a></li>
+                        <li><a href="/special-terrain.html#blessed-terrain">Blessed Terrain</a></li>
+                        <li><a href="/special-terrain.html#cursed-terrain">Cursed Terrain</a></li>
+                        <li><a href="/special-terrain.html#obscuring-cloud">Obscuring Cloud</a></li>
+                        <li><a href="/special-terrain.html#toxic-cloud">Toxic Could</a></li>
+                        <li><a href="/special-terrain.html#lava">Lava</a></li>
+                    </ul>
+                </li>
+
+
+
+                <li class="opener">
+                    <h2> <i class="fa-solid fa-chevron-right"></i> <a href="/legends.html">Legends</a></h2>
+                    <ul>
+                        <li><a href="/forging-legends.html#legendary-deeds">Legendary Deeds</a></li>
+                        <li><a href="/forging-legends.html#commemorating-legends">Comemorating Legends</a></li>
+                        <li><a href="/forging-legends.html#legendary-quests">Legendary Quests</a></li>
+                        <li><a href="/forging-legends.html#legends-of-old">Legends of Old</a></li>
+                    </ul>
+                </li>
+                <!-- <li>
+                    <a href="/downtime.html">Downtime</a><span class="opener"></span>
+                    <ul>
+                        <li><a href="/downtime.html#crafting">Crafting</a></li>
+                    </ul>
+                </li> -->
+
+
+                
+                <h1>Gamemastery</h1>
+                <h2> </i> <a href="/soon.html">Coming Soon!</a></h2>
+
+
+            </ul>
+        </nav>
+
+        <!-- ??? -->
+            <!-- <section>
+            <header class="major">
+                <h2>Latest Skills</h2>
+            </header>
+            <div class="mini-posts">
+                <article>
+                    <a href="/#" class="image"><img src="/images/pic07.jpg" alt="" /></a>
+                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                </article>
+                <article>
+                    <a href="/#" class="image"><img src="/images/pic08.jpg" alt="" /></a>
+                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                </article>
+                <article>
+                    <a href="/#" class="image"><img src="/images/pic09.jpg" alt="" /></a>
+                    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                </article>
+            </div>
+            <ul class="actions">
+                <li><a href="/#" class="button">More</a></li>
+            </ul>
+        </section> -->
+
+        <!-- ??? -->
+        <!-- <section>
+            <header class="major">
+                <h2>Get in touch</h2>
+            </header>
+            <p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+            <ul class="contact">
+                <li class="icon solid fa-envelope"><a href="/#">information@untitled.tld</a></li>
+                <li class="icon solid fa-phone">(000) 000-0000</li>
+                <li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+                Nashville, TN 00000-0000</li>
+            </ul>
+        </section> -->
+
+        <!-- Footer -->
+        <!-- <footer id="footer">
+            <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="/https://unsplash.com">Unsplash</a>. Design: <a href="/https://html5up.net">HTML5 UP</a>.</p>
+        </footer> -->
+    </div>
+</div>
+			<div id="main">
+					<h1 id="skills">Skills</h1>
+
+<p>Skills are specific things a character can do to help achieve their goals. Some skills have useful effects outside of combat, while others help characters defeat their enemies and protect their allies. All skills have a <a href="skills/type.md">type</a>, a <a href="skills/target.md">target</a>, and <a href="skills/tags.md">tags</a>, that describe how the skill may be used. Most skills have <a href="skills/effects.md">effects</a> that describe what the skill does when used, and some skills may also cost or grant <a href="combat/defense.md">defense</a> when used.</p>
+<h2 id="skill-types">Skill Types</h2>
+
+<p>Each skill has a type that describes how it is used in combat. There are four types of skills: Actions, Maneuvers, Reactions, &amp; Passives.</p>
+<h3 id="actions">Actions</h3>
+
+<p>Actions are often a character’s most powerful skills, including most attacks against enemies and skills to support allies. Characters may use one action on their turn.  Actions may benefit from a character’s <a href="abilities/agility.md">agility</a>, <a href="abilities/brawn.md">brawn</a>, and/or <a href="abilities/cunning.md">cunning</a>, depending on the action’s target, as detailed in the <a href="skills/target.md">skill targets</a> section below. Actions require a challenge to see how well they succeed, as detailed in the <a href="skills/action-challenge.md">action challenge</a> section below. After a character uses an action, or replaced their action with a maneuver, all <a href="conditions/temporary.md">temporary</a> <a href="conditions.md">conditions</a> are removed from the character.</p>
+
+<h3 id="maneuvers">Maneuvers</h3>
+
+<p>Each character may only use one maneuver each turn. A character can give up their action to use a second maneuver on their turn, but if they do, they become <a href="conditions/flat-footed.md">flat-footed</a>. A character cannot use an action in the middle of a maneuver, or vice-versa. A character may move up to their speed as part of any maneuver that isn’t <a href="skills/slow.md">slow</a>, but not maneuvers that are slow. Using a maneuver in an enemy’s <a href="combat/zone-of-control.md">zone of control</a> risks being <a href="combat/hinder.md">hinder</a>, unless it it <a href="skills/careful.md">careful</a>. A Maneuver doesn’t normally involve a challenge unless it involves moving though an unusual area.</p>
+
+<h3 id="reactions">Reactions</h3>
+
+<p>Reactions may be used at any time, even during another character’s turn and interrupting another a skill. However, all reactions have a <strong>trigger</strong>, which must be met before the reaction can be used. A character can use reactions as often as their triggers are met are met, but normally only once per triggering event. A reaction doesn’t normally involve a challenge.</p>
+
+<h3 id="passive">Passive</h3>
+
+<p>Passive skills are always in effect, and a character always receives their benefits.</p>
+
+<h3 id="other">Other</h3>
+
+<p>Other skills take more than one action, and will specify how long they take to complete. A character must <a href="skills/concentration.md">concentrate</a> on the skill for the duration in order to complete the skill. If they are interrupted, then nothing happens, and any resources spent on the skill are not consumed.</p>
+
+<h2 id="skill-targets">Skill Targets</h2>
+
+<p>All non-<a href="skills/passive.md">passive</a> skills have a target, which describes who or what is affected by the skill. A character must be able to see the target(s) of a skill, with the exception of <a href="skills/burst.md">burst</a> skills and skills that only target the user. The targets of a skill must be chosen before any effects, costs, threat or yields come into effect. If a skill targets multiple different characters, then each may independently choose how to respond to the skill. Some skills may also specify special targeting rules that must be followed.</p>
+<h3 id="utility">Utility</h3>
+
+<p>Utility skills are the broadest category of skills, and may aid oneself or allies in or outside of combat. Unless specified otherwise, a character can target themselves with utility skills, and the user us always considered the target of a utility skill that is neither melee or ranged. Utility skills are capable of affecting enemies as well, but they are never attacks.
+Whenever a character uses a utility action, they may choose one of two bonuses to add to the effect. Either they themselves gain momentum equal to their brawn, or one target gains focus equal to their cunning. If the character targets themselves, they may gain either momentum or focus.</p>
+
+<h3 id="attack">Attack</h3>
+
+<p>An attack skill lets you wear down your target’s defenses and ultimately defeat them. In addition to the usual features of a skill, all attacks have a <a href="combat/threat.md">threat</a> and a <a href="combat/yield.md">yield</a>. The target of your attack most choose between the threat or the yield, both of which will be harmful in different ways. See the <a href="combat/attacking.md">attacking &amp; defending</a> section for details on what to do when you are attacked.</p>
+<h3 id="threat">Threat</h3>
+
+<p>The threat of the <a href="skills/attack.md">attack</a> represents how difficult an attack is to avoid. Each attack will tell you it’s base threat, and you add your <a href="abilities/agility.md">agility</a> to that threat when you use that attack. You must take an attack’s threat as your choice of <a href="combat/poise.md">poise</a>, <a href="combat/momentum.md">momentum</a>, or <a href="combat/focus.md">focus</a> damage if you want to avoid that attack’s <a href="combat/yield.md">yield</a>. This is detailed in the <a href="combat/attacking.md">attacking &amp; defending</a> section.</p>
+
+<h3 id="yield">Yield</h3>
+
+<p>An <a href="skills/attack.md">attack’s</a> yield describes what the attack does if it is not <a href="combat/attacking.md">defended</a> against. Each attack has a damage type (<a href="combat/poise.md">poise</a>, <a href="combat/momentum.md">momentum</a>, or <a href="combat/focus.md">focus</a>) and damage dice that you roll if the target yields. Add together all the dice to determine the amount of damage you do with the attack. If it is a  <a href="skills/melee.md">melee</a> attack, also add your  <a href="abilities/brawn.md">brawn</a> to this damage. The target’s armor reduces the damage they take from an attack’s yield.</p>
+<h3 id="cunning-effects">Cunning Effects</h3>
+
+<p>For each of your skill’s dice that roll below your cunning, you have earned a cunning effect! Unlike an attack’s damage, a skill’s dice are not added together to determine cunning effects. Instead, each die is considered individually, and multiple dice below your cunning can earn multiple cunning effects. The type of cunning effects you may add to the skill depend on the skill’s tags, and will usually offer you a choice. For example, a <a href="skills/water.md">water</a> cunning effect can make the target <a href="conditions/wet.md">wet</a> or remove a condition from them.
+If your skill earns three or more cunning effects, then it becomes fated instead! Describe to the GM any effect you can imagine your skill having, and the GM will tell you if it is reasonable, and what happens.</p>
+
+<h3 id="melee">Melee</h3>
+
+<p>A melee skill can target one character who is within one space of the character using the skill. A melee utility skill can usually target the character using it, but melee attacks can’t. A character adds their brawn to the damage of melee attack actions.</p>
+
+<h3 id="ranged">Ranged</h3>
+
+<p>A ranged skill will specify a maximum range, such as “Ranged: 10”. This range is increased by a character’s cunning. A ranged skill can target one character within the maximum range. Using a ranged action in an enemy’s <a href="combat/zone-of-control.md">zone of control</a> let’s that enemy impose a bane on the skill.</p>
+
+<h3 id="line">Line</h3>
+
+<p>A line always specifies a range and begins from the character using the skill. The character may draw a line in any direction, and the skill targets any space or character that the line passes though, up to the maximum range. Line skills require precision and cannot target a character that cannot be seen; they automatically fail to affect unseen characters.</p>
+
+<h3 id="burst">Burst</h3>
+
+<p>A burst is a sphere that spreads out from the center a number of spaces specified by the skill. For example, a two-space burst would include the center of the area as well as all spaces up to two spaces away from the center. Bursts cannot normally go through walls, but can spread around them.
+A burst can be <strong>central</strong>, <strong>point-blank</strong>, or <strong>within range</strong>. A central burst means the area of the skill must be directly centered on the character using it If a character occupies more than one space, they choose one of their spaces as the center of the burst. A point-blank burst means that at least one space of the burst must be adjacent to the character using the skill, and no space can include the character. A burst within range means that the center of the burst may be anywhere within the range of the skill. Note that the range applies to the center of the area, so it is possible for a character to be affected even beyond the listed range.</p>
+
+<h2 id="skill-costs">Skill Costs</h2>
+
+<p>A skill may list a type of <a href="combat/defense.md">defense</a> that it grants or costs when used. A positive number grants the character using it the specified amount of the specified type of defense. If the character can’t currently gain that type of defense, for example if they are <a href="combat/knocked-down.md">knocked-down</a> and trying to gain <a href="combat/momentum.md">momentum</a>, then the character may still use the skill but they gain no defense from it.
+A negative number means that the skill costs defense, which must be paid before the skill can be used; this cost is unaffected by a character’s <a href="abilities/armor.md">armor</a>. If the character cannot pay the cost, they cannot use the skill. If a <a href="skills/reaction.md">reaction</a> changes the character’s defense after they use the skill but before it comes into effect and leaves them unable to pay the cost, then the skill does nothing and the <a href="skills/action.md">action</a>, <a href="skills/maneuver.md">maneuver</a>, or <a href="skills/reaction.md">reaction</a> opportunity used on the skill is wasted.
+A character may invoke a <a href="final%20gambit">final gambit</a> to use a skill without paying its defense cost, but doing so leaves the character drained of energy and automatically <a href="combat/defeated.md">defeated</a>.</p>
+
+<h2 id="skill-effects">Skill Effects</h2>
+
+<p>A skill’s effects describe what it actually does when used. Most skills have effects, except for some straightforward attacks. Effects of a skill are not usually optional, they happen weather or not a character wants them to happen, although they may give a character options. Effects of a skill are always decided and resolved after the cost of the skill and before any other rules. If there is ever any uncertainty regarding exactly what a skill’s effects do, the GM will make the final decision.</p>
+<h3 id="concentration">Concentration</h3>
+
+<p>Some skills require the user’s active concentration to maintain the effects. Unlike most other effects of a skill, concentration effects may be ignored by the character using the skill if desired. While a character is concentrating on an effect, they may release their concentration any time on a friendly character’s turn, but not on an enemy’s turn.
+Concentrating on a skill doesn’t come with any inherent cost or penalty, however it does have a few stipulations. For one, a character may only concentrate on one skill at a time. If a character uses a second concentration skill while they are already concentrating on another one, then they must either release concentration on the first skill or ignore the concentration effects of the second skill.</p>
+
+<h3 id="interrupting-concentration">Interrupting Concentration</h3>
+
+<p>A character who is concentrating can be interrupted by other skills and effects. Interrupting a character is also an option for an attack’s twist of fate (but not a critical). When a character’s concentration is interrupted, any effects they were concentrating on immediately end. Some concentration effects are automatically interrupted when specific events come to pass, and some skills might do something special when they are interrupted.</p>
+
+<h2 id="action-challenges">Action Challenges</h2>
+
+<p>A challenge is required every time a character uses a <a href="skills/utility.md">utility</a> <a href="skills/action.md">action</a> skill, or <a href="combat/yield.md">yields</a> to an <a href="skills/attack.md">attack</a> <a href="skills/action.md">action</a> skill. Challenges aren’t normally used for <a href="skills/maneuver.md">maneuvers</a>, <a href="skills/reaction.md">reactions</a>, or <a href="skills/passive.md">passive</a> skills.
+The target number for an action challenge is 10, and the character using the skill further reduces the TN by their cunning. Other effects, such as boons and banes, can also modify a skill’s TN. Two ten-sided dice are rolled, however, the results of an action challenge are interpreted differently than a normal challenge.
+If none of the dice beat the TN, then nothing happens; no additional complications arise. If exactly one of the dice beat the TN, then the action is a <a href="skills/cunning-effect.md">cunning-effect</a>! Critical actions grant bonus effects based on the type of skill used. If two or more dice beat the TN, then the action is fated! The character may choose two critical effects or invoke a free <a href="playing/twist-of-fate.md">twist of fate</a> related to the action. However, If all dice involved in an action challenge roll “1” or below, then the action is doomed and suffers a complication. If an action has multiple targets, a separate challenge should be rolled for each.</p>
+<h3 id="cunning-effects-1">Cunning Effects</h3>
+
+<p>For each of your skill’s dice that roll below your cunning, you have earned a cunning effect! Unlike an attack’s damage, a skill’s dice are not added together to determine cunning effects. Instead, each die is considered individually, and multiple dice below your cunning can earn multiple cunning effects. The type of cunning effects you may add to the skill depend on the skill’s tags, and will usually offer you a choice. For example, a <a href="skills/water.md">water</a> cunning effect can make the target <a href="conditions/wet.md">wet</a> or remove a condition from them.
+If your skill earns three or more cunning effects, then it becomes fated instead! Describe to the GM any effect you can imagine your skill having, and the GM will tell you if it is reasonable, and what happens.</p>
+
+<h3 id="boons">Boons</h3>
+
+<p>Each boon that your <a href="skills/action.md">action</a> receives lets you roll one additional die for the action, and increases your action’s threat by +4 if it is an attack.</p>
+
+<h3 id="banes">Banes</h3>
+
+<p>Each bane that your <a href="skills/action.md">action</a> receives cancels out one <a href="skills/boon.md">boon</a> that the action has. Each excess bane removed one of the action’s dice, and reduces the <a href="combat/threat.md">threat</a> by -4 if it is an attack. An action’s dice can be reduced to 0, but not below 0. Even if an action has 0 dice, any other effects still take place.</p>
+
+<h2 id="skill-tags">Skill Tags</h2>
+
+<p>A skill’s tags may describe many things about the skill, included where it comes from, how it may be used, and what it does when used. For example, skills with the <a href="equipment/weapon.md">weapon</a> tag come from weapons, armor skill come from armor, legendary skills are associated with a personal legend or legendary character. A skill’s tags also specify which class(es) may learn the skill, and weather the skill is a core feature of the class or requires a certain tier to unlock. A complete glossary of skill tags can be found below, and players should refer back to this list when necessary.</p>
+<h3 id="careful">Careful</h3>
+
+<p>A careful <a href="skills/maneuver.md">maneuver</a> cannot be <a href="combat/hinder.md">hinder</a>, and a careful <a href="skills/ranged.md">ranged</a> action does not suffer a <a href="skills/bane.md">bane</a> when it is used in an enemy <a href="combat/zone-of-control.md">zone of control</a>.</p>
+
+<h3 id="slow">Slow</h3>
+
+<p>A slow <a href="skills/maneuver.md">maneuver</a> doesn’t let a character move their <a href="abilities/speed.md">bonus speed</a> as part of the skill. Slow maneuvers may still let the character move a specific number of spaces.</p>
+
+<h3 id="fire">Fire</h3>
+
+<p>A fire skill wields the elemental power of flame.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> The target becomes <a href="conditions/burning.md">burning</a> or <a href="conditions/blinded.md">blinded</a>.</p>
+
+<h3 id="sight">Sight</h3>
+
+<p>A sight skill relies on bright light or visual patterns for it’s effect. A light skill is <a href="skills/ineffective.md">ineffective</a> on a <a href="conditions/blinded.md">blinded</a> character, and a blinded character may be unable to use certain light skills at the GM’s discretion.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> Either you or the target becomes <a href="conditions/blinded.md">blinded</a> or <a href="conditions/guarded.md">guarded</a>.</p>
+
+<h3 id="air">Air</h3>
+
+<p>An air skill wields the elemental power of the winds.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> the target becomes <a href="conditions/vortexed.md">vortexed</a>, <a href="conditions/choking.md">choking</a>, or <a href="conditions/evasive.md">evasive</a>.</p>
+
+<h3 id="barehanded">Barehanded</h3>
+
+<p>A barehanded skill requires the use of one free hand, and typically can’t be used while wielding a separate <a href="equipment/weapon.md">weapon</a> in each hand. A barehanded skill may be used while wielding one two-handed weapon, but you cannot use a barehanded skill white <a href="combat/concentration">concentrating</a> on a two-handed weapon’s skill and vice versa.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> The target becomes <a href="conditions/grabbed.md">grabbed</a> while you concentrate, you take one of the target’s weapons, or you remove a non-persistent condition from the target.</p>
+
+<h3 id="slashing">Slashing</h3>
+
+<p>  A slashing skill slices with a keen edge.
+  <strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> The target becomes <a href="conditions/bleeding.md">bleeding</a> or deal +3 poise damage.</p>
+
+<h3 id="piercing">Piercing</h3>
+
+<p>  A piercing skill stabs with an impaling point.
+  <strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> This skill ignores the target’s armor or deals +3 focus damage.</p>
+
+<h3 id="blunt">Blunt</h3>
+
+<p>A blunt skill smashes with brute force. A punch, hammer strike, or hurled boulder would all be blunt.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> <a href="combat/shove.md">Shove</a> the target three spaces or deal +3 <a href="combat/momentum.md">momentum</a> damage.</p>
+
+<h3 id="lightning">Lightning</h3>
+
+<p>A lightning skill wields the elemental power of electricity.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> The target becomes <a href="conditions/shocked.md">shocked</a> or <a href="combat/disarmed.md">disarmed</a>.</p>
+
+<h3 id="ice">Ice</h3>
+
+<p>A ice skill wields the elemental power of frost.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> The target becomes <a href="conditions/chilled.md">chilled</a> or <a href="conditions/weakened.md">weakened</a>.</p>
+
+<h3 id="water">Water</h3>
+
+<p>A water skill wields the elemental power of water.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> The target becomes <a href="conditions/wet.md">wet</a>, or you remove a non-<a href="conditions/persistent.md">persistent</a> <a href="conditions">condition</a> from the target.</p>
+
+<h3 id="earth">Earth</h3>
+
+<p>An earth skill wields the elemental power of stone.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> The target becomes <a href="conditions/petrified.md">petrified</a>, <a href="conditions/guarded.md">guarded</a>, or <a href="conditions/staggered.md">staggered</a>.</p>
+
+<h3 id="caustic">Caustic</h3>
+
+<p>A caustic skill wields the elemental power of acid.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> The target becomes <a href="conditions/corroding.md">corroding</a> or <a href="conditions/wracked.md">wracked</a>.</p>
+
+<h3 id="oil">Oil</h3>
+
+<p>An oil skill wields the elemental power of grease.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> The target becomes <a href="conditions/oiled.md">oiled</a>, <a href="conditions/evasive.md">evasive</a>, or <a href="conditions/fumbling.md">fumbling</a>.</p>
+
+<h3 id="holy">Holy</h3>
+
+<p>A holy skill wields the righteous power of the divine.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> Either you or the target becomes <a href="conditions/blessed.md">blessed</a> or <a href="conditions/guarded.md">guarded</a>.</p>
+
+<h3 id="unholy">Unholy</h3>
+
+<p>An unholy skill wields the wicked power of the dammed.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> Either you or the target becomes <a href="conditions/cursed.md">cursed</a> or <a href="conditions/defenseless.md">defenseless</a>.</p>
+
+<h3 id="plant">Plant</h3>
+
+<p>A plant skill wields the natural power of flora.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> The target becomes <a href="conditions/retrained.md">retrained</a> or <a href="conditions/guarded.md">guarded</a>.</p>
+
+<h3 id="mental">Mental</h3>
+
+<p>A mental skill manipulates a character’s mind.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> Either you or the target becomes <a href="conditions/distracted.md">distracted</a> or <a href="conditions/honed.md">honed</a>.</p>
+
+<h3 id="sound">Sound</h3>
+
+<p>A sound skill relies on shouting, music, or other noise for it’s effect. A sound skill is <a href="skills/ineffective.md">ineffective</a> on a <a href="conditions/deafened.md">deafened</a> character, and a deafened or <a href="conditions/choking.md">choking</a> character may be unable to use certain sound skills at the GM’s discretion.
+<strong><a href="skills/cunning-effect.md">Cunning</a>:</strong> Either you or the target becomes <a href="conditions/deafened.md">deafened</a> or <a href="conditions/empowered.md">empowered</a>.</p>
+
+<h3 id="weapon">Weapon</h3>
+
+<p>A weapon skill requires the user to wield the skill’s weapon in the proper way in order to use it. Two handed weapons must be wielded in both hands to use any of their skills. If a character is not proficient in a weapon, then they can only use the first half, rounded down, of that weapon’s skills.</p>
+
+<h3 id="unblockable">Unblockable</h3>
+
+<p>The target of an unblockable <a href="skills/attack.md">attack</a> can’t use <a href="combat/momentum.md">momentum</a> to defend against the attack. They must either <a href="combat/attacking.md">dodge</a>, <a href="combat/attacking.md">predict</a>, or <a href="combat/yield.md">yield</a> the attack.</p>
+
+<h3 id="undodgeable">Undodgeable</h3>
+
+<p>The target of an undodgeable <a href="skills/attack.md">attack</a> can’t use <a href="combat/poise.md">poise</a> to defend against the attack. They must either <a href="combat/attacking.md">block</a>, <a href="combat/attacking.md">predict</a>, or <a href="combat/yield.md">yield</a> the attack.</p>
+
+<h3 id="unpredictable">Unpredictable</h3>
+
+<p>The target of an unpredictable <a href="skills/attack.md">attack</a> can’t use <a href="combat/focus.md">focus</a> to defend against the attack. They must either <a href="combat/attacking.md">block</a>, <a href="combat/attacking.md">dodge</a>, or <a href="combat/yield.md">yield</a> the attack.</p>
+
+<h3 id="universal">Universal</h3>
+
+<p>A universal skill is available to any character at any time, regardless of equipped weapons or fighting styles. Characters may still be prevented from using universal skills by outside forces, such aw the restrained condition preventing a character from dashing. The GM may rule that some universal skills are unavailable to certain characters, for example, a snake cannot reasonably use the kick skill.</p>
+
+<h3 id="legendary">Legendary</h3>
+
+<p>A legendary skill is unique to a legendary foe or a character’s personal legend.</p>
+
+<h3 id="core">Core</h3>
+
+<p>A core skill is the defining feature of a class, and is automatically included as a part of that classes fighting style. Core skills don’t count against the number of skills a character can equip to their fighting style.</p>
+
+<h3 id="basic">Basic</h3>
+
+<p>A basic skill is available to every member of a specific class, and does not need to be unlocked with experience.</p>
+
+<h3 id="stealthy">Stealthy</h3>
+
+<p>A stealthy skill is relatively inconspicuous, and does not automatically remove the <a href="conditions/hidden.md">hidden</a> condition from the character using it. However, the GM will usually call for an <a href="abilities/agility.md">agility</a> roll to remain hidden even when using a stealthy skill.</p>
+
+<h3 id="vulnerable">Vulnerable</h3>
+
+<p>If a character is vulnerable to a specific tag, then any <a href="skills/attack.md">attack</a> <a href="skills/action.md">action</a> with that tag that targets them gains a <a href="skills/boon.md">boon</a>. <a href="skills/utility.md">utility</a> skills and attacks that aren’t actions are unaffected by vulnerability. If a character is vulnerable to multiple tags, then each will add a boon to attacks targeting them. However, multiple sources of vulnerability to the same tag don’t add multiple boons.</p>
+
+<h3 id="resistant">Resistant</h3>
+
+<p>If a character is resistant to a specific tag, then any <a href="skills/attack.md">attack</a> <a href="skills/action.md">action</a> with that tag that targets them suffers a <a href="skills/bane.md">bane</a>. <a href="skills/utility.md">utility</a> skills and attacks that aren’t actions are unaffected by resistance. If a character is resistant to multiple tags, then each will add a bane to attacks targeting them. However, multiple sources of resistance to the same tag don’t add multiple banes.</p>
+
+<h3 id="immune">Immune</h3>
+
+<p>If a character is immune to a <a href="condition">condition</a>, then that condition can’t be applied to that character. If a character is immune to a specific tag, then the <a href="combat/threat.md">threat</a> of any any <a href="skills/attack.md">attack</a> with that tag is reduced to 0, effectively allowing the character to ignore that attack. In addition, a character who is immune to an attack’s tag may choose to automatically make that attack <a href="doomed">doomed</a>. Note that a character only needs to be immune to one of a skill’s tags, not all of them.</p>
+
+<h3 id="ineffective">Ineffective</h3>
+
+<p>If a skill with a particular tag is ineffective on a character, then that character can’t be affected by the skill in any way, whether they want to be affected or not.</p>
+ <!--  | replace_regex -->
+			</div>
+			<div id="info">
+			</div>
+			<!-- <div id="map">
+			</div> -->
+		</div>
+	</body>
+</html>
