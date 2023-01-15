@@ -461,11 +461,13 @@ h3 img{
 }
 
 .tooltipster-base h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   margin: 0 0 0 0;
 }
 
-
+.tooltipster-base table {
+  color: black;
+}
 
 
 
