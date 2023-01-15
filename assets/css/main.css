@@ -36,7 +36,7 @@ a {
   -webkit-transition: color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out; */
-  border-bottom: dotted 1px var(--secondary-color);
+  border-bottom: dotted 1px var(--primary-color);
   text-decoration: none; 
   color: inherit;
   cursor: pointer;
@@ -48,7 +48,7 @@ a:hover {
   -ms-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out; */
   font-weight: bold;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   /* -moz-transition: text-shadow 0.2s ease-in-out;
   -webkit-transition: text-shadow 0.2s ease-in-out;
   -ms-transition: text-shadow 0.2s ease-in-out;
@@ -71,14 +71,16 @@ h1 {
 
 h2 {
   font-family: "MrEaves", serif;
-  font-size: 2em; }
+  font-size: 2em;
+  margin-bottom: 0.3em;}
 
 
 h3, h4, h5, h6{
   font-family: "ScalySansCaps", serif;
 }
 h3 {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  margin-bottom: 0.2em;}
 
 h4 {
   font-size: 1.25em; }
@@ -300,8 +302,36 @@ h6 {
   overflow-x: auto;
 }
 
+#main h2{
+  border-bottom: var(--secondary-color) 2px solid
+}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+table{
+  width: 100%;
+  text-align: center;
+}
+thead tr:nth-child(odd) {background: #CCC}
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
 
 
 
@@ -428,6 +458,11 @@ h3 img{
 
 .tooltipster-box {
   max-height: 50vh;
+}
+
+.tooltipster-base h1 {
+  font-size: 2em;
+  margin: 0 0 0 0;
 }
 
 

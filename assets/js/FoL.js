@@ -426,10 +426,12 @@ function registerTooltips(html, oldInstances=[]){
         tooltip.content($(await generateSummary(item)))
 
       } else {
-        const href = window.location.origin + '/' + origin.getAttribute("href").replace('.html#','/').replace('.html','')+'.html'
+        const href = window.location.origin + '/' + origin.getAttribute("href").replace('.html#"','').replace('.html#','/').replace('.html','')+'.html'
   
         await $.get( href, function( page ) {
+          console.log(page)
           const content = $(page).find('#main').length ? $($(page).find('#main')[0].innerHTML) : $(page);
+          console.log(content)
           tooltip.content(content);
         });
   
@@ -980,7 +982,7 @@ $('#main a').each(async function( index ) {
   const id = href.replace(re, '$2');
 
   if (icons.includes(id)){
-    $(this).prepend(`<img src='images/icons/${id}.png' class='inline-icon'> `)
+    $(this).prepend(`<img src='assets/images/icons/${id}.png' class='inline-icon'> `)
   }
 
 })
@@ -988,7 +990,7 @@ $('#main a').each(async function( index ) {
 $('#main h3').each(async function( index ) {
   const id = this.id
   if (icons.includes(id)){
-    $(this).prepend(`<img src='images/icons/${id}.png' class='inline-icon'> `)
+    $(this).prepend(`<img src='assets/images/icons/${id}.png' class='inline-icon'> `)
   }
 
 })
