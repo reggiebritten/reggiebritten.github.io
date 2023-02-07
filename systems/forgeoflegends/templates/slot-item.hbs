@@ -1,0 +1,11 @@
+
+
+{{#with (lookup this.actor.equipment slot) as | item |}}
+        {{> "systems/forgeoflegends/templates/grid-item.hbs" item=item slot=../slot actor=../actor}}
+{{else}}
+        <li data-slot='{{slot}}' title='{{slice slot -1}}'>
+                <img class= "item-image" src="systems/forgeoflegends/icons/sheets/{{slice slot -1}}.png"/>
+                <div class="item-name"><span class="empty-inventory">{{slice slot -1}}</span></div>
+        </li>
+{{/with}}
+

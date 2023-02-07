@@ -1,0 +1,70 @@
+<div class = "forgeoflegends item-card" data-document-id= "{{item._id}}" data-uuid="{{item.uuid}}">
+    <h1 class='item-header flex-group'><span class = "scale-text"><img src="{{item.img}}" class='inline-icon'>{{item.name}}</span></h1>
+    <hr>
+    <span class='item-tags'>
+        {{#unless item.system.isPassive}}
+            {{#if item.system.defense}}
+                {{plusSign item.system.defense}}
+            {{/if}}
+            <span class="keyword">{{item.system.defenseType}}</span>
+            {{#if item.system.isRanged}}🎯 <span class="keyword">Ranged</span>:
+                {{#if actor}}<span title="{{item.system.range}} + {{actor.system.cunning}}">{{sum item.system.range actor.system.cunning}}</span>{{/if}}
+                {{#unless actor}}<span title="{{item.system.range}}">{{item.system.range}}</span>{{/unless}}
+            {{/if}}
+            {{#if item.system.isMelee}}✋🏽 <span class="keyword">Melee</span>{{/if}}
+            {{#if item.system.isUtility}}⚙️ <span class="keyword">Utility</span>{{/if}}
+            {{#if item.system.isAttack}}⚔️ <span class="keyword">Attack</span>{{/if}}
+        
+        {{/unless}}
+        <span class="keyword">{{item.system.type}}</span>
+        {{#if item.system.tags.length}}📜{{#each item.system.tags}} <span class="keyword">{{this}}</span>{{/each}}{{/if}}
+    </span>
+
+    {{#if item.system.effect}}
+        <hr>{{{item.system.effect}}} 
+    {{/if}}
+
+    {{#if actor.system.speed}}
+        {{#if item.system.isManeuver}}
+            {{#unless item.system.isSlow}}
+                <ul><li>Move up to <strong>{{actor.system.speed}}</strong> space(s).</li></ul>
+            {{/unless}}
+        {{/if}}
+    {{/if}}
+
+    {{#if item.system.isAttack}}
+        <hr><strong>Threat: <span title="{{item.system.threat}}{{#if actor.system.agility}} + {{actor.system.agility}} {{/if}}">
+        {{#if actor.system.agility}} {{sum item.system.threat actor.system.agility}}{{/if}}
+        {{#unless actor.system.agility}} {{item.system.threat}}{{/unless}}
+        </span> /</strong>
+        {{#if item.system.diceNumber}}Deal <strong>{{item.system.diceNumber}}d{{item.system.diceSize}}</strong>
+        {{#if actor.system.brawn}}{{#if item.system.isMelee}}+ {{actor.system.brawn}} {{/if}}{{/if}}
+        <span class="keyword">{{item.system.damageType}}</span> damage. {{/if}}{{{item.system.yield}}}
+    {{/if}}
+
+    {{#if item.system.isAction}}
+        {{!-- {{#if item.system.isUtility}}
+            Roll 2d8 to earn <span class="keyword">cunning effects</span>.
+        {{/if}} --}}
+    
+        <ul class = "cunning-effects">
+            {{#each item.system.tags as |tag|}}
+                    {{{getCunning tag}}}
+            {{/each}}
+        </ul>
+    {{else if item.system.isAattack}}
+        <ul class = "cunning-effects">
+            {{#each item.system.tags as |tag|}}
+                    {{{getCunning tag}}}
+            {{/each}}
+        </ul>
+    {{/if}}
+
+
+    {{#if item.system.description}}
+        <hr>
+        <div class = "flavor-text">
+            {{{item.system.description}}}
+        </div>
+    {{/if}}
+</div>

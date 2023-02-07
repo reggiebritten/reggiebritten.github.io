@@ -1,0 +1,60 @@
+<div >
+    <!-- <ol class ="grid-3col grid">
+        <li class="chat-name token" data-token-id="{{actor.token.id}}">
+            <img src="{{actor.img}}"  width="50px;">
+            <div>{{actor.name}}</div>
+        </li>
+        <li class="chat-name item-edit" data-document-id="{{item._id}}" data-uuid="{{item.document.uuid}}" data-token-id="{{actor.id}}">
+            <img src="{{item.img}}" class="item-name" width="50px;"/>
+            <div>{{item.name}}</div>
+        </li>
+        {{#each targets as |target id|}}
+        <li class="chat-name token" data-token-id="{{target.actor.token.id}}">
+            <img src="{{target.actor.img}}"  width="50px;">
+            <div>{{target.actor.name}}</div>
+        </li>
+        {{/each}}
+    </ol>
+    <hr> -->
+    {{{item.system.flags.partialSummary}}}
+    {{#if item.system.flags.attack}}
+    <hr>
+    <div class ="attack-results">
+        <div class="grid grid-3col">
+            <button class = "attack" data-threat="{{item.system.flags.threat}}" data-type="poise" title="The selected token(s) dodge the attack and take the damage to their poise pool.">
+                <strong>Dodge</strong>
+                <br>
+                <img src='/systems/forgeoflegends/icons/rules/poise.png' class="icon inline-icon">
+                <span class=""><strong> -{{item.system.flags.threat}}</strong></span>
+            </button>
+            <button class = "attack" data-threat="{{item.system.flags.threat}}" data-type="momentum" title="The selected token(s) block the attack and take the damage to their momentum pool.">
+                <strong>Block</strong>
+                <br>
+                <img src='/systems/forgeoflegends/icons/rules/momentum.png' class="icon inline-icon">
+                <span class=""><strong> -{{item.system.flags.threat}}</strong></span>
+            </button>
+            <button class = "attack" data-threat="{{item.system.flags.threat}}" data-type="focus" title="The selected token(s) predict the attack and take the damage to their focus pool.">
+                <strong>Predict</strong>
+                <br>
+                <img src='/systems/forgeoflegends/icons/rules/focus.png' class="icon inline-icon">
+                <span class=""><strong> -{{item.system.flags.threat}}</strong></span>
+            </button>
+        </div>
+        <div class="yield-section">
+            <button class = "attack" data-type="yield" data-critical="{{actor.system.cunning}}" title="The selected token(s) yield to the attack and suffer its yields.">
+                <img src='/systems/forgeoflegends/icons/rules/threat.png' class="icon inline-icon"><strong> Yield</strong>
+                <br>
+            </button>
+            <div class="yield">
+                {{{item.system.flags.yield}}}
+            </div>
+        </div>
+    </div>
+    {{else if item.system.flags.action}}
+    <div class ="utility-results">
+        <button class = "utility" data-critical="{{actor.system.cunning}}">
+            {{{item.system.flags.fatedEffects}}}
+        </button>
+    </div>
+    {{/if}}
+</div>

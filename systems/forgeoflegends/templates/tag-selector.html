@@ -1,0 +1,25 @@
+<form autocomplete="off" onsubmit="event.preventDefault();">
+
+    <div class="form-group stacked">
+        <label>Filter</label>
+        <input type="text" name="search" class="search" value="" placeholder="" autocomplete="off">
+    </div>
+    {{#each choices as |choice key|}}
+
+        {{#compare choice.label "!=" "<hr>"}}
+        <label class="checkbox tag-check search-filter-{{key}}">
+            <input type="checkbox" name="{{key}}" data-dtype="Boolean" {{checked choice.chosen}}>{{choice.label}}&nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        {{/compare}}
+        {{#compare choice.label "==" "<hr>"}}
+            {{{choice.label}}}
+        {{/compare}}
+    {{/each}}
+    {{#if allowCustom}}
+    <div class="form-group stacked">
+        <label>Other (seperated by commas)</label>
+        <input type="text" name="custom" value="{{custom}}" data-dtype="String"/>
+    </div>
+    {{/if}}
+    <button type="submit" name="submit" value="1"><i class="far fa-save"></i> Save</button>
+</form>

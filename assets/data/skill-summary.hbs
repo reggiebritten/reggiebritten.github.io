@@ -6,7 +6,7 @@
             {{#if item.system.defense}}
                 {{plusSign item.system.defense}}
             {{/if}}
-            {{item.system.defenseType}}
+            <img src="assets/images/icons/{{item.system.defenseType}}.png" class='inline-icon'> {{item.system.defenseType}}
         {{/unless}}
         {{#if item.system.isRanged}}🎯 Ranged: <span title="{{item.system.range}} + {{actor.system.cunning}}">{{sum item.system.range actor.system.cunning}}</span>{{/if}}
         {{#if item.system.isMelee}}✋🏽 Melee{{/if}}

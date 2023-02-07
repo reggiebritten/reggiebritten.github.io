@@ -16,15 +16,9 @@
     <meta name="author" content="Reggie Britten">
 	<link rel="icon" type="image/png" href="/images/logo.png"/>
 	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/forgeoflegends.css" />
 	<link rel="stylesheet" href="/assets/css/tooltipster.bundle.css" />
 	<link rel="stylesheet" href="/assets/js/leaflet/leaflet.css" />
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="/assets/js/FoL.js"></script>
-	<script src="/assets/js/handlebars-v4.7.7.js"></script>
-	<script src="/assets/js/tooltipster.bundle.js"></script>
-	<script src="/assets/js/leaflet/leaflet.js"></script>
-	<script src="https://kit.fontawesome.com/c754307781.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -92,12 +86,15 @@
                         <li><a href="/class.html#core-feature">Core Feature</a></li>
                         <li><a href="/class.html#fighting--style">Fighting Style</a></li>
                         <li><a href="/class.html#expereince">Experience</a></li>
+                        <hr>
                         <li><a href="/assassin">Assassin</a></li>
-                        <li><a href="/bard.html">Bard</a></li>
                         <li><a href="/battlemaster.html">Battlemaster</a></li>
-                        <li><a href="/beastmaster.html">Beastmaster</a></li>
                         <li><a href="/berserker.html">Berserker</a></li>
                         <li><a href="/elementalist.html">Elementalist</a></li>
+                        <hr>
+                        <strong style="text-align: center;display: block;">WIP</strong>
+                        <li><a href="/beastmaster.html">Beastmaster</a></li>
+                        <li><a href="/bard.html">Bard</a></li>
                         <li><a href="/enchanter.html">Enchanter</a></li>
                         <li><a href="/geomancer.html">Geomancer</a></li>
                         <li><a href="/monk.html">Monk</a></li>
@@ -274,6 +271,10 @@
                 <h1>Gamemastery</h1>
                 <h2> </i> <a href="/soon.html">Coming Soon!</a></h2>
 
+                <!-- <h1>Contact</h1>
+                <a href="mailto:Info@ForgeOfLegends.com">Info@ForgeOfLegends.com</a> -->
+
+
 
             </ul>
         </nav>
@@ -329,35 +330,35 @@
 
 <h2 id="jumping">Jumping</h2>
 
-<p>You can easily jump a number of spaces horizontally equal to one plus your <a href="abilities.html#brawn">brawn</a> with a running start, or half that distance if you don’t have a running start. Your can jump vertically a number of feet equal to your brawn, or about 1/3rd that many meters. If a you want to jump farther or higher, the GM will call for a brawn <a href="rolls.html">roll</a> to see if you succeed.</p>
+<p>You can easily jump a number of spaces horizontally equal to one plus your <a class = "keyword" href="abilities.html#brawn">brawn</a> with a running start, or half that distance if you don’t have a running start. Your can jump vertically a number of feet equal to your brawn, or about 1/3rd that many meters. If a you want to jump farther or higher, the GM will call for a brawn <a class = "keyword" href="rolls.html">roll</a> to see if you succeed.</p>
 
-<p>You can jump as part of any movement <a href="skills.html">skill</a>, and spaces moved while jumping count against the total number of spaces you may move. If you run out of movement in the middle of your jump, you end your turn suspended in the air. On your next turn, you must either use more movement to complete the jump, or you begin <a href="exploration.html#falling">falling</a>.</p>
+<p>You can jump as part of any movement <a class = "keyword" href="skills.html">skill</a>, and spaces moved while jumping count against the total number of spaces you may move. If you run out of movement in the middle of your jump, you end your turn suspended in the air. On your next turn, you must either use more movement to complete the jump, or you begin <a class = "keyword" href="exploration.html#falling">falling</a>.</p>
 
 <h2 id="climbing">Climbing</h2>
 
-<p>Climbing up an easy structure like a ladder typically doesn’t require a roll. However, the GM will usually call for a <a href="abilities.html#brawn">brawn</a> <a href="rolls.html">roll</a> to climb up a rope, tree, or cliff or other surface. You can use a movement <a href="skills.html">skill</a> to climb, but you must spend an extra point of movement for every space you climb. In general, you can’t use <a href="skills.html#actions">actions</a> while climbing, although the GM may make exceptions. You can’t <a href="combat.html#defending-vs-yielding">defend</a> against <a href="skills.html#attacks">attacks</a> while you’re climbing; you must <a href="combat.html#yield">yield</a> to any attack.</p>
+<p>Climbing up an easy structure like a ladder typically doesn’t require a roll. However, the GM will usually call for a <a class = "keyword" href="abilities.html#brawn">brawn</a> <a class = "keyword" href="rolls.html">roll</a> to climb up a rope, tree, or cliff or other surface. You can use a movement <a class = "keyword" href="skills.html">skill</a> to climb, but you must spend an extra point of movement for every space you climb. In general, you can’t use <a class = "keyword" href="skills.html#actions">actions</a> while climbing, although the GM may make exceptions. You can’t <a class = "keyword" href="combat.html#defending-vs-yielding">defend</a> against <a class = "keyword" href="skills.html#attacks">attacks</a> while you’re climbing; you must <a class = "keyword" href="combat.html#yield">yield</a> to any attack.</p>
 
 <h2 id="flying">Flying</h2>
 
-<p>Some majestic creatures possess the power of flight. A flying creature must spend two movement points for ever space it ascends, but may move two spaces downward for each point of movement. A flying creature ignores most <a href="special-terrain.html">special terrain</a>.</p>
+<p>Some majestic creatures possess the power of flight. A flying creature must spend two movement points for ever space it ascends, but may move two spaces downward for each point of movement. A flying creature ignores most <a class = "keyword" href="special-terrain.html">special terrain</a>.</p>
 
-<p>A flying creature that becomes <a href="conditions.html#kneeling">kneeling</a> immediately falls five spaces, and a creature that becomes <a href="conditions.html#knocked-down">knocked-down</a> falls ten spaces. They fall that same distance at the end of each of their turns as long as the conditions persist. Any flying creature without the hover skill must use a movement skill each turn, or it falls five spaces. However, all flying creatures can partially control their fall. If they hit the ground, they treat the <a href="exploration.html#falling">fall</a> as if it were half the distance.</p>
+<p>A flying creature that becomes <a class = "keyword" href="conditions.html#kneeling">kneeling</a> immediately falls five spaces, and a creature that becomes <a class = "keyword" href="conditions.html#knocked-down">knocked-down</a> falls ten spaces. They fall that same distance at the end of each of their turns as long as the conditions persist. Any flying creature without the hover skill must use a movement skill each turn, or it falls five spaces. However, all flying creatures can partially control their fall. If they hit the ground, they treat the <a class = "keyword" href="exploration.html#falling">fall</a> as if it were half the distance.</p>
 
 <h2 id="falling">Falling</h2>
 
-<p>When you are shoved off a ledge or fail at jumping or climbing, you begin falling. However, if you are near a ledge, rope, or other grabbable surface when you begin to fall, you may immediately grab that surface and be dangling from it instead. Dangling is still an extremely dangerous position to be in. You’re considered <a href="conditions.html#knocked-down">knocked-down</a>, you can’t <a href="combat.html#defending-vs-yielding">defend</a> against attacks, and you suffer a <a href="rolls.html#boons--banes">bane</a> on <a href="abilities.html#brawn">brawn</a> <a href="rolls.html">rolls</a> to climb back up.</p>
+<p>When you are shoved off a ledge or fail at jumping or climbing, you begin falling. However, if you are near a ledge, rope, or other grabbable surface when you begin to fall, you may immediately grab that surface and be dangling from it instead. Dangling is still an extremely dangerous position to be in. You’re considered <a class = "keyword" href="conditions.html#knocked-down">knocked-down</a>, you can’t <a class = "keyword" href="combat.html#defending-vs-yielding">defend</a> against attacks, and you suffer a <a class = "keyword" href="rolls.html#boons--banes">bane</a> on <a class = "keyword" href="abilities.html#brawn">brawn</a> <a class = "keyword" href="rolls.html">rolls</a> to climb back up.</p>
 
-<p>When you fall from a height, you suffer <a href="stress.html">stress</a> based on how far you fell. You can safely jump down two spaces, or fall accidentally one space, with no consequence. If you fall farther than that the GM will call for an <a href="abilities.html#agility">agility</a> roll. Each success lets your treat the fall as if it was two spaces shorter. For each excess space fallen, you suffer 1d6 stress.</p>
+<p>When you fall from a height, you suffer <a class = "keyword" href="stress.html">stress</a> based on how far you fell. You can safely jump down two spaces, or fall accidentally one space, with no consequence. If you fall farther than that the GM will call for an <a class = "keyword" href="abilities.html#agility">agility</a> roll. Each success lets your treat the fall as if it was two spaces shorter. For each excess space fallen, you suffer 1d6 stress.</p>
 
 <h2 id="swimming">Swimming</h2>
 
-<p>Deep water is considered <a href="special-terrain.html#wet-terrain">wet terrain</a>, so you must spend two points of movement to enter each space. The GM won’t usually call for a roll for swimming across placid water. But swimming against turbulent water, while carrying a lot of gear, or while under attack will usually take a <a href="abilities.html#brawn">brawn</a> <a href="rolls.html">roll</a>. If you fail this roll, you might be carried away by the current or even sink. Several rules apply to <a href="combat.html#combat-in-water">fighting</a> in or under water.</p>
+<p>Deep water is considered <a class = "keyword" href="special-terrain.html#wet-terrain">wet terrain</a>, so you must spend two points of movement to enter each space. The GM won’t usually call for a roll for swimming across placid water. But swimming against turbulent water, while carrying a lot of gear, or while under attack will usually take a <a class = "keyword" href="abilities.html#brawn">brawn</a> <a class = "keyword" href="rolls.html">roll</a>. If you fail this roll, you might be carried away by the current or even sink. Several rules apply to <a class = "keyword" href="combat.html#combat-in-water">fighting</a> in or under water.</p>
 
 <h2 id="breath-holding">Breath Holding</h2>
 
-<p>Your can hold your breath for a number of rounds equal to six plus three times your <a href="abilities.html#brawn">brawn</a>, plus an additional 6 rounds if you intentionally hold your breath on your turn. However, any round in which you use an <a href="skills.html#actions">action</a> or two <a href="skills.html#maneuvers">maneuvers</a> counts as three rounds of holding your breath instead of one. When your breath runs out, you suffer 1d4 <a href="stress.html">stress</a> each round until you take a breath.</p>
+<p>Your can hold your breath for a number of rounds equal to six plus three times your <a class = "keyword" href="abilities.html#brawn">brawn</a>, plus an additional 6 rounds if you intentionally hold your breath on your turn. However, any round in which you use an <a class = "keyword" href="skills.html#actions">action</a> or two <a class = "keyword" href="skills.html#maneuvers">maneuvers</a> counts as three rounds of holding your breath instead of one. When your breath runs out, you suffer 1d4 <a class = "keyword" href="stress.html">stress</a> each round until you take a breath.</p>
 
-<p>If you are unexpectedly plunged under water, you suffer the <a href="conditions.html#choking">choking</a> condition, and that condition is <a href="conditions.html#persistent">persistent</a> while you remain under water. You will also become choking if you are unexpectedly buried or immersed in a <a href="special-terrain.html#toxic-cloud">toxic cloud</a>. However, if you intentionally hold your breath on your turn, you are immune to the choking condition, but you lose -2 <a href="combat.html#momentum">momentum</a> and -2 <a href="combat.html#focus">focus</a> at the end of your turn.</p>
+<p>If you are unexpectedly plunged under water, you suffer the <a class = "keyword" href="conditions.html#choking">choking</a> condition, and that condition is <a class = "keyword" href="conditions.html#persistent">persistent</a> while you remain under water. You will also become choking if you are unexpectedly buried or immersed in a <a class = "keyword" href="special-terrain.html#toxic-cloud">toxic cloud</a>. However, if you intentionally hold your breath on your turn, you are immune to the choking condition, but you lose -2 <a class = "keyword" href="combat.html#momentum">momentum</a> and -2 <a class = "keyword" href="combat.html#focus">focus</a> at the end of your turn.</p>
 
 <h2 id="sight--darkness">Sight &amp; Darkness</h2>
 
@@ -368,30 +369,30 @@
     <p>Daylight, torches, and campfires all cast <strong>bright</strong> light, which imposes no penalties or modifications. On a clear day with no obstructions, you can see out to 3 miles or 5km away.</p>
   </li>
   <li>
-    <p>An starry night in an open field or the border of a fire may be <strong>dim</strong> light. All skills suffer a <a href="skills.html#banes">bane</a> when targeting a character in dim light.</p>
+    <p>An starry night in an open field or the border of a fire may be <strong>dim</strong> light. All skills suffer a <a class = "keyword" href="skills.html#banes">bane</a> when targeting a character in dim light.</p>
   </li>
   <li>
-    <p>A dark area, such as a the depths of a cave or a midnight forest, is devoid of light. Most characters can’t see in darkness, meaning you can’t even target other characters with <a href="skills.html">skills</a>. If you move more than one space in a turn without being able to see where you are going, you risk bumping into something, making noise, generating <a href="exploration.html#doom">doom</a>, and suffering <a href="stress.html">stress</a>.</p>
+    <p>A dark area, such as a the depths of a cave or a midnight forest, is devoid of light. Most characters can’t see in darkness, meaning you can’t even target other characters with <a class = "keyword" href="skills.html">skills</a>. If you move more than one space in a turn without being able to see where you are going, you risk bumping into something, making noise, generating <a class = "keyword" href="exploration.html#doom">doom</a>, and suffering <a class = "keyword" href="stress.html">stress</a>.</p>
   </li>
 </ul>
 
 <h2 id="stealth">Stealth</h2>
 
-<p>When you try to hide from or sneak past enemies, the GM will call for an <a href="rolls.html#opposed-rolls">opposed</a> <a href="abilities.html#agility">agility</a> <a href="rolls.html">roll</a>. The <a href="rolls.html#opposed-rolls">difficulty</a> of the roll is determined by the highest <a href="abilities.html#cunning">cunning</a> of any enemy you try to avoid. The GM may further adjust the difficulty based on factors such as your distance, the amount of cover you have, and the amount of light in the area. Using two <a href="skills.html#maneuvers">maneuvers</a> in a turn, using the <a class="item" data-name="Sprint">Sprint</a> skill, or otherwise moving quickly imposes a <a href="rolls.html#boons--banes">bane</a> on the agility roll. Hiding from sight without any cover is usually impossible. The GM might decide that each roll represents one round of movement, but a roll might also use one roll to describe several rounds, minutes, or hours.</p>
+<p>When you try to hide from or sneak past enemies, the GM will call for an <a class = "keyword" href="rolls.html#opposed-rolls">opposed</a> <a class = "keyword" href="abilities.html#agility">agility</a> <a class = "keyword" href="rolls.html">roll</a>. The <a class = "keyword" href="rolls.html#opposed-rolls">difficulty</a> of the roll is determined by the highest <a class = "keyword" href="abilities.html#cunning">cunning</a> of any enemy you try to avoid. The GM may further adjust the difficulty based on factors such as your distance, the amount of cover you have, and the amount of light in the area. Using two <a class = "keyword" href="skills.html#maneuvers">maneuvers</a> in a turn, using the <a class="item" data-name="Sprint">Sprint</a> skill, or otherwise moving quickly imposes a <a class = "keyword" href="rolls.html#boons--banes">bane</a> on the agility roll. Hiding from sight without any cover is usually impossible. The GM might decide that each roll represents one round of movement, but a roll might also use one roll to describe several rounds, minutes, or hours.</p>
 
-<p>A complete failure on this roll will mean your enemies have noticed you. A mixed roll will usually mean that your enemies haven’t noticed you yet, but have noticed that something is amiss. They won’t be <a href="conditions.html#surprised">surprised</a> if you attack and might begin searching for you.</p>
+<p>A complete failure on this roll will mean your enemies have noticed you. A mixed roll will usually mean that your enemies haven’t noticed you yet, but have noticed that something is amiss. They won’t be <a class = "keyword" href="conditions.html#surprised">surprised</a> if you attack and might begin searching for you.</p>
 
-<p>If you successfully hide from an enemy, they do not know where you are and can’t target you with skills. If you spring from hiding to <a href="skills.html#attacks">attack</a> an enemy who couldn’t see you, then you gain a <a href="skills.html#boons">boon</a> on the attack. If your enemies weren’t even aware that something was amiss, they become <a href="conditions.html#surprised">surprised</a> as well!</p>
+<p>If you successfully hide from an enemy, they do not know where you are and can’t target you with skills. If you spring from hiding to <a class = "keyword" href="skills.html#attacks">attack</a> an enemy who couldn’t see you, then you gain a <a class = "keyword" href="skills.html#boons">boon</a> on the attack. If your enemies weren’t even aware that something was amiss, they become <a class = "keyword" href="conditions.html#surprised">surprised</a> as well!</p>
 
-<p>Skills are assumed to make a significant amount of noise, whether it’s the clatter of footfalls, grunts of exertion, the clang of steel on steel, the thrum of a bowstring, or arcane words of power. The exception to this rule is a skill that has the <a href="skills.html#stealthy">stealthy</a> tag, which can be used without making a commotion.</p>
+<p>Skills are assumed to make a significant amount of noise, whether it’s the clatter of footfalls, grunts of exertion, the clang of steel on steel, the thrum of a bowstring, or arcane words of power. The exception to this rule is a skill that has the <a class = "keyword" href="skills.html#stealthy">stealthy</a> tag, which can be used without making a commotion.</p>
 
 <h2 id="damaging-objects">Damaging Objects</h2>
 
-<p>The GM will call for a <a href="abilities.html#brawn">brawn</a> <a href="rolls.html">roll</a> to damage or destroy an object. Most object are impossible to damage without the right tools; most people can’t chop through a door or cut a rope with their bare hands.</p>
+<p>The GM will call for a <a class = "keyword" href="abilities.html#brawn">brawn</a> <a class = "keyword" href="rolls.html">roll</a> to damage or destroy an object. Most object are impossible to damage without the right tools; most people can’t chop through a door or cut a rope with their bare hands.</p>
 
-<p>Many effects of a damaged object are obvious; a damaged door no longer blocks passage, a damaged wagon can’t roll, and so on. Equipment can also be damaged in which case it suffers the <a href="conditions.html#damaged">damaged</a> condition. Damaged equipment can usually be repaired in town. In extreme cases, like a blade snapped entirely in half, the object may be considered <a href="conditions.html#destroyed">destroyed</a> beyond repair.</p>
+<p>Many effects of a damaged object are obvious; a damaged door no longer blocks passage, a damaged wagon can’t roll, and so on. Equipment can also be damaged in which case it suffers the <a class = "keyword" href="conditions.html#damaged">damaged</a> condition. Damaged equipment can usually be repaired in town. In extreme cases, like a blade snapped entirely in half, the object may be considered <a class = "keyword" href="conditions.html#destroyed">destroyed</a> beyond repair.</p>
 
-<p>A damaged weapon suffers a <a href="skills.html#banes">bane</a> on all <a href="skills.html#attacks">attacks</a>. Damaged <a href="equipment.html#armor">armor</a> provides no armor. Other damaged equipment can’t be used and doesn’t provide any of its benefits or <a href="skills.html">skills</a>. <a href="legends.html">Legendary items</a> are no exception and may become damaged or even destroyed as well. However, even if a legendary symbol is broken, the legend itself will likely remain and find a new symbol in time.</p>
+<p>A damaged weapon suffers a <a class = "keyword" href="skills.html#banes">bane</a> on all <a class = "keyword" href="skills.html#attacks">attacks</a>. Damaged <a class = "keyword" href="equipment.html#armor">armor</a> provides no armor. Other damaged equipment can’t be used and doesn’t provide any of its benefits or <a class = "keyword" href="skills.html">skills</a>. <a class = "keyword" href="legends.html">Legendary items</a> are no exception and may become damaged or even destroyed as well. However, even if a legendary symbol is broken, the legend itself will likely remain and find a new symbol in time.</p>
 
 <h2 id="doom">Doom</h2>
 
@@ -418,7 +419,7 @@
 
 <h2 id="resting">Resting</h2>
 
-<p>Characters need about eight hours of sleep each night. If you and your group take turns keeping watch, the whole rest lasts 10 hours, or 12 if you also make and break camp in the wilderness. You also expend one of your <a href="equipment.html#supplies">supplies</a> each day away from comfort, representing the food and other consumables you used. You will suffer <a href="stress.html">stress</a> if you get significantly less sleep or run out of supplies.</p>
+<p>Characters need about eight hours of sleep each night. If you and your group take turns keeping watch, the whole rest lasts 10 hours, or 12 if you also make and break camp in the wilderness. You also expend one of your <a class = "keyword" href="equipment.html#supplies">supplies</a> each day away from comfort, representing the food and other consumables you used. You will suffer <a class = "keyword" href="stress.html">stress</a> if you get significantly less sleep or run out of supplies.</p>
 
 <p>After a supper and a night’s sleep, you recover from one point of stress. Staying in a cozy but modest dwelling might relieve an additional point of stress, while sleeping in a warm soft inn might relieve three in total. However, sleeping in a cold dank cave might cause as much stress as it relieves, and trying to sleep outside in a storm may cause even more.</p>
  <!--  | replace_regex -->
@@ -429,4 +430,12 @@
 			</div> -->
 		</div>
 	</body>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/assets/js/FoL.js"></script>
+	<script src="/assets/js/handlebars-v4.7.7.js"></script>
+	<script src="/assets/js/fitty.min.js"></script>
+	<script src="/assets/js/tooltipster.bundle.js"></script>
+	<script src="/assets/js/leaflet/leaflet.js"></script>
+	<script src="https://kit.fontawesome.com/c754307781.js" crossorigin="anonymous"></script>
 </html>

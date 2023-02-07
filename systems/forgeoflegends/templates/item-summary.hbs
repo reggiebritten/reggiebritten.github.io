@@ -1,0 +1,31 @@
+<div class="forgeoflegends item-card" data-document-id= "{{item._id}}" data-uuid="{{item.uuid}}">
+    <h1 class='item-header flex-group'><span class = "scale-text"><img src="{{item.img}}" class='inline-icon'>{{item.name}}</span></h1>
+    <hr>
+    <span class='item-tags'>
+        {{#if item.system.tags.length}}📜{{#each item.system.tags}} <span class="keyword item-tag">{{this}}</span>{{/each}}{{/if}}
+    </span>
+    <strong>🎒 Bulk: </strong>{{item.system.bulk}}
+    <strong>💎 Value: </strong>{{item.system.value}}
+    
+    {{#if item.system.isArmor}}
+        <strong>🛡️ Armor: </strong>{{item.system.armor}}
+        {{#if item.system.pockets}}
+            <strong>💼 Pockets: </strong>{{item.system.pockets}}
+        {{/if}}
+    {{/if}}
+        {{{item.system.description}}}
+
+    <ol class="items-grid">
+        {{#each item.system.skillDocuments as |item index|}}
+            <li class="item grid-item" data-index="{{index}}" data-slot="{{slot}}" data-document-id= "{{item._id}}" data-uuid="{{item.uuid}}" data-actor-uuid="{{actor.uuid}}">
+                <img class= "item-image" src="{{item.img}}"/>
+                <div class="item-name">{{{item.name}}}</div>
+            </li>
+            {{!-- {{> "systems/forgeoflegends/templates/grid-item.hbs" item=item index=index actor=../actor}} --}}
+        {{/each}}
+        {{#each item.effects as |effect index|}}
+            {{> "systems/forgeoflegends/templates/grid-effect.hbs" effect=effect index=index actor=../actor}}
+        {{/each}}
+    </ol>
+
+</div>

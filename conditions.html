@@ -16,15 +16,9 @@
     <meta name="author" content="Reggie Britten">
 	<link rel="icon" type="image/png" href="/images/logo.png"/>
 	<link rel="stylesheet" href="/assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/forgeoflegends.css" />
 	<link rel="stylesheet" href="/assets/css/tooltipster.bundle.css" />
 	<link rel="stylesheet" href="/assets/js/leaflet/leaflet.css" />
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="/assets/js/FoL.js"></script>
-	<script src="/assets/js/handlebars-v4.7.7.js"></script>
-	<script src="/assets/js/tooltipster.bundle.js"></script>
-	<script src="/assets/js/leaflet/leaflet.js"></script>
-	<script src="https://kit.fontawesome.com/c754307781.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -92,12 +86,15 @@
                         <li><a href="/class.html#core-feature">Core Feature</a></li>
                         <li><a href="/class.html#fighting--style">Fighting Style</a></li>
                         <li><a href="/class.html#expereince">Experience</a></li>
+                        <hr>
                         <li><a href="/assassin">Assassin</a></li>
-                        <li><a href="/bard.html">Bard</a></li>
                         <li><a href="/battlemaster.html">Battlemaster</a></li>
-                        <li><a href="/beastmaster.html">Beastmaster</a></li>
                         <li><a href="/berserker.html">Berserker</a></li>
                         <li><a href="/elementalist.html">Elementalist</a></li>
+                        <hr>
+                        <strong style="text-align: center;display: block;">WIP</strong>
+                        <li><a href="/beastmaster.html">Beastmaster</a></li>
+                        <li><a href="/bard.html">Bard</a></li>
                         <li><a href="/enchanter.html">Enchanter</a></li>
                         <li><a href="/geomancer.html">Geomancer</a></li>
                         <li><a href="/monk.html">Monk</a></li>
@@ -274,6 +271,10 @@
                 <h1>Gamemastery</h1>
                 <h2> </i> <a href="/soon.html">Coming Soon!</a></h2>
 
+                <!-- <h1>Contact</h1>
+                <a href="mailto:Info@ForgeOfLegends.com">Info@ForgeOfLegends.com</a> -->
+
+
 
             </ul>
         </nav>
@@ -325,15 +326,15 @@
 			<div id="main">
 					<h1 id="conditions">Conditions</h1>
 
-<p>Conditions are temporary descriptions of your situation. Most are bad, some are good, and others may be a mix of both depending on your priorities. Many conditions are inflicted during combat, but some arise outside combat as well. Each condition lasts until something happens to end or remove it, and applies a specific set of bonuses or penalties to the affected character. Refer to the <a href="conditions.html#condition-list">Condition List</a> section for a description of each condition’s effects.</p>
+<p>Conditions are temporary descriptions of your situation. Most are bad, some are good, and others may be a mix of both depending on your priorities. Many conditions are inflicted during combat, but some arise outside combat as well. Each condition lasts until something happens to end or remove it, and applies a specific set of bonuses or penalties to the affected character. Refer to the <a class = "keyword" href="conditions.html#condition-list">Condition List</a> section for a description of each condition’s effects.</p>
 
 <h2 id="removing-conditions">Removing Conditions</h2>
 
-<p>All conditions, except for those with the <a href="conditions.html#persistent">persistent</a> tag, can be removed by using the <a class="item" data-name="Recovery">Recovery</a> skill. Furthermore, <a href="conditions.html#temporary">temporary</a> conditions are automatically removed from you after your action or your turn, whichever comes first. The <a href="conditions.html#blessed">blessed</a> condition can also help remove non-persistent conditions.</p>
+<p>All conditions, except for those with the <a class = "keyword" href="conditions.html#persistent">persistent</a> tag, can be removed by using the <a class="item" data-name="Recovery">Recovery</a> skill. Furthermore, <a class = "keyword" href="conditions.html#temporary">temporary</a> conditions are automatically removed from you after your action or your turn, whichever comes first. The <a class = "keyword" href="conditions.html#blessed">blessed</a> condition can also help remove non-persistent conditions.</p>
 
 <h3 id="replacing-conditions">Replacing Conditions</h3>
 
-<p>Many conditions will be overwritten by specific other conditions when they are applied, in addition to any other effects. For example, if you are <a href="conditions.html#burning">burning</a> when you become <a href="conditions.html#wet">wet</a>, then the burning condition in immediately removed from you. Even <a href="conditions.html#persistent">persistent</a> conditions can be replaced.</p>
+<p>Many conditions will be overwritten by specific other conditions when they are applied, in addition to any other effects. For example, if you are <a class = "keyword" href="conditions.html#burning">burning</a> when you become <a class = "keyword" href="conditions.html#wet">wet</a>, then the burning condition in immediately removed from you. Even <a class = "keyword" href="conditions.html#persistent">persistent</a> conditions can be replaced.</p>
 
 <h2 id="condition-tags">Condition Tags</h2>
 
@@ -341,23 +342,23 @@
 
 <h3 id="persistent">Persistent</h3>
 
-<p>A persistent condition cannot be removed by typical means, Including the <a class="item" data-name="Recovery">Recovery</a> skill or the <a href="conditions.html#blessed">blessed</a> condition. Persistent conditions can only be removed by effects that specifically name that condition. Some conditions are innately persistent, while others can be temporarily made persistent by other effects.</p>
+<p>A persistent condition cannot be removed by typical means, Including the <a class="item" data-name="Recovery">Recovery</a> skill or the <a class = "keyword" href="conditions.html#blessed">blessed</a> condition. Persistent conditions can only be removed by effects that specifically name that condition. Some conditions are innately persistent, while others can be temporarily made persistent by other effects.</p>
 
 <h3 id="temporary">Temporary</h3>
 
-<p>A temporary condition is automatically removed from you after your next <a href="skills.html#actions">action</a>, or after you use an extra <a href="skills.html#maneuvers">maneuver</a> instead of your action. A temporary condition that is granted during an action is not removed until the next action after that one. Temporary conditions applied to legendary characters on your turn are removed after your next ally’s action, instead of the next action of the legendary character.</p>
+<p>A temporary condition is automatically removed from you after your next <a class = "keyword" href="skills.html#actions">action</a>, or after you use an extra <a class = "keyword" href="skills.html#maneuvers">maneuver</a> instead of your action. A temporary condition that is granted during an action is not removed until the next action after that one. Temporary conditions applied to legendary characters on your turn are removed after your next ally’s action, instead of the next action of the legendary character.</p>
 
 <h3 id="granted-modifiers">Granted Modifiers</h3>
 
-<p>Some conditions may make you <a href="skills.html#vulnerable">vulnerable</a> or <a href="skills.html#resistant">resistant</a> to certain skill tags, or <a href="skills.html#immune">immune</a> to certain other conditions. Multiple sources of vulnerability, resistance, and immunity don’t stack.</p>
+<p>Some conditions may make you <a class = "keyword" href="skills.html#vulnerable">vulnerable</a> or <a class = "keyword" href="skills.html#resistant">resistant</a> to certain skill tags, or <a class = "keyword" href="skills.html#immune">immune</a> to certain other conditions. Multiple sources of vulnerability, resistance, and immunity don’t stack.</p>
 
 <h3 id="item">Item</h3>
 
-<p>An equipment condition affects an item, such as a piece of <a href="equipment.html">equipment</a>, rather than a character directly.</p>
+<p>An equipment condition affects an item, such as a piece of <a class = "keyword" href="equipment.html">equipment</a>, rather than a character directly.</p>
 
 <h3 id="mind">Mind</h3>
 
-<p>A mind condition affects a character’s mental state or emotions. Mindless characters, such as zombies, are <a href="skills.html#immune">immune</a> to mental conditions.</p>
+<p>A mind condition affects a character’s mental state or emotions. Mindless characters, such as zombies, are <a class = "keyword" href="skills.html#immune">immune</a> to mental conditions.</p>
 
 <h3 id="beneficial">Beneficial</h3>
 
@@ -365,7 +366,7 @@
 
 <h3 id="elemental">Elemental</h3>
 
-<p>An elemental condition harnesses the power of one of the primal elements. Elemental conditions also have a skill tag that denotes which specific element they represent. If you are <a href="skills.html#immune">immune</a> to that elemental tag, you are also immune to that elemental condition. For example, if you are immune to the <a href="skills.html#fire">fire</a> tag, you are also immune to the <a href="conditions.html#burning">burning</a> condition.</p>
+<p>An elemental condition harnesses the power of one of the primal elements. Elemental conditions also have a skill tag that denotes which specific element they represent. If you are <a class = "keyword" href="skills.html#immune">immune</a> to that elemental tag, you are also immune to that elemental condition. For example, if you are immune to the <a class = "keyword" href="skills.html#fire">fire</a> tag, you are also immune to the <a class = "keyword" href="conditions.html#burning">burning</a> condition.</p>
 
 <h3 id="magical">magical</h3>
 
@@ -379,231 +380,231 @@
 
 <h3 id="bleeding">Bleeding</h3>
 
-<p><strong><a href="conditions.html#bodily">Bodily</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#bodily">Bodily</a></strong></p>
 
-<p>A bleeding character is rapidly losing blood. At the start of your turn, you loose -2 <a href="combat.html#momentum">momentum</a> and -2 <a href="combat.html#poise">poise</a>. This defense loss is not affected by armor, and never carries over to another defense if one is depleted. If your momentum and poise are both 0, you suffer one stress at the start of your turn instead.</p>
+<p>A bleeding character is rapidly losing blood. At the start of your turn, you loose -2 <a class = "keyword" href="combat.html#momentum">momentum</a> and -2 <a class = "keyword" href="combat.html#poise">poise</a>. This defense loss is not affected by armor, and never carries over to another defense if one is depleted. If your momentum and poise are both 0, you suffer one stress at the start of your turn instead.</p>
 
 <h3 id="blessed">Blessed</h3>
 
-<p><strong><a href="skills.html#holy">Holy</a> <a href="conditions.html#magical">Magical</a> <a href="conditions.html#beneficial">Beneficial</a> <a href="conditions.html#temporary">Temporary</a></strong></p>
+<p><strong><a class = "keyword" href="skills.html#holy">Holy</a> <a class = "keyword" href="conditions.html#magical">Magical</a> <a class = "keyword" href="conditions.html#beneficial">Beneficial</a> <a class = "keyword" href="conditions.html#temporary">Temporary</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#cursed">Cursed</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#cursed">Cursed</a></strong></p>
 
-<p><strong>Granted Resistance: <a href="skills.html#holy">Holy</a>, <a href="skills.html#unholy">Unholy</a></strong></p>
+<p><strong>Granted Resistance: <a class = "keyword" href="skills.html#holy">Holy</a>, <a class = "keyword" href="skills.html#unholy">Unholy</a></strong></p>
 
-<p>A blessed character is guarded by a protective force of justice. If you are not an undead or a demon, then you may use a reaction to immediately remove one non-<a href="conditions.html#persistent">persistent</a> condition from yourself. A creature that is an undead or demon is, <a href="skills.html#vulnerable">vulnerable</a> to <a href="skills.html#unholy">unholy</a> skills instead of <a href="skills.html#resistant">resistant</a>, and all other conditions on such a creature are <a href="conditions.html#persistent">persistent</a>.</p>
+<p>A blessed character is guarded by a protective force of justice. If you are not an undead or a demon, then you may use a reaction to immediately remove one non-<a class = "keyword" href="conditions.html#persistent">persistent</a> condition from yourself. A creature that is an undead or demon is, <a class = "keyword" href="skills.html#vulnerable">vulnerable</a> to <a class = "keyword" href="skills.html#unholy">unholy</a> skills instead of <a class = "keyword" href="skills.html#resistant">resistant</a>, and all other conditions on such a creature are <a class = "keyword" href="conditions.html#persistent">persistent</a>.</p>
 
 <h3 id="blinded">Blinded</h3>
 
-<p><strong><a href="conditions.html#bodily">Bodily</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#bodily">Bodily</a></strong></p>
 
-<p>A blinded character has had their vision temporarily impaired and can only see things very close to them. <a href="skills.html#ranged">Ranged</a> <a href="skills.html#attacks">attacks</a> gain <a href="skills.html#boons">boon</a> against you. You can only target adjacent characters and spaces with skills, except for <a href="skills.html#blast">blast</a> skills. <a href="skills.html#line">Line</a> skills can’t be aimed properly and fail to target non-adjacent characters. <a href="skills.html#sight">Sight</a> skills are ineffective on you and enemies gain a <a href="rolls.html#boons--banes">boon</a> on <a href="rolls.html">rolls</a> made to sneak around if you’re the only person who might notice them</p>
+<p>A blinded character has had their vision temporarily impaired and can only see things very close to them. <a class = "keyword" href="skills.html#ranged">Ranged</a> <a class = "keyword" href="skills.html#attacks">attacks</a> gain <a class = "keyword" href="skills.html#boons">boon</a> against you. You can only target adjacent characters and spaces with skills, except for <a class = "keyword" href="skills.html#blast">blast</a> skills. <a class = "keyword" href="skills.html#line">Line</a> skills can’t be aimed properly and fail to target non-adjacent characters. <a class = "keyword" href="skills.html#sight">Sight</a> skills are ineffective on you and enemies gain a <a class = "keyword" href="rolls.html#boons--banes">boon</a> on <a class = "keyword" href="rolls.html">rolls</a> made to sneak around if you’re the only person who might notice them</p>
 
 <h3 id="burning">Burning</h3>
 
-<p><strong><a href="skills.html#fire">Fire</a> <a href="conditions.html#elemental">Elemental</a></strong></p>
+<p><strong><a class = "keyword" href="skills.html#fire">Fire</a> <a class = "keyword" href="conditions.html#elemental">Elemental</a></strong></p>
 
-<p><strong>Replaces:</strong> <strong><a href="conditions.html#bleeding">Bleeding</a> <a href="conditions.html#chilled">Chilled</a> <a href="conditions.html#oiled">Oiled</a></strong></p>
+<p><strong>Replaces:</strong> <strong><a class = "keyword" href="conditions.html#bleeding">Bleeding</a> <a class = "keyword" href="conditions.html#chilled">Chilled</a> <a class = "keyword" href="conditions.html#oiled">Oiled</a></strong></p>
 
-<p><strong>Granted Resistance: <a href="skills.html#ice">Ice</a></strong></p>
+<p><strong>Granted Resistance: <a class = "keyword" href="skills.html#ice">Ice</a></strong></p>
 
-<p><strong>Granted Immunity: <a href="conditions.html#oiled">Oiled</a></strong></p>
+<p><strong>Granted Immunity: <a class = "keyword" href="conditions.html#oiled">Oiled</a></strong></p>
 
-<p>A burning character is on fire. At the start of your turn, you loose -2 <a href="combat.html#poise">poise</a> and -2 <a href="combat.html#focus">focus</a>. If you are <a href="skills.html#vulnerable">vulnerable</a> or <a href="skills.html#resistant">resistant</a> to <a href="skills.html#fire">fire</a>, you loose 1 less or more poise and focus, respectively. This defense loss is not affected by armor and never carries over to another defense if one is depleted. If your poise and focus are both 0, you suffer one stress at the start of your turn instead.</p>
+<p>A burning character is on fire. At the start of your turn, you loose -2 <a class = "keyword" href="combat.html#poise">poise</a> and -2 <a class = "keyword" href="combat.html#focus">focus</a>. If you are <a class = "keyword" href="skills.html#vulnerable">vulnerable</a> or <a class = "keyword" href="skills.html#resistant">resistant</a> to <a class = "keyword" href="skills.html#fire">fire</a>, you loose 1 less or more poise and focus, respectively. This defense loss is not affected by armor and never carries over to another defense if one is depleted. If your poise and focus are both 0, you suffer one stress at the start of your turn instead.</p>
 
 <h3 id="chilled">Chilled</h3>
 
-<p><strong><a href="skills.html#ice">Ice</a> <a href="conditions.html#elemental">Elemental</a> <a href="conditions.html#temporary">Temporary</a></strong></p>
+<p><strong><a class = "keyword" href="skills.html#ice">Ice</a> <a class = "keyword" href="conditions.html#elemental">Elemental</a> <a class = "keyword" href="conditions.html#temporary">Temporary</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#burning">Burning</a> <a href="conditions.html#wet">Wet</a> <a href="conditions.html#hastened">Hastened</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#burning">Burning</a> <a class = "keyword" href="conditions.html#wet">Wet</a> <a class = "keyword" href="conditions.html#hastened">Hastened</a></strong></p>
 
-<p><strong>Granted Resistance:</strong> <strong><a href="skills.html#fire">Fire</a></strong></p>
+<p><strong>Granted Resistance:</strong> <strong><a class = "keyword" href="skills.html#fire">Fire</a></strong></p>
 
-<p>A chilled character has been struck by extreme cold and has difficulty moving quickly. You can only use one <a href="skills.html#actions">action</a> or <a href="skills.html#maneuvers">maneuver</a> on your turn, but not both.</p>
+<p>A chilled character has been struck by extreme cold and has difficulty moving quickly. You can only use one <a class = "keyword" href="skills.html#actions">action</a> or <a class = "keyword" href="skills.html#maneuvers">maneuver</a> on your turn, but not both.</p>
 
 <h3 id="choking">Choking</h3>
 
-<p><strong><a href="conditions.html#bodily">Bodily</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#bodily">Bodily</a></strong></p>
 
-<p>A choking character is coughing, drowning, or otherwise unable to catch their breath. At the start of your turn, you loose -2 <a href="combat.html#focus">focus</a> and -2 <a href="combat.html#momentum">momentum</a>. This defense loss is not affected by armor and never carries over to another defense if one is depleted. If your focus and momentum are both 0, you suffer one stress at the start of your turn instead. You can’t use <a href="skills.html#sound">sound</a> skills that involve speaking or shouting. A character who is unable to breath for several rounds will eventually suffer <a href="stress.html">stress</a>, as described in the <a href="exploration.html#breath-holding">breath holding</a> section.</p>
+<p>A choking character is coughing, drowning, or otherwise unable to catch their breath. At the start of your turn, you loose -2 <a class = "keyword" href="combat.html#focus">focus</a> and -2 <a class = "keyword" href="combat.html#momentum">momentum</a>. This defense loss is not affected by armor and never carries over to another defense if one is depleted. If your focus and momentum are both 0, you suffer one stress at the start of your turn instead. You can’t use <a class = "keyword" href="skills.html#sound">sound</a> skills that involve speaking or shouting. A character who is unable to breath for several rounds will eventually suffer <a class = "keyword" href="stress.html">stress</a>, as described in the <a class = "keyword" href="exploration.html#breath-holding">breath holding</a> section.</p>
 
 <h3 id="compelled">Compelled</h3>
 
-<p><strong><a href="conditions.html#mind">Mind</a>, <a href="conditions.html#temporary">Temporary</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#mind">Mind</a>, <a class = "keyword" href="conditions.html#temporary">Temporary</a></strong></p>
 
-<p><strong>Granted Vulnerability:</strong> <strong><a href="skills.html#mental">Mental</a></strong></p>
+<p><strong>Granted Vulnerability:</strong> <strong><a class = "keyword" href="skills.html#mental">Mental</a></strong></p>
 
-<p>A compelled character is being mentally manipulated by another character. As a <a href="skills.html#reactions">reaction</a> at the start of the compelled character’s turn, the compelling character may issue the compelled character a mental command. On its next turn the compelled character must either pay 4 <a href="combat.html#focus">focus</a> or obey the command.</p>
+<p>A compelled character is being mentally manipulated by another character. As a <a class = "keyword" href="skills.html#reactions">reaction</a> at the start of the compelled character’s turn, the compelling character may issue the compelled character a mental command. On its next turn the compelled character must either pay 4 <a class = "keyword" href="combat.html#focus">focus</a> or obey the command.</p>
 
 <h3 id="confused">Confused</h3>
 
-<p><strong><a href="conditions.html#persistent">Persistent</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#persistent">Persistent</a></strong></p>
 
-<p>A confused character’s <a href="combat.html#focus">focus</a> has been reduced to zero, and they have lost track of the battle around them. While confused, you can’t gain focus, you loose your <a href="combat.html#zone-of-control">zone of control</a>, and all your skills target a random character within the skill’s range.</p>
+<p>A confused character’s <a class = "keyword" href="combat.html#focus">focus</a> has been reduced to zero, and they have lost track of the battle around them. While confused, you can’t gain focus, you loose your <a class = "keyword" href="combat.html#zone-of-control">zone of control</a>, and all your skills target a random character within the skill’s range.</p>
 
 <h3 id="corroding">Corroding</h3>
 
-<p><strong><a href="skills.html#caustic">Caustic</a> <a href="conditions.html#elemental">Elemental</a></strong></p>
+<p><strong><a class = "keyword" href="skills.html#caustic">Caustic</a> <a class = "keyword" href="conditions.html#elemental">Elemental</a></strong></p>
 
-<p>A corroding character is covered in a caustic liquid that weakens their equipment. Whenever an <a href="skills.html#attacks">attack</a> against you two scores two or more <a href="skills.html#cunning-effects">cunning effects</a>, the GM will choose to <a href="exploration.html#damaging-objects">damage</a> one of your weapons, armor pieces, or other equipment, in addition to any other effects.</p>
+<p>A corroding character is covered in a caustic liquid that weakens their equipment. Whenever an <a class = "keyword" href="skills.html#attacks">attack</a> against you two scores two or more <a class = "keyword" href="skills.html#cunning-effects">cunning effects</a>, the GM will choose to <a class = "keyword" href="exploration.html#damaging-objects">damage</a> one of your weapons, armor pieces, or other equipment, in addition to any other effects.</p>
 
 <h3 id="cursed">Cursed</h3>
 
-<p><strong><a href="skills.html#holy">Unholy</a> <a href="conditions.html#magical">Magical</a> <a href="conditions.html#temporary">Temporary</a></strong></p>
+<p><strong><a class = "keyword" href="skills.html#holy">Unholy</a> <a class = "keyword" href="conditions.html#magical">Magical</a> <a class = "keyword" href="conditions.html#temporary">Temporary</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#cursed">Cursed</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#cursed">Cursed</a></strong></p>
 
-<p><strong>Granted Vulnerability: <a href="skills.html#holy">Holy</a>, <a href="skills.html#unholy">Unholy</a></strong></p>
+<p><strong>Granted Vulnerability: <a class = "keyword" href="skills.html#holy">Holy</a>, <a class = "keyword" href="skills.html#unholy">Unholy</a></strong></p>
 
-<p>A cursed character is haunted by a wicked force of evil. While you are cursed, all other conditions on you are <a href="conditions.html#persistent">persistent</a>, unless you are an undead or a demon. An undead or demon who is cursed is <a href="skills.html#resistant">resistant</a> to <a href="skills.html#holy">holy</a> and <a href="skills.html#unholy">unholy</a> skills instead of <a href="skills.html#vulnerable">vulnerable</a>. Such a creature may use a <a href="skills.html#reactions">reaction</a> to immediately remove one non-<a href="conditions.html#persistent">persistent</a> condition from itself, then the cursed condition ends.</p>
+<p>A cursed character is haunted by a wicked force of evil. While you are cursed, all other conditions on you are <a class = "keyword" href="conditions.html#persistent">persistent</a>, unless you are an undead or a demon. An undead or demon who is cursed is <a class = "keyword" href="skills.html#resistant">resistant</a> to <a class = "keyword" href="skills.html#holy">holy</a> and <a class = "keyword" href="skills.html#unholy">unholy</a> skills instead of <a class = "keyword" href="skills.html#vulnerable">vulnerable</a>. Such a creature may use a <a class = "keyword" href="skills.html#reactions">reaction</a> to immediately remove one non-<a class = "keyword" href="conditions.html#persistent">persistent</a> condition from itself, then the cursed condition ends.</p>
 
 <h3 id="damaged">Damaged</h3>
 
-<p><strong><a href="conditions.html#item">Item</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#item">Item</a></strong></p>
 
-<p>A damaged item is not functioning properly. You suffer a bane on any <a href="skills.html">skill</a> or <a href="rolls.html">roll</a> made with the item. Equipment that normally grants <a href="equipment.html#armor">armor</a> grants one fewer point of armor while damaged. Damaged items are best repaired in town, though you might have tools that let you manage a quicker repair.</p>
+<p>A damaged item is not functioning properly. You suffer a bane on any <a class = "keyword" href="skills.html">skill</a> or <a class = "keyword" href="rolls.html">roll</a> made with the item. Equipment that normally grants <a class = "keyword" href="equipment.html#armor">armor</a> grants none while damaged. Damaged items can usually only be repaired in town.</p>
 
 <h3 id="deafened">Deafened</h3>
 
-<p><strong><a href="conditions.html#bodily">Bodily</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#bodily">Bodily</a></strong></p>
 
-<p>A deafened character has had their hearing temporarily impaired and can’t react to enemies nearby. You loose your <a href="combat.html#zone-of-control">zone of control</a>, and attacks against you while you’re both deafened and <a href="combat.html#surrounded">surrounded</a> gain an additional <a href="skills.html#boons">boon</a>. <a href="skills.html#sound">Sound</a> skills are ineffective on a deafened character, and enemies gain a <a href="rolls.html#boons--banes">boon</a> on <a href="rolls.html">rolls</a> made to sneak around if you’re the only person who might notice them.</p>
+<p>A deafened character has had their hearing temporarily impaired and can’t react to enemies nearby. You loose your <a class = "keyword" href="combat.html#zone-of-control">zone of control</a>, and attacks against you while you’re both deafened and <a class = "keyword" href="combat.html#surrounded">surrounded</a> gain an additional <a class = "keyword" href="skills.html#boons">boon</a>. <a class = "keyword" href="skills.html#sound">Sound</a> skills are ineffective on a deafened character, and enemies gain a <a class = "keyword" href="rolls.html#boons--banes">boon</a> on <a class = "keyword" href="rolls.html">rolls</a> made to sneak around if you’re the only person who might notice them.</p>
 
 <h3 id="defenseless">Defenseless</h3>
 
-<p><strong><a href="conditions.html#temporary">Temporary</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#temporary">Temporary</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#guarded">Guarded</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#guarded">Guarded</a></strong></p>
 
-<p><a href="combat.html#defending-vs-yielding">Attacks</a> gain a <a href="skills.html#boons">boon</a> against you.</p>
+<p><a class = "keyword" href="combat.html#defending-vs-yielding">Attacks</a> gain a <a class = "keyword" href="skills.html#boons">boon</a> against you.</p>
 
 <h3 id="destroyed">Destroyed</h3>
 
-<p><strong><a href="conditions.html#item">Item</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#item">Item</a></strong></p>
 
-<p>A destroyed item has been wrecked beyond all hope of repair. You can’t use any of the item’s <a href="skills.html">skills</a>, you can’t use it for <a href="rolls.html">rolls</a>, and it grants no <a href="equipment.html#armor">armor</a>.</p>
+<p>A destroyed item has been wrecked beyond all hope of repair. You can’t use any of the item’s <a class = "keyword" href="skills.html">skills</a>, you can’t use it for <a class = "keyword" href="rolls.html">rolls</a>, and it grants no <a class = "keyword" href="equipment.html#armor">armor</a>.</p>
 
 <h3 id="distracted">Distracted</h3>
 
-<p><strong>Replaces: <a href="conditions.html#vigilant">Vigilant</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#vigilant">Vigilant</a></strong></p>
 
-<p>A distracted character has had their attention drawn away from the action. You suffer a <a href="skills.html#banes">bane</a> on all <a href="combat.html#focus">focus</a> based <a href="skills.html">skills</a>, and you can’t <a href="combat.html#defending-vs-yielding">predict</a> attacks. You are immediately interrupted and can’t concentrate on skills. Enemies gain a <a href="rolls.html#boons--banes">boon</a> on <a href="rolls.html">rolls</a> made to sneak around if you’re the only person who might notice them.</p>
+<p>A distracted character has had their attention drawn away from the action. You suffer a <a class = "keyword" href="skills.html#banes">bane</a> on all <a class = "keyword" href="combat.html#focus">focus</a> based <a class = "keyword" href="skills.html">skills</a>, and you can’t <a class = "keyword" href="combat.html#defending-vs-yielding">predict</a> attacks. You are immediately interrupted and can’t concentrate on skills. Enemies gain a <a class = "keyword" href="rolls.html#boons--banes">boon</a> on <a class = "keyword" href="rolls.html">rolls</a> made to sneak around if you’re the only person who might notice them.</p>
 
 <h3 id="drunk">Drunk</h3>
 
-<p><strong><a href="conditions.html#bodily">Bodily</a> <a href="conditions.html#persistent">Persistent</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#bodily">Bodily</a> <a class = "keyword" href="conditions.html#persistent">Persistent</a></strong></p>
 
 <p><strong>Removed after:</strong> a night’s rest.</p>
 
-<p>A drunk character has had too much alcohol to drink. You suffer a <a href="skills.html#banes">bane</a> on all your <a href="combat.html#defending-vs-yielding">attack</a> actions, but all of your attacks are <a href="skills.html#unpredictable">unpredictable</a>. You gain a <a href="rolls.html#boons--banes">boon</a> on <a href="personality.html#bold-vs-subtle">bold</a> and <a href="personality.html#serious-vs-whimsical">whimsical</a> rolls, but suffer a bane on <a href="personality.html#bold-vs-subtle">subtle</a> and <a href="personality.html#serious-vs-whimsical">serious</a> rolls, Enemies gain a <a href="rolls.html#boons--banes">boon</a> on <a href="rolls.html">rolls</a> made to sneak around if you’re the only person who might notice them.</p>
+<p>A drunk character has had too much alcohol to drink. You suffer a <a class = "keyword" href="skills.html#banes">bane</a> on all your <a class = "keyword" href="combat.html#defending-vs-yielding">attack</a> actions, but all of your attacks are <a class = "keyword" href="skills.html#unpredictable">unpredictable</a>. You gain a <a class = "keyword" href="rolls.html#boons--banes">boon</a> on <a class = "keyword" href="personality.html#bold-vs-subtle">bold</a> and <a class = "keyword" href="personality.html#serious-vs-whimsical">whimsical</a> rolls, but suffer a bane on <a class = "keyword" href="personality.html#bold-vs-subtle">subtle</a> and <a class = "keyword" href="personality.html#serious-vs-whimsical">serious</a> rolls, Enemies gain a <a class = "keyword" href="rolls.html#boons--banes">boon</a> on <a class = "keyword" href="rolls.html">rolls</a> made to sneak around if you’re the only person who might notice them.</p>
 
 <h3 id="empowered">Empowered</h3>
 
-<p><strong><a href="conditions.html#temporary">Temporary</a> <a href="conditions.html#beneficial">Beneficial</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#temporary">Temporary</a> <a class = "keyword" href="conditions.html#beneficial">Beneficial</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#weakened">Weakened</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#weakened">Weakened</a></strong></p>
 
-<p>Your next <a href="combat.html#defending-vs-yielding">attack</a> <a href="skills.html#actions">action</a> gains a <a href="skills.html#boons">boon</a> (but not your <a href="skills.html#maneuvers">maneuvers</a> or <a href="skills.html#reactions">reactions</a>).</p>
+<p>Your next <a class = "keyword" href="combat.html#defending-vs-yielding">attack</a> <a class = "keyword" href="skills.html#actions">action</a> gains a <a class = "keyword" href="skills.html#boons">boon</a> (but not your <a class = "keyword" href="skills.html#maneuvers">maneuvers</a> or <a class = "keyword" href="skills.html#reactions">reactions</a>).</p>
 
 <h3 id="encumbered">Encumbered</h3>
 
-<p><strong><a href="conditions.html#persistent">Persistent</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#persistent">Persistent</a></strong></p>
 
 <p><strong>Removed after:</strong> The character is no longer carrying too much.</p>
 
-<p>An encumbered character is carrying more armor, weapons, or inventory items than they can easily hold. You suffer a <a href="skills.html#banes">bane</a> on all your rolls, attacks against you gain a <a href="skills.html#boons">boon</a>, and you must spend an extra point of movement to move each space. You move half as quickly while <a href="overland-travel.html">traveling</a> and suffers one <a href="stress.html">stress</a> for every hour you spend traveling while encumbered.</p>
+<p>An encumbered character is carrying more armor, weapons, or inventory items than they can easily hold. You suffer a <a class = "keyword" href="skills.html#banes">bane</a> on all your rolls, attacks against you gain a <a class = "keyword" href="skills.html#boons">boon</a>, and you must spend an extra point of movement to move each space. You move half as quickly while <a class = "keyword" href="travel.html">traveling</a> and suffers one <a class = "keyword" href="stress.html">stress</a> for every hour you spend traveling while encumbered.</p>
 
 <h3 id="evasive">Evasive</h3>
 
-<p><strong><a href="conditions.html#temporary">Temporary</a> <a href="conditions.html#beneficial">Beneficial</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#temporary">Temporary</a> <a class = "keyword" href="conditions.html#beneficial">Beneficial</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#grabbed">Grabbed</a>, <a href="conditions.html#restrained">Restrained</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#grabbed">Grabbed</a>, <a class = "keyword" href="conditions.html#restrained">Restrained</a></strong></p>
 
-<p>An evasive character is swift enough to move through enemy zones of control. Enemy zones of control can’t <a href="combat.html#surrounded">surround</a> you, <a href="combat.html#hindering-maneuvers">hinder</a> you, or impose <a href="skills.html#banes">banes</a> on your <a href="skills.html#ranged">ranged</a> skills.</p>
+<p>An evasive character is swift enough to move through enemy zones of control. Enemy zones of control can’t <a class = "keyword" href="combat.html#surrounded">surround</a> you, <a class = "keyword" href="combat.html#hindering-maneuvers">hinder</a> you, or impose <a class = "keyword" href="skills.html#banes">banes</a> on your <a class = "keyword" href="skills.html#ranged">ranged</a> skills.</p>
 
 <h3 id="frightened">Frightened</h3>
 
-<p><strong><a href="conditions.html#mind">Mind</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#mind">Mind</a></strong></p>
 
-<p>A frightened character has been terrified by another character. You can’t willingly move toward the source of your fear, and a <a href="skills.html#banes">bane</a> is added to your <a href="skills.html#attacks">attacks</a> against the character frightening you.</p>
+<p>A frightened character has been terrified by another character. You can’t willingly move toward the source of your fear, and a <a class = "keyword" href="skills.html#banes">bane</a> is added to your <a class = "keyword" href="skills.html#attacks">attacks</a> against the character frightening you.</p>
 
 <h3 id="fumbling">Fumbling</h3>
 
-<p><strong>Replaces: <a href="conditions.html#honed">Honed</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#honed">Honed</a></strong></p>
 
-<p>A fumbling character can’t coordinate their actions. Your skills can’t earn <a href="skills.html#cunning-effects">cunning effects</a>, no matter what the dice roll. You are also interrupted whenever you <a href="combat.html#yield">yield</a> to an <a href="skills.html#attacks">attack</a>.</p>
+<p>A fumbling character can’t coordinate their actions. Your skills can’t earn <a class = "keyword" href="skills.html#cunning-effects">cunning effects</a>, no matter what the dice roll. You are also interrupted whenever you <a class = "keyword" href="combat.html#yield">yield</a> to an <a class = "keyword" href="skills.html#attacks">attack</a>.</p>
 
 <h3 id="grabbed">Grabbed</h3>
 
-<p><strong><a href="conditions.html#persistent">Persistent</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#persistent">Persistent</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#evasive">Evasive</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#evasive">Evasive</a></strong></p>
 
-<p>A grabbed character is being held in place by one or more other characters. While you’re grabbed, you loose your <a href="combat.html#zone-of-control">zone of control</a> and suffer a <a href="skills.html#banes">bane</a> on <a href="skills.html#attacks">attacks</a> against characters who are not part of the grab. If the character grabbing you is within one size of you, they also loose their zone of control and suffer a bane on characters outside the grab.</p>
+<p>A grabbed character is being held in place by one or more other characters. While you’re grabbed, you loose your <a class = "keyword" href="combat.html#zone-of-control">zone of control</a> and suffer a <a class = "keyword" href="skills.html#banes">bane</a> on <a class = "keyword" href="skills.html#attacks">attacks</a> against characters who are not part of the grab. If the character grabbing you is within one size of you, they also loose their zone of control and suffer a bane on characters outside the grab.</p>
 
-<p>If you and the character grabbing you are within one <a href="combat.html#size">size</a> of each other, then you cannot move. The character grabbing you can drag you along whenever they move, but each space they move costs an extra point of movement. If you and the character grabbing you are two or more size category apart, then the larger character may move freely and the smaller character is pulled along, regardless of who is grabbing whom.</p>
+<p>If you and the character grabbing you are within one <a class = "keyword" href="combat.html#size">size</a> of each other, then you cannot move. The character grabbing you can drag you along whenever they move, but each space they move costs an extra point of movement. If you and the character grabbing you are two or more size category apart, then the larger character may move freely and the smaller character is pulled along, regardless of who is grabbing whom.</p>
 
-<p>If two similar sized characters grab each other, then neither can move. Characters in a grab can still be <a href="combat.html#shoving">shoved</a>, and shoving a character out of reach removes the grabbed condition. You must usually <a href="skills.html#concentration">concentrate</a> on a grab, and <a href="skills.html#interrupting-concentration">interrupting</a> that concentration will free the grabbed character.</p>
+<p>If two similar sized characters grab each other, then neither can move. Characters in a grab can still be <a class = "keyword" href="combat.html#shoving">shoved</a>, and shoving a character out of reach removes the grabbed condition. You must usually <a class = "keyword" href="skills.html#concentration">concentrate</a> on a grab, and <a class = "keyword" href="skills.html#interrupting-concentration">interrupting</a> that concentration will free the grabbed character.</p>
 
 <h3 id="guarded">Guarded</h3>
 
-<p><strong><a href="conditions.html#temporary">Temporary</a> <a href="conditions.html#beneficial">Beneficial</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#temporary">Temporary</a> <a class = "keyword" href="conditions.html#beneficial">Beneficial</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#defenseless">Defenseless</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#defenseless">Defenseless</a></strong></p>
 
-<p><a href="combat.html#defending-vs-yielding">Attack</a> suffer a <a href="skills.html#banes">bane</a> against you.</p>
+<p><a class = "keyword" href="combat.html#defending-vs-yielding">Attack</a> suffer a <a class = "keyword" href="skills.html#banes">bane</a> against you.</p>
 
 <h3 id="hastened">Hastened</h3>
 
-<p><strong><a href="conditions.html#temporary">Temporary</a> <a href="conditions.html#magical">Magical</a> <a href="conditions.html#beneficial">Beneficial</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#temporary">Temporary</a> <a class = "keyword" href="conditions.html#magical">Magical</a> <a class = "keyword" href="conditions.html#beneficial">Beneficial</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#chilled">Chilled</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#chilled">Chilled</a></strong></p>
 
-<p>A hastened character is moving supernaturally quickly. On your next turn, you can use an additional <a href="skills.html#maneuvers">maneuver</a>.</p>
+<p>A hastened character is moving supernaturally quickly. On your next turn, you can use an additional <a class = "keyword" href="skills.html#maneuvers">maneuver</a>.</p>
 
 <h3 id="heedless">Heedless</h3>
 
-<p><strong><a href="conditions.html#temporary">Temporary</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#temporary">Temporary</a></strong></p>
 
-<p>Your <a href="combat.html#zone-of-control">zone of control</a> is temporarily suppressed. You automatically become heedless if you replace your action with a maneuver on your turn.</p>
+<p>Your <a class = "keyword" href="combat.html#zone-of-control">zone of control</a> is temporarily suppressed. You automatically become heedless if you replace your action with a maneuver on your turn.</p>
 
 <h3 id="honed">Honed</h3>
 
-<p><strong><a href="conditions.html#temporary">Temporary</a> <a href="conditions.html#beneficial">Beneficial</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#temporary">Temporary</a> <a class = "keyword" href="conditions.html#beneficial">Beneficial</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#fumbling">Fumbling</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#fumbling">Fumbling</a></strong></p>
 
-<p>A honed character can envision a clear path to victory. Your next <a href="skills.html#actions">action</a> automatically earns an extra <a href="skills.html#cunning-effects">cunning-effect</a>, even if your target doesn’t <a href="combat.html#yield">yield</a>. If you would be <a href="skills.html#interrupting-concentration">interrupted</a>, you may instead give up the honed condition to maintain your <a href="skills.html#concentration">concentration</a>.</p>
+<p>A honed character can envision a clear path to victory. Your next <a class = "keyword" href="skills.html#actions">action</a> automatically earns an extra <a class = "keyword" href="skills.html#cunning-effects">cunning-effect</a>, even if your target doesn’t <a class = "keyword" href="combat.html#yield">yield</a>. If you would be <a class = "keyword" href="skills.html#interrupting-concentration">interrupted</a>, you may instead give up the honed condition to maintain your <a class = "keyword" href="skills.html#concentration">concentration</a>.</p>
 
 <h3 id="invisible">Invisible</h3>
 
-<p><strong><a href="conditions.html#magical">Magical</a> <a href="conditions.html#beneficial">Beneficial</a> <a href="conditions.html#temporary">Temporary</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#magical">Magical</a> <a class = "keyword" href="conditions.html#beneficial">Beneficial</a> <a class = "keyword" href="conditions.html#temporary">Temporary</a></strong></p>
 
-<p>An invisible character can’t be seen by anyone. Your <a href="skills.html#attacks">attacks</a> gain a <a href="skills.html#boons">boon</a>, and enemies  can only target you with <a href="skills.html#blast">blast</a> skills. Enemy <a href="combat.html#zone-of-control">zones of control</a> can’t <a href="combat.html#surrounded">surround</a> you, <a href="combat.html#hindering-maneuvers">hinder</a> you, or impose <a href="skills.html#banes">banes</a> on your <a href="skills.html#ranged">ranged</a> skills.</p>
+<p>An invisible character can’t be seen by anyone. Your <a class = "keyword" href="skills.html#attacks">attacks</a> gain a <a class = "keyword" href="skills.html#boons">boon</a>, and enemies  can only target you with <a class = "keyword" href="skills.html#blast">blast</a> skills. Enemy <a class = "keyword" href="combat.html#zone-of-control">zones of control</a> can’t <a class = "keyword" href="combat.html#surrounded">surround</a> you, <a class = "keyword" href="combat.html#hindering-maneuvers">hinder</a> you, or impose <a class = "keyword" href="skills.html#banes">banes</a> on your <a class = "keyword" href="skills.html#ranged">ranged</a> skills.</p>
 
 <p>When you become invisible, anything you are wearing or carrying becomes invisible along with them. However, anything you drop or set down becomes visible, and anything you pick up while invisible remains visible.</p>
 
 <h3 id="kneeling">Kneeling</h3>
 
-<p>A kneeling character has been forced down to their knees. You suffer a <a href="skills.html#banes">bane</a> on <a href="combat.html#momentum">momentum</a> based skills, and you can’t <a href="combat.html#defending-vs-yielding">block</a> attacks. You must spend an extra point of movement for each space you move.</p>
+<p>A kneeling character has been forced down to their knees. You suffer a <a class = "keyword" href="skills.html#banes">bane</a> on <a class = "keyword" href="combat.html#momentum">momentum</a> based skills, and you can’t <a class = "keyword" href="combat.html#defending-vs-yielding">block</a> attacks. You must spend an extra point of movement for each space you move.</p>
 
 <h3 id="knocked-down">Knocked-Down</h3>
 
-<p><strong><a href="conditions.html#persistent">Persistent</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#persistent">Persistent</a></strong></p>
 
-<p>A knocked-down character’s <a href="combat.html#momentum">momentum</a> has been reduce to zero, leaving them immobile on the ground. While knocked-down, you can’t gain momentum, you loose your <a href="combat.html#zone-of-control">zone of control</a>, and you can’t move except with the <a class="item" data-name="Shift">Shift</a> skill.</p>
+<p>A knocked-down character’s <a class = "keyword" href="combat.html#momentum">momentum</a> has been reduce to zero, leaving them immobile on the ground. While knocked-down, you can’t gain momentum, you loose your <a class = "keyword" href="combat.html#zone-of-control">zone of control</a>, and you can’t move except with the <a class="item" data-name="Shift">Shift</a> skill.</p>
 
 <h3 id="oiled">Oiled</h3>
 
-<p><strong><a href="conditions.html#persistent">Persistent</a> <a href="skills.html#oil">Oil</a> <a href="conditions.html#elemental">Elemental</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#persistent">Persistent</a> <a class = "keyword" href="skills.html#oil">Oil</a> <a class = "keyword" href="conditions.html#elemental">Elemental</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#invisible">Invisible</a> <a href="conditions.html#grabbed">Grabbed</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#invisible">Invisible</a> <a class = "keyword" href="conditions.html#grabbed">Grabbed</a></strong></p>
 
-<p><strong>Granted Immunity:</strong> <strong><a href="conditions.html#grabbed">Grabbed</a> <a href="conditions.html#wet">Wet</a> <a href="conditions.html#corroding">Corroding</a> <a href="conditions.html#chilled">Chilled</a></strong></p>
+<p><strong>Granted Immunity:</strong> <strong><a class = "keyword" href="conditions.html#grabbed">Grabbed</a> <a class = "keyword" href="conditions.html#wet">Wet</a> <a class = "keyword" href="conditions.html#corroding">Corroding</a> <a class = "keyword" href="conditions.html#chilled">Chilled</a></strong></p>
 
-<p><strong>Granted Resistance:</strong> <strong><a href="skills.html#water">Water</a></strong> <strong><a href="skills.html#caustic">Caustic</a> <a href="skills.html#ice">Ice</a></strong></p>
+<p><strong>Granted Resistance:</strong> <strong><a class = "keyword" href="skills.html#water">Water</a></strong> <strong><a class = "keyword" href="skills.html#caustic">Caustic</a> <a class = "keyword" href="skills.html#ice">Ice</a></strong></p>
 
-<p><strong>Granted Vulnerability:</strong> <strong><a href="skills.html#fire">Fire</a></strong></p>
+<p><strong>Granted Vulnerability:</strong> <strong><a class = "keyword" href="skills.html#fire">Fire</a></strong></p>
 
 <p><strong>Removed after:</strong> the character spends 10 minutes removing most of the oil.</p>
 
@@ -613,87 +614,87 @@
 
 <p><strong>Earth Elemental</strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#bleeding">Bleeding</a> <a href="conditions.html#evasive">Evasive</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#bleeding">Bleeding</a> <a class = "keyword" href="conditions.html#evasive">Evasive</a></strong></p>
 
-<p>A petrified character is encased in heavy stone slabs. You can’t move and your <a href="equipment.html#armor">armor</a> is increased by 5.</p>
+<p>A petrified character is encased in heavy stone slabs. You can’t move and your <a class = "keyword" href="equipment.html#armor">armor</a> is increased by 5.</p>
 
 <h3 id="provoked">Provoked</h3>
 
-<p><strong><a href="conditions.html#mind">Mind</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#mind">Mind</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#provoked">Provoked</a></strong> by another character.</p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#provoked">Provoked</a></strong> by another character.</p>
 
-<p>A provoked character has had their attention commanded by a specific enemy. You suffer a <a href="skills.html#banes">bane</a> on skills targeting any other character than the one that provoked you, including skills that target yourself or that have no target.</p>
+<p>A provoked character has had their attention commanded by a specific enemy. You suffer a <a class = "keyword" href="skills.html#banes">bane</a> on skills targeting any other character than the one that provoked you, including skills that target yourself or that have no target.</p>
 
 <h3 id="reeling">Reeling</h3>
 
-<p><strong><a href="conditions.html#persistent">Persistent</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#persistent">Persistent</a></strong></p>
 
-<p>A reeling character’s <a href="combat.html#poise">poise</a> has been reduce to zero, leaving them in a unable to coordinate an attack. While reeling, you can’t gain poise, you loose your <a href="combat.html#zone-of-control">zone of control</a>, and you suffer a <a href="skills.html#banes">bane</a> on all your <a href="skills.html#attacks">attacks</a>.</p>
+<p>A reeling character’s <a class = "keyword" href="combat.html#poise">poise</a> has been reduce to zero, leaving them in a unable to coordinate an attack. While reeling, you can’t gain poise, you loose your <a class = "keyword" href="combat.html#zone-of-control">zone of control</a>, and you suffer a <a class = "keyword" href="skills.html#banes">bane</a> on all your <a class = "keyword" href="skills.html#attacks">attacks</a>.</p>
 
 <h3 id="restrained">Restrained</h3>
 
-<p><strong><a href="conditions.html#persistent">Persistent</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#persistent">Persistent</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#evasive">Evasive</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#evasive">Evasive</a></strong></p>
 
-<p>A restrained character is held in place by some object such as a net or chain. You can’t move or be <a href="combat.html#shoving">shoved</a>, and you lose you <a href="combat.html#zone-of-control">zone of control</a>. The restraints must be removed in order to free you. This will usually require a <a href="abilities.html#brawn">brawn</a> <a href="rolls.html">roll</a> to break the restraints, as determined by the GM. Usually such a roll may be made as part of any skill that would let you move, and if you succeed you may use that skill’s movement.</p>
+<p>A restrained character is held in place by some object such as a net or chain. You can’t move or be <a class = "keyword" href="combat.html#shoving">shoved</a>, and you lose you <a class = "keyword" href="combat.html#zone-of-control">zone of control</a>. The restraints must be removed in order to free you. This will usually require a <a class = "keyword" href="abilities.html#brawn">brawn</a> <a class = "keyword" href="rolls.html">roll</a> to break the restraints, as determined by the GM. Usually such a roll may be made as part of any skill that would let you move, and if you succeed you may use that skill’s movement.</p>
 
 <h3 id="shocked">Shocked</h3>
 
-<p><strong><a href="conditions.html#bodily">Bodily</a> <a href="skills.html#lightning">Lightning</a> <a href="conditions.html#elemental">Elemental</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#bodily">Bodily</a> <a class = "keyword" href="skills.html#lightning">Lightning</a> <a class = "keyword" href="conditions.html#elemental">Elemental</a></strong></p>
 
-<p>A shocked character has become uncoordinated after an electric shock. The only <a href="skills.html#maneuvers">maneuvers</a> that you can use are Dash and Recovery.</p>
+<p>A shocked character has become uncoordinated after an electric shock. The only <a class = "keyword" href="skills.html#maneuvers">maneuvers</a> that you can use are Dash and Recovery.</p>
 
 <h3 id="surprised">Surprised</h3>
 
-<p><strong><a href="conditions.html#temporary">Temporary</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#temporary">Temporary</a></strong></p>
 
-<p>A surprised character has been caught unaware and unprepared for combat. You have no <a href="combat.html#zone-of-control">zone of control</a> and you can’t use <a href="skills.html#reactions">reactions</a> other than to draw your weapon(s). On your next turn, you can use an <a href="skills.html#actions">action</a> or a <a href="skills.html#maneuvers">maneuver</a>, but not both.</p>
+<p>A surprised character has been caught unaware and unprepared for combat. You have no <a class = "keyword" href="combat.html#zone-of-control">zone of control</a> and you can’t use <a class = "keyword" href="skills.html#reactions">reactions</a> other than to draw your weapon(s). On your next turn, you can use an <a class = "keyword" href="skills.html#actions">action</a> or a <a class = "keyword" href="skills.html#maneuvers">maneuver</a>, but not both.</p>
 
 <h3 id="unbalanced">Unbalanced</h3>
 
-<p>An unbalanced character is having difficulty finding their footing. You suffer a <a href="skills.html#banes">bane</a> on all <a href="combat.html#poise">poise</a> based skills, and you can’t <a href="combat.html#defending-vs-yielding">dodge</a> attacks. You lose your zone of control.</p>
+<p>An unbalanced character is having difficulty finding their footing. You suffer a <a class = "keyword" href="skills.html#banes">bane</a> on all <a class = "keyword" href="combat.html#poise">poise</a> based skills, and you can’t <a class = "keyword" href="combat.html#defending-vs-yielding">dodge</a> attacks. You lose your zone of control.</p>
 
 <h3 id="unconscious">Unconscious</h3>
 
-<p><strong><a href="conditions.html#bodily">Bodily</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#bodily">Bodily</a></strong></p>
 
-<p>An unconscious character is either asleep or knocked-out. You can’t talk, see, or use skills. A sleeping character might wake up from a touch or loud noise, but a knocked-out character wouldn’t. If you are <a href="skills.html#attacks">attacked</a>, you are immediately <a href="combat.html#defeated">defeated</a>, and the damage of the attack’s yield directly inflicts <a href="stress.html">stress</a>.</p>
+<p>An unconscious character is either asleep or knocked-out. You can’t talk, see, or use skills. A sleeping character might wake up from a touch or loud noise, but a knocked-out character wouldn’t. If you are <a class = "keyword" href="skills.html#attacks">attacked</a>, you are immediately <a class = "keyword" href="combat.html#defeated">defeated</a>, and the damage of the attack’s yield directly inflicts <a class = "keyword" href="stress.html">stress</a>.</p>
 
 <h3 id="vigilant">Vigilant</h3>
 
-<p><strong><a href="conditions.html#temporary">Temporary</a> <a href="conditions.html#beneficial">Beneficial</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#temporary">Temporary</a> <a class = "keyword" href="conditions.html#beneficial">Beneficial</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#distracted">Distracted</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#distracted">Distracted</a></strong></p>
 
-<p>A vigilant character is prepared to prevent an enemy’s escape. You can <a href="combat.html#hindering-maneuvers">hinder</a> <a href="skills.html#careful">careful</a> skills and skills that otherwise ignore your <a href="combat.html#zone-of-control">zone of control</a>, even if another condition would say otherwise. Whenever you hinder an enemy, that enemy loses a total of 4 <a href="combat.html#poise">poise</a>, 4 <a href="combat.html#momentum">momentum</a>, and 4 <a href="combat.html#focus">focus</a>, instead of the usual amount.</p>
+<p>A vigilant character is prepared to prevent an enemy’s escape. You can <a class = "keyword" href="combat.html#hindering-maneuvers">hinder</a> <a class = "keyword" href="skills.html#careful">careful</a> skills and skills that otherwise ignore your <a class = "keyword" href="combat.html#zone-of-control">zone of control</a>, even if another condition would say otherwise. Whenever you hinder an enemy, that enemy loses a total of 4 <a class = "keyword" href="combat.html#poise">poise</a>, 4 <a class = "keyword" href="combat.html#momentum">momentum</a>, and 4 <a class = "keyword" href="combat.html#focus">focus</a>, instead of the usual amount.</p>
 
 <h3 id="vortexed">Vortexed</h3>
 
-<p><strong><a href="skills.html#air">Air</a> <a href="conditions.html#elemental">Elemental</a> <a href="conditions.html#magical">Magical</a></strong></p>
+<p><strong><a class = "keyword" href="skills.html#air">Air</a> <a class = "keyword" href="conditions.html#elemental">Elemental</a> <a class = "keyword" href="conditions.html#magical">Magical</a></strong></p>
 
-<p>A vortexed character is surrounded by magically swirling winds. All <a href="skills.html#ranged">ranged</a> skills used by you or used against you suffer a <a href="skills.html#banes">bane</a>. You loose your <a href="combat.html#zone-of-control">zone of control</a>, and enemy zones of control can’t <a href="combat.html#surrounded">surround</a> you, <a href="combat.html#hindering-maneuvers">hinder</a> you, or impose <a href="skills.html#banes">banes</a> on your <a href="skills.html#ranged">ranged</a> skills.</p>
+<p>A vortexed character is surrounded by magically swirling winds. All <a class = "keyword" href="skills.html#ranged">ranged</a> skills used by you or used against you suffer a <a class = "keyword" href="skills.html#banes">bane</a>. You loose your <a class = "keyword" href="combat.html#zone-of-control">zone of control</a>, and enemy zones of control can’t <a class = "keyword" href="combat.html#surrounded">surround</a> you, <a class = "keyword" href="combat.html#hindering-maneuvers">hinder</a> you, or impose <a class = "keyword" href="skills.html#banes">banes</a> on your <a class = "keyword" href="skills.html#ranged">ranged</a> skills.</p>
 
 <h3 id="weakened">Weakened</h3>
 
-<p><strong><a href="conditions.html#temporary">Temporary</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#temporary">Temporary</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#empowered">Empowered</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#empowered">Empowered</a></strong></p>
 
-<p>You suffer a <a href="skills.html#banes">bane</a> on your <a href="combat.html#defending-vs-yielding">attacks</a>.</p>
+<p>You suffer a <a class = "keyword" href="skills.html#banes">bane</a> on your <a class = "keyword" href="combat.html#defending-vs-yielding">attacks</a>.</p>
 
 <h3 id="wet">Wet</h3>
 
-<p><strong><a href="conditions.html#persistent">Persistent</a> <a href="skills.html#water">Water</a> <a href="conditions.html#elemental">Elemental</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#persistent">Persistent</a> <a class = "keyword" href="skills.html#water">Water</a> <a class = "keyword" href="conditions.html#elemental">Elemental</a></strong></p>
 
-<p><strong>Replaces: <a href="conditions.html#burning">Burning</a> <a href="conditions.html#invisible">Invisible</a></strong></p>
+<p><strong>Replaces: <a class = "keyword" href="conditions.html#burning">Burning</a> <a class = "keyword" href="conditions.html#invisible">Invisible</a></strong></p>
 
-<p><strong>Granted Immunity:</strong> <strong><a href="conditions.html#burning">Burning</a></strong></p>
+<p><strong>Granted Immunity:</strong> <strong><a class = "keyword" href="conditions.html#burning">Burning</a></strong></p>
 
-<p><strong>Granted Resistance:</strong> <strong><a href="skills.html#fire">Fire</a></strong></p>
+<p><strong>Granted Resistance:</strong> <strong><a class = "keyword" href="skills.html#fire">Fire</a></strong></p>
 
-<p><strong>Granted Vulnerability:</strong> <strong><a href="skills.html#ice">Ice</a></strong>, <strong><a href="skills.html#lightning">Lightning</a></strong></p>
+<p><strong>Granted Vulnerability:</strong> <strong><a class = "keyword" href="skills.html#ice">Ice</a></strong>, <strong><a class = "keyword" href="skills.html#lightning">Lightning</a></strong></p>
 
 <p><strong>Removed after:</strong> You are targeted by a fire, ice or lightning skill, or you spend 10 minutes drying off.</p>
 
@@ -701,9 +702,9 @@
 
 <h3 id="wracked">Wracked</h3>
 
-<p><strong><a href="conditions.html#bodily">Bodily</a></strong></p>
+<p><strong><a class = "keyword" href="conditions.html#bodily">Bodily</a></strong></p>
 
-<p>A wracked character is crippled by pain when they try to move. You lose your choice of -1 <a href="combat.html#poise">poise</a>, <a href="combat.html#momentum">momentum</a>, or <a href="combat.html#focus">focus</a> for each space you move, except when you are <a href="combat.html#shoving">shoved</a>.</p>
+<p>A wracked character is crippled by pain when they try to move. You lose your choice of -1 <a class = "keyword" href="combat.html#poise">poise</a>, <a class = "keyword" href="combat.html#momentum">momentum</a>, or <a class = "keyword" href="combat.html#focus">focus</a> for each space you move, except when you are <a class = "keyword" href="combat.html#shoving">shoved</a>.</p>
 
  <!--  | replace_regex -->
 			</div>
@@ -713,4 +714,12 @@
 			</div> -->
 		</div>
 	</body>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="/assets/js/FoL.js"></script>
+	<script src="/assets/js/handlebars-v4.7.7.js"></script>
+	<script src="/assets/js/fitty.min.js"></script>
+	<script src="/assets/js/tooltipster.bundle.js"></script>
+	<script src="/assets/js/leaflet/leaflet.js"></script>
+	<script src="https://kit.fontawesome.com/c754307781.js" crossorigin="anonymous"></script>
 </html>

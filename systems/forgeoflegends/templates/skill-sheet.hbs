@@ -1,0 +1,153 @@
+<form class="{{cssClass}}" autocomplete="off" data-uuid="{{item.uuid}}">
+
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <div class="header-fields">
+            <h1 class="flexrow">
+                <input name="name" type="text" value="{{item.name}}" placeholder="Name"/>
+            </h1>
+        </div>
+    </header>
+
+    {{!-- <nav class="sheet-tabs tabs" data-group="primary">
+        <a data-tab="summary"><h3 class="section-header">Summary</h3></a>
+        <a data-tab="details"><h3 class="section-header">Details</h3></a>
+    </nav> --}}
+
+    <section class="sheet-body">
+
+        {{!-- <div class="tab" data-group="primary"  data-tab="summary"> --}}
+            {{{item.system.summary}}}
+        {{!-- </div> --}}
+
+        <h1>Details</h1>
+
+        {{!-- <div class="tab" data-group="primary"  data-tab="details"> --}}
+
+            <div class="flexrow flex-group-center">
+                <div class="resource-label">
+                    <label>Type
+                        <select name="system.type">
+                            {{#select item.system.type}}
+                            <option value="action">Action</option>
+                            <option value="maneuver">Maneuver</option>
+                            <option value="reaction">Reaction</option>
+                            <option value="passive">Passive</option>
+                            <option value="other">Other</option>
+                            {{/select}}
+                        </select>
+                    </label>
+                </div>
+
+                {{#unless isPassive}}
+                    <div class="resource-label">
+                        <label>Target
+                            <select name="system.targetType">
+                                {{#select item.system.targetType}}
+                                    <option value="utility">Utility</option>
+                                    <option value="melee attack">Melee Attack</option>
+                                    <option value="ranged attack">Ranged Attack</option>
+                                    <option value="melee utility">Melee Utility</option>
+                                    <option value="ranged utility">Ranged Utility</option>
+                                {{/select}}
+                            </select>
+                        </label>
+                    </div>
+                {{/unless}}
+
+                {{#if isRanged}}
+                    <div class="resource-label">
+                        <label>Range
+                            <input type="text" name="system.range" value="{{item.system.range}}" data-dtype = "Number"/>
+                        </label>
+                    </div>
+                {{/if}}
+            </div>
+
+                <div class="tags flex-group-center">
+                    <a>
+                        <div><label class="resource-label">Tags</label></div>
+                        <div class="tag-list">
+                            {{#each item.system.tags}}
+                                <span class ="tag keyword {{this}}" data-keyword = "{{this}}">{{this}}</span>
+                            {{/each}}
+                        </div>
+                    </a>
+                </div>
+
+
+            {{#unless isPassive}}
+            <div class="resource-label flexrow flex-group-center">
+                    <label>Defense:</label>
+                    <input type="text" name="system.defense" value="{{item.system.defense}}" data-dtype = "Number"/>
+                    <select name="system.defenseType">
+                        {{#select item.system.defenseType}}
+                            <option value="">(None)</option>
+                            <option value="poise">Poise</option>
+                            <option value="momentum">Momentum</option>
+                            <option value="focus">Focus</option>
+                        {{/select}}
+                    </select>
+            </div>
+            {{/unless}}
+
+            <hr>
+            <h3 class ="section-header">Effects</h3>
+            <div class="mce-editor" name="system.effect">{{{item.system.effect}}}</div>
+            
+            {{#if isAttack}}
+                <hr>
+                <h3 class ="flexrow flex-center section-header">
+                    <label><img src='/systems/forgeoflegends/icons/rules/threat.png' class="inline-icon"> Threat: </label>
+                    <input type="text" name="system.threat" value="{{item.system.threat}}" data-dtype = "Number"/>
+                    <label>Yield:</label>
+                </h3>
+                <div class ="flexrow flex-center section-header flex-group-center">
+                        <label>Damage:</label>
+                        <input type="text" name="system.diceNumber" value="{{item.system.diceNumber}}" data-dtype = "Number"/>
+                        <label>d</label>
+                        <select name="system.diceSize" data-dtype = "Number">
+                            {{#select item.system.diceSize}}
+                                <option value="4">4</option>
+                                <option value="6">6</option>
+                                <option value="8">8</option>
+                                <option value="10">10</option>
+                                <option value="12">12</option>
+                                <option value="20">20</option>
+                            {{/select}}
+                        </select>
+                        <label> </label>
+                        <select name="system.damageType">
+                            {{#select item.system.damageType}}
+                                <option value="poise">Poise</option>
+                                <option value="momentum">Momentum</option>
+                                <option value="focus">Focus</option>
+                            {{/select}}
+                        </select>
+
+                </div>
+                <div class="mce-editor" name="system.yield">{{{item.system.yield}}}</div>
+            {{/if}}
+
+            <hr>
+            <h3 class ="section-header">Description</h3>
+            <div class="mce-editor" name="system.description">{{{item.system.description}}}</div>
+            {{#if isPassive}}
+                <hr>
+                <h3 class ="section-header">Active Effects</h3>
+                <ol class="items-grid">
+                    <li class="flexrow effect-create">
+                        <img class= "item-image" src="systems/forgeoflegends/icons/sheets/new.png"/>
+                        <div class="item-name">Create</div>
+                    </li>
+                    {{#each item.effects as |effect id|}}
+                        {{> "systems/forgeoflegends/templates/grid-effect.hbs" effect=effect}}
+                    {{/each}}
+                </ol>
+            {{/if}}
+
+        {{!-- </div> --}}
+
+    </section>
+
+</form>

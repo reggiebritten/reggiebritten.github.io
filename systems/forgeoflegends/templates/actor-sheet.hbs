@@ -1,0 +1,537 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}, {{actor.system.title}}"/>
+        <div class="header-fields" >
+          <div class ="charbanner">
+            <h1 class="charname flex-group-center">
+              <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
+              <input class = "character-title" name="system.title" type="text" value="{{actor.system.title}}" placeholder="Concept & Motivation"/>
+            </h1>
+          </div>
+          <div class ="chartype">
+            <div>
+              <select name="system.tier">
+                {{#select actor.system.tier}}
+                    <option value="elite">Elite</option>
+                    <option value="minion">Minion</option>
+                    <option value="legendary">Legendary</option>
+                {{/select}}
+              </select>
+            </div>
+            <div>
+              <select name="system.type">
+                {{#select actor.system.type}}
+                    <option value="human">Human</option>
+                    <option value="elf">Elf</option>
+                    <option value="dwarf">Dwarf</option>
+                    <option value="gnome">Gnome</option>
+                    <option value="orc">Orc</option>
+                    <option value="undead">Undead</option>
+                    <option value="demon">Demon</option>
+                    <option value="angel">Angel</option>
+                    <option value="dragon">Dragon</option>
+                {{/select}}
+              </select>
+            </div>
+          </div>
+        </div>
+    </header>
+
+  {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="sheet-tab" data-tab="combat"><div class="section-header"><h2>Combat</h2></div></a>
+        <a class="sheet-tab" data-tab="personality"><div class="section-header"><h2>Personality</h2></div></a>
+        <a class="sheet-tab" data-tab="skills"><div class="section-header"><h2>Skills</h2></div></a>
+        <a class="sheet-tab" data-tab="inventory"><div class="section-header"><h2>Inventory</h2></div></a>
+        <a class="sheet-tab" data-tab="effects"><div class="section-header"><h2>Effects</h2></div></a>
+    </nav>
+
+  {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+  {{!-- Combat Tab --}}
+        <div class="tab combat" data-group="primary" data-tab="combat">
+
+          <div class="abilities grid grid-2col">
+            <div class="abilities-list">
+              <div class="abilities grid grid-3col">
+                <div class="ability flex-group-center">
+                  <button class="resource-label rollable" data-roll="agility">Agility</button>
+                  <input type="number" name="system.agility" value="{{actor.system.agility}}"/>
+                </div>
+                <div class="ability flex-group-center">
+                  <button class="resource-label rollable" data-roll="brawn">Brawn</button>
+                  <input type="number" name="system.brawn" value="{{actor.system.brawn}}"/>
+                </div>
+                <div class="ability flex-group-center">
+                  <button class="resource-label rollable" data-roll="cunning">Cunning</button>
+                  <input type="number" name="system.cunning" value="{{actor.system.cunning}}"/>
+                </div>
+              </div>
+
+              
+              {{#compare actor.system.tier "!=" "minion"}}
+    
+              <div class="abilities grid grid-3col">
+              <div class="ability  flex-group-center">
+                
+                <label class="resource-label" data-path="poise"><img src='/systems/forgeoflegends/icons/rules/poise.png' class="inline-icon"> Poise</label>
+                <div class="grid grid-2col">
+                  <input type="number" name="system.poise" value="{{actor.system.poise}}"/>
+                  <label class="resource-label"> /   <button class="reset-defense" data-defense="poise">{{actor.system.base-poise}}</button></label>
+                </div>
+              </div>
+              <div class="ability flex-group-center">
+                <label class="resource-label" data-path="momentum"><img src='/systems/forgeoflegends/icons/rules/momentum.png' class="inline-icon"> Momentum</label>
+                <div class="grid grid-2col">
+                  <input type="number" name="system.momentum" value="{{actor.system.momentum}}"/>
+                  <label class="resource-label"> /   <button class="reset-defense" data-defense="momentum">{{actor.system.base-momentum}}</button></label>
+                </div>
+              </div>
+              <div class="ability flex-group-center">
+                <label class="resource-label" data-path="focus"><img src='/systems/forgeoflegends/icons/rules/focus.png' class="inline-icon"> Focus</label>
+                <div class="grid grid-2col">
+                  <input type="number" name="system.focus" value="{{actor.system.focus}}"/>
+                  <label class="resource-label"> / <button class="reset-defense" data-defense="focus">{{actor.system.base-focus}}</button></label>
+                </div>
+                </div>
+              </div>
+
+              {{/compare}}
+
+              {{#compare actor.system.tier "==" "minion"}}
+    
+              <div class="abilities">
+              <div class="ability  flex-group-center">
+                <label class="resource-label"><img src='/systems/forgeoflegends/icons/rules/defense.png' class="inline-icon"> Defense</label>
+                <div class="grid grid-3col">
+                  <input type="number" name="system.defense" value="{{actor.system.defense}}"/>
+                  /
+                  <input type="number" name="system.base-defense" value="{{actor.system.base-defense}}"/>
+                </div>
+              </div>
+              </div>
+
+              {{/compare}}
+
+              <div class="abilities grid grid-3col">
+                  <div class="stat flex-group-center">
+                    <div><label class="resource-label">Speed</label></div>
+                    <div><label class="resource-label">{{actor.system.speed}}</label></div>
+                  </div>
+                  <div class="stat flex-group-center">
+                    <div><label class="resource-label">Armor</label></div>
+                    <div><label class="resource-label">{{actor.system.armor}}</label></div>
+                  </div>
+                  <div class="stat flex-group-center">
+                    <div><label class="resource-label">Perception</label></div>
+                    <div><label class="resource-label">{{actor.system.perception}}</label></div>
+                  </div>
+              </div>
+
+            </div>
+
+
+
+
+
+
+        
+          <div class ="item-skills">
+            {{#if actor.equipment.set1}}
+              <div class="flex-group-center">
+                  <h3 class ="weapon-summary ">
+                      {{#if actor.equipment.weapon1}}
+                        <li class ="item" data-uuid="{{actor.equipment.weapon1.uuid}}" data-actor-uuid="{{actor.uuid}}">
+                          <img class= "inline-icon" src="{{actor.equipment.weapon1.img}}"/>&nbsp;{{actor.equipment.weapon1.name}}
+                        </li>
+                      {{/if}}
+
+                        {{#if actor.equipment.weapon2}}
+                          {{#unless actor.equipment.weapon2.system.isTwohanded}}
+                            <li class ="item" data-uuid="{{actor.equipment.weapon2.uuid}}" data-actor-uuid="{{actor.uuid}}">
+                              <img class= "inline-icon" src="{{actor.equipment.weapon2.img}}"/>&nbsp;{{actor.equipment.weapon2.name}}
+                            </li>
+                          {{/unless}}
+                        {{/if}}
+
+                  </h3>
+                <ol class="items-grid">
+                  {{log actor.equipment.weapon1}}
+                    {{#each actor.equipment.weapon1.system.skillDocuments as |skill index|}}
+                        {{> "systems/forgeoflegends/templates/grid-item.hbs" item=this index=index actor=../actor}}
+                    {{/each}}
+                    {{#unless actor.equipment.weapon2.system.isTwohanded}}
+                      {{#each actor.equipment.weapon2.system.skillDocuments as |skill index|}}
+                        {{> "systems/forgeoflegends/templates/grid-item.hbs" item=this index=index actor=../actor}}
+                      {{/each}}
+                    {{/unless}}
+                </ol>
+              </div>
+            {{/if}}
+
+            {{#if actor.equipment.set2}}
+              <div class="flex-group-center">
+                  <h3 class ="weapon-summary ">
+                    <img class= "item-image weapon-swap" src="systems/forgeoflegends/icons/sheets/swap.png"/>
+                      {{#if actor.equipment.weapon3}}
+                        <li class ="item" style="opacity:0.5;" data-uuid="{{actor.equipment.weapon3.uuid}}" data-actor-uuid="{{actor.uuid}}">
+                          <img class= "inline-icon" src="{{actor.equipment.weapon3.img}}"/>&nbsp;{{actor.equipment.weapon3.name}}
+                        </li>
+                      {{/if}}
+
+                        {{#if actor.equipment.weapon4}}
+                          {{#unless actor.equipment.weapon4.system.isTwohanded}}
+                            <li class ="item" style="opacity:0.5;" data-uuid="{{actor.equipment.weapon4.uuid}}" data-actor-uuid="{{actor.uuid}}">
+                              <img class= "inline-icon" src="{{actor.equipment.weapon4.img}}"/>&nbsp;{{actor.equipment.weapon4.name}}
+                            </li>
+                          {{/unless}}
+                        {{/if}}
+                  </h3>
+                <ol class="items-grid" style="opacity:0.5;">
+                    {{#each actor.equipment.weapon3.system.skillDocuments as |skill index|}}
+                        {{> "systems/forgeoflegends/templates/grid-item.hbs" item=this index=index actor=../actor}}
+                    {{/each}}
+                    {{#unless actor.equipment.weapon4.system.isTwohanded}}
+                      {{#each actor.equipment.weapon4.system.skillDocuments as |skill index|}}
+                        {{> "systems/forgeoflegends/templates/grid-item.hbs" item=this index=index actor=../actor}}
+                      {{/each}}
+                    {{/unless}}
+                </ol>
+              </div>
+            {{/if}}
+        </div>
+      </div>
+
+      <div class="grid grid-2col item-skills" style="margin:0;">
+          <div class="flex-group-center">
+            <h3 class ="flexrow weapon-summary">
+              Fighting Style
+            </h3>
+            <ol class="items-grid">
+              {{#each actor.skills as |skill index|}}
+                {{#if this.system.equipped}}
+                  {{> "systems/forgeoflegends/templates/grid-item.hbs" item=this index=index actor=../actor}}
+                {{/if}}
+              {{/each}}
+            </ol>
+          </div>
+
+          <div class="flex-group-center">
+            <h3 class ="flexrow weapon-summary">
+              Equipment
+            </h3>
+            <ol class="items-grid">
+              {{#each actor.equippedArmor}}
+                {{#each this.system.skillDocuments as |skill index|}}
+                  {{> "systems/forgeoflegends/templates/grid-item.hbs" item=this index=index actor=../actor}}
+                {{/each}}
+              {{/each}}
+            </ol>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="flex-group-center">
+          <h3 class="universal-skills-header"> <strong>Universal Skills</strong></h3>
+          <ol class="items-grid item-skills">
+            {{#each actor.universalSkills as |skill index|}}
+                {{> "systems/forgeoflegends/templates/grid-item.hbs" item=this index=index actor=../actor}}
+            {{/each}}
+          </ol>
+        </div>
+
+
+
+
+        </div>
+		
+  {{!-- Biography Tab --}}
+    <div class="tab biography" data-group="primary" data-tab="personality">
+      <div class="abilities grid grid-3col">
+        <div class="ability flexrow flex-group-center">
+          <label class="resource-label">Stress</label>
+          <input type="number" name="system.stress" value="{{actor.system.stress}}"/>
+        </div>
+        <div class="ability flexrow flex-group-center">
+          <label class="resource-label">Fate</label>
+          <input type="number" name="system.fate" value="{{actor.system.fate}}"/>
+        </div>
+      <div class="ability flexrow flex-group-center">
+          <label class="resource-label">XP</label>
+          <input type="number" name="system.experience" value="{{actor.system.experience}}"/>
+        </div>
+      </div>
+      <div class="grid grid-3col">
+        
+        <div class="flex-group-center">
+          <div class="grid grid-2col">
+            <div>
+              <button class="resource-label rollable" data-roll="bold">Bold</button>
+              <label class="resource-label">{{actor.system.bold}}</label>
+            </div>
+            <div>
+              <button class="resource-label rollable" data-roll="subtle">Subtle</button>
+              <label class="resource-label">{{actor.system.subtle}}</label>
+            </div>
+          </div>
+          <input type="range" min="1" max="5" name="system.subtle" value="{{actor.system.subtle}}">
+        </div>
+
+        <div class="flex-group-center">
+          <div class="grid grid-2col">
+            <div>
+              <button class="resource-label rollable" data-roll="serious">Serious</button>
+              <label class="resource-label">{{actor.system.serious}}</label>
+            </div>
+            <div>
+              <button class="resource-label rollable" data-roll="whimsical">Whimsical</button>
+              <label class="resource-label">{{actor.system.whimsical}}</label>
+            </div>
+          </div>
+          <input type="range" min="1" max="5" name="system.whimsical" value="{{actor.system.whimsical}}">
+        </div>
+
+        <div class="flex-group-center">
+          <div class="grid grid-2col">
+            <div>
+              <button class="resource-label rollable" data-roll="idealistic">Idealistic</button>
+              <label class="resource-label">{{actor.system.idealistic}}</label>
+            </div>
+            <div>
+              <button class="resource-label rollable" data-roll="pragmatic">Pragmatic</button>
+              <label class="resource-label">{{actor.system.pragmatic}}</label>
+            </div>
+          </div>
+          <input type="range" min="1" max="5" name="system.pragmatic" value="{{actor.system.pragmatic}}">
+        </div>
+
+      </div>
+
+
+      <hr>
+        <h3 class ="section-header"> Background, Personal Legend & Indulgences</h3>
+        <div class="editor">
+          <div class="editor-content" data-edit="system.background" data-engine="prosemirror" data-collaborate="false"></div>
+        </div>
+        <!-- <div>{{editor actor.system.background engine ="prosemirror" target="system.background" button=true owner=owner editable=editable}}</div> -->
+        
+
+
+    </div>
+
+  {{!-- Skills Tab --}}
+  <div class="tab skills flexrow" data-group="primary" data-tab="skills">
+    <div class='grid grid-12col'>
+      <div class ='inventory-list'>
+          <h3 class ="section-header">Repertoire</h3>
+                {{!-- <input class="repertoire-search" type="text" name="search" value="" placeholder="Filter" autocomplete="off"> --}}
+        <ol class="items-grid">
+          {{#each actor.skills as |item index|}}
+            {{#unless item.system.equipped}}
+            {{#unless item.system.isUniversal}}
+              {{> "systems/forgeoflegends/templates/grid-item.hbs" item=item index=index actor=../actor}}
+            {{/unless}}
+            {{/unless}}
+          {{/each}}
+          <li class="flexrow">
+            <a>
+              <img class= "item-image item-control item-create" data-type="skill" src="systems/forgeoflegends/icons/sheets/new.png"/>
+              <div class="item-name item-control item-create" data-type="skill">Create Skill</div>
+            </a>
+          </li>
+        </ol>
+      </div>
+
+      <div class ='equipment-list'>
+        <h3 class ="section-header">Fighting Style</h3>
+        <ol class="equipment-grid grid grid-4col">
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='core1'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='core2'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='core3'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='core4'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='active1'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='active2'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='active3'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='active4'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='passive1'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='passive2'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='passive3'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='passive4'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='permanent1'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='permanent2'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='permanent3'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='permanent4'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='bonus1'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='bonus2'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='bonus3'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='bonus4'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='bonus5'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='bonus6'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='bonus7'}}
+          {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='bonus8'}}
+        </ol>
+
+      </div>
+    </div>
+  </div>
+
+
+    {{!-- Owned Items Tab --}}
+      <div class="tab inventory" data-group="primary" data-tab="inventory">
+
+          <div class='grid grid-12col'>
+            <div class ='inventory-list'>
+                <h3 class ="section-header">Items</h3>
+              <ol class="items-grid">
+
+                {{#each actor.gear as |item index|}}
+                  {{#unless item.system.equipped}}
+                    {{> "systems/forgeoflegends/templates/grid-item.hbs" item=item index=index actor=../actor}}
+                  {{/unless}}
+                {{/each}}
+                <li class="flexrow">
+                  <a>
+                    <img class= "item-image item-control item-create" data-type="item" src="systems/forgeoflegends/icons/sheets/new.png"/>
+                    <div class="item-name item-control item-create" data-type="item">Create Item</div>
+                  </a>
+                </li>
+              </ol>
+            </div>
+
+            <div class ='equipment-list'>
+              <h3 class ="section-header">Equipment</h3>
+              <ol class="equipment-grid grid grid-4col">
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot="weapon1"}}                                
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='head1'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='trinket1'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='pocket1'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='weapon2'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='chest1'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='trinket2'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='pocket2'}}
+
+                <li class="flex-group-left flexrow weapon-swap" title="Swap Weapons">
+                  <img class= "item-image" src="systems/forgeoflegends/icons/sheets/swap.png"/>
+                  <div class="item-name">Swap Weapons</div>
+                </li>
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='back1'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='misc1'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='pocket3'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='weapon3'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='hands1'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='misc2'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='pocket4'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='weapon4'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='feet1'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='misc3'}}
+                {{> "systems/forgeoflegends/templates/slot-item.hbs" slot='pocket5'}}
+
+              </ol>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="grid grid-6col">
+            <div class="ability flexrow flex-group-center">
+                <img class= "currency" title="Copper" src="systems/forgeoflegends/icons/sheets/copper.png"/>
+                <input type="number" name="system.copper" value="{{actor.system.copper}}"/>
+            </div>
+            <div class="ability flexrow flex-group-center">
+              <img class= "currency" title="Silver" src="systems/forgeoflegends/icons/sheets/silver.png"/>
+                <input type="number" name="system.silver" value="{{actor.system.silver}}"/>
+            </div>
+            <div class="ability flexrow flex-group-center">
+              <img class= "currency" title="Gold" src="systems/forgeoflegends/icons/sheets/gold.png"/>
+                <input type="number" name="system.gold" value="{{actor.system.gold}}"/>
+            </div>
+            <div class="ability flexrow flex-group-center">
+              <img class= "currency" title="Mithril" src="systems/forgeoflegends/icons/sheets/mithril.png"/>
+                <input type="number" name="system.mithril" value="{{actor.system.mithril}}"/>
+            </div>
+            <div class="ability flexrow flex-group-center">
+              <img class= "currency" title="Gemstones" src="systems/forgeoflegends/icons/sheets/gem.png"/>
+                <input type="number" name="system.gems" value="{{actor.system.gems}}"/>
+            </div>
+            <div class="ability flexrow flex-group-center">
+              <label class="resource-label">Bulk</label>
+              <div>            {{actor.system.bulk}} / {{actor.system.capacity}}</div>
+
+            </div>
+          </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        {{!-- Effects Tab --}}
+        <div class="tab effects" data-group="primary" data-tab="effects">
+          <div class="grid grid-2col">
+
+            <div class="flex-group-center">
+              <h3 class ="section-header">Conditions</h3>
+              <ol class="items-grid grid grid-3col">
+                {{#each actor.conditions as |effect id|}}
+                  {{> "systems/forgeoflegends/templates/grid-effect.hbs" effect=effect hideSource=true}}
+                {{/each}}
+              </ol>
+            </div>
+
+            <div class="flex-group-center">
+              <h3 class ="section-header">Active Effects</h3>
+              <ol class="items-grid grid grid-3col">
+                {{#each actor.activeEffects as |effect id|}}
+                  {{> "systems/forgeoflegends/templates/grid-effect.hbs" effect=effect}}
+                {{/each}}
+                <li class="flexrow effect-create">
+                  <img class= "item-image" src="systems/forgeoflegends/icons/sheets/new.png"/>
+                  <div class="item-name">Create Effect</div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="flex-group-center">
+              <h3 class ="section-header">Skill / Equipment Effects</h3>
+              <ol class="items-grid grid grid-3col">
+                {{#each actor.inventoryEffects as |effect id|}}
+                  {{> "systems/forgeoflegends/templates/grid-effect.hbs" effect=effect}}
+                {{/each}}
+              </ol>
+            </div>
+
+            <div class="flex-group-center">
+              <h3 class ="section-header">Inactive Effects</h3>
+              <ol class="items-grid grid grid-3col">
+                {{#each actor.inactiveEffects as |effect id|}}
+                  {{> "systems/forgeoflegends/templates/grid-effect.hbs" effect=effect}}
+                {{/each}}
+              </ol>
+            </div>
+
+          </div>
+
+        </div>
+
+    </section>
+</form>
+

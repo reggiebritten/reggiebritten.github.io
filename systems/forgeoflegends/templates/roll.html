@@ -1,0 +1,16 @@
+<div>
+    <h2>{{rolltype}}</h2>
+    <div class="dice-tooltip">
+        <ol class="dice-rolls">
+
+                {{#each data}}
+                <li>
+                    <span  class="roll d10">{{this.value}}</span>
+                    <span  class="bonus"> + {{this.bonus}}{{#if this.extra}} + {{this.extra}}{{/if}} = {{this.sum}}</span>
+                </li>
+                {{/each}}
+
+            
+        </ol>
+    </div>
+</div>

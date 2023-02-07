@@ -1,0 +1,24 @@
+<div class="dice-formula"></div>
+    <h2>{{rolltype}}</h2>
+    <div class="dice-roll">
+        <div class="dice-result">
+        <div class="dice-formula">{{roll._formula}}</div>
+        <div class="dice-tooltip">
+            <section class="tooltip-part">
+            <div class="dice">
+                <header class="part-header flexrow">
+                    <span class="part-formula">1d10</span>
+                    <span class="part-total">{{results}}</span>
+                </header>
+                <ol class="dice-rolls">
+                    <li class="roll die d10">{{results}}</li>
+                    {{#each fate.terms.0.results as |r|}}
+                        <li class="roll die d10 fate-roll">{{r.result}}</li>
+                    {{/each}}
+                </ol>
+            </div>
+            </section>
+        </div>
+        <h4 class="dice-total">{{roll._total}}{{{fateResult}}}</h4>
+    </div>
+</div>

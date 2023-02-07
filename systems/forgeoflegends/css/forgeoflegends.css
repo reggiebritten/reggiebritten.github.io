@@ -1,0 +1,1224 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
+/* Global styles */
+.window-app {
+  font-family: "Roboto", sans-serif;
+}
+
+
+
+:root{
+  --color-shadow-primary: #4f9416;
+  --color-text-hyperlink: #61b81b;
+  --color-shadow-highlight: #6ecf1f;
+  --color-underline-header: #b2964f;
+  --color-border-highlight: #6ecf1f;
+  --color-border-highlight-alt: #61b81b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #61b81b;
+}
+
+
+select {text-align: center;}
+
+
+
+
+.rollable:hover, .rollable:focus, .grid-item:hover, .grid-item:focus, .effect-control:hover,
+.effect-control:focus, .weapon-swap:hover, .effect-create:hover, .effect-activate:hover, .weapon-summary li:hover, .profile-img:hover {
+  /*color: #000;*/
+  text-shadow: 0 0 10px #61b81b;
+  cursor: pointer;
+}
+
+#context-menu .context-items .context-item{
+  text-shadow: none;
+  font-weight: normal;
+}
+
+#context-menu {
+  width:max-content;
+  min-width:50px;
+}
+
+.item-edit:hover, .item-edit:focus {
+  color: #000;
+  text-shadow: 0 0 10px #61b81b;
+  cursor: url(hand.cur), help;
+}
+
+/* body{
+  cursor: url(../icons/Cursors/Cursor_Basic.png) 3 0, auto;
+}
+
+button, .forgeoflegends .universal-skills-header{
+  cursor: url(../icons/Cursors/Cursor_Attack.png) 1 0, pointer;
+} */
+
+.grid,
+.grid-2col {
+  display: grid;
+  grid-column: span 2 / span 2;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* gap: 10px; */
+  /* margin: 10px 0; */
+  padding: 0;
+}
+
+.grid-3col {
+  grid-column: span 3 / span 3;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-4col {
+  grid-column: span 4 / span 4;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-5col {
+  grid-column: span 5 / span 5;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-6col {
+  grid-column: span 6 / span 6;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-7col {
+  grid-column: span 7 / span 7;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-8col {
+  grid-column: span 8 / span 8;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.grid-9col {
+  grid-column: span 9 / span 9;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+}
+
+.grid-10col {
+  grid-column: span 10 / span 10;
+  grid-template-columns: repeat(10, minmax(0, 1fr));
+}
+
+.grid-11col {
+  grid-column: span 11 / span 11;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+}
+
+.grid-12col {
+  grid-column: span 12 / span 12;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.flex-group-center,
+.flex-group-left,
+.flex-group-right {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  border: 2px groove #eeede0;
+  border-radius: 5px;
+}
+
+.flex-group-left {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.flex-group-right {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.flex-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+/* Styles limited to forgeoflegends sheets */
+.forgeoflegends .item-form {
+  font-family: "Roboto", sans-serif;
+}
+
+.forgeoflegends .sheet-header {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 110px;
+  flex: 0 0 110px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* -webkit-box-orient: horizontal; */
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  /* height: -webkit-fill-available; */
+}
+
+
+
+/* .forgeoflegends .charbanner{
+  display: flex;
+} */
+
+.forgeoflegends .chartype{
+  display: grid;
+  align-items: center;
+}
+
+
+
+.forgeoflegends .profile-img {
+  margin-left: 3px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+/* 
+#enchiridion .crop {
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	margin: auto;
+}
+
+#enchiridion .asset-image {
+	aspect-ratio: 1 / 1;
+    width: 100%;
+    height: unset;
+} */
+
+.sheet header.sheet-header img {
+  flex: 0 0 75px;
+  height: 75px;
+  margin-right: 6px;
+  object-fit: cover;
+}
+
+.forgeoflegends .sheet-header .header-fields {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: flex;
+  text-align: center;
+
+}
+
+.forgeoflegends .sheet-header h1.charname {
+  /* height: 40px; */
+  padding: 0px;
+  margin: 5px 0;
+  border-bottom: 0;
+}
+
+.forgeoflegends .sheet-header h1.charname input {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.forgeoflegends .sheet-header .character-title{
+  font-size: 0.7em;
+}
+
+.forgeoflegends .sheet nav.sheet-tabs {
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  display: flex;
+  border-bottom: none;
+}
+
+.forgeoflegends .sheet-tabs a {
+  font-weight: bold;
+  flex:100;
+}
+
+.sheet-tab.active h2 {
+  border-bottom: 3px solid #30a000;
+}
+
+.sheet-tab h2 {
+  border-bottom: 3px solid #b09540;
+}
+
+/* .forgeoflegends .sheet-tab {
+  font-size: 2em;
+} */
+
+/* .forgeoflegends .tabs .sheet-tab.active {
+  border-radius: 7px 7px 0% 0%;
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.forgeoflegends .tabs .sheet-tab:not(.active) {
+	border-radius: 7px 7px 0% 0%;
+	border: 1px solid black;
+	background: rgba(40,44,42,0.25);
+} */
+
+
+
+
+/* .forgeoflegends .sheet-body{
+  height: fit-content;
+  overflow:scroll;
+} */
+
+.window-app .window-content{
+  /* overflow-y: scroll; */
+}
+
+.forgeoflegends .tox .tox-editor-container {
+  background: #fff;
+}
+
+.forgeoflegends .tox .tox-edit-area {
+  padding: 0 8px;
+}
+
+.forgeoflegends .resource-label {
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  /* border-bottom: 1px solid var(--color-shadow-primary); */
+}
+
+.forgeoflegends .section-header{
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-bottom: none;
+}
+
+
+
+
+/* .forgeoflegends .items-grid {
+  list-style: none;
+  margin: 7px 0;
+  padding: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+} */
+
+/* .item-remove {
+  top: -15px;
+  position: relative;
+  height: 0px;
+  display: block;
+  left: 70%;
+  width: fit-content;
+} */
+
+.inventory .inventory-list{
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* .skills .inventory-list{
+  max-height: 400px;
+  overflow-y: auto;
+} */
+
+.forgeoflegends .items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+
+  padding: 0 0 0 0;
+  justify-items: center;
+  gap: 5px;
+}
+
+/* .forgeoflegends .items-grid:last-child {
+  flex: 0 1 100%;
+} */
+
+
+
+
+.forgeoflegends .items-grid li {
+  display: block;
+  /* height: 100%;
+  width: 100%; */
+  padding: 3px 0;
+}
+
+/* .forgeoflegends .items-grid li:nth-child(even) {    
+    background: rgba(0, 0, 0, 0.05);
+} */
+
+
+
+.forgeoflegends .items-grid .item-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 24px;
+  height: 40px;
+  flex: 0 0 24px;
+}
+
+.forgeoflegends .items-grid .item-name, .forgeoflegends .equipment-grid .item-name {
+  margin: 0;
+  text-align: center;
+  font-size: 0.8em;
+  height: 4.8em;
+  overflow-wrap: break-word;
+  /* white-space: nowrap; */
+  max-width: 45px;
+  max-height: 2.4em;
+  margin: auto;
+  overflow: hidden;
+  font-weight: bold;
+  text-overflow: clip;
+}
+
+
+.forgeoflegends .empty-inventory{
+  opacity: 0.5;
+  color:rgb(116, 84, 17);
+  text-transform: capitalize;
+}
+
+.forgeoflegends  .abilities-list div{
+  margin: 0 0 5px 0;
+}
+
+.forgeoflegends  .ability div{
+  display: flex;
+  align-items: center;
+}
+
+.forgeoflegends  .ability button{
+  /* min-width: 2.5em; */
+}
+
+/* .forgeoflegends  .abilities-list div{
+  height: 33%;
+} */
+/* .forgeoflegends .weapon-summary{
+  margin: -0.1rem 0 -0.1rem;
+} */
+
+/* .forgeoflegends .item-skills{
+  margin-top: 10px;
+  padding-top: 10px;
+  border-bottom: 2px groove #AAA;
+  overflow-y: scroll;
+  max-height:225px
+} */
+
+
+/* .forgeoflegends .weapon-summary .item-edit{
+  margin: 3px;
+  /* text-align: center;
+  font-size: 0.8em; */
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
+
+.attributes .grid-2col{
+  margin:0;
+}
+
+.forgeoflegends .abilities {
+  margin-bottom:0px;
+}
+
+.forgeoflegends .combat .items-grid{
+  margin-bottom:0px;
+  margin-top:0px;
+}
+
+.item-skills .items-grid{
+  margin:0;
+}
+.item-skills .flex-group-center{
+  padding-bottom:2px;
+  padding-top:2px;
+}
+
+.forgeoflegends .weapon-summary{
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.forgeoflegends .weapon-summary li{
+  display: flex;
+  white-space: nowrap;
+  min-width: max-content;
+  flex-grow: 1;
+  overflow: hidden;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.forgeoflegends .weapon-summary .weapon-swap{
+  height: 1.5em;
+  width: 1.5em;
+  margin-bottom: -0.3em;
+}
+
+.forgeoflegends .item-skills .grid-item .item-name{
+  height: 2.5em;
+  /* white-space: revert; */
+  /* max-width: unset; */
+}
+
+.forgeoflegends .item-title {
+  text-align: center;
+  font-size: 0.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 20px
+
+}
+
+.forgeoflegends .item-grid .item-name {
+  margin: 0;
+  text-align: center;
+  font-size: 0.8em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 45px;
+}
+
+
+
+
+.forgeoflegends .equipment-grid{
+  gap: 5px;
+  grid-template-rows: 70px 70px 70px 70px 70px;
+}
+
+
+.forgeoflegends .equipment-grid li {
+  display: block;
+  padding: 0;
+  border: none;
+}
+
+.forgeoflegends .equipment-grid .item-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+}
+
+
+
+
+
+
+
+
+
+.forgeoflegends .items-list {
+  list-style: none;
+  margin: 7px 0;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.forgeoflegends .items-list .item-header {
+  font-weight: bold;
+}
+
+.forgeoflegends .items-list .item {
+  height: 40px;
+  line-height: 24px;
+  padding: 3px 0;
+  border: 2px groove #eeede0;
+}
+
+.forgeoflegends .items-list .item .item-image {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 24px;
+  height: 110%;
+  flex: 0 0 24px;
+  margin-right: 5px;
+  margin-top: -1px;
+  margin-left: 3px;
+}
+
+.forgeoflegends .items-list .item-name {
+  margin: 0;
+  flex: 100;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 130%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.forgeoflegends .items-list .item-controls {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 86px;
+  flex: 0 0 86px;
+  text-align: right;
+  padding: 0 3px;
+}
+
+.forgeoflegends .items-list .item-controls-one {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 24px;
+  flex: 0 0 24px;
+  text-align: right;
+  font-size: 1.2em;
+  padding: 0 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.forgeoflegends .item-summary {
+  margin: 0;
+  font-size: 0.85em;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform:capitalize;
+}
+
+
+
+
+.forgeoflegends .equipment-image {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 24px;
+  height: 40px;
+  flex: 0 0 24px;
+}
+
+
+
+
+
+
+.forgeoflegends .tag {
+  display: inline-block;
+  margin: 0 2px 0 0;
+  padding: 0 3px;
+  border: 2px groove #eeede0;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.05);
+  text-transform:capitalize
+}
+
+.inline-icon {
+  width:1.2em;
+  height:1.2em;
+  margin-bottom:-0.3em;
+  margin-right: 0.2em;
+  border: 0px
+}
+
+.resource-label .inline-icon {
+  margin-bottom:0em;
+}
+
+p img {
+  width:1.2em;
+  height:1.2em;
+  margin-bottom:
+  -0.3em;
+  border: 0px
+}
+
+
+
+
+.forgeoflegends .item-header {
+  font-weight: bold;
+}
+
+.item-tags {
+  font-weight: bold;
+  text-transform:capitalize;
+}
+
+.tag-name {
+  font-weight: bold;
+  text-transform:capitalize;
+}
+
+.tag-check {
+  white-space: nowrap;
+}
+
+.forgeoflegends .bonus {
+  font-size:80%;
+}
+
+.active-effect-sheet .changes-list {
+    padding-top: 3px;
+}
+
+/* 
+.keyword{
+  font-weight: 600;
+  text-decoration: underline dashed 0.0001em;
+} */
+
+
+
+
+.forgeoflegends .equipped-false {
+  color: #8d8b80;
+  text-shadow: none;
+}
+
+
+
+.failure {
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+.tag-list{
+  margin-top:5px;
+}
+
+.tag-selection{
+  font-size: 0.9em;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  text-transform: capitalize;
+}
+
+.tag-selection input{
+  vertical-align: sub;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.item.sheet .item-header {
+  display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.forgeoflegends .item-image {
+  flex: 0 0 30px;
+  height: 30px;
+  background-size: 30px;
+  border: none;
+  margin-right: 5px;
+}
+
+.forgeoflegends .currency {
+  flex: 0 0 10px;
+  height: 20px;
+  background-size: 25px;
+  border: none;
+  margin-right: 5px;
+}
+
+.editor {
+  height: 240px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1px 3px;
+  border: 1px solid var(--color-border-light-tertiary);
+  border-radius: 3px;
+}
+
+
+
+.two-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 2;
+}
+
+.three-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 3;
+}
+
+.max-flex {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 10000000;
+}
+
+button.attack, button.utility{
+  padding-top: 3px;
+  line-height: 1.2em;
+}
+
+
+
+.fate-roll {
+  color:magenta !important;
+}
+
+.fated {
+  color:green !important;
+}
+
+.doomed {
+  color:red !important;
+}
+
+
+
+.chat-img {
+  height: 40px;
+  width: 40px;
+  margin-left: 3px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.chat-name {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+
+
+
+.flavor-text {
+  font-style: italic;
+}
+
+.flavor-text textarea{
+  font-style: italic;
+}
+
+
+
+
+.forgeoflegends .textbox {
+  display: block;
+
+}
+
+.forgeoflegends textarea {
+  min-height: 2em;
+  max-width: 100%;
+  min-width: 100%;
+  height: 4.5em;
+}
+
+
+
+
+
+
+
+
+.token-initiative{
+  border-left: 1px solid #222;
+  line-height: 0px;
+}
+
+.acted-button {
+  margin: 0 0px 0 0px;
+}
+
+.sidebar-tab .directory-list .directory-item .combat-defense img{
+  height:16px;
+  width:16px;
+  vertical-align: text-top;
+  margin-top: 5px;
+  margin-right: 0px;
+}
+
+.sidebar-tab .directory-list .directory-item .combat-defense{
+  flex: 0 0 65px;
+  text-align: right;
+  line-height: 0px;
+}
+.combat-defense a{
+position:relative;
+}
+
+#combat li.combatant .token-name h4 {
+  flex: 0 0 127px;
+  line-height: 28px;
+  margin: 0 0 2px;
+}
+
+.combat-defense-text {
+  color:white;
+  -webkit-text-stroke: 0px black !important;
+  position: absolute !important;
+  top: 1em;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.combat-defense-text.depleted {
+  color:red;
+}
+
+
+
+
+#token-hud .status-effects {
+  display: grid;
+  grid-column: span 4 / span 4;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+
+
+
+
+
+.forgeoflegends .inventory-list {
+  grid-column: 1 / 8; /* span from grid column line 1 to 3 (i.e., span 2 columns) */
+}
+
+.forgeoflegends .equipment-list {
+  grid-column: 8 / 13; /* span from grid column line 1 to 3 (i.e., span 2 columns) */
+}
+
+
+.forgeoflegends .grid-item {
+  padding:2px;
+  margin:2px;
+  cursor: help;
+}
+
+.forgeoflegends .combat .grid-item {
+  cursor: pointer;
+}
+
+.grid-item:hover, .grid-item:focus {
+  text-shadow: 0 0 10px #61b81b;
+}
+
+.forgeoflegends .slot-item .item-name {
+  max-height: 2.4em;
+  margin: auto;
+}
+
+.forgeoflegends .item.slot-item .item-image {
+
+  border: 1px solid var(--color-border-dark);
+}
+
+
+
+/* .forgeoflegends.item-card{
+  background: top center / 100% 25% no-repeat url(../icons/UI/item-cards/top.png),
+  center / 100% 50% no-repeat url(../icons/UI/item-cards/middle.png),
+  bottom center / 100% 25% no-repeat url(../icons/UI/item-cards/bottom.png);
+} */
+
+
+
+
+
+
+
+
+/* .forgeoflegends .show {
+  opacity: 1;
+}
+
+.forgeoflegends .universal-skills-list {
+  opacity: 0;
+  transition: opacity 0.6s linear;
+} */
+
+
+@font-face{
+  font-family:"ScalySans";
+  src:url("ScalySans.woff") format("woff");
+}
+
+@font-face{
+  font-family:"MrEaves";
+  src:url("MrEavesSmallCapsBold.woff") format("woff");
+}
+
+@font-face{
+  font-family:"ScalySansCaps";
+  src:url("ScalySansCaps.woff") format("woff");
+}
+
+h1, h2 {
+  font-family: "MrEaves", serif;
+  font-weight: bold;
+}
+
+h3, h4 {
+  font-family: "ScalySansCaps", serif;
+}
+
+h3 label{
+  font-family: "ScalySansCaps", serif;
+}
+
+h5, h6, p, label, /*div,*/ button, section, .window-header a, table, ul, ol {font-family: "ScalySans", serif;}
+
+/* .tooltipster-content a {
+  color: #61b81b;
+} */
+
+/* .tooltipster-content {
+  max-height: 300px;
+	background: url(https://localhost:30000/ui/denim.png) repeat !important;
+}
+
+.tooltipster-box{
+  border-radius: 5px;
+  box-shadow: 0 0 20px var(--color-shadow-dark);
+
+} */
+
+.tooltipster-content{
+  background: url(../ui/denim075.png) repeat;
+}
+
+
+
+
+
+
+
+
+/* .dice-d10{
+  position: relative;
+  width: 24px;
+  line-height: 24px;
+  float: left;
+  margin-right: 1px;
+  background-image: url(../icons/svg/d6-grey.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  font-size: var(--font-size-16);
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+    background-image: url(../icons/svg/d10-grey.svg);
+} */
+
+
+/* 
+.dice-rolls .bonus{
+  position: relative;
+    line-height: 24px;
+    float: left;
+    margin-right: 1px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    font-size: var(--font-size-16);
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dice-rolls li{
+  display:flex;
+} */
+
+
+.yield-section{
+  border: 2px #eeede0 groove;
+  border-radius: 5px;
+
+}
+
+
+
+
+
+
+
+/* 
+.textbox {
+  display: block;
+  position: relative;
+}
+
+.textbox > div, .textextboxtarea-container > textarea {
+  word-wrap: break-word; 
+  box-sizing: border-box;
+  padding: 2px;
+  width: 100%;
+}
+
+.textbox > textarea {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+}
+
+.textbox > div {
+  padding-bottom: 1.5em;
+  visibility: hidden;
+} */
+
+
+.message-sender{
+  font-family: "MrEaves", serif;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+
+
+
+
+
+.mce-editor{
+  margin-top: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1px 3px;
+  border: 1px solid var(--color-border-light-tertiary);
+  border-radius: 3px;
+}
+
+.mce-edit-focus{
+  outline: unset !important;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 800px) {
+  .window-app {
+    font-size: 70%;
+  }
+}

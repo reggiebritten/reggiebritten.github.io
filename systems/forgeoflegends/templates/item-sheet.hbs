@@ -1,0 +1,106 @@
+<form class="{{cssClass}}" autocomplete="off" data-uuid="{{item.uuid}}">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+        </div>
+    </header>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        <div data-group="primary">
+
+            {{!-- Header --}}
+            <div class="flexrow flex-group-center">
+
+
+                <div class="flexrow">
+
+
+                    <div class="resource">
+                        <label class="resource-label">Bulk</label>
+                        <input type="text" name="system.bulk" value="{{item.system.bulk}}" data-dtype="Number"/>
+                    </div>
+                    <div class="resource">
+                        <label class="resource-label">Value</label>
+                            <select name="system.value" data-dtype="String">
+                                {{#select item.system.value}}
+                                    <option value="copper">Copper</option>
+                                    <option value="silver">Silver</option>
+                                    <option value="gold">Gold</option>
+                                    <option value="platinum">Platinum</option>
+                                    <option value="gems">Gems</option>
+                                {{/select}}
+                            </select>
+                    </div>
+                    {{!-- {{#if item.system.isArmor}} --}}
+                    <div class="resource">
+                        <label class="resource-label">Armor</label>
+                        <input type="text" name="system.armor" value="{{item.system.armor}}" data-dtype="Number"/>
+                    </div>
+                    <div class="resource">
+                        <label class="resource-label">Pockets</label>
+                        <input type="text" name="system.pockets" value="{{item.system.pockets}}" data-dtype="Number"/>
+                    </div>
+                    {{!-- {{/if}} --}}
+                    {{#if item.system.isLoading}}
+                    <div class="resource">
+                        <label class="resource-label">Loaded</label>
+                        <input type="checkbox" name="system.loaded" data-dtype="Boolean" {{checked item.system.loaded}}/>
+                    </div>
+                    {{/if}}
+                    <!-- <div class="resource">
+                        <label class="resource-label">Identified</label>
+                        <input type="checkbox" name="system.identified" data-dtype="Boolean" {{checked item.system.identified}}/>
+                    </div>
+                    <div class="resource">
+                        <label class="resource-label">Origin</label>
+                        <input type="text" name="system.origin" data-dtype="String" value="{{item.system.origin}}"/>
+                    </div> -->
+
+                </div>
+
+
+            </div>
+
+                <div class="tags flex-group-center">
+                    <a>
+                        <div><label class="resource-label">Tags</label></div>
+                        <div class="tag-list">
+                            {{#each item.system.tags}}
+                                <span class ="tag keyword {{this}}" data-keyword = "{{this}}">{{this}}</span>
+                            {{/each}}
+                        </div>
+                    </a>
+                </div>
+
+            <hr>
+                <h3 class ="section-header">Description</h3>
+                <div class="mce-editor" name="system.description">{{{item.system.description}}}</div>
+            <hr>
+            {{#if item.system.skills}}
+                <h3 class ="section-header">Skills</h3>
+                <ol class="items-grid">
+                    {{#each item.system.skillDocuments as |skill index| }}
+                        {{> "systems/forgeoflegends/templates/grid-item.hbs" item=skill index=index actor=../actor}}
+                    {{/each}}
+                </ol>
+            {{/if}}
+            <hr>
+                <h3 class ="section-header">Equipped Effects</h3>
+                <ol class="items-grid">
+                    <li class="flexrow effect-create">
+                        <img class= "item-image" src="systems/forgeoflegends/icons/sheets/new.png"/>
+                        <div class="item-name">Create</div>
+                    </li>
+                    {{#each item.effects as |effect id|}}
+                        <li class="effect grid-item" data-document-id="{{effect.id}}">
+                            <img class= "item-image effect-activate" src="{{effect.icon}}"/>
+                            <div class="item-name">{{effect.label}}<br>{{effect.sourceName}}</div>
+                        </li>
+                    {{/each}}
+                </ol>
+
+        </div>
+    </section>
+</form>
