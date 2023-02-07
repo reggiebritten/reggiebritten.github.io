@@ -22,15 +22,6 @@ $('#sidebar-handle').click(function(e) {
   }
 })
 
-$('#main a, #main h3').each(async function() {
-  const href = this.href
-  var re = new RegExp(`(.+?)#(.+)`,"mi");
-  const id = this.id || href?.replace(re, '$2');
-
-  if (icons.includes(id)){
-    $(this).prepend(`<img src='systems/forgeoflegends/icons/rules/${id}.png' class='inline-icon'> `)
-  }
-})
 
 
 
@@ -60,17 +51,17 @@ $.get(`systems/forgeoflegends/templates/grid-effect.hbs`, function(hbs){
 })
 
 
-  // try {var map = L.map('map')?.setView([0, 0], 1);} catch(err) {}
+  try {var map = L.map('map')?.setView([0, 0], 1);} catch(err) {}
 
-  // if (map){
-  //     L.tileLayer('images/test/{z}/{x}/{y}.png', {
-  //       maxZoom: 2,
-  //       minZoom: 1,
-  //       noWrap: true
-  //   }).addTo(map);
+  if (map){
+      L.tileLayer('images/test/{z}/{x}/{y}.png', {
+        maxZoom: 2,
+        minZoom: 1,
+        noWrap: true
+    }).addTo(map);
     
-  //   var marker = L.marker([51.5, -0.09]).addTo(map);
-  // }
+    var marker = L.marker([51.5, -0.09]).addTo(map);
+  }
 
 // });
 
@@ -135,7 +126,18 @@ const icons = [
   "weakened",
   "wet",
   "wracked"
-]
+];
+
+
+$('#main a, #main h3').each(async function() {
+  const href = this.href
+  var re = new RegExp(`(.+?)#(.+)`,"mi");
+  const id = this.id || href?.replace(re, '$2');
+
+  if (icons.includes(id)){
+    $(this).prepend(`<img src='systems/forgeoflegends/icons/rules/${id}.png' class='inline-icon'> `)
+  }
+})
 
 const classes = [
   "battlemaster",
@@ -440,6 +442,7 @@ $.get("systems/forgeoflegends/packs/items.db", function(items){
   items = JSON.parse(items);
   items = items.concat(universal)
   ForgeOfLegends.items = items;
+  ForgeOfLegends.registerTooltips($("#main"))
 });
 
 
@@ -479,6 +482,7 @@ for (const tag of damageTags){
 
 
 function registerTooltips(html){
+
   html.find('.item-card p [data-mce-style="text-decoration: underline;"]').removeAttr("style").addClass('keyword');
 
   html.find(`.keyword:not(.tooltipstered), .item:not(.tooltipstered), .skill:not(.tooltipstered)`).each(function(){
@@ -545,15 +549,11 @@ async function functionBefore(tooltip, data){
   const origin = $(data.origin)
 
   if (origin.is('.item, .skill')){
-    console.log(ForgeOfLegends.items)
     const uuid = origin.data('uuid') || "Item."+origin.data('document-id');
-    console.log(uuid)
     const item = ForgeOfLegends.items.find(el => el.uuid == uuid) || fromUuidSync(uuid);
-    console.log(item)
     const actor = fromUuidSync(origin.data('actorUuid'));
     const content = await ForgeOfLegends.itemSummary(item, actor);
-    console.log(content)
-    if (item) await tooltip.content($(`<div>${content}</div>`));
+    if (item) tooltip.content($(`<div>${content}</div>`));
   } else {
     const content = await ForgeOfLegends.getRule(origin)
     await tooltip.content(content);
@@ -615,9 +615,6 @@ function fromUuidSync(uuid){
 
 
 
-
-
-ForgeOfLegends.registerTooltips($("#main"))
 
 
 
