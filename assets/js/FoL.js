@@ -1,5 +1,5 @@
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
 $('.opener i').click(function(e) {
   $(this).closest('.opener').toggleClass('opened')
@@ -59,22 +59,20 @@ $.get(`systems/forgeoflegends/templates/grid-effect.hbs`, function(hbs){
   Handlebars.registerPartial('systems/forgeoflegends/templates/grid-effect.hbs', hbs)
 })
 
-ForgeOfLegends.registerTooltips($("#main"))
 
+  // try {var map = L.map('map')?.setView([0, 0], 1);} catch(err) {}
 
-  try {var map = L.map('map')?.setView([0, 0], 1);} catch(err) {}
-
-  if (map){
-      L.tileLayer('images/test/{z}/{x}/{y}.png', {
-        maxZoom: 2,
-        minZoom: 1,
-        noWrap: true
-    }).addTo(map);
+  // if (map){
+  //     L.tileLayer('images/test/{z}/{x}/{y}.png', {
+  //       maxZoom: 2,
+  //       minZoom: 1,
+  //       noWrap: true
+  //   }).addTo(map);
     
-    var marker = L.marker([51.5, -0.09]).addTo(map);
-  }
+  //   var marker = L.marker([51.5, -0.09]).addTo(map);
+  // }
 
-});
+// });
 
 
 
@@ -618,6 +616,8 @@ function fromUuidSync(uuid){
 
 
 
+
+ForgeOfLegends.registerTooltips($("#main"))
 
 
 
