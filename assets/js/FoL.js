@@ -547,10 +547,14 @@ async function functionBefore(tooltip, data){
   const origin = $(data.origin)
 
   if (origin.is('.item, .skill')){
+    console.log(ForgeOfLegends.items)
     const uuid = origin.data('uuid') || "Item."+origin.data('document-id');
+    console.log(uuid)
     const item = ForgeOfLegends.items.find(el => el.uuid == uuid) || fromUuidSync(uuid);
+    console.log(item)
     const actor = fromUuidSync(origin.data('actorUuid'));
-    const content = await ForgeOfLegends.itemSummary(item, actor)
+    const content = await ForgeOfLegends.itemSummary(item, actor);
+    console.log(content)
     if (item) await tooltip.content($(`<div>${content}</div>`));
   } else {
     const content = await ForgeOfLegends.getRule(origin)
