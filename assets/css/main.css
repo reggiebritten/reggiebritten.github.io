@@ -277,7 +277,7 @@ h6 {
 
 
 #main{
-  margin: 3vw;
+  margin: calc(3vw + 20px);;
   overflow-x: auto;
 }
 
@@ -456,7 +456,11 @@ h3 img{
 }
 
 
-
+.show {
+  font-size: 1.75em;
+  
+  font-family: "MrEaves", serif;
+}
 
 
 

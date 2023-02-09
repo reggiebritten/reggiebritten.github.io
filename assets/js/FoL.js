@@ -113,7 +113,7 @@ const icons = [
   "reaction",
   "reeling",
   "relaxed",
-  "retrained",
+  "restrained",
   "shocked",
   "slowed",
   "staggered",
@@ -436,16 +436,6 @@ const ForgeOfLegends = {
 }
 
 
-$.get("systems/forgeoflegends/packs/items.db", function(items){
-  items = "["+items.replace(/}\n/g, "},");
-  items = items.substring(0, items.length - 1)  + "]";
-  items = JSON.parse(items);
-  items = items.concat(universal)
-  ForgeOfLegends.items = items;
-  ForgeOfLegends.registerTooltips($("#main"))
-});
-
-
 
 const damageTags = [
   "slashing",
@@ -505,7 +495,7 @@ function registerTooltips(html){
     functionAfter,
   });
 
-  html.find('.show').tooltipster('show')
+  // html.find('.show').tooltipster('show')
 }
 
 function functionPosition(instance, helper, position){
@@ -520,24 +510,36 @@ function functionPosition(instance, helper, position){
 
 function functionReady(tooltip, data){
 
-  if ($(data.origin).is(".show")){
-    $(data.origin).parent().css({
-      display: "grid",
-      ["grid-template-columns"]: $(data.origin).parents('.tooltipster-base').length?"100%":"50% 50%",
-      ["justify-items"]: "center",
-      ["row-gap"]: "1em",
-    }).addClass('shown-tooltip-items')
+  // if ($(data.origin).is(".show")){
+  //   $(data.origin).parent().css({
+  //     display: "grid",
+  //     ["grid-template-columns"]: $(data.origin).parents('.tooltipster-base').length || $(window).width() < 880?"100%":"50% 50%",
+  //     ["justify-items"]: "center",
+  //     ["row-gap"]: "1em",
+  //   }).addClass('shown-tooltip-items')
 
-    $(data.origin).replaceWith($(data.tooltip).css({
-      left: "auto",
-      top: "auto",
-      width: "95%",
-      ["min-width"]: "auto",
-      ["max-width"]: "auto",
-      height: "auto",
-      position: "relative",
-    }))
-  }
+  //   // $(data.tooltip).insertAfter($(data.origin)).css({
+  //   //   left: "auto",
+  //   //   top: "auto",
+  //   //   width: "95%",
+  //   //   ["min-width"]: "auto",
+  //   //   ["max-width"]: "auto",
+  //   //   height: "auto",
+  //   //   position: "relative",
+  //   // })
+
+  //   // $(data.origin).replaceWith($(data.tooltip).css({
+  //   //   left: "auto",
+  //   //   top: "auto",
+  //   //   width: "95%",
+  //   //   ["min-width"]: "auto",
+  //   //   ["max-width"]: "auto",
+  //   //   height: "auto",
+  //   //   position: "relative",
+  //   // }))
+  // }
+
+  // if ($(data.tooltip).is(".shown-tooltip-items > *:nth-child(2n-1):nth-last-of-type(1)")) console.log("ASD")
 
   $(data.tooltip).css({
     height: "auto",
@@ -575,7 +577,7 @@ async function functionBefore(tooltip, data){
   ForgeOfLegends.registerTooltips($(tooltip.content()));
 
   tooltip.on('close', function(event) {
-    if ($(data.origin).is('.show')) event.stop();
+    // if ($(data.origin).is('.show')) event.stop();
   });
 
   const parentId = $(data.origin).parents('.tooltipster-base').attr('id');
@@ -611,6 +613,25 @@ function fromUuidSync(uuid){
 
 
 
+
+
+$.get("systems/forgeoflegends/packs/items.db", function(items){
+  items = "["+items.replace(/}\n/g, "},");
+  items = items.substring(0, items.length - 1)  + "]";
+  items = JSON.parse(items);
+  items = items.concat(universal)
+  ForgeOfLegends.items = items;
+  ForgeOfLegends.registerTooltips($("#main"))
+
+  $(".show").parent().css({
+      display: "grid",
+      ["grid-template-columns"]: $(this).parents('.tooltipster-base').length || $(window).width() < 880?"100%":"50% 50%",
+      ["justify-items"]: "center",
+      ["row-gap"]: "1em",
+    }).addClass('shown-tooltip-items')
+
+
+});
 
 
 
