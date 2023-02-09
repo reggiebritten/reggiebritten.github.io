@@ -302,7 +302,7 @@ const universal = [
        defenseType: "poise",
        yield:"",
        summary:"",
-       effect: "When you use an attack... Increase the threat of the attak by +4.",
+       effect: "Trigger: When you use an attack... Increase the threat of the attak by +4.",
        isUniversal: true,
      }
    },
@@ -487,6 +487,22 @@ function registerTooltips(html){
     updateAnimation:null,
     minWidth: $("#info").width()*.9,
     maxWidth: $("#info").width()*.9,
+    trigger: "custom",
+    triggerClose: {
+      click: true,
+      mouseleave: true,
+      originClick: false,
+      scroll: false,
+      tap: true,
+      touchleave: true
+  },
+  triggerOpen: {
+      click: true,
+      hover: true,
+      mouseenter: true,
+      tap: true,
+      touchstart: true
+  },
     interactive: true,
     arrow: false,
     functionPosition,

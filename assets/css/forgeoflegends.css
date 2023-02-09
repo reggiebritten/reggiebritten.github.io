@@ -15,9 +15,9 @@
   --color-border-highlight-alt: #61b81b;
 }
 
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: var(--primary-color)
-}
+} */
 
 :root {
   --primary-color: #73953e;
