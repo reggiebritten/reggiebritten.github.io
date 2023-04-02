@@ -386,7 +386,7 @@
 
 <h3 id="minions-defense">Minions’ Defense</h3>
 
-<p>Many weaker NPCs, called minions, do not have poise, momentum, or focus. Instead, they simply have defense, which represents all three together. Whenever a minion would gain or lose poise, momentum or focus, their defense is adjusted by that amount instead.</p>
+<p>Many weaker NPCs, called minions, do not have poise, momentum, or focus. Instead, they simply have defense, which represents all three together. Whenever a minion would gain or lose poise, momentum or focus, their defense is adjusted by that amount instead. If an effect prevents a minion from either dodging, blocking, or predicting an <a class = "keyword" href="skills.html#attacks">attack</a>, that minion must <a class = "keyword" href="combat.html#yield">yield</a>.</p>
 
 <h2 id="defending-vs-yielding">Defending vs Yielding</h2>
 
@@ -479,11 +479,11 @@
 
 <h2 id="movement--position">Movement &amp; Position</h2>
 
-<p>Movement is counted in spaces, where one space is equivalent to about 5 feet or 1½ meters. The most reliable way to get from place to place is the <a class="item" data-name="Dash">Dash</a> maneuver, which allows you to move 3 spaces plus your <a class = "keyword" href="abilities.html#speed">speed</a>. However, using most <a class = "keyword" href="skills.html#maneuvers">maneuvers</a> in an enemy’s <a class = "keyword" href="combat.html#zone-of-control">zone of control</a> carries a risk of being <a class = "keyword" href="combat.html#hindering-maneuvers">hindered</a>, as described below. Another movement option is the <a class="item" data-name="Shift">Shift</a> maneuver, which lets you move exactly 1 space. Since <a class="item" data-name="Shift">Shift</a> has the <a class = "keyword" href="skills.html#careful">careful</a> tag, it can ’t be hindered. Finally, the <a class="item" data-name="Sprint">Sprint</a> reaction lets a character trade <a class = "keyword" href="combat.html#momentum">momentum</a> for a burst of speed.</p>
+<p>Distance is counted in spaces, where one space is equivalent to about 5 feet or 1½ meters. The most reliable way to get from place to place is the <a class="item" data-name="Dash">Dash</a> maneuver, which allows you to move 3 spaces plus your <a class = "keyword" href="abilities.html#speed">speed</a>. However, using most <a class = "keyword" href="skills.html#maneuvers">maneuvers</a> in an enemy’s <a class = "keyword" href="combat.html#zone-of-control">zone of control</a> carries a risk of being <a class = "keyword" href="combat.html#hindering-maneuvers">hindered</a>, as described below. Another movement option is the <a class="item" data-name="Shift">Shift</a> maneuver, which lets you move exactly 1 space. Since <a class="item" data-name="Shift">Shift</a> has the <a class = "keyword" href="skills.html#careful">careful</a> tag, it can ’t be hindered. Finally, the <a class="item" data-name="Sprint">Sprint</a> reaction lets a character trade <a class = "keyword" href="combat.html#momentum">momentum</a> for a burst of speed.</p>
 
-<p>There are a few rules that must be followed when you move. You can move freely through another friendly character’s space, but not an enemy’s. You can’t end their your in another character’s space; if you somehow find yourself sharing a space with another character, the GM will move one of you to an adjacent space.</p>
+<p>There are a few rules that must be followed when you move. You can move freely through another friendly character’s space, but not an enemy’s. You can’t end their your in another character’s space; if you somehow find yourself sharing a space with another character, the GM will move one of you to an adjacent space. If you can’t help but share a space with another character, then both of you become <a class = "keyword" href="conditions.html#encumbered">encumbered</a>.</p>
 
-<p>Moving diagonally costs one space of movement the first time you move diagonally on a turn, then two spaces for the next time you move diagonally, repeating that pattern as they continue to move diagonally. You can’t move diagonally if the movement would cut through an impassable obstacle or a enemy’s space.</p>
+<p>If your group is using a square grid, then the first diagonal space counts as one space (and adjacent), the second counts as two spaces, the third as one, then two again, and so on.  You can’t move diagonally if the movement would cut through an impassable obstacle or a enemy’s space.</p>
 
 <p>Some effects may require you to use additional movement to enter a space. If you can’t afford this extra movement, you can’t enter that space. Other effects prevent movement entirely, including any movement specified by a skill.</p>
 
@@ -515,13 +515,13 @@
 
 <h3 id="disarmed">Disarmed</h3>
 
-<p>When you become disarmed, everything you are holding is thrown three spaces away in random directions, including wielded <a class = "keyword" href="equipment.html#weapon">weapons</a>. You will need to draw new weapons or reverie your old ones to stay in fighting shape.</p>
+<p>When you become disarmed, everything you are holding is thrown three spaces away in random directions, including wielded <a class = "keyword" href="equipment.html#weapon">weapons</a>. Any of those weapon’s skills you may have been concentrating on are immediately <a class = "keyword" href="skills.html#interrupting-concentration">interrupted</a>. You will need to draw new weapons or reverie your old ones to stay in fighting shape.</p>
 
 <h2 id="zone-of-control">Zone of Control</h2>
 
 <p>Your zone of control, sometimes abbreviated as “ZoC”, is the area of the battlefield where you can interfere with an enemy. Any <a class = "keyword" href="skills.html#ranged">ranged</a> skill used while in an enemy’s zone of control suffers a <a class = "keyword" href="skills.html#banes">bane</a>. Your zone of control also determines where you can <a class = "keyword" href="combat.html#hindering-maneuvers">hinder</a> <a class = "keyword" href="skills.html#maneuvers">maneuvers</a> and when you have an enemy <a class = "keyword" href="combat.html#surrounded">surrounded</a>.</p>
 
-<p>A character armed with a <a class = "keyword" href="equipment.html#weapon">weapon</a> with the <a class = "keyword" href="equipment.html#ZoC">ZoC</a> tag, typically a weapon used for melee combat, has a zone of control that includes their own space and all spaces adjacent to them. You don’t have a zone of control if you don’t have a ZOC weapon, although some creatures might. You might temporarily loose your zone of control while you are <a class = "keyword" href="conditions.html#knocked-down">knocked-down</a>, <a class = "keyword" href="conditions.html#reeling">reeling</a>, confused, or affected by certain other <a class = "keyword" href="conditions.html">conditions</a>.</p>
+<p>A character armed with a <a class = "keyword" href="equipment.html#weapon">weapon</a> with the <a class = "keyword" href="equipment.html#zoC">ZoC</a> tag, typically a weapon used for melee combat, has a zone of control that includes their own space and all spaces adjacent to them. You don’t have a zone of control if you don’t have a ZOC weapon, although some creatures might. You might temporarily loose your zone of control while you are <a class = "keyword" href="conditions.html#knocked-down">knocked-down</a>, <a class = "keyword" href="conditions.html#reeling">reeling</a>, confused, or affected by certain other <a class = "keyword" href="conditions.html">conditions</a>.</p>
 
 <h3 id="hindering-maneuvers">Hindering Maneuvers</h3>
 
@@ -549,7 +549,7 @@
 
 <p>If the mount is reasonably intelligent, then it acts on its own, taking its own turn during combat and using its own actions and maneuvers. You may use your actions and maneuvers independently while mounted, although you still share the mount’s momentum.</p>
 
-<h2 id="combat-in-water">Combat in Water</h2>
+<h2 id="underwater-combat">Underwater Combat</h2>
 
 <p>Fighting while swimming can be extremely difficult if you are unprepared. Spaces of water count as <a class = "keyword" href="special-terrain.html#wet-terrain">wet-terrain</a>, and require an extra point of movement for every space moved. You automatically become <a class = "keyword" href="conditions.html#wet">wet</a> while swimming, and the wet condition is instantly reapplied if it is ever removed. Your <a class = "keyword" href="skills.html">skills</a> suffer a <a class = "keyword" href="skills.html#banes">bane</a> while you are swimming, but the GM may determine that certain skills from <a class = "keyword" href="equipment.html#dagger">daggers</a>, <a class = "keyword" href="equipment.html#one-handed">one-handed</a> <a class = "keyword" href="equipment.html#polearm">polearms</a>, and similar weapons remain effective. Almost all <a class = "keyword" href="skills.html#ranged">ranged</a> skills, including <a class = "keyword" href="skills.html#utility">utility</a> and <a class = "keyword" href="skills.html#support">support</a> skills, are <a class = "keyword" href="skills.html#ineffective">ineffective</a> against a target more than 5 spaces away in water. The GM may further rule that some skills are impossible or have other penalties underwater.</p>
 
